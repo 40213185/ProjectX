@@ -10,7 +10,6 @@ public class StatusEffect : MonoBehaviour
         Freeze,
         Poisoned
     }
-
     private EffectType effectType;
     public int effectDuration;
     private int currentDuration;
