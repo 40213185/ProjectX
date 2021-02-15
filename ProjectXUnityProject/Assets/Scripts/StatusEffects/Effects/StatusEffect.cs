@@ -8,7 +8,8 @@ public class StatusEffect : MonoBehaviour
     {
         Burn,
         Freeze,
-        Poisoned
+        Poisoned,
+        Bleed
     }
     private EffectType effectType;
     public int effectDuration;
