@@ -6,10 +6,15 @@ public class StatusEffect : MonoBehaviour
 {
     public enum EffectType 
     {
+        None,
         Burn,
         Freeze,
         Poisoned,
-        Bleed
+        Bleed,
+        Stun,
+        Healing,
+        StrengthBuff,
+        IntBuff
     }
     private EffectType effectType;
     public int effectDuration;
