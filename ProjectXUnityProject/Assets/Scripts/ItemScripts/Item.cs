@@ -9,7 +9,7 @@ public class Item : MonoBehaviour
     private Vector2 range;
     private Vector2 areaOfEffect;
     private Vector2Int potency;
-    
+
 
     public void SetNameAndDesc(string newName, string newDescription)
     {
@@ -29,7 +29,7 @@ public class Item : MonoBehaviour
         areaOfEffect = newAreaOfEffect;
     }
 
-    
+
     public Vector2 GetRange() { return range; }
 
     public Vector2 GetAreaOfEffect() { return areaOfEffect; }
