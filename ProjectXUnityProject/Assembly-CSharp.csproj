@@ -62,14 +62,15 @@
     <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Movement\PlayerAnimationController.cs" />
     <Compile Include="Assets\deleteonpush\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Movement\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\DungeonStructure\FloorGeneration\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\StatusEffects\Effects\StatusEffect.cs" />
     <Compile Include="Assets\Scripts\DataContainer.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\Usable.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
-    <Compile Include="Assets\Scripts\ItemScripts\Weapon.cs" />
-    <Compile Include="Assets\Scripts\ItemScripts\Item.cs" />
-    <Compile Include="Assets\Scripts\DungeonStructure\FloorGeneration\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\FloorGeneration\MapHandler.cs" />
+    <Compile Include="Assets\Scripts\ItemScripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\DungeonStructure\FOW\FogOfWar.cs" />
+    <Compile Include="Assets\Scripts\ItemScripts\Item.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

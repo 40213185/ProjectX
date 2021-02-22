@@ -38,7 +38,7 @@ public class MapGenerator : MonoBehaviour
             {
                 //pick a room
                 int pick = Random.Range(0, RoomPrefabs.Length);
-                Instantiate(RoomPrefabs[pick], new Vector3(pointer.x * 25, 0, pointer.y * 25), RoomPrefabs[pick].transform.rotation);
+                Instantiate(RoomPrefabs[pick], new Vector3(pointer.x * MapHandler.roomSizex, 0, pointer.y * MapHandler.roomSizey), RoomPrefabs[pick].transform.rotation);
                 roomsBuiltValidation[pointer.x, pointer.y] = true;
                 roomType[pointer.x, pointer.y] = pick;
             }
