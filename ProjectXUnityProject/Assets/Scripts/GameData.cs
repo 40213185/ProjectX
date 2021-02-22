@@ -6,6 +6,7 @@ public static class GameData
 {
     private static DataContainer dataContainer;
     public static Stats playerStats { get; private set; }
+    public static int CurrentFloor { get; private set; }
 
     public static void Save() 
     {
@@ -20,5 +21,10 @@ public static class GameData
         ///
         ///write code here
         ///
+    }
+
+    public static void SetFloor(int floor) 
+    {
+        CurrentFloor = floor;
     }
 }
