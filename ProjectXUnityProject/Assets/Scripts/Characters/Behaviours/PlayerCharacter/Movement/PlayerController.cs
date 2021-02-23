@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public ControllerState controllerState;
     public float movementSpeed;
     private Vector2Int[] moveToPoints;
+    public int movementRange;
 
     //temp vars for testing
     private Vector3 mouseClickPos;
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         controllerState = ControllerState.Wait;
-        GlobalGameState.SetCombatState(false);
+        GlobalGameState.SetCombatState(true);
 
         mouseClickPos = new Vector3();
         feetpos = 0.5f;
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
                                 if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
                                 {
                                     //get the movetopoints
-                                    moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos);
+                                    moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos,movementRange);
                                     //change state
                                     if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat) controllerState = ControllerState.Move;
                                     else if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)

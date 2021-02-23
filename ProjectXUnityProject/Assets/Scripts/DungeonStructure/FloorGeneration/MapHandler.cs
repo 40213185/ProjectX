@@ -8,7 +8,7 @@ public static class MapHandler
 
     //the tyletype enumeration defines the int values of the matrixes
     //0-empty 1-walkable 2-obstacle
-    public enum TileType { Empty, Walkable, Obstacle ,
+    public enum TileType { Empty, Walkable, Obstacle,
         None }//keep none at the end of the enumeration
 
     //store room matrixes here
@@ -111,9 +111,72 @@ public static class MapHandler
 
         return tilepos;
     }
-    public static Vector2Int[] GetMoveToPoints(Vector2Int initialPosition, Vector2Int finalPosition)
+    public static Vector2Int[] GetMoveToPoints(Vector2Int initialPosition, Vector2Int finalPosition,int range)
     {
-        return null;
+        List<Vector2Int> possibleMovePoints = new List<Vector2Int>();
+        bool complete = false;
+        int counter = range;
+        Vector2Int currentPos = initialPosition;
+
+        while (counter >= 0 && !complete) 
+        {
+            //check fx>cx
+            if (finalPosition.x > currentPos.x)
+            {
+                //increment and add possibility
+                if (mapMatrix[currentPos.x + 1, currentPos.y] == 1)
+                {
+                    currentPos.x++;
+                    possibleMovePoints.Add(currentPos);
+                }
+            }
+            //check fx<cx
+            else if (finalPosition.x < currentPos.x)
+            {
+                //decrement and add
+                if (mapMatrix[currentPos.x - 1, currentPos.y] == 1)
+                {
+                    currentPos.x--;
+                    possibleMovePoints.Add(currentPos);
+                }
+            }
+            //fx==cx
+            else 
+            {
+                //fy>cy
+                if (finalPosition.y > currentPos.y)
+                {
+                    //increment and add
+                    if (mapMatrix[currentPos.x, currentPos.y+1] == 1)
+                    {
+                        currentPos.y++;
+                        possibleMovePoints.Add(currentPos);
+                    }
+                }
+                //fy<cy
+                else if (finalPosition.y < currentPos.y)
+                {
+                    //increment and add
+                    if (mapMatrix[currentPos.x, currentPos.y-1] == 1)
+                    {
+                        currentPos.y--;
+                        possibleMovePoints.Add(currentPos);
+                    }
+                }
+                //fy==cy
+                else
+                {
+                    //add
+                    possibleMovePoints.Add(currentPos);
+                    //complete
+                    complete = true;
+                }
+            }
+            counter--;
+        }
+
+        if (complete) return possibleMovePoints.ToArray();
+        else return new Vector2Int[0];
     }
     public static TileType GetTileTypeFromMatrix(Vector2Int matrixPosition)
     {
