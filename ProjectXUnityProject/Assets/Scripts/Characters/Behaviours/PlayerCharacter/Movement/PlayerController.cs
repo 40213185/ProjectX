@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
                                 Debug.Log(clickpos.ToString());
                                 if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
                                 {
+                                    Debug.Log("Walkable");
                                     //get the movetopoints
                                     moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos,movementRange);
                                     //change state
