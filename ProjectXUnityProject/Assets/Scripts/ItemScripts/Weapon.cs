@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Weapon : Item
 {
+<<<<<<< Updated upstream
     public enum EquipmentType {Dagger, Sword, TwoHandedSword, FireBall, IceSpike}
     public enum skills {Stab, Slash, Smash, Throw}
+=======
+    public enum EquipmentType { Dagger, Sword, TwoHandedSword, FireBall, IceSpike }
+    public GameObject[] weaponMeshs;
+    public enum skills { Stab, Slash, Smash, Throw }
+>>>>>>> Stashed changes
     private int rarity;
     private EquipmentType type;
     private skills skill;
     private StatusEffect.EffectType effectType = StatusEffect.EffectType.None;
 
-    public Weapon(string name, string description, int rarity, Vector2 range, int floor)
+
+    public Weapon(int rarity, Vector2 range, int floor)
     {
         type = (EquipmentType)Random.Range(0, 6);
         switch (type)
