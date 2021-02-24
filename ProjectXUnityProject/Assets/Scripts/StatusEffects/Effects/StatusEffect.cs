@@ -4,24 +4,19 @@ using UnityEngine;
 
 public class StatusEffect : MonoBehaviour
 {
-    public enum EffectType
+    public enum EffectType 
     {
-        None,
         Burn,
         Freeze,
         Poisoned,
-        Bleed,
-        Stun,
-        Healing,
-        StrengthBuff,
-        IntBuff
+        Bleed
     }
     private EffectType effectType;
     public int effectDuration;
     private int currentDuration;
     private int currentTurn;
 
-    public StatusEffect(EffectType type, int duration)
+    public StatusEffect(EffectType type,int duration) 
     {
         effectType = type;
         effectDuration = duration;
@@ -29,7 +24,7 @@ public class StatusEffect : MonoBehaviour
         currentTurn = GlobalGameState.turnTime;
     }
 
-    private void TurnTick()
+    private void TurnTick() 
     {
         //apply effect on turn tick
         ///
@@ -38,11 +33,11 @@ public class StatusEffect : MonoBehaviour
         currentDuration--;
     }
 
-    public EffectType GetEffectType()
+    public EffectType GetEffectType() 
     {
         return effectType;
     }
-    public int GetCurrentDuration()
+    public int GetCurrentDuration() 
     {
         return currentDuration;
     }

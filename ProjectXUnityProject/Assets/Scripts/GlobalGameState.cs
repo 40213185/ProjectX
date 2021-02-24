@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class GlobalGameState
 {
-    public enum CombatState { Combat,OutOfCombat }
+    public enum CombatState { OutOfCombat, Combat }
     public static CombatState combatState { get; private set; }
     public static bool _pause { get; private set; }
     public static int turnTime { get; private set; }
