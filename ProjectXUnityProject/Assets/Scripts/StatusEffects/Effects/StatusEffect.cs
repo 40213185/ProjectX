@@ -9,7 +9,12 @@ public class StatusEffect : MonoBehaviour
         Burn,
         Freeze,
         Poisoned,
-        Bleed
+        Bleed,
+        Healing,
+        StrengthBuff,
+        IntBuff,
+        Stun,
+        None
     }
     private EffectType effectType;
     public int effectDuration;
