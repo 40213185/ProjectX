@@ -80,6 +80,7 @@ public class MapGenerator : MonoBehaviour
         //rooms per floor on current floor
         int roomsOnFloor = RoomsPerFloor[GameData.CurrentFloor];
         GenerateMap(roomsOnFloor);
+        foreach (int i in roomType) Debug.Log(i.ToString() + " , ");
         GenerateMapMatrix(roomsOnFloor);
     }
 

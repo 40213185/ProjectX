@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         switch (controllerState) 
         {
@@ -61,9 +61,9 @@ public class PlayerController : MonoBehaviour
                             try
                             {
                                 Debug.Log(clickpos.ToString());
+                                Debug.Log(MapHandler.GetTileTypeFromMatrix(clickpos).ToString());
                                 if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
                                 {
-                                    Debug.Log("Walkable");
                                     //get the movetopoints
                                     moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos,movementRange);
                                     //change state
