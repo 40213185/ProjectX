@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
     private float feetpos;
     private bool freeMove;
 
+    //test
+    public bool combat;
+    public float outofcombatMovementSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,79 +41,81 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (controllerState) 
-        {
-            case ControllerState.Wait:
-                {
-                    //replace code below with map vector points
-                    if (Input.GetMouseButtonDown(0))
+            GlobalGameState.SetCombatState(combat);
+
+        switch (controllerState)
+            {
+                case ControllerState.Wait:
                     {
-                        //disabel free move
-                        freeMove = false;
-                        //set up ray
-                        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                        //create a plane at floor level
-                        Plane hitPlane = new Plane(Vector3.up, new Vector3(0,0,0));
-                        //Plane.Raycast stores the distance from ray.origin to the hit point in this variable
-                        float distance = 0;
-                        //if the ray hits the plane
-                        if (hitPlane.Raycast(ray, out distance))
+                        //replace code below with map vector points
+                        if (Input.GetMouseButtonDown(0))
                         {
-                            //get the hit point
-                            mouseClickPos = ray.GetPoint(distance);
-
-                            //setup for maphandler functions
-                            Vector2Int initpos = new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
-                            Vector2Int clickpos = new Vector2Int(Mathf.FloorToInt(mouseClickPos.x), Mathf.FloorToInt(mouseClickPos.z));
-                            try
+                            //disabel free move
+                            freeMove = false;
+                            //set up ray
+                            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                            //create a plane at floor level
+                            Plane hitPlane = new Plane(Vector3.up, new Vector3(0, 0, 0));
+                            //Plane.Raycast stores the distance from ray.origin to the hit point in this variable
+                            float distance = 0;
+                            //if the ray hits the plane
+                            if (hitPlane.Raycast(ray, out distance))
                             {
-                                Debug.Log(clickpos.ToString());
-                                Debug.Log(MapHandler.GetTileTypeFromMatrix(clickpos).ToString());
-                                if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
-                                {
-                                    //get the movetopoints
-                                    moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos,movementRange);
-                                    //change state
-                                    if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat) controllerState = ControllerState.Move;
-                                    else if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)
-                                    {
-                                        //adjust click position
-                                        mouseClickPos = new Vector3(clickpos.x,feetpos,clickpos.y);
+                                //get the hit point
+                                mouseClickPos = ray.GetPoint(distance);
 
-                                        freeMove = true;
+                                //setup for maphandler functions
+                                Vector2Int initpos = new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
+                                Vector2Int clickpos = new Vector2Int(Mathf.FloorToInt(mouseClickPos.x), Mathf.FloorToInt(mouseClickPos.z));
+                                try
+                                {
+                                    Debug.Log(clickpos.ToString());
+                                    Debug.Log(MapHandler.GetTileTypeFromMatrix(clickpos).ToString());
+                                    if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
+                                    {
+                                        //get the movetopoints
+                                        moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos, movementRange);
+                                        //change state
+                                        if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat) controllerState = ControllerState.Move;
+                                        else if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)
+                                        {
+                                            //adjust click position
+                                            mouseClickPos = new Vector3(clickpos.x, feetpos, clickpos.y);
+
+                                            freeMove = true;
+                                        }
                                     }
                                 }
+                                catch
+                                {
+                                    Debug.Log("Index out of bounds error.");
+                                }
                             }
-                            catch 
-                            {
-                                Debug.Log("Index out of bounds error.");
-                            }
+
                         }
 
+                        //free move if necessary
+                        if (freeMove)
+                        {
+                            //move prediction
+                            Vector3 moveprediction = Vector3.MoveTowards(transform.position, mouseClickPos, outofcombatMovementSpeed * Time.deltaTime);
+                            //get current tiletype for move prediction
+                            if (MapHandler.GetTileTypeFromMatrix(new Vector2Int(Mathf.FloorToInt(moveprediction.x), Mathf.FloorToInt(moveprediction.z))) == MapHandler.TileType.Walkable)
+                                //move if walkable
+                                transform.position = moveprediction;
+                            //else stop moving
+                            else freeMove = false;
+                            //arrived at position
+                            if (transform.position == mouseClickPos) freeMove = false;
+                        }
+                        break;
                     }
-
-                    //free move if necessary
-                    if (freeMove) 
+                case ControllerState.Move:
                     {
-                        //move prediction
-                        Vector3 moveprediction = Vector3.MoveTowards(transform.position, mouseClickPos, movementSpeed * Time.deltaTime);
-                        //get current tiletype for move prediction
-                        if (MapHandler.GetTileTypeFromMatrix(new Vector2Int(Mathf.FloorToInt(moveprediction.x),Mathf.FloorToInt(moveprediction.z))) == MapHandler.TileType.Walkable)
-                            //move if walkable
-                            transform.position = moveprediction;
-                        //else stop moving
-                        else freeMove = false;
-                        //arrived at position
-                        if (transform.position == mouseClickPos) freeMove = false;
+                        if (MoveToPoint()) controllerState = ControllerState.Wait;
+                        break;
                     }
-                    break;
             }
-            case ControllerState.Move:
-                {
-                    if(MoveToPoint()) controllerState = ControllerState.Wait;
-                    break;
-                }
-        }
     }
 
     private bool MoveToPoint()

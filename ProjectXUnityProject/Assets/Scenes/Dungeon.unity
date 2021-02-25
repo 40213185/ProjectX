@@ -363,7 +363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &349255982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,6 +656,8 @@ MonoBehaviour:
   controllerState: 0
   movementSpeed: 0.9
   movementRange: 10
+  combat: 0
+  outofcombatMovementSpeed: 0
 --- !u!4 &1048662750
 Transform:
   m_ObjectHideFlags: 0
