@@ -4,18 +4,30 @@ using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
-    public GameObject playerControllerObject;
     private Animator animationController;
+    private Vector3 directionVector,previousPosition,newPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        previousPosition = transform.position;
+        newPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //store new position
+        newPosition = transform.position;
+
+        //get the new direction vector
+        directionVector = newPosition - previousPosition;
+
+        if(directionVector.magnitude>0)
+            transform.rotation = Quaternion.Euler(0,-90+ Mathf.Atan2(directionVector.z,-directionVector.x)*Mathf.Rad2Deg, 0);
         
+
+        //stores the old position
+        previousPosition = newPosition;
     }
 }

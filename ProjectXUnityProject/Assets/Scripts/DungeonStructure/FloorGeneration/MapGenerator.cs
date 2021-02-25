@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MapGenerator : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class MapGenerator : MonoBehaviour
     private bool[,] roomsBuiltValidation;
     private int[,] roomType;
 
+    public Text mapMatrix;
+
     private void GenerateMap(int roomsOnFloor)
     {
         //room build validation
@@ -21,7 +24,7 @@ public class MapGenerator : MonoBehaviour
         roomsBuiltValidation = new bool[roomsOnFloor, roomsOnFloor];
         for (int x = 0; x < roomsOnFloor; x++)
         {
-            for (int y = 0; y < RoomPrefabs.Length; y++)
+            for (int y = 0; y < roomsOnFloor; y++)
             {
                 roomsBuiltValidation[x, y] = false;
             }
@@ -76,12 +79,21 @@ public class MapGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameData.SetFloor(4);
+        GameData.SetFloor(0);
         //rooms per floor on current floor
         int roomsOnFloor = RoomsPerFloor[GameData.CurrentFloor];
         GenerateMap(roomsOnFloor);
-        foreach (int i in roomType) Debug.Log(i.ToString() + " , ");
         GenerateMapMatrix(roomsOnFloor);
+
+
+        for (int y = 0; y < MapHandler.mapMatrix.GetLength(1); y++)
+        {
+            for (int x = 0; x < MapHandler.mapMatrix.GetLength(0); x++)
+            {
+                mapMatrix.text+=MapHandler.mapMatrix[x,y];
+            }
+            mapMatrix.text += "\n";
+        }
     }
 
     // Update is called once per frame

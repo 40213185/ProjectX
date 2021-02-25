@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     public enum ControllerState 
     {
-        FreeMovement,
         Move,
         SelectAction,
         UseAction,
@@ -17,21 +16,22 @@ public class PlayerController : MonoBehaviour
     private Vector2Int[] moveToPoints;
     public int movementRange;
 
-    //temp vars for testing
+
     private Vector3 mouseClickPos;
     private int moveIndex;
-    private float delay;
     private float feetpos;
+    private bool freeMove;
 
     // Start is called before the first frame update
     void Start()
     {
         controllerState = ControllerState.Wait;
-        GlobalGameState.SetCombatState(true);
+        GlobalGameState.SetCombatState(false);
 
         mouseClickPos = new Vector3();
         feetpos = 0.5f;
         moveIndex = 0;
+        freeMove = false;
     }
 
     // Update is called once per frame
@@ -44,6 +44,9 @@ public class PlayerController : MonoBehaviour
                     //replace code below with map vector points
                     if (Input.GetMouseButtonDown(0))
                     {
+                        //disabel free move
+                        freeMove = false;
+                        //set up ray
                         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                         //create a plane at floor level
                         Plane hitPlane = new Plane(Vector3.up, new Vector3(0,0,0));
@@ -70,8 +73,10 @@ public class PlayerController : MonoBehaviour
                                     if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat) controllerState = ControllerState.Move;
                                     else if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)
                                     {
+                                        //adjust click position
                                         mouseClickPos = new Vector3(clickpos.x,feetpos,clickpos.y);
-                                        controllerState = ControllerState.FreeMovement;
+
+                                        freeMove = true;
                                     }
                                 }
                             }
@@ -82,19 +87,26 @@ public class PlayerController : MonoBehaviour
                         }
 
                     }
+
+                    //free move if necessary
+                    if (freeMove) 
+                    {
+                        //move prediction
+                        Vector3 moveprediction = Vector3.MoveTowards(transform.position, mouseClickPos, movementSpeed * Time.deltaTime);
+                        //get current tiletype for move prediction
+                        if (MapHandler.GetTileTypeFromMatrix(new Vector2Int(Mathf.FloorToInt(moveprediction.x),Mathf.FloorToInt(moveprediction.z))) == MapHandler.TileType.Walkable)
+                            //move if walkable
+                            transform.position = moveprediction;
+                        //else stop moving
+                        else freeMove = false;
+                        //arrived at position
+                        if (transform.position == mouseClickPos) freeMove = false;
+                    }
                     break;
             }
             case ControllerState.Move:
                 {
                     if(MoveToPoint()) controllerState = ControllerState.Wait;
-                    break;
-                }
-            case ControllerState.FreeMovement:
-                {
-                    //move to position
-                    transform.position = Vector3.MoveTowards(transform.position, mouseClickPos, movementSpeed * Time.deltaTime);
-                    //change state
-                    if (transform.position == mouseClickPos) controllerState = ControllerState.Wait;
                     break;
                 }
         }
