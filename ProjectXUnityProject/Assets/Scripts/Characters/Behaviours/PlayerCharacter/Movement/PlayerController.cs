@@ -4,53 +4,68 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public enum ControllerState 
+    public enum CombatControllerState
     {
-        Move,
+        CombatMove,
         SelectAction,
         UseAction,
-        Wait
+        Wait, //this state also handles out of combat behavior
+        Freeze
     }
-    public ControllerState controllerState;
+    //set to public for testing -  reset to private after testing cycle done
+    public CombatControllerState combatControllerState;
     public float movementSpeed;
+    public float outofcombatMovementSpeed;
     private Vector2Int[] moveToPoints;
     public int movementRange;
 
-
+    //mostly movement things
     private Vector3 mouseClickPos;
     private int moveIndex;
     private float feetpos;
+    //free movement is handled outside of controller state
+    //while the state is in wait
     private bool freeMove;
+
+    //combat
+    private bool myTurn;
 
     //test
     public bool combat;
-    public float outofcombatMovementSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        controllerState = ControllerState.Wait;
+        combatControllerState = CombatControllerState.Wait;
         GlobalGameState.SetCombatState(false);
 
         mouseClickPos = new Vector3();
         feetpos = 0.5f;
         moveIndex = 0;
         freeMove = false;
+        MyTurn();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-            GlobalGameState.SetCombatState(combat);
-
-        switch (controllerState)
+        //only perform actions if players turn
+        //this is always set to true outside of combat
+        if (myTurn)
+        {
+            switch (combatControllerState)
             {
-                case ControllerState.Wait:
+                //disable any kind of interaction until conditions are met
+                case CombatControllerState.Freeze:
                     {
-                        //replace code below with map vector points
+                        break;
+                    }
+
+                case CombatControllerState.Wait:
+                    {
                         if (Input.GetMouseButtonDown(0))
                         {
-                            //disabel free move
+                            //disable free move
                             freeMove = false;
                             //set up ray
                             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -69,19 +84,17 @@ public class PlayerController : MonoBehaviour
                                 Vector2Int clickpos = new Vector2Int(Mathf.FloorToInt(mouseClickPos.x), Mathf.FloorToInt(mouseClickPos.z));
                                 try
                                 {
-                                    Debug.Log(clickpos.ToString());
-                                    Debug.Log(MapHandler.GetTileTypeFromMatrix(clickpos).ToString());
                                     if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
                                     {
                                         //get the movetopoints
                                         moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos, movementRange);
                                         //change state
-                                        if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat) controllerState = ControllerState.Move;
+                                        if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat && myTurn) combatControllerState = CombatControllerState.CombatMove;
                                         else if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)
                                         {
                                             //adjust click position
                                             mouseClickPos = new Vector3(clickpos.x, feetpos, clickpos.y);
-
+                                            //free movement handled inside state, below
                                             freeMove = true;
                                         }
                                     }
@@ -94,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
                         }
 
-                        //free move if necessary
+                        //free move if out of combat
                         if (freeMove)
                         {
                             //move prediction
@@ -106,31 +119,64 @@ public class PlayerController : MonoBehaviour
                             //else stop moving
                             else freeMove = false;
                             //arrived at position
-                            if (transform.position == mouseClickPos) freeMove = false;
+                            if (transform.position == mouseClickPos) freeMove = false; //stop moving
                         }
                         break;
                     }
-                case ControllerState.Move:
+
+                //combat movement
+                case CombatControllerState.CombatMove:
                     {
-                        if (MoveToPoint()) controllerState = ControllerState.Wait;
+                        if (MoveToPoint()) combatControllerState = CombatControllerState.Wait;
                         break;
                     }
             }
+        }
     }
 
     private bool MoveToPoint()
     {
+        //if it hasnt reached the array point limit + 1
         if (moveIndex < moveToPoints.Length)
         {
+            //get the next move point
             Vector3 movePoint = new Vector3(moveToPoints[moveIndex].x, feetpos, moveToPoints[moveIndex].y);
+            //move towards that point
             transform.position = Vector3.MoveTowards(transform.position, movePoint, movementSpeed * Time.deltaTime);
+            //once reached go to next index
             if (transform.position == movePoint) moveIndex++;
+            //not reached last point return false
             return false;
         }
+        //over the array limit
         else
         {
+            //reset index for next movement
             moveIndex = 0;
+            //return finished
             return true;
         }
+    }
+
+    /// <summary>
+    /// set to bool value. true=player able to move during combat, false=movement disabled
+    /// </summary>
+    /// <param name="value"></param>
+    public void CombatStartPhase()
+    {
+        //disable all actions
+        combatControllerState = CombatControllerState.Freeze;
+        myTurn = false;
+        CombatHandler.StartCombat(gameObject);
+    }
+
+    public void MyTurn() 
+    {
+        myTurn = true;
+    }
+
+    public void EndTurn() 
+    {
+        myTurn = false;
     }
 }

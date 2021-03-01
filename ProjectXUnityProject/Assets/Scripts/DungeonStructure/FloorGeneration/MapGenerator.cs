@@ -14,8 +14,6 @@ public class MapGenerator : MonoBehaviour
     private bool[,] roomsBuiltValidation;
     private int[,] roomType;
 
-    public Text mapMatrix;
-
     private void GenerateMap(int roomsOnFloor)
     {
         //room build validation
@@ -85,15 +83,6 @@ public class MapGenerator : MonoBehaviour
         GenerateMap(roomsOnFloor);
         GenerateMapMatrix(roomsOnFloor);
 
-
-        for (int y = 0; y < MapHandler.mapMatrix.GetLength(1); y++)
-        {
-            for (int x = 0; x < MapHandler.mapMatrix.GetLength(0); x++)
-            {
-                mapMatrix.text+=MapHandler.mapMatrix[x,y];
-            }
-            mapMatrix.text += "\n";
-        }
     }
 
     // Update is called once per frame

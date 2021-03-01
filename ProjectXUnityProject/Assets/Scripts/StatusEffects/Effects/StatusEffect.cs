@@ -26,7 +26,7 @@ public class StatusEffect : MonoBehaviour
         effectType = type;
         effectDuration = duration;
         currentDuration = effectDuration;
-        currentTurn = GlobalGameState.turnTime;
+        currentTurn = CombatHandler.turnTime;
     }
 
     private void TurnTick() 
@@ -49,6 +49,6 @@ public class StatusEffect : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if (GlobalGameState.turnTime != currentTurn) TurnTick();
+        if (CombatHandler.turnTime != currentTurn) TurnTick();
     }
 }
