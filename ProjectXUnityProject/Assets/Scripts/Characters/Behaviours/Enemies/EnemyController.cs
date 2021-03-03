@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    //stats
+    Stats stats;
+
     public enum State {
     Idle,
     Wait,
@@ -14,10 +17,13 @@ public class EnemyController : MonoBehaviour
     private State actionState;
     private bool myTurn; //used to update the controller. Only updates when true
 
+    public EnemyLibrary.EnemyType enemyType;
+
     // Start is called before the first frame update
     void Start()
     {
         actionState = State.Idle;
+        stats = EnemyLibrary.GetEnemyStats(enemyType);
     }
 
     // Update is called once per frame

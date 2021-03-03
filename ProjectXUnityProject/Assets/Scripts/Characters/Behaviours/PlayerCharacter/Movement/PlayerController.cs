@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //stats
+    Stats stats;
+
     public enum CombatControllerState
     {
         CombatMove,
@@ -30,12 +33,11 @@ public class PlayerController : MonoBehaviour
     //combat
     private bool myTurn;
 
-    //test
-    public bool combat;
-
     // Start is called before the first frame update
     void Start()
     {
+        stats = new Stats(10, 3);
+
         combatControllerState = CombatControllerState.Wait;
         GlobalGameState.SetCombatState(false);
 
@@ -113,7 +115,7 @@ public class PlayerController : MonoBehaviour
                             //move prediction
                             Vector3 moveprediction = Vector3.MoveTowards(transform.position, mouseClickPos, outofcombatMovementSpeed * Time.deltaTime);
                             //get current tiletype for move prediction
-                            if (MapHandler.GetTileTypeFromMatrix(new Vector2Int(Mathf.FloorToInt(moveprediction.x), Mathf.FloorToInt(moveprediction.z))) == MapHandler.TileType.Walkable)
+                            if (MapHandler.GetTileTypeFromMatrix(new Vector2Int(Mathf.FloorToInt(moveprediction.x+(moveprediction.normalized.x)), Mathf.FloorToInt(moveprediction.z+moveprediction.normalized.z))) == MapHandler.TileType.Walkable)
                                 //move if walkable
                                 transform.position = moveprediction;
                             //else stop moving

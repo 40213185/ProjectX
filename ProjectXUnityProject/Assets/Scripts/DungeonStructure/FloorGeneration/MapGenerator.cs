@@ -13,6 +13,7 @@ public class MapGenerator : MonoBehaviour
     public int[] RoomsPerFloor;
     private bool[,] roomsBuiltValidation;
     private int[,] roomType;
+    public GameObject player;
 
     private void GenerateMap(int roomsOnFloor)
     {
@@ -74,6 +75,11 @@ public class MapGenerator : MonoBehaviour
         MapHandler.GenerateMapMatrix(roomsBuiltValidation, roomType);
     }
 
+    private void PositionPlayer() 
+    {
+        Instantiate(player, new Vector3(1, 1, 1), player.transform.rotation);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +88,7 @@ public class MapGenerator : MonoBehaviour
         int roomsOnFloor = RoomsPerFloor[GameData.CurrentFloor];
         GenerateMap(roomsOnFloor);
         GenerateMapMatrix(roomsOnFloor);
-
+        PositionPlayer();
     }
 
     // Update is called once per frame
