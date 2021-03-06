@@ -7,32 +7,39 @@ public static class CombatHandler
     public static int turnTime { get; private set; }
 
     //set combatants for turn order and individual turn passing
-    public static List<GameObject> _combatants;
+    public static GameObject[] _combatants;
     //index pointer for current combatant turn
     private static int combatantPointer;
 
-    private static void ResetCombat() 
+    private static void ResetCombat(GameObject[] combatants) 
     {
+        //set list of combatants/battle participants
+        _combatants = combatants; 
+        
+        Debug.Log(_combatants.Length.ToString());
+        for (int i = 0; i < _combatants.Length; i++)
+        {
+            if (_combatants[i] == null) Debug.Log("null");else Debug.Log(_combatants[i].tag .ToString());
+        }
+        //reset turn time
         turnTime = 0;
-        if (_combatants == null) _combatants = new List<GameObject>();
-        else _combatants.Clear();
+        //set pointer to the first combatant index
         combatantPointer = 0;
     }
 
-    public static void Init()
+    public static void StartCombat(GameObject[] combatants)
     {
-        ResetCombat();
-    }
-    public static void StartCombat(GameObject combatant)
-    {
-        //reset combat handler if its the first run
-        if (turnTime != 0) ResetCombat();
-        //add combatant to the list
-        _combatants.Add(combatant);
+        //set global state
+        GlobalGameState.SetCombatState(true);
 
-        //set them to their respective combat start phase state
-        if (combatant.tag == "Player") combatant.GetComponent<PlayerController>().CombatStartPhase();
-        else if (combatant.tag == "Enemy") combatant.GetComponent<EnemyController>().CombatStart();
+        //if its the fist call of combat handling
+        if (_combatants==null) CombatHandler.ResetCombat(combatants);
+        for (int i = 0; i < _combatants.Length; i++)
+        {
+            //set them to their respective combat start phase state
+            if (_combatants[i].transform.tag == "Player") _combatants[i].GetComponent<PlayerController>().CombatStartPhase();
+            else if (_combatants[i].transform.tag == "Enemy") _combatants[i].GetComponent<EnemyController>().CombatStart();
+        }
     }
 
     public static void AddTurnTime()
@@ -47,11 +54,11 @@ public static class CombatHandler
     public static void NextCombatantTurn() 
     {
         //end turn
-        if (_combatants[combatantPointer].tag == "Player") _combatants[combatantPointer].GetComponent<PlayerController>().EndTurn();
+        if (_combatants[combatantPointer].tag == "Player") _combatants[combatantPointer].GetComponent<PlayerControllerCombat>().EndTurn();
         else if (_combatants[combatantPointer].tag == "Enemy") _combatants[combatantPointer].GetComponent<EnemyController>().EndTurn();
 
         //increment counter
-        if (combatantPointer >= _combatants.Count)
+        if (combatantPointer >= _combatants.Length-1)
         {
             AddTurnTime();
             combatantPointer = 0;
@@ -59,8 +66,14 @@ public static class CombatHandler
         else combatantPointer++;
 
         //set turn for next combatant
-        if (_combatants[combatantPointer].tag == "Player") _combatants[combatantPointer].GetComponent<PlayerController>().MyTurn();
+        if (_combatants[combatantPointer].tag == "Player") _combatants[combatantPointer].GetComponent<PlayerControllerCombat>().MyTurn();
         else if (_combatants[combatantPointer].tag == "Enemy") _combatants[combatantPointer].GetComponent<EnemyController>().MyTurn();
 
+    }
+
+    public static void EndCombat() 
+    {
+        //clear combatants list
+        _combatants=null;
     }
 }

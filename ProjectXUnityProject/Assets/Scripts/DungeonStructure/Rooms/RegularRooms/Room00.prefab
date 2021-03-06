@@ -3170,6 +3170,7 @@ GameObject:
   - component: {fileID: 8237728193747979426}
   - component: {fileID: 2723525794838892904}
   - component: {fileID: 7932839217952157147}
+  - component: {fileID: 3159599498580355981}
   m_Layer: 0
   m_Name: Room00
   m_TagString: Untagged
@@ -3218,6 +3219,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 25, y: 3, z: 25}
   m_Center: {x: 12, y: 0, z: 12}
+--- !u!114 &3159599498580355981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237728193747979427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3a46526527e624db265d59818a51ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyList:
+  - {fileID: 6236241332086102608, guid: d7d1924106f1d06449e93df13a4ac2b8, type: 3}
+  - {fileID: 6236241332086102608, guid: d7d1924106f1d06449e93df13a4ac2b8, type: 3}
+  - {fileID: 6236241332086102608, guid: d7d1924106f1d06449e93df13a4ac2b8, type: 3}
+  enemySpawnMin: 1
+  enemySpawnMax: 3
 --- !u!1 &8237728194192066409
 GameObject:
   m_ObjectHideFlags: 0

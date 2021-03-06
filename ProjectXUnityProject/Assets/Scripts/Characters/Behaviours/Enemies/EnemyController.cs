@@ -41,7 +41,6 @@ public class EnemyController : MonoBehaviour
     {
         actionState = State.Wait;
         myTurn = false;
-        CombatHandler.StartCombat(gameObject);
     }
 
     public void MyTurn()

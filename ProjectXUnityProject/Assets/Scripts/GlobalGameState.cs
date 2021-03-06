@@ -16,11 +16,7 @@ public static class GlobalGameState
     }
     public static void SetCombatState(bool inCombat) 
     {
-        if (inCombat)
-        {
-            combatState = CombatState.Combat;
-            CombatHandler.Init();
-        }
+        if (inCombat) combatState = CombatState.Combat;
         else combatState = CombatState.OutOfCombat;
     }
 }
