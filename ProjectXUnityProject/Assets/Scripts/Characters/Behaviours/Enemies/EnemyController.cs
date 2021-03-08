@@ -6,24 +6,36 @@ public class EnemyController : MonoBehaviour
 {
     //stats
     Stats stats;
+    //camera
+    public Camera controllerCamera;
 
     public enum State {
     Idle,
     Wait,
     Move,
-    Action
+    Action,
+    TurnEnd
     }
 
-    private State actionState;
+    public State actionState;
     private bool myTurn; //used to update the controller. Only updates when true
 
     public EnemyLibrary.EnemyType enemyType;
+    public float movementSpeed;
+
+    private Vector2Int[] movePoints;
+    private int pointPick;
+
+    //player reference
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        actionState = State.Idle;
+        //actionState = State.Idle;
         stats = EnemyLibrary.GetEnemyStats(enemyType);
+
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -31,9 +43,57 @@ public class EnemyController : MonoBehaviour
     {
         if (myTurn)
         {
-            //
-            //perform turn logic here
-            //
+            switch (actionState)
+            {
+                case State.Wait:
+                    {
+                        //movement decision
+                        movePoints = EnemyLibrary.GetPossibleMovementPoints(enemyType, GetMatrixPos());
+                        //if there are valid movement points
+                        if (movePoints.Length > 0)
+                        {
+                            //reset pointpick
+                            pointPick = 0;
+                            //create player vector2Int reference
+                            Vector2Int playerPos = new Vector2Int(Mathf.FloorToInt(player.transform.position.x),
+                                Mathf.FloorToInt(player.transform.position.z));
+                            //pick movement point
+                            for (int i = 0; i < movePoints.Length; i++) 
+                            {
+                                //choose new point if the distance to the player is smaller
+                                if ((movePoints[i] - playerPos).magnitude < (movePoints[pointPick] - playerPos).magnitude)
+                                    pointPick = i;
+                            }
+                            //move
+                            actionState = State.Move;
+                        }
+                        //end turn if no points to move to (in case of piece blocked)
+                        else 
+                        {
+                            actionState = State.TurnEnd;
+                        }
+                        break;
+                    }
+                case State.Move:
+                    {
+                        transform.position = Vector3.MoveTowards(transform.position,
+                            new Vector3(movePoints[pointPick].x, 0, movePoints[pointPick].y),
+                            movementSpeed * Time.deltaTime);
+                        if (transform.position.x == movePoints[pointPick].x &&
+                            transform.position.z == movePoints[pointPick].y)
+                            actionState = State.TurnEnd;
+                        break;
+                    }
+                case State.Action:
+                    {
+                        break;
+                    }
+                case State.TurnEnd: 
+                    {
+                        EndTurn();
+                        break;
+                    }
+            }
         }
     }
 
@@ -45,11 +105,30 @@ public class EnemyController : MonoBehaviour
 
     public void MyTurn()
     {
+        //set camera
+        controllerCamera.enabled = true;
+        //set initial state
+        actionState = State.Wait;
+        //tick effects
+        if (GetComponent<StatusEffect>())
+        {
+            foreach (StatusEffect effect in GetComponents<StatusEffect>())
+                effect.TurnTick();
+        }
+        //play
         myTurn = true;
     }
 
     public void EndTurn()
     {
+        controllerCamera.enabled = false;
+        actionState = State.Idle;
         myTurn = false;
+        CombatHandler.NextCombatantTurn();
+    }
+
+    private Vector2Int GetMatrixPos() 
+    {
+        return new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
     }
 }

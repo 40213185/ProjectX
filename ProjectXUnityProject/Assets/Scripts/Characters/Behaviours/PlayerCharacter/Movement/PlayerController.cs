@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     //stats
     private Stats stats;
 
+    //camera
+    public Camera controllerCamera;
+
     //combatController
     private PlayerControllerCombat combatController;
 
@@ -130,4 +133,8 @@ public class PlayerController : MonoBehaviour
         enabled = false;
     }
 
+    public void OnEnable()
+    {
+        controllerCamera.enabled = true;
+    }
 }

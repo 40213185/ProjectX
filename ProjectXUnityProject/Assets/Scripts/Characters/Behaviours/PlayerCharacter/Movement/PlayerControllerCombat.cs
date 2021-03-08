@@ -6,13 +6,16 @@ public class PlayerControllerCombat : MonoBehaviour
 {
     //stats
     private Stats stats;
+    //camera
+    public Camera controllerCamera;
 
     public enum CombatControllerState
     {
         CombatMove,
         SelectAction,
         UseAction,
-        Wait, //this state also handles out of combat behavior
+        Wait,
+        EndTurn,
         Freeze
     }
     //set to public for testing -  reset to private after testing cycle done
@@ -34,12 +37,11 @@ public class PlayerControllerCombat : MonoBehaviour
     {
         stats = new Stats(10, 3);
 
-        combatControllerState = CombatControllerState.Wait;
+        combatControllerState = CombatControllerState.Freeze;
 
         mouseClickPos = new Vector3();
         feetpos = 0.5f;
         moveIndex = 0;
-        MyTurn();       //set to initial turn for testing purposes
     }
 
     // Update is called once per frame
@@ -110,7 +112,14 @@ public class PlayerControllerCombat : MonoBehaviour
                 //combat movement
                 case CombatControllerState.CombatMove:
                     {
-                        if (MoveToPoint()) combatControllerState = CombatControllerState.Wait;
+                        if (MoveToPoint()) combatControllerState = CombatControllerState.EndTurn;
+                        break;
+                    }
+
+                //end turn
+                case CombatControllerState.EndTurn:
+                    {
+                        EndTurn();
                         break;
                     }
             }
@@ -175,11 +184,16 @@ public class PlayerControllerCombat : MonoBehaviour
 
     public void MyTurn()
     {
+        controllerCamera.enabled = true;
+        combatControllerState = CombatControllerState.Wait;
         myTurn = true;
     }
 
     public void EndTurn()
     {
+        controllerCamera.enabled = false;
+        combatControllerState = CombatControllerState.Freeze;
         myTurn = false;
+        CombatHandler.NextCombatantTurn();
     }
 }

@@ -283,12 +283,19 @@ public static class MapHandler
     }
     public static TileType GetTileTypeFromMatrix(Vector2Int matrixPosition)
     {
-        switch (mapMatrix[matrixPosition.x, matrixPosition.y])
+        try
         {
-            case 0: return TileType.Empty;
-            case 1: return TileType.Walkable;
-            case 2: return TileType.Obstacle;
-            default: return TileType.None;
+            switch (mapMatrix[matrixPosition.x, matrixPosition.y])
+            {
+                case 0: return TileType.Empty;
+                case 1: return TileType.Walkable;
+                case 2: return TileType.Obstacle;
+                default: return TileType.None;
+            }
+        }
+        catch 
+        {
+            return TileType.Obstacle;
         }
     }
     public static TileType GetTileTypeFromPosition(Vector3 position)
