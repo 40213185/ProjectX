@@ -11,19 +11,22 @@ public class MapGenerator : MonoBehaviour
     //Room00: 20x20 floor
     public GameObject[] RoomPrefabs;
     public int[] RoomsPerFloor;
-    private bool[,] roomsBuiltValidation;
+    public bool[,] roomsBuiltValidation { get; private set; }
     private int[,] roomType;
     public GameObject player;
+    public List<GameObject> rooms { get; private set; }
 
     private void GenerateMap(int roomsOnFloor)
     {
+        //save rooms setup
+        rooms = new List<GameObject>();
         //room build validation
         //this is initialized as false and set to true when a room is placed
         //used to check and avoid room overlapping
         roomsBuiltValidation = new bool[roomsOnFloor, roomsOnFloor];
-        for (int x = 0; x < roomsOnFloor; x++)
+        for (int y = 0; y < roomsOnFloor; y++)
         {
-            for (int y = 0; y < roomsOnFloor; y++)
+            for (int x = 0; x < roomsOnFloor; x++)
             {
                 roomsBuiltValidation[x, y] = false;
             }
@@ -40,17 +43,20 @@ public class MapGenerator : MonoBehaviour
             {
                 //pick a room
                 int pick = Random.Range(0, RoomPrefabs.Length);
-                Instantiate(RoomPrefabs[pick], new Vector3(pointer.x * MapHandler.roomSizex, 0, pointer.y * MapHandler.roomSizey), RoomPrefabs[pick].transform.rotation);
+                //create room and store it
+                rooms.Add(Instantiate(RoomPrefabs[pick], new Vector3(pointer.x * MapHandler.roomSizex, 0, pointer.y * MapHandler.roomSizey), RoomPrefabs[pick].transform.rotation));
+                //set room built here
                 roomsBuiltValidation[pointer.x, pointer.y] = true;
+                //store room type
                 roomType[pointer.x, pointer.y] = pick;
             }
             //create possible room placement array
             List<Vector2Int> possiblePlacements = new List<Vector2Int>();
             //populate list
-            for (int x = 0; x < roomsOnFloor; x++)
+            for (int y = 0; y < roomsOnFloor; y++)
             {
-                for (int y = 0; y < roomsOnFloor; y++)
-                {
+                for (int x = 0; x < roomsOnFloor; x++)
+                { 
                     //if theres no room placed
                     if (!roomsBuiltValidation[x, y])
                     {
@@ -77,7 +83,7 @@ public class MapGenerator : MonoBehaviour
 
     private void PositionPlayer() 
     {
-        Instantiate(player, new Vector3(1, 1, 1), player.transform.rotation);
+        Instantiate(player, new Vector3(1, 0, 1), player.transform.rotation);
     }
 
     // Start is called before the first frame update

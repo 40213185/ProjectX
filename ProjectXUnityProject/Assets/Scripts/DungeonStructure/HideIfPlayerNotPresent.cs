@@ -6,13 +6,11 @@ using UnityEngine;
 
 public class HideIfPlayerNotPresent : MonoBehaviour
 {
-    private GameObject player;
     public GameObject hideThis;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         hideThis.SetActive(false);
         GetComponent<BoxCollider>().isTrigger = true;
     }
@@ -38,6 +36,8 @@ public class HideIfPlayerNotPresent : MonoBehaviour
     {
         if (other.gameObject.transform.tag == "Player")
         {
+            //spawn portals
+            gameObject.GetComponent<PortalContainer>().ActivatePortalPipeline();
             //spawn if there is an enemy spawner
             if (GetComponent<EnemySpawner>()) GetComponent<EnemySpawner>().CheckAndPlaceEnemies();
 

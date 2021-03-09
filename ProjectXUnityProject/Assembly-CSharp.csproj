@@ -71,12 +71,15 @@
     <Compile Include="Assets\Scripts\DungeonStructure\FloorGeneration\MapHandler.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\Item.cs" />
+    <Compile Include="Assets\test.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Movement\PlayerControllerCombat.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyLibrary.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\HideIfPlayerNotPresent.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyController.cs" />
-    <Compile Include="Assets\test.cs" />
+    <Compile Include="Assets\Scripts\DungeonStructure\Portal\PortalBehavior.cs" />
+    <Compile Include="Assets\Scripts\DungeonStructure\Portal\triggered.cs" />
+    <Compile Include="Assets\Scripts\DungeonStructure\PortalContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

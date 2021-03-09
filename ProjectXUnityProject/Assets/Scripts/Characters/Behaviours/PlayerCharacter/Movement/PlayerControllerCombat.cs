@@ -40,7 +40,7 @@ public class PlayerControllerCombat : MonoBehaviour
         combatControllerState = CombatControllerState.Freeze;
 
         mouseClickPos = new Vector3();
-        feetpos = 0.5f;
+        feetpos = 0;
         moveIndex = 0;
     }
 
