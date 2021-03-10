@@ -28,6 +28,9 @@ public class PlayerControllerCombat : MonoBehaviour
     private Vector3 mouseClickPos;
     private int moveIndex;
     private float feetpos;
+    public float waitTime;
+    private float waitTimer;
+    private bool wait;
 
     //combat
     private bool myTurn;
@@ -42,6 +45,9 @@ public class PlayerControllerCombat : MonoBehaviour
         mouseClickPos = new Vector3();
         feetpos = 0;
         moveIndex = 0;
+
+        waitTimer = Time.time + waitTime;
+        wait = false;
     }
 
     // Update is called once per frame
@@ -153,24 +159,38 @@ public class PlayerControllerCombat : MonoBehaviour
         //if it hasnt reached the array point limit + 1
         if (moveIndex < moveToPoints.Length)
         {
-            //get the next move point
-            Vector3 movePoint = new Vector3(moveToPoints[moveIndex].x, feetpos, moveToPoints[moveIndex].y);
-            if (CanMove(new Vector2Int(Mathf.FloorToInt(movePoint.x), Mathf.FloorToInt(movePoint.z))))
+            if (!wait)
             {
-                //move towards that point
-                transform.position = Vector3.MoveTowards(transform.position, movePoint, movementSpeed * Time.deltaTime);
-                //once reached go to next index
-                if (transform.position == movePoint) moveIndex++;
-                //not reached last point return false
+                //get the next move point
+                Vector3 movePoint = new Vector3(moveToPoints[moveIndex].x, feetpos, moveToPoints[moveIndex].y);
+                if (CanMove(new Vector2Int(Mathf.FloorToInt(movePoint.x), Mathf.FloorToInt(movePoint.z))))
+                {
+                    //move towards that point
+                    transform.position = Vector3.MoveTowards(transform.position, movePoint, movementSpeed * Time.deltaTime);
+                    //once reached go to next index
+                    if (transform.position == movePoint)
+                    {
+                        moveIndex++;
+                        wait = true;
+                        waitTimer = Time.time + waitTime;
+                    }
+                    //not reached last point return false
+                    return false;
+                }
+                else
+                {
+                    //reset index for next movement
+                    moveIndex = 0;
+                    //return finished
+                    return true;
+                }
+            }
+            else if (waitTimer < Time.time)
+            {
+                wait = false;
                 return false;
             }
-            else
-            {
-                //reset index for next movement
-                moveIndex = 0;
-                //return finished
-                return true;
-            }
+            else return false;
         }
         //over the array limit
         else

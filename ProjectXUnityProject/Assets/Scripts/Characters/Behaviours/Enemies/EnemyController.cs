@@ -22,6 +22,10 @@ public class EnemyController : MonoBehaviour
 
     public EnemyLibrary.EnemyType enemyType;
     public float movementSpeed;
+    private Vector3 nextPoint;
+    public float waitTime;
+    private float waitTimer;
+    private bool wait;
 
     private Vector2Int[] movePoints;
     private int pointPick;
@@ -36,6 +40,9 @@ public class EnemyController : MonoBehaviour
         stats = EnemyLibrary.GetEnemyStats(enemyType);
 
         player = GameObject.FindGameObjectWithTag("Player");
+
+        waitTimer = Time.time + waitTime;
+        wait = false;
     }
 
     // Update is called once per frame
@@ -64,6 +71,9 @@ public class EnemyController : MonoBehaviour
                                 if ((movePoints[i] - playerPos).magnitude < (movePoints[pointPick] - playerPos).magnitude)
                                     pointPick = i;
                             }
+                            //ajust timing
+                            wait = true;
+                            waitTimer = Time.time + waitTime;
                             //move
                             actionState = State.Move;
                         }
@@ -76,12 +86,25 @@ public class EnemyController : MonoBehaviour
                     }
                 case State.Move:
                     {
-                        transform.position = Vector3.MoveTowards(transform.position,
-                            new Vector3(movePoints[pointPick].x, 0, movePoints[pointPick].y),
-                            movementSpeed * Time.deltaTime);
-                        if (transform.position.x == movePoints[pointPick].x &&
-                            transform.position.z == movePoints[pointPick].y)
-                            actionState = State.TurnEnd;
+                        if (!wait)
+                        {
+                            transform.position = Vector3.MoveTowards(transform.position,
+                                   nextPoint,
+                                   movementSpeed * Time.deltaTime);
+                            if (transform.position == nextPoint)
+                            {
+                                waitTimer = Time.time + waitTime;
+                                wait = true;
+                            }
+                            if (transform.position.x == movePoints[pointPick].x &&
+                                transform.position.z == movePoints[pointPick].y)
+                                actionState = State.TurnEnd;
+                        }
+                        else if (waitTimer < Time.time)
+                        {
+                            nextPoint = GetNextMovePoint();
+                            wait = false;
+                        }
                         break;
                     }
                 case State.Action:
@@ -95,6 +118,17 @@ public class EnemyController : MonoBehaviour
                     }
             }
         }
+    }
+
+    private Vector3 GetNextMovePoint() 
+    {
+        Vector3 lastPoint = new Vector3(movePoints[pointPick].x, 0, movePoints[pointPick].y);
+        Vector3 point = transform.position+(lastPoint-transform.position).normalized;
+        point = new Vector3(Mathf.RoundToInt(point.x), 0, Mathf.RoundToInt(point.z));
+
+        Debug.Log(string.Format("{0}->{1}->{2}",transform.position,point,lastPoint));
+        
+        return point;
     }
 
     public void CombatStart() 

@@ -23,7 +23,7 @@ public class triggered : MonoBehaviour
             if (Time.time > delay)
             {
                 trig = true;
-                Debug.Log("Activated");
+
                 delay = Time.time + 3.0f;
             }
         }
@@ -34,7 +34,6 @@ public class triggered : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             trig = false;
-            Debug.Log("Deactivated");
         }
     }
 }

@@ -42,12 +42,10 @@ public class PortalContainer : MonoBehaviour
         if ((x < mapGenerator.GetComponent<MapGenerator>().roomsBuiltValidation.GetLength(0) && x >= 0) &&
             (y < mapGenerator.GetComponent<MapGenerator>().roomsBuiltValidation.GetLength(1) && y >= 0))
         {
-            Debug.Log("Valid index position");
+
             //check if theres a room using room validation in map generator
             if (mapGenerator.GetComponent<MapGenerator>().roomsBuiltValidation[Mathf.FloorToInt(transform.position.x / MapHandler.roomSizex) + x, Mathf.FloorToInt(transform.position.z / MapHandler.roomSizey) + y])
             {
-                Debug.Log("Checking room at index position: " + (Mathf.FloorToInt(transform.position.x / MapHandler.roomSizex) + x).ToString() + " : " +
-                    (Mathf.FloorToInt(transform.position.z / MapHandler.roomSizey) + y).ToString());
                 //get room
                 for (int i = 0; i < mapGenerator.GetComponent<MapGenerator>().rooms.Count; i++)
                 {
@@ -57,8 +55,6 @@ public class PortalContainer : MonoBehaviour
                        mapGenerator.GetComponent<MapGenerator>().rooms[i].transform.position.z ==
                         transform.position.z + y * MapHandler.roomSizey)
                     {
-                        Debug.Log("RoomFound at " + mapGenerator.GetComponent<MapGenerator>().rooms[i].transform.position.ToString());
-
                         //get the portal closest to it
                         int closestPortalCurrent = 0;
                         //get the closest portal point on the other rooms portals
@@ -96,7 +92,6 @@ public class PortalContainer : MonoBehaviour
                             mapGenerator.GetComponent<MapGenerator>().rooms[i].GetComponent<PortalContainer>().portalContainer[closestPortalFurthest]);
                         mapGenerator.GetComponent<MapGenerator>().rooms[i].GetComponent<PortalContainer>().portalContainer[closestPortalFurthest].GetComponent<PortalBehavior>().SetTeleportPos(
                             portalContainer[closestPortalCurrent]);
-                        Debug.Log("Portal activated");
                         break;
                     }
                 }
