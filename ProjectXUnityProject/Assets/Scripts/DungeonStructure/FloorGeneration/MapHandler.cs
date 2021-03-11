@@ -173,12 +173,12 @@ public static class MapHandler
         {
             for (int y = 0; y < roomPositionValidation.GetLength(1); y++)
             {
-                mapMatrix[y, x] = 0;
+                mapMatrix[x, y] = 0;
             }
         }
 
         //go through matrix
-        for (int x = 0; x < roomPositionValidation.GetLength(0); x++)
+            for (int x = 0; x < roomPositionValidation.GetLength(0); x++)
         {
             for (int y = 0; y < roomPositionValidation.GetLength(1); y++)
             {
@@ -188,19 +188,19 @@ public static class MapHandler
                     //pointer for room matrix
                     Vector2Int pointer = new Vector2Int(0,0);
                     //fill with appropriate data
-                    for (int xx = x*roomSizex; xx < (x*roomSizex)+roomSizex; xx++)
+                    for (int yy = y * roomSizey; yy < (y * roomSizey) + roomSizey; yy++)
                     {
-                        for (int yy = y * roomSizey; yy < (y * roomSizey) + roomSizey; yy++)
+                        for (int xx = x * roomSizex; xx < (x * roomSizex) + roomSizex; xx++)
                         {
-                            mapMatrix[xx, yy] = roomMatrixes[roomType[y, x]][pointer.y, pointer.x];
+                            mapMatrix[xx, yy] = roomMatrixes[roomType[x, y]][pointer.y, pointer.x];
 
-                            //increment pointer y
-                            pointer.y++;
+                            //increment pointer x
+                            pointer.x++;
                         }
-                        //increment pointer x
-                        pointer.x++;
+                        //increment pointer y
+                        pointer.y++;
                         //reset pointer y
-                        pointer.y = 0;
+                        pointer.x = 0;
                     }
                 }
             }
@@ -283,12 +283,19 @@ public static class MapHandler
     }
     public static TileType GetTileTypeFromMatrix(Vector2Int matrixPosition)
     {
-        switch (mapMatrix[matrixPosition.x, matrixPosition.y])
+        try
         {
-            case 0: return TileType.Empty;
-            case 1: return TileType.Walkable;
-            case 2: return TileType.Obstacle;
-            default: return TileType.None;
+            switch (mapMatrix[matrixPosition.x, matrixPosition.y])
+            {
+                case 0: return TileType.Empty;
+                case 1: return TileType.Walkable;
+                case 2: return TileType.Obstacle;
+                default: return TileType.None;
+            }
+        }
+        catch 
+        {
+            return TileType.Obstacle;
         }
     }
     public static TileType GetTileTypeFromPosition(Vector3 position)

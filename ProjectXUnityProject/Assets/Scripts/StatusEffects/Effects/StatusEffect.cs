@@ -17,19 +17,20 @@ public class StatusEffect : MonoBehaviour
         None
     }
     private EffectType effectType;
-    public int effectDuration;
+    public int effectDuration { get; private set; }
     private int currentDuration;
-    private int currentTurn;
+    public int effectPotency { get; private set; }
 
-    public StatusEffect(EffectType type,int duration) 
+
+    public void setStatusEffect(EffectType type,int duration,int potency) 
     {
         effectType = type;
         effectDuration = duration;
         currentDuration = effectDuration;
-        currentTurn = CombatHandler.turnTime;
+        effectPotency = potency;
     }
 
-    private void TurnTick() 
+    public void TurnTick() 
     {
         //apply effect on turn tick
         ///
@@ -47,8 +48,4 @@ public class StatusEffect : MonoBehaviour
         return currentDuration;
     }
 
-    public void FixedUpdate()
-    {
-        if (CombatHandler.turnTime != currentTurn) TurnTick();
-    }
 }

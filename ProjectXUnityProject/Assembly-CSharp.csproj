@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GlobalGameState.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\InventorySystem.cs" />
+    <Compile Include="Assets\Scripts\DungeonStructure\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\StatusEffects\Stats\Stats.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Movement\PlayerAnimationController.cs" />
     <Compile Include="Assets\Scripts\CombatHandling\CombatHandler.cs" />
@@ -70,10 +71,15 @@
     <Compile Include="Assets\Scripts\DungeonStructure\FloorGeneration\MapHandler.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\Item.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyController.cs" />
+    <Compile Include="Assets\test.cs" />
+    <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Movement\PlayerControllerCombat.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyLibrary.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\HideIfPlayerNotPresent.cs" />
+    <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\DungeonStructure\Portal\PortalBehavior.cs" />
+    <Compile Include="Assets\Scripts\DungeonStructure\Portal\triggered.cs" />
+    <Compile Include="Assets\Scripts\DungeonStructure\PortalContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
