@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item
 {
     private string itemName;
     private string description;
@@ -17,10 +17,10 @@ public class Item : MonoBehaviour
         description = newDescription;
     }
 
-    public void SetPotency(int min, int max, int floor, int rarity)
+    public void SetPotency(int min, int max, int multiplier1, int multiplier2)
     {
-        potency.x = min * floor * rarity;
-        potency.y = max * floor * rarity;
+        potency.x = min * multiplier1 * multiplier2;
+        potency.y = max * multiplier1 * multiplier2;
     }
 
     public void SetRangeAndAoF(Vector2 newRange, Vector2 newAreaOfEffect)
@@ -35,8 +35,12 @@ public class Item : MonoBehaviour
     public Vector2 GetAreaOfEffect() { return areaOfEffect; }
 
     public Vector2Int GetPotency() { return potency; }
+    public int RollForPotency() 
+    {
+        return Random.Range(potency.x, potency.y + 1);
+    }
 
-    public string GetName() { return name; }
+    public string GetName() { return itemName; }
 
     public string GetDescription() { return description; }
 }

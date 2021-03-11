@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour
         combatController.enabled = false;
 
         controllerState = ControllerState.FreeMovement;
-        GlobalGameState.SetCombatState(false);      //test- remove once combat done?
 
         mouseClickPos = new Vector3();
         feetpos = 0;
@@ -134,5 +133,10 @@ public class PlayerController : MonoBehaviour
     public void OnEnable()
     {
         controllerCamera.enabled = true;
+    }
+
+    public Stats GetStats() 
+    {
+        return stats;
     }
 }

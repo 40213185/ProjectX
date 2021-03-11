@@ -17,14 +17,17 @@ public class StatusEffect : MonoBehaviour
         None
     }
     private EffectType effectType;
-    public int effectDuration;
+    public int effectDuration { get; private set; }
     private int currentDuration;
+    public int effectPotency { get; private set; }
 
-    public StatusEffect(EffectType type,int duration) 
+
+    public void setStatusEffect(EffectType type,int duration,int potency) 
     {
         effectType = type;
         effectDuration = duration;
         currentDuration = effectDuration;
+        effectPotency = potency;
     }
 
     public void TurnTick() 

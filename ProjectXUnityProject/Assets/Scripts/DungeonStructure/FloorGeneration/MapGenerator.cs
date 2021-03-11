@@ -89,7 +89,12 @@ public class MapGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //initialize game data
         GameData.SetFloor(4);
+        GlobalGameState.SetCombatState(false);
+        InventorySystem.init(1,10);
+
+        //initialize map
         //rooms per floor on current floor
         int roomsOnFloor = RoomsPerFloor[GameData.CurrentFloor];
         GenerateMap(roomsOnFloor);
