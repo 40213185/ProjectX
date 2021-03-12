@@ -22,7 +22,7 @@ public class Weapon : Item
                 weaponRoll.type = EquipmentType.Dagger;
                 weaponRoll.skill = skills.Stab;
                 weaponRoll.effectType = StatusEffect.EffectType.Bleed;
-                SetNameAndDesc("Daggar", "A Small bladed dagger, used for stabbing things, Good at making holes that bleed");
+                SetNameAndDesc("Dagger", "A Small bladed dagger, used for stabbing things, Good at making holes that bleed");
                 SetPotency(1, 3, floor, rarity);
                 break;
 
