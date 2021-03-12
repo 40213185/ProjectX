@@ -8,13 +8,17 @@ public class Stats
     private int currentHealth;
     private int maxMovementPoints;
     private int currentMovementPoints;
+    private int currentActionPoints;
+    private int maxActionPoints;
 
-    public Stats(int maxhealth,int maxmovementPoints) 
+    public Stats(int maxhealth,int maxmovementPoints, int maxactionPoints) 
     {
         maxHealth = maxhealth;
         currentHealth = maxHealth;
         maxMovementPoints = maxmovementPoints;
         currentMovementPoints = maxMovementPoints;
+        maxActionPoints = maxactionPoints;
+        currentActionPoints = maxActionPoints;
     }
 
     public int GetMaxHealth() 
@@ -25,6 +29,16 @@ public class Stats
     {
         return currentHealth;
     }
+
+    public int GetMaxActionPoints()
+    {
+        return maxActionPoints;
+    }
+    public int GetCurrentActionPoints()
+    {
+        return currentActionPoints;
+    }
+
     public int ModifyHealthBy(int amount) 
     {
         //store current health

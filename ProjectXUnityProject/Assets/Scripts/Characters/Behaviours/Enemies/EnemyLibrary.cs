@@ -20,31 +20,31 @@ public static class EnemyLibrary
         {
             case (EnemyType.Pawn):
                 {
-                    return new Stats(5, 1);
+                    return new Stats(5, 1, 2);
                 }
             case (EnemyType.Rook):
                 {
-                    return new Stats(20, 20);
+                    return new Stats(20, 20, 2);
                 }
             case (EnemyType.Bishop):
                 {
-                    return new Stats(15, 20);
+                    return new Stats(15, 20, 2);
                 }
             case (EnemyType.Horse):
                 {
-                    return new Stats(12, 3);
+                    return new Stats(12, 3, 2);
                 }
             case (EnemyType.King):
                 {
-                    return new Stats(30, 1);
+                    return new Stats(30, 1, 2);
                 }
             case (EnemyType.Queen):
                 {
-                    return new Stats(50, 20);
+                    return new Stats(50, 20, 2);
                 }
             default:
                 {
-                    return new Stats(10, 3);
+                    return new Stats(10, 3, 2);
                 }
         }
     }

@@ -38,7 +38,7 @@ public class PlayerControllerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stats = new Stats(10, 3);
+        stats = new Stats(10, 3, 6);
 
         combatControllerState = CombatControllerState.Freeze;
 

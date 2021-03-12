@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stats = new Stats(10, 3);                   //initial player stats
+        stats = new Stats(10, 3, 6);                   //initial player stats
         combatController = GetComponent<PlayerControllerCombat>();
         combatController.enabled = false;
 
