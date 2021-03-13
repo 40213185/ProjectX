@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerControllerCombat : MonoBehaviour
 {
-    //stats
-    private Stats stats;
     //camera
     public Camera controllerCamera;
 
@@ -38,8 +36,6 @@ public class PlayerControllerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stats = new Stats(10, 3);
-
         combatControllerState = CombatControllerState.Freeze;
 
         mouseClickPos = new Vector3();

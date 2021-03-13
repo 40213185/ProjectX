@@ -47,16 +47,12 @@ public class EnemySpawner : MonoBehaviour
 
                 //choose spawn point with index
                 Vector2 spawnPoint = possibleSpawningPoints[index];
-                Debug.Log("Choosing enemy");
                 //choose enemy
                 GameObject spawnable = enemyList[Random.Range(0, enemyList.Length)];
-                Debug.Log("Placing enemy");
                 //instantiate it
                 combatants[i] = Instantiate(spawnable, new Vector3(spawnPoint.x, 0, spawnPoint.y), spawnable.transform.rotation);
-                Debug.Log("REmoving from list");
                 //remove from list for next spawn
                 possibleSpawningPoints.RemoveAt(index);
-                Debug.Log("Removed");
             }
 
             //add player to combatants list

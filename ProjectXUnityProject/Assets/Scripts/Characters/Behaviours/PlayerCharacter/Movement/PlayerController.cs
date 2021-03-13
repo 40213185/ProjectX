@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //stats
-    private Stats stats;
+    public Stats stats { get; private set; }
 
     //camera
     public Camera controllerCamera;
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stats = new Stats(10, 3);                   //initial player stats
+        stats = new Stats(100000, 3);                   //initial player stats
         combatController = GetComponent<PlayerControllerCombat>();
         combatController.enabled = false;
 
@@ -133,10 +133,5 @@ public class PlayerController : MonoBehaviour
     public void OnEnable()
     {
         controllerCamera.enabled = true;
-    }
-
-    public Stats GetStats() 
-    {
-        return stats;
     }
 }

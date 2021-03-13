@@ -10,10 +10,11 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = string.Format("{0} -> {1}",GlobalGameState.combatState.ToString(),
+        text.text = string.Format("{0} -> {1}\n{2} health",GlobalGameState.combatState.ToString(),
             CombatHandler.GetCurrentTurnCombatant()!=null&&
             CombatHandler.GetCurrentTurnCombatant()!=GameObject.FindGameObjectWithTag("Player")?
             CombatHandler.GetCurrentTurnCombatant().GetComponent<EnemyController>().enemyType.ToString():
-            "Player");
+            "Player",
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().stats.GetCurrentHealth().ToString());
     }
 }
