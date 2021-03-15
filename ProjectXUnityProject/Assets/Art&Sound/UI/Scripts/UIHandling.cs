@@ -12,7 +12,7 @@ public class UIHandling : MonoBehaviour
     public Slider hpSlider;
     public Slider manaSlider;
 
-
+    public GameObject usablesPanel;
     public GameObject apGroup;
     public GameObject apPoint;
 
@@ -51,5 +51,27 @@ public class UIHandling : MonoBehaviour
                 apCollection[i].SetActive(true);
             }
         }
+    }
+
+    public void BasicAttackPressed(int index) 
+    {
+        Debug.Log("BASIC ATTACK PRESSED");
+    }
+
+    public void WeaponSkillPressed(int index) 
+    {
+        Debug.Log("WEAPON SKILL USED");
+    }
+
+    public void UsablesToggle() 
+    {
+        Animator anim = usablesPanel.GetComponent<Animator>();
+        bool isOpen = anim.GetBool("?Open");
+        anim.SetBool("?Open", !isOpen);
+    }
+
+    public void UsablePressed(int index) 
+    {
+        Debug.Log("USABLE " + index + " PRESSED");
     }
 }
