@@ -15,11 +15,11 @@ C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59117
+51819
 Successfully changed project path to: C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 19.73 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 20.80 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.4f1 (becced5a802b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,206 +35,24 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56364
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56888
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002074 seconds.
+Registered in 0.001948 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 21.03 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 21.84 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.969 seconds
+- Completed reload, in  0.877 seconds
 Platform modules already initialized, skipping
-Registering precompiled user dll's ...
-Registered in 0.000710 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001B06F464050 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.799 seconds
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.2 MB.
-System memory in use after: 57.3 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1547.
-Total: 1.820600 ms (FindLiveObjects: 0.262700 ms CreateObjectMapping: 0.037500 ms MarkObjects: 1.430100 ms  DeleteObjects: 0.089100 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scripts/StatusEffects/Stats/Stats.cs
-  artifactKey: Guid(f7e1fa0abbf58704cbfa79732000f48c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/StatusEffects/Stats/Stats.cs using Guid(f7e1fa0abbf58704cbfa79732000f48c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f974ad1fab496ea72505b20c4be74d0b') in 0.028511 seconds
-  Import took 0.030452 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 87.910146 seconds.
-  path: Assets/Scripts/GlobalGameState.cs
-  artifactKey: Guid(b5ca95f7983c3b84a931ba6c31d3472e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GlobalGameState.cs using Guid(b5ca95f7983c3b84a931ba6c31d3472e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc10e254d75a478f5d674ae0dbfedcc') in 0.002990 seconds
-  Import took 0.004885 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000920 seconds.
-  path: Assets/Scripts/GlobalGameState.cs
-  artifactKey: Guid(b5ca95f7983c3b84a931ba6c31d3472e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GlobalGameState.cs using Guid(b5ca95f7983c3b84a931ba6c31d3472e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc10e254d75a478f5d674ae0dbfedcc') in 0.002855 seconds
-  Import took 0.004933 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 58.694564 seconds.
-  path: Assets/Scripts/UI
-  artifactKey: Guid(cd98f861397a4bc4e9fd6cd99003dce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI using Guid(cd98f861397a4bc4e9fd6cd99003dce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd29fe80b2b139eba59dd78c5a6c6ed3f') in 0.003104 seconds
-  Import took 0.004899 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.420289 seconds.
-  path: Assets/Art&Sound/UI
-  artifactKey: Guid(ef7d37dd0e545994ea59bacd57c66f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/UI using Guid(ef7d37dd0e545994ea59bacd57c66f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e78c24e267df53461361e91765b48c9b') in 0.002275 seconds
-  Import took 0.003934 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000900 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001B06B867010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.655 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.2 MB.
-System memory in use after: 57.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1549.
-Total: 1.431500 ms (FindLiveObjects: 0.141000 ms CreateObjectMapping: 0.024400 ms MarkObjects: 1.253900 ms  DeleteObjects: 0.011500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 48.012971 seconds.
-  path: Assets/Art&Sound/UI/UIHandling.cs
-  artifactKey: Guid(5b55117d982a5954cb29d6d2d34a2379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/UI/UIHandling.cs using Guid(5b55117d982a5954cb29d6d2d34a2379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ab316437fd456d93ed5a5dd6c09f0bf') in 0.004561 seconds
-  Import took 0.006350 seconds .
-
-========================================================================
-Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.000743 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001B0709CC010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.651 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.2 MB.
-System memory in use after: 57.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1551.
-Total: 1.879300 ms (FindLiveObjects: 0.235100 ms CreateObjectMapping: 0.026800 ms MarkObjects: 1.597700 ms  DeleteObjects: 0.017400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.964438 seconds.
-  path: Assets/Art&Sound/UI/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b742667fb32d0841c21ac68bdfff645f') in 0.045891 seconds
-  Import took 0.048010 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.750386 seconds.
-  path: Assets/Scenes/Menu.unity
-  artifactKey: Guid(bc5dbc32a2242684185c58a8f869bfc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Menu.unity using Guid(bc5dbc32a2242684185c58a8f869bfc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f14d1cd3f035887be263fe5583d2c7d0') in 0.003396 seconds
-  Import took 0.005260 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.217915 seconds.
-  path: Assets/Scenes/Dungeon.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4feb38e592775fb0e012f2245bbc0f25') in 0.003836 seconds
-  Import took 0.005632 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000768 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001B071FCBD10 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.672 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.3 MB.
-System memory in use after: 57.4 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1555.
-Total: 2.362900 ms (FindLiveObjects: 0.229000 ms CreateObjectMapping: 0.028300 ms MarkObjects: 1.992700 ms  DeleteObjects: 0.111100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 61.445733 seconds.
-  path: Assets/Art&Sound/UI/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7be98f6929341dfe033590ba17ae028d') in 0.044222 seconds
-  Import took 0.046650 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000755 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001B06F9F2220 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-0000019371504570 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
@@ -243,7 +61,211 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.678 seconds
+- Completed reload, in  0.713 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.2 MB.
+System memory in use after: 57.3 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1547.
+Total: 1.614300 ms (FindLiveObjects: 0.181000 ms CreateObjectMapping: 0.027500 ms MarkObjects: 1.333900 ms  DeleteObjects: 0.070700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56d77cc86a464b0a15f5f652ac16eea6') in 0.065506 seconds
+  Import took 0.067505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.401397 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8da225adb4b5a3cec576aa94c6d10a25') in 0.005718 seconds
+  Import took 0.007664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.291968 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51a074fec27d903b83ddbe643897973d') in 0.007017 seconds
+  Import took 0.009503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.060540 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a29cb1bca7df3a771d668b909d1f1ac0') in 0.006366 seconds
+  Import took 0.008680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.262509 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8791581948520bc3d695fbbfaee47690') in 0.006080 seconds
+  Import took 0.008200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.003202 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae187b2f9ebe50b18bc58ee4c7a80fa9') in 0.006851 seconds
+  Import took 0.009145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.413127 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93db42aa3f8679349d1eaef5dcad901c') in 0.005853 seconds
+  Import took 0.007793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.053843 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9acf93c1e5bd316327834a1fc8bd20e') in 0.007396 seconds
+  Import took 0.009786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.595346 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23969c36392498e5d8b277d65834be33') in 0.006616 seconds
+  Import took 0.008885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.387986 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dbab2c12ab806d223fcbca4caa57901') in 0.007305 seconds
+  Import took 0.009610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.391406 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '311980da31623d7c5ac0c3276d61c047') in 0.006011 seconds
+  Import took 0.007947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.456442 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a940bb51250c09924ccefedddba743d1') in 0.006422 seconds
+  Import took 0.008457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.420550 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '785f909134ef2a4e41b85af54dad8286') in 0.006757 seconds
+  Import took 0.009071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.469678 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a10410bfa9a489a68a4e3cdddf3632') in 0.005846 seconds
+  Import took 0.008036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.596151 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e5b0126f41e180204e509ea196b58c3') in 0.007057 seconds
+  Import took 0.009541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.409252 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b3a1b84496e2c46131f1dbc5a16c5c') in 0.006265 seconds
+  Import took 0.008254 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.620477 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cfba83cb379e1361afb950c206608e0') in 0.006791 seconds
+  Import took 0.009306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.024263 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a97035045ed3a18e51cf2c08d6d25d84') in 0.006313 seconds
+  Import took 0.008505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.423168 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2f7058daf6ccd82242c0e5ce407bcbd') in 0.006238 seconds
+  Import took 0.008299 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000850 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001937130E010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.627 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.3 MB.
+System memory in use after: 57.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1551.
+Total: 1.505200 ms (FindLiveObjects: 0.159500 ms CreateObjectMapping: 0.026600 ms MarkObjects: 1.294800 ms  DeleteObjects: 0.023200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000767 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019378A6C540 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.613 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -251,55 +273,411 @@ Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 57.3 MB.
 System memory in use after: 57.4 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1557.
-Total: 1.484900 ms (FindLiveObjects: 0.162000 ms CreateObjectMapping: 0.024900 ms MarkObjects: 1.276500 ms  DeleteObjects: 0.020500 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1553.
+Total: 1.905300 ms (FindLiveObjects: 0.186700 ms CreateObjectMapping: 0.025900 ms MarkObjects: 1.674300 ms  DeleteObjects: 0.016600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 25.641124 seconds.
+  Time since last request: 112.830741 seconds.
   path: Assets/Art&Sound/UI/UI.prefab
   artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6ab717649b96de0ae3f500aa5e3dfdd') in 0.043624 seconds
-  Import took 0.045807 seconds .
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a0f9dcfdc70acd54dd10b8bbd52bc30') in 0.046214 seconds
+  Import took 0.048936 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.502123 seconds.
+  Time since last request: 12.114331 seconds.
   path: Assets/Art&Sound/UI/UI.prefab
   artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '856e3179bad7b02d9b2c13e1ee78dbec') in 0.006240 seconds
-  Import took 0.008327 seconds .
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '001be8ab5d8e769a717bb1492384131b') in 0.006157 seconds
+  Import took 0.008141 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.049117 seconds.
-  path: Assets/Art&Sound/UI/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7521c7560e0028a18b44b19870476b9') in 0.006376 seconds
-  Import took 0.008639 seconds .
+  Time since last request: 136.383826 seconds.
+  path: Assets/Art&Sound/UI/sack-icon-28.jpg
+  artifactKey: Guid(7717a23aecf384f4c9fa9fb2e30fd3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/sack-icon-28.jpg using Guid(7717a23aecf384f4c9fa9fb2e30fd3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0d8791c5ce9aad6950ca4ae0cbd337d') in 0.027277 seconds
+  Import took 0.029625 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.429310 seconds.
-  path: Assets/Art&Sound/UI/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c72cc4d8870e7553491f27b06334a1e') in 0.006299 seconds
-  Import took 0.008678 seconds .
+  Time since last request: 34.314854 seconds.
+  path: Assets/Art&Sound/UI/sack-icon-28.png
+  artifactKey: Guid(0a67c6ead20f09546b727aee8fec56ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/sack-icon-28.png using Guid(0a67c6ead20f09546b727aee8fec56ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40aef2788f03e1b18fd429ddfaed7a51') in 0.012437 seconds
+  Import took 0.014617 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.801128 seconds.
+  Time since last request: 7.366304 seconds.
   path: Assets/Art&Sound/UI/UI.prefab
   artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee89350f19127837e960b522caa96720') in 0.006138 seconds
-  Import took 0.008327 seconds .
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd10c9a8dd58d50d8dedcafc5de074bc4') in 0.006214 seconds
+  Import took 0.008097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.428424 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b6a3c4c6228844c533dfb942bbacb5f') in 0.006321 seconds
+  Import took 0.008427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.600979 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76c658fd3f53ca20ab5969aa6b9c2283') in 0.005894 seconds
+  Import took 0.007839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.000406 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be42f0e527e4e3cfd659d3393b6b1026') in 0.006553 seconds
+  Import took 0.008920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.799538 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c79a2cde084c3ef5b582f83aa1fad49') in 0.006780 seconds
+  Import took 0.009191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.224595 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55af37d0ff6086437347ba48c03abc25') in 0.005840 seconds
+  Import took 0.007730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.633657 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b72c6334753d00f5c87811e009abe13b') in 0.006096 seconds
+  Import took 0.008226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.194290 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9e74ab04aae01ba68f1d5e6913672c7') in 0.005958 seconds
+  Import took 0.008032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.472970 seconds.
+  path: Assets/Art&Sound/UI/sack-icon-28.jpg
+  artifactKey: Guid(7717a23aecf384f4c9fa9fb2e30fd3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/sack-icon-28.jpg using Guid(7717a23aecf384f4c9fa9fb2e30fd3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc7d98df9344332b9fa1634de9da9062') in 0.042228 seconds
+  Import took 0.044434 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.496920 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bea31a2dcf5ed08ebd1f9e72e645b6f') in 0.007120 seconds
+  Import took 0.009313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.535708 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e2b1484b961d182436d00b6072da91d') in 0.007712 seconds
+  Import took 0.009981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.264371 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a417a3e8dd758891da09b35b7d2ac9c') in 0.006445 seconds
+  Import took 0.008598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.609474 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c60f5688b508c5eab44f45c8598a6a1') in 0.006303 seconds
+  Import took 0.008372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.791155 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2fe342f25275d3870b3dfc13ab67a50') in 0.007321 seconds
+  Import took 0.009664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.805349 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c58a66ee24c445b8eeaf70c3c4b3867') in 0.006429 seconds
+  Import took 0.008607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.062909 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dce8e59ebafd99ad3cf7af324016cb71') in 0.008290 seconds
+  Import took 0.010720 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.449993 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2984a13933de152f52475db3104a17b2') in 0.011474 seconds
+  Import took 0.013770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 210.036744 seconds.
+  path: Assets/Art&Sound/UI/PanelController.controller
+  artifactKey: Guid(93e322c6f43ddef4db5e4c93aa7dd8d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/PanelController.controller using Guid(93e322c6f43ddef4db5e4c93aa7dd8d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e921f8170e876e0fceeef40158f2c97') in 0.006107 seconds
+  Import took 0.008204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 123.402919 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f46a456319a0238391393e1373c2baf') in 0.006398 seconds
+  Import took 0.008683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.433362 seconds.
+  path: Assets/Art&Sound/UI/PanelAnimations
+  artifactKey: Guid(363bbff8f08662445ad074f9ea630a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/PanelAnimations using Guid(363bbff8f08662445ad074f9ea630a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2e7da8a97f89c978dbe83c9c0f5b9ba') in 0.003396 seconds
+  Import took 0.005015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.444010 seconds.
+  path: Assets/Art&Sound/UI/PanelAnimator.anim
+  artifactKey: Guid(899c0354b5a3d5c41b7327b19cc588ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/PanelAnimator.anim using Guid(899c0354b5a3d5c41b7327b19cc588ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daabccf6b21cbd941883ea77b2ac9479') in 0.005026 seconds
+  Import took 0.006724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001859 seconds.
+  path: Assets/Art&Sound/UI/PanelAnimator.anim
+  artifactKey: Guid(899c0354b5a3d5c41b7327b19cc588ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/PanelAnimator.anim using Guid(899c0354b5a3d5c41b7327b19cc588ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daabccf6b21cbd941883ea77b2ac9479') in 0.002478 seconds
+  Import took 0.003669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.446773 seconds.
+  path: Assets/Art&Sound/UI/PanelAnimations/PanelOpen.anim
+  artifactKey: Guid(5b63eac03f8674f459cdba51be308af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/PanelAnimations/PanelOpen.anim using Guid(5b63eac03f8674f459cdba51be308af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4c9c13fce34ebbfc3919d1b00e853cd') in 0.004152 seconds
+  Import took 0.006088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001922 seconds.
+  path: Assets/Art&Sound/UI/PanelAnimations/PanelOpen.anim
+  artifactKey: Guid(5b63eac03f8674f459cdba51be308af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/PanelAnimations/PanelOpen.anim using Guid(5b63eac03f8674f459cdba51be308af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4c9c13fce34ebbfc3919d1b00e853cd') in 0.003046 seconds
+  Import took 0.004987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.061551 seconds.
+  path: Assets/Art&Sound/UI/PanelAnimations/PanelClose.anim
+  artifactKey: Guid(4c72ee531c40ba342bc6240089332864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/PanelAnimations/PanelClose.anim using Guid(4c72ee531c40ba342bc6240089332864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '773d5d5c5447e338cbe2ce4bc8b40971') in 0.003827 seconds
+  Import took 0.005859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003810 seconds.
+  path: Assets/Art&Sound/UI/PanelAnimations/PanelClose.anim
+  artifactKey: Guid(4c72ee531c40ba342bc6240089332864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/PanelAnimations/PanelClose.anim using Guid(4c72ee531c40ba342bc6240089332864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '773d5d5c5447e338cbe2ce4bc8b40971') in 0.002800 seconds
+  Import took 0.004627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 62.244966 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'befd6ddd9506f86e85fc432415bebdd9') in 0.007857 seconds
+  Import took 0.010686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.883425 seconds.
+  path: Assets/Art&Sound/UI/Closed.anim
+  artifactKey: Guid(6a48a03f25dba25498b38120ac62ba20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/Closed.anim using Guid(6a48a03f25dba25498b38120ac62ba20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3f2e63fa1ecaee2ac23b97ed49a5bf6') in 0.004021 seconds
+  Import took 0.005838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.384803 seconds.
+  path: Assets/Art&Sound/UI/Open.anim
+  artifactKey: Guid(c1c347e05682db04c9f15957421d86ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/Open.anim using Guid(c1c347e05682db04c9f15957421d86ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c5af80e4a27a6b02df2ff590c67d82f') in 0.004091 seconds
+  Import took 0.005900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000834 seconds.
+  path: Assets/Art&Sound/UI/Open.anim
+  artifactKey: Guid(c1c347e05682db04c9f15957421d86ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/Open.anim using Guid(c1c347e05682db04c9f15957421d86ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c5af80e4a27a6b02df2ff590c67d82f') in 0.002781 seconds
+  Import took 0.004122 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001080 seconds.
+Registered in 0.000889 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001B06B652190 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-00000193758C6020 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.622 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.4 MB.
+System memory in use after: 60.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1561.
+Total: 1.368900 ms (FindLiveObjects: 0.141100 ms CreateObjectMapping: 0.024500 ms MarkObjects: 1.184000 ms  DeleteObjects: 0.018300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 453.525409 seconds.
+  path: Assets/Art&Sound/UI/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '548db1f8062c43c74c2c9df44b1a3ecf') in 0.037122 seconds
+  Import took 0.039168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.617096 seconds.
+  path: Assets/Art&Sound/UI/UsablesPanel.controller
+  artifactKey: Guid(95aa648c04d10a443b758c2e657785a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UsablesPanel.controller using Guid(95aa648c04d10a443b758c2e657785a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ade687901e53059f397d6b6a9141545d') in 0.004426 seconds
+  Import took 0.006469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001603 seconds.
+  path: Assets/Art&Sound/UI/UsablesPanel.controller
+  artifactKey: Guid(95aa648c04d10a443b758c2e657785a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/UsablesPanel.controller using Guid(95aa648c04d10a443b758c2e657785a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ade687901e53059f397d6b6a9141545d') in 0.003041 seconds
+  Import took 0.005153 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000767 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019378664670 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.608 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.4 MB.
+System memory in use after: 60.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1563.
+Total: 1.470000 ms (FindLiveObjects: 0.161200 ms CreateObjectMapping: 0.025900 ms MarkObjects: 1.259700 ms  DeleteObjects: 0.022000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000896 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019378664670 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.595 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.4 MB.
+System memory in use after: 60.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1565.
+Total: 1.311400 ms (FindLiveObjects: 0.117100 ms CreateObjectMapping: 0.024700 ms MarkObjects: 1.158400 ms  DeleteObjects: 0.010500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000800 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001937888C5F0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.611 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.4 MB.
+System memory in use after: 60.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1567.
+Total: 1.569800 ms (FindLiveObjects: 0.160100 ms CreateObjectMapping: 0.025500 ms MarkObjects: 1.371000 ms  DeleteObjects: 0.012000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000874 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019378664670 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
@@ -308,40 +686,73 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.674 seconds
+- Completed reload, in  0.665 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.3 MB.
-System memory in use after: 57.4 MB.
+System memory in use before: 60.4 MB.
+System memory in use after: 60.5 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1559.
-Total: 1.495100 ms (FindLiveObjects: 0.154000 ms CreateObjectMapping: 0.024600 ms MarkObjects: 1.290500 ms  DeleteObjects: 0.025000 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1569.
+Total: 1.569300 ms (FindLiveObjects: 0.176700 ms CreateObjectMapping: 0.027000 ms MarkObjects: 1.349700 ms  DeleteObjects: 0.014700 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000749 seconds.
+Registered in 0.000745 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001B071F01570 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-0000019371432030 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.629 seconds
+- Completed reload, in  0.600 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.3 MB.
-System memory in use after: 57.4 MB.
+System memory in use before: 60.4 MB.
+System memory in use after: 60.5 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1561.
-Total: 1.928800 ms (FindLiveObjects: 0.435500 ms CreateObjectMapping: 0.027400 ms MarkObjects: 1.442700 ms  DeleteObjects: 0.021600 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1571.
+Total: 1.473100 ms (FindLiveObjects: 0.164100 ms CreateObjectMapping: 0.026700 ms MarkObjects: 1.269300 ms  DeleteObjects: 0.011400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 363.234417 seconds.
+  path: Assets/Art&Sound/UI/PanelAnimations/PanelOpen.anim
+  artifactKey: Guid(5b63eac03f8674f459cdba51be308af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/UI/PanelAnimations/PanelOpen.anim using Guid(5b63eac03f8674f459cdba51be308af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ace5e5732ebdd5ae5a7b3085acb17045') in 0.010982 seconds
+  Import took 0.012817 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001504 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019371432030 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.602 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1098 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.4 MB.
+System memory in use after: 60.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1573.
+Total: 1.352100 ms (FindLiveObjects: 0.123800 ms CreateObjectMapping: 0.032000 ms MarkObjects: 1.185700 ms  DeleteObjects: 0.009900 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
