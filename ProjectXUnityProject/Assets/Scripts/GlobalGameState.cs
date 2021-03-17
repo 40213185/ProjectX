@@ -18,5 +18,6 @@ public static class GlobalGameState
     {
         if (inCombat) combatState = CombatState.Combat;
         else combatState = CombatState.OutOfCombat;
+        GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().setCombat(inCombat);
     }
 }

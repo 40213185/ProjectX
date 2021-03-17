@@ -8,6 +8,7 @@ public class UIHandling : MonoBehaviour
     private Stats playerStats;
     private Stats uiPlayerStats;
     private GameObject[] apCollection;
+    
 
     public Slider hpSlider;
     public Slider manaSlider;
@@ -15,6 +16,7 @@ public class UIHandling : MonoBehaviour
     public GameObject usablesPanel;
     public GameObject apGroup;
     public GameObject apPoint;
+    public GameObject[] combatObjectCollection;
 
     private void Start()
     {
@@ -31,13 +33,13 @@ public class UIHandling : MonoBehaviour
             Debug.Log(i);
         }
 
-        
-
         uiPlayerStats = playerStats;
+        
     }
 
     public void UpdateUI() 
     {
+
         if (uiPlayerStats.GetCurrentHealth() != playerStats.GetCurrentHealth()) hpSlider.value = playerStats.GetCurrentHealth(); 
         
         if(uiPlayerStats.GetCurrentActionPoints() != playerStats.GetCurrentActionPoints()) 
@@ -53,6 +55,24 @@ public class UIHandling : MonoBehaviour
         }
     }
 
+    public void setCombat(bool inCombat) 
+    {
+        if (inCombat == false)
+        {
+            foreach (GameObject e in combatObjectCollection)
+            {
+                e.SetActive(false);
+            }
+        }
+        else 
+        {
+            foreach (GameObject e in combatObjectCollection)
+            {
+                e.SetActive(true);
+            }
+        }
+    }
+
     public void BasicAttackPressed(int index) 
     {
         Debug.Log("BASIC ATTACK PRESSED");
@@ -61,6 +81,11 @@ public class UIHandling : MonoBehaviour
     public void WeaponSkillPressed(int index) 
     {
         Debug.Log("WEAPON SKILL USED");
+    }
+
+    public void SkipTurnPressed() 
+    {
+        Debug.Log("SKIPPING TURN");
     }
 
     public void UsablesToggle() 

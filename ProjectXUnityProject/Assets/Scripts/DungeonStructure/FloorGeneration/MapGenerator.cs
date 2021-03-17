@@ -14,6 +14,7 @@ public class MapGenerator : MonoBehaviour
     public bool[,] roomsBuiltValidation { get; private set; }
     private int[,] roomType;
     public GameObject player;
+    public GameObject UI;
     public List<GameObject> rooms { get; private set; }
 
     private void GenerateMap(int roomsOnFloor)
@@ -84,6 +85,7 @@ public class MapGenerator : MonoBehaviour
     private void PositionPlayer() 
     {
         Instantiate(player, new Vector3(1, 0, 1), player.transform.rotation);
+        //Instantiate(UI, new Vector3(0, 0, 0), );
     }
 
     // Start is called before the first frame update
