@@ -17,6 +17,7 @@ public class UIHandling : MonoBehaviour
     public GameObject apGroup;
     public GameObject apPoint;
     public GameObject[] combatObjectCollection;
+    public GameObject[] usablesButtons;
 
     private void Start()
     {
@@ -93,10 +94,20 @@ public class UIHandling : MonoBehaviour
         Animator anim = usablesPanel.GetComponent<Animator>();
         bool isOpen = anim.GetBool("?Open");
         anim.SetBool("?Open", !isOpen);
+        int count = 0;
+
+        foreach(Usable e in InventorySystem.usablesHeld) 
+        {
+            if (e != null) usablesButtons[count].SetActive(true) ; else usablesButtons[count].SetActive(false);
+            count++;
+        }
     }
 
     public void UsablePressed(int index) 
     {
+        usablesButtons[index].SetActive(false);
         Debug.Log("USABLE " + index + " PRESSED");
+        InventorySystem.usablesHeld[index] = null;
     }
+
 }

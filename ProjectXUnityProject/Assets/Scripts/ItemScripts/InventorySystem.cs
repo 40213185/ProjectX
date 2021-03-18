@@ -18,7 +18,12 @@ public static class InventorySystem
         usableSlots = useSlots;
         equipmentHeld = new Weapon[equipmentSlots];
         usablesHeld = new Usable[usableSlots];
+        Debug.Log("Inventory Init");
+        usablesHeld[0] = new Usable(Usable.UsableType.Potion);
+        usablesHeld[1] = new Usable(Usable.UsableType.Bomb);
+        Debug.Log(usablesHeld[1].GetName());
     }
+
     public static void AddToInventory(Weapon equip,int index) 
     {
         equipmentHeld[index] = equip;

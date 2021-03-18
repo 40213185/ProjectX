@@ -94,7 +94,7 @@ public class MapGenerator : MonoBehaviour
         //initialize game data
         GameData.SetFloor(4);
         GlobalGameState.SetCombatState(false);
-        InventorySystem.init(1,10);
+        InventorySystem.init(1,4);
 
         //initialize map
         //rooms per floor on current floor
