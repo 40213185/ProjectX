@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 mouseClickPos;
     public float feetpos { get; private set; }
     private bool move;  //used for checking movement during movement
+    private Vector2Int[] moveToPoints;
+    private int movePointsIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -63,8 +65,6 @@ public class PlayerController : MonoBehaviour
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
-                        //reset mouseclick
-                        move = true;
                         //set up ray
                         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                         //create a plane at floor level
@@ -83,8 +83,13 @@ public class PlayerController : MonoBehaviour
                             {
                                 if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
                                 {
-                                    //adjust click position
-                                    mouseClickPos = new Vector3(clickpos.x, feetpos, clickpos.y);
+                                    //get the movetopoints
+                                    moveToPoints = MapHandler.GetMoveToPoints(new Vector2Int(Mathf.FloorToInt(transform.position.x),
+                                        Mathf.FloorToInt(transform.position.z)), clickpos, 100);
+                                    //reset index
+                                    movePointsIndex = 1;
+                                    //reset mouseclick
+                                    move = true;
                                 }
                             }
                             catch
@@ -94,18 +99,37 @@ public class PlayerController : MonoBehaviour
                         }
 
                     }
-                    if (move)
+                    if (move&&moveToPoints!=null)
                     {
-                        //move prediction
-                        Vector3 moveprediction = Vector3.MoveTowards(transform.position, mouseClickPos+new Vector3(0,feetpos,0), movementSpeed * Time.deltaTime);
-                        //get current tiletype for move prediction
-                        if (MapHandler.GetTileTypeFromMatrix(new Vector2Int(Mathf.FloorToInt(moveprediction.x), Mathf.FloorToInt(moveprediction.z))) == MapHandler.TileType.Walkable&&
-                            MapHandler.GetTileTypeFromMatrix(new Vector2Int(Mathf.CeilToInt(moveprediction.x), Mathf.CeilToInt(moveprediction.z))) == MapHandler.TileType.Walkable)
-                            //move if walkable
-                            transform.position = moveprediction;
-                        //arrived at position or new click
-                        if (transform.position == mouseClickPos) move = false ; //stop moving
+                        //at the last point
+                        if (transform.position.x == moveToPoints[moveToPoints.Length - 1].x &&
+                            transform.position.z == moveToPoints[moveToPoints.Length - 1].y)
+                        {
+                            //stop movement
+                            move = false;
+                            break;
+                        }
+                        //not at the end yet?
+                        else
+                        {
+                            Debug.Log("moving to" + moveToPoints[movePointsIndex].ToString());
+                            //move towards point
+                            transform.position = Vector3.MoveTowards(transform.position,
+                            new Vector3(moveToPoints[movePointsIndex].x, feetpos, moveToPoints[movePointsIndex].y),
+                            movementSpeed * Time.deltaTime);
 
+                            //if at next point
+                            if (transform.position.x == moveToPoints[movePointsIndex].x &&
+                                transform.position.z == moveToPoints[movePointsIndex].y)
+                            {
+                                //increase index
+                                movePointsIndex++;
+                                //moveindex out of range?
+                                if (movePointsIndex >= moveToPoints.Length)
+                                    //stop moving
+                                    move = false;
+                            }
+                        }
                     }
                     break;
                 }
@@ -133,5 +157,10 @@ public class PlayerController : MonoBehaviour
     public void OnEnable()
     {
         controllerCamera.enabled = true;
+    }
+
+    public void StopMovement() 
+    {
+        move = false;
     }
 }
