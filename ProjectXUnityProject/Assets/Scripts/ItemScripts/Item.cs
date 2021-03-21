@@ -23,7 +23,7 @@ public class Item
         potency.y = max * multiplier1 * multiplier2;
     }
 
-    public void SetRangeAndAoF(Vector2 newRange, Vector2 newAreaOfEffect)
+    public void SetRangeAndAoE(Vector2 newRange, Vector2 newAreaOfEffect)
     {
         range = newRange;
         areaOfEffect = newAreaOfEffect;

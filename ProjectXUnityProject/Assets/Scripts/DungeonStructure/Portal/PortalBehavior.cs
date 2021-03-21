@@ -37,6 +37,8 @@ public class PortalBehavior : MonoBehaviour
                 {
                     //add delay to next portal so no insta back to portal
                     teleportPosObject.GetComponent<PortalBehavior>().setDelay();
+                    //stop player movement
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().StopMovement();
                     //teleport
                     GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(
                         teleportPosObject.transform.position.x,

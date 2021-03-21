@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerControllerCombat : MonoBehaviour
 {
-    //stats
-    private Stats stats;
     //camera
     public Camera controllerCamera;
 
@@ -38,8 +36,6 @@ public class PlayerControllerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stats = new Stats(10, 3);
-
         combatControllerState = CombatControllerState.Freeze;
 
         mouseClickPos = new Vector3();
@@ -88,25 +84,25 @@ public class PlayerControllerCombat : MonoBehaviour
                                 
                                 if (CanMove(clickpos))
                                 {
-                                    try
-                                    {
+                                    //try
+                                   // {
                                         if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
                                         {
                                             //get the movetopoints
                                             moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos, movementRange);
                                             //change state
-                                            if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat && myTurn) combatControllerState = CombatControllerState.CombatMove;
+                                            if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat && myTurn&&moveToPoints!=null) combatControllerState = CombatControllerState.CombatMove;
                                             else if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)
                                             {
                                                 //adjust click position
                                                 mouseClickPos = new Vector3(clickpos.x, feetpos, clickpos.y);
                                             }
                                         }
-                                    }
-                                    catch
-                                    {
-                                        Debug.Log("Index out of bounds error.");
-                                    }
+                                    //}
+                                   // catch
+                                   // {
+                                   //     Debug.Log("Index out of bounds error.");
+                                   // }
                                 }
                             }
 

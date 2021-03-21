@@ -5,65 +5,117 @@ using UnityEngine;
 public class Weapon : Item
 {
     public enum EquipmentType { Dagger, Sword, TwoHandedSword, FireBall, IceSpike }
-    public enum skills { Stab, Slash, Smash, Throw }
+    public enum Skills { Stab, Slash, Smash, Throw }
     private int rarity;
     private EquipmentType type;
-    private skills skill;
-    private StatusEffect.EffectType effectType;
+    private Skills skill;
+    private StatusEffect.EffectType effect;
 
-    public Weapon GetRandomWeapon(int rarity, int floor)
+    public static Weapon GetRandomWeapon(int modifier1, int modifier2)
     {
         Weapon weaponRoll = new Weapon();
-        int weaponType = Random.Range(0, 6);
-        switch (type)
+        int rndType = Random.Range(0, 5);
+        EquipmentType equipType=EquipmentType.Dagger;
+        switch (rndType)
+        {
+            case 0: { equipType = EquipmentType.Dagger; break; }
+            case 1: { equipType = EquipmentType.Sword; break; }
+            case 2: { equipType = EquipmentType.TwoHandedSword; break; }
+            case 3: { equipType = EquipmentType.FireBall; break; }
+            case 4: { equipType = EquipmentType.IceSpike; break; }
+        }
+        switch (equipType)
         {
             case EquipmentType.Dagger:
-                Debug.Log("Dagger");
                 weaponRoll.type = EquipmentType.Dagger;
-                weaponRoll.skill = skills.Stab;
-                weaponRoll.effectType = StatusEffect.EffectType.Bleed;
-                SetNameAndDesc("Daggar", "A Small bladed dagger, used for stabbing things, Good at making holes that bleed");
-                SetPotency(1, 3, floor, rarity);
+                weaponRoll.skill = Skills.Stab;
+                weaponRoll.effect = StatusEffect.EffectType.Bleed;
+                weaponRoll.SetNameAndDesc("Dagger", "A Small bladed dagger, used for stabbing things, Good at making holes that bleed");
+                weaponRoll.SetPotency(1, 3, modifier2, modifier1);
+                weaponRoll.SetRangeAndAOEforSkill(weaponRoll.skill);
                 break;
 
             case EquipmentType.Sword:
-                Debug.Log("Sword");
                 weaponRoll.type = EquipmentType.Sword;
-                weaponRoll.skill = skills.Slash;
-                weaponRoll.effectType = StatusEffect.EffectType.None;
+                weaponRoll.skill = Skills.Slash;
+                weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Sword", "A long bladed weapon, Makes a nice whoosh sound when used in a slashing motion");
-                weaponRoll.SetPotency(2, 5, floor, rarity);
+                weaponRoll.SetPotency(2, 5, modifier2, modifier1);
+                weaponRoll.SetRangeAndAOEforSkill(weaponRoll.skill);
                 break;
 
             case EquipmentType.TwoHandedSword:
-                Debug.Log("2HSword");
                 weaponRoll.type = EquipmentType.TwoHandedSword;
-                weaponRoll.skill = skills.Smash;
-                weaponRoll.effectType = StatusEffect.EffectType.Stun;
+                weaponRoll.skill = Skills.Smash;
+                weaponRoll.effect = StatusEffect.EffectType.Stun;
                 weaponRoll.SetNameAndDesc("TwoHandedSword", "A Massive sword, Surprised you can even hold it up, Good at cracking eggs");
-                weaponRoll.SetPotency(4, 8, floor, rarity);
+                weaponRoll.SetPotency(4, 8, modifier2, modifier1);
+                weaponRoll.SetRangeAndAOEforSkill(weaponRoll.skill);
                 break;
 
             case EquipmentType.FireBall:
-                Debug.Log("FireBall");
                 weaponRoll.type = EquipmentType.FireBall;
-                weaponRoll.skill = skills.Throw;
-                weaponRoll.effectType = StatusEffect.EffectType.Burn;
+                weaponRoll.skill = Skills.Throw;
+                weaponRoll.effect = StatusEffect.EffectType.Burn;
                 weaponRoll.SetNameAndDesc("Fireball", "Summon a fireball from god knows where and use it for things such as cooking or other activities");
-                weaponRoll.SetPotency(3, 6, floor, rarity);
+                weaponRoll.SetPotency(3, 6, modifier2, modifier1);
+                weaponRoll.SetRangeAndAOEforSkill(weaponRoll.skill);
                 break;
 
             case EquipmentType.IceSpike:
-                Debug.Log("IceSpike");
                 weaponRoll.type = EquipmentType.IceSpike;
-                weaponRoll.skill = skills.Throw;
-                weaponRoll.effectType = StatusEffect.EffectType.Freeze;
+                weaponRoll.skill = Skills.Throw;
+                weaponRoll.effect = StatusEffect.EffectType.Freeze;
                 weaponRoll.SetNameAndDesc("Icespike", "Summon a giant ice spike that can be launched like a rocket, remember to wear gloves when using this, can get chilly");
-                weaponRoll.SetPotency(3, 6, floor, rarity);
+                weaponRoll.SetPotency(3, 6, modifier2, modifier1);
+                weaponRoll.SetRangeAndAOEforSkill(weaponRoll.skill);
                 break;
         }
 
         return weaponRoll;
+    }
+    public void CreateWeapon(EquipmentType equipType, Skills equipSkill,int minPotency,int maxPotency,int modifier1,int modifier2)
+    {
+        type = equipType;
+        skill = equipSkill;
+        effect = StatusEffect.EffectType.None;
+        SetRangeAndAOEforSkill(skill); 
+        SetPotency(minPotency, maxPotency, modifier2, modifier1);
+    }
+    public void CreateWeapon(EquipmentType equipType, Skills equipSkill, StatusEffect.EffectType effectType, int minPotency, int maxPotency, int modifier1, int modifier2)
+    {
+        type = equipType;
+        skill = equipSkill;
+        effect = effectType;
+        SetRangeAndAOEforSkill(skill);
+        SetPotency(minPotency, maxPotency, modifier2, modifier1);
+    }
+
+    private void SetRangeAndAOEforSkill(Skills equipSkill) 
+    {
+        switch (equipSkill)
+        {
+            case Skills.Slash:
+                {
+                    SetRangeAndAoE(new Vector2(1, 1), new Vector2(0, 0));
+                    break;
+                }
+            case Skills.Smash:
+                {
+                    SetRangeAndAoE(new Vector2(1, 1), new Vector2(0, 0));
+                    break;
+                }
+            case Skills.Stab:
+                {
+                    SetRangeAndAoE(new Vector2(1, 1), new Vector2(0, 0));
+                    break;
+                }
+            case Skills.Throw:
+                {
+                    SetRangeAndAoE(new Vector2(1, 4), new Vector2(0, 1));
+                    break;
+                }
+        }
     }
 
     public int getRarity()
@@ -85,11 +137,6 @@ public class Weapon : Item
     public EquipmentType GetEquipmentType()
     {
         return type;
-    }
-
-    public Vector2 getAreaOfEffect(EquipmentType equipmentType)
-    {
-        return GetAreaOfEffect();
     }
 
     public void use()
