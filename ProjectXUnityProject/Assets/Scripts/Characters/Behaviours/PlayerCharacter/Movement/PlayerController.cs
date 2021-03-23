@@ -112,7 +112,6 @@ public class PlayerController : MonoBehaviour
                         //not at the end yet?
                         else
                         {
-                            Debug.Log("moving to" + moveToPoints[movePointsIndex].ToString());
                             //move towards point
                             transform.position = Vector3.MoveTowards(transform.position,
                             new Vector3(moveToPoints[movePointsIndex].x, feetpos, moveToPoints[movePointsIndex].y),

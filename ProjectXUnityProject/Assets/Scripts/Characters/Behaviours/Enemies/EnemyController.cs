@@ -30,6 +30,7 @@ public class EnemyController : MonoBehaviour
 
     private Vector2Int[] movePoints;
     private int pointPick;
+    private int weaponPick;
     private bool moved;
 
     //equipment
@@ -69,7 +70,8 @@ public class EnemyController : MonoBehaviour
                     {
                         //setup for weapon decision
                         weaponChoice.Clear();
-                        float distanceToPlayer = (transform.position - player.transform.position).magnitude;
+
+                        float distanceToPlayer = CalculateDistanceTo(transform.position,player.transform.position);
                         bool moveDecision = false;
                         withinAttackRange = false;
                         for (int i = 0; i < weapons.Length; i++)
@@ -93,8 +95,8 @@ public class EnemyController : MonoBehaviour
                             //if above fails
                             else
                             {
-                                //check distance to player is bigger or equal 1
-                                if (distanceToPlayer > 1 && !moved) moveDecision = true;
+                                //move
+                                if (!moved) moveDecision = true;
                                 else moveDecision = false;
                             }
                         }
@@ -117,56 +119,117 @@ public class EnemyController : MonoBehaviour
                             //if there are valid movement points
                             if (movePoints.Length > 0)
                             {
-                                //reset pointpick
-                                pointPick = 0;
                                 //create player vector2Int reference
                                 Vector2Int playerPos = new Vector2Int(Mathf.FloorToInt(player.transform.position.x),
                                     Mathf.FloorToInt(player.transform.position.z));
+
+                                //store possible points
+                                List<int> possiblePointsWithWeapon = new List<int>();
+                                List<int> weaponChosenForPoint = new List<int>();
+                                List<int> possiblePointsWithoutWeapon = new List<int>();
+
                                 //pick movement point
                                 for (int i = 0; i < movePoints.Length; i++)
                                 {
-                                    if (!withinAttackRange)
+                                    //if theres no weapon choices
+                                    if (weaponChoice.Count <= 0)
                                     {
-                                        //if theres no weapon choices
-                                        if (weaponChoice.Count <= 0)
-                                        {
-                                            //add all weapons to weapon choice list
-                                            for (int x = 0; x < weapons.Length; x++) weaponChoice.Add(x);
-                                        }
+                                        //add all weapons to weapon choice list
+                                        for (int x = 0; x < weapons.Length; x++) weaponChoice.Add(x);
                                     }
 
-                                    if (weaponChoice.Count > 1)
+                                    //go though weapon choices
+                                    for (int w = 0; w < weaponChoice.Count; w++)
                                     {
-                                        //pick weapon
-                                        for (int weapPick = 0; weapPick < weaponChoice.Count; weapPick++)
+                                        //if within range of weapon
+                                        if (CalculateDistanceTo(movePoints[i], playerPos) - weapons[weaponChoice[w]].GetRange().y - weapons[weaponChoice[w]].GetAreaOfEffect().y
+                                            <= 0)
                                         {
-                                            //check if (min potency + max potency) / 2 is bigger than the weapon at 0 index
-                                            if ((weapons[weaponChoice[0]].GetPotency().x + weapons[weaponChoice[0]].GetPotency().y) / 2 <
-                                                (weapons[weaponChoice[weapPick]].GetPotency().x + weapons[weaponChoice[weapPick]].GetPotency().y) / 2)
+                                            possiblePointsWithWeapon.Add(i);
+                                            weaponChosenForPoint.Add(w);
+                                        }
+                                        //if not within weapon range
+                                        else
+                                        {
+                                            possiblePointsWithoutWeapon.Add(i);
+                                        }
+                                    }
+                                }
+                                //have possible points with weapons?
+                                if (possiblePointsWithWeapon.Count > 0)
+                                {
+                                    Debug.Log("move with weapons");
+                                    //reset pointpick
+                                    pointPick = 0;
+                                    weaponPick = 0;
+                                    //go through points
+                                    for (int i = 0; i < possiblePointsWithWeapon.Count; i++)
+                                    {
+                                        float pointDistanceToPlayer = CalculateDistanceTo(movePoints[possiblePointsWithWeapon[i]], playerPos);
+                                        float currentDistanceToPlayer = CalculateDistanceTo(movePoints[pointPick], playerPos);
+                                        float weaponMinDistance = weapons[weaponChosenForPoint[i]].GetRange().x + weapons[weaponChosenForPoint[i]].GetAreaOfEffect().x;
+                                        //highest dmg weapon
+                                        if ((pointDistanceToPlayer < currentDistanceToPlayer) &&
+                                            (currentDistanceToPlayer >= pointDistanceToPlayer + weaponMinDistance))
+                                        {
+                                            pointPick = possiblePointsWithWeapon[i];
+                                            weaponPick = i;
+                                        }
+                                    }
+                                }
+                                //no points with weapons?
+                                else if (possiblePointsWithoutWeapon.Count > 0)
+                                {
+                                    //store highest dmg weapon
+                                    weaponPick = 0;
+                                    for (int i = 0; i < weaponChoice.Count; i++)
+                                    {
+                                        if (weapons[weaponPick].GetPotency().y > weapons[i].GetPotency().y)
+                                        {
+                                            weaponPick = i;
+                                        }
+                                    }
+                                    //pick point using highest dmg weapon
+                                    pointPick = 0;
+                                    bool picked = false;
+                                    //store possibilities
+                                    List<int> possiblePoints = new List<int>();
+                                    for (int i = 0; i < possiblePointsWithoutWeapon.Count; i++)
+                                    {
+                                        float pointDistanceToPlayer = CalculateDistanceTo(movePoints[possiblePointsWithoutWeapon[i]], playerPos);
+                                        float currentDistanceToPlayer = CalculateDistanceTo(movePoints[pointPick], playerPos);
+                                        float weaponMinDistance = weapons[weaponPick].GetRange().x + weapons[weaponPick].GetAreaOfEffect().x;
+                                        //closest distance
+                                        if ( currentDistanceToPlayer>= pointDistanceToPlayer + weaponMinDistance) 
+                                        {
+                                            //store point
+                                            possiblePoints.Add(possiblePointsWithoutWeapon[i]);
+                                            //point was picked
+                                            picked = true;
+                                        }
+                                    }
+                                    //have possible points
+                                    if (picked)
+                                    {
+                                        Debug.Log("No weapon move");
+                                        for (int i = 0; i < possiblePoints.Count; i++)
+                                        {
+                                            if (CalculateDistanceTo(movePoints[pointPick], playerPos) >
+                                                CalculateDistanceTo(movePoints[possiblePoints[i]], playerPos))
                                             {
-                                                //replace 0 index
-                                                weaponChoice[0] = weapPick;
+                                                pointPick = possiblePoints[i];
                                             }
                                         }
                                     }
-
-                                    //if within range of weapon
-                                    if ((new Vector2(movePoints[i].x, movePoints[i].y) + weapons[weaponChoice[0]].GetRange() + weapons[weaponChoice[0]].GetAreaOfEffect()).magnitude
-                                        <= (movePoints[i] - playerPos).magnitude)
-                                    {
-                                        pointPick = i;
-                                        break;
-                                    }
+                                    //if no point was picked
                                     else
                                     {
-                                        //choose new point based on distance to player + weapon range + weapon aoe
-                                        if ((movePoints[i] - playerPos +
-                                            weapons[weaponChoice[0]].GetRange() + weapons[weaponChoice[0]].GetAreaOfEffect()).magnitude <
-                                            (movePoints[pointPick] - playerPos +
-                                            weapons[weaponChoice[weaponChoice[0]]].GetRange() + weapons[weaponChoice[0]].GetAreaOfEffect()).magnitude)
-                                            pointPick = i;
+                                        Debug.Log("random movement");
+                                        //pick random
+                                        pointPick = possiblePointsWithoutWeapon[Random.Range(0, possiblePointsWithoutWeapon.Count)];
                                     }
                                 }
+
                                 //ajust timing
                                 wait = true;
                                 waitTimer = Time.time + moveWaitTime;
@@ -254,6 +317,26 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    private float CalculateDistanceTo(Vector3 me,Vector3 target) 
+    {
+        float dx = target.x - me.x;
+        float dy = target.z - me.z;
+        float sqrx = Mathf.Pow(dx, 2);
+        float sqry = Mathf.Pow(dy, 2);
+        float distanceToTarget = Mathf.Sqrt(sqrx) + Mathf.Sqrt(sqry);
+
+        return distanceToTarget;
+    }
+    private float CalculateDistanceTo(Vector2Int me, Vector2Int target)
+    {
+        float dx = target.x - me.x;
+        float dy = target.y - me.y;
+        float sqrx = Mathf.Pow(dx, 2);
+        float sqry = Mathf.Pow(dy, 2);
+        float distanceToTarget = Mathf.Sqrt(sqrx) + Mathf.Sqrt(sqry);
+
+        return distanceToTarget;
+    }
     private Vector3 GetNextMovePoint() 
     {
         //get the last point
