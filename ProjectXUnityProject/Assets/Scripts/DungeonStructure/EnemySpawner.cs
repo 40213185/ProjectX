@@ -39,7 +39,6 @@ public class EnemySpawner : MonoBehaviour
             //create array accoridingly+player
             GameObject[] combatants = new GameObject[rnd+1];
 
-            Debug.Log("Spawning enemies");
             for (int i = 0; i < rnd; i++)
             {
                 //get random index

@@ -70,8 +70,8 @@ public static class MapHandler
         { 2,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,2,0,0 },
         { 2,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,2,0,0 },
         { 2,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,2,0,0 },
-        { 2,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,2,0,0 },
         { 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0 },
+        { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }});
         //room 02
@@ -255,8 +255,16 @@ public static class MapHandler
         startNode.hcost = Node.CalculateDistance(initialPosition, finalPosition);
         startNode.CalculateFCost();
 
+        //no path found
+        int counter = 25 * 25 + 15;
+
         while (openList.Count > 0)
         {
+            //counter for floodfill
+            counter--;
+
+            if (counter <= 0) return null;
+
             //current node
             Node currentNode = Node.GetLowestFCostNode(openList);
            
@@ -284,15 +292,15 @@ public static class MapHandler
                 float tentativeGcost = currentNode.gcost+Node.CalculateDistance(n.getPosition(),currentNode.getPosition());
 
                 //if cost is lower or the same
-                if (tentativeGcost <= n.gcost)
-                {
+                //if (tentativeGcost <= n.gcost+1)
+                //{
                     //check if not in open list
                     bool found = false;
                     int index = 0;
                     for (int i = 0; i < openList.Count; i++)
                     {
                         //if found
-                        if (openList[i].getPosition() == n.getPosition())
+                        if (openList[i].getPosition() == n.getPosition() || n.getPosition() == initialPosition)
                         {
                             found = true;
                             index = i;
@@ -312,7 +320,7 @@ public static class MapHandler
 
                         //check if its the final node
                         if (openList[openList.Count-1].getPosition() == endNode.getPosition())
-                            return CalculatedPath(openList);
+                            return CalculatedPath(openList,initialPosition);
                     }
                     //if found
                     else 
@@ -325,14 +333,13 @@ public static class MapHandler
 
                         //check if its the final node
                         if (openList[index].getPosition() == endNode.getPosition())
-                            return CalculatedPath(openList);
+                            return CalculatedPath(openList,initialPosition);
                     }
 
-                }
+                // }
             }
         }
         //out of nodes?
-        //return null
         return null;
     }
 
@@ -350,7 +357,7 @@ public static class MapHandler
         return valid;
     }
 
-    private static Vector2Int[] CalculatedPath(List<Node> nodeOpenList)
+    private static Vector2Int[] CalculatedPath(List<Node> nodeOpenList,Vector2Int initialPos)
     {
         List<Node> path = new List<Node>();
         path.Add(nodeOpenList[nodeOpenList.Count-1]);
@@ -358,16 +365,65 @@ public static class MapHandler
         while (current.parentNode != null)
         {
             path.Add(current.parentNode);
-            if (path[path.Count - 1].getPosition() == nodeOpenList[0].getPosition()) break;
             current = current.parentNode;
+            if (current.getPosition() == initialPos) break;
         }
         path.Reverse();
 
+        //convert to position points
         List<Vector2Int> points = new List<Vector2Int>();
         for (int i = 0; i < path.Count; i++)
         {
             points.Add(path[i].getPosition());
         }
+        List<int> aIndex = new List<int>();
+        List<int> bIndex = new List<int>();
+
+        //check
+        bool found = false;
+        //cleanup - fixes back and forth movement
+        for (int i = 0; i < points.Count; i++)
+        {
+            for (int x = 0; x < points.Count; x++)
+            {
+                if (points[i] == points[x])
+                {
+                    aIndex.Add(i);
+                    bIndex.Add(x);
+                    found = true;
+                }
+            }
+        }
+
+        if (found)
+        {
+            //store type
+            Vector2Int type = new Vector2Int(-9999, -9999);
+            //replaces unusable points with type
+            for (int i = 0; i < aIndex.Count; i++)
+            {
+                for (int x = i ; x < bIndex[i]; x++)
+                {
+                    points[x] = type;
+                }
+            }
+
+            //remove all
+            while (found)
+            {
+                found = false;
+                for (int i = 0; i < points.Count; i++)
+                {
+                    if (points[i] == type)
+                    {
+                        points.RemoveAt(i);
+                        found = true;
+                        break;
+                    }
+                }
+            }
+        }
+
         return points.ToArray();
     }
 }
@@ -388,17 +444,17 @@ public class Node
         this.x = x;
         this.y = y;
     }
-    public Vector2Int getPosition() 
+    public Vector2Int getPosition()
     {
         return new Vector2Int(x, y);
     }
     public void CalculateGCost(Vector2Int current, Vector2Int initial)
     {
-        gcost = CalculateDistance(current,initial);
+        gcost = CalculateDistance(current, initial);
     }
     public void CalculateHCost(Vector2Int current, Vector2Int final)
     {
-        hcost = CalculateDistance(current,final);
+        hcost = CalculateDistance(current, final);
     }
     public void CalculateFCost()
     {
@@ -427,7 +483,7 @@ public class Node
         return lowestFCostNode;
     }
 
-    public static List<Node> GetNeighbours(Node currentNode,Vector2Int inititalPosition,Vector2Int finalPosition)
+    public static List<Node> GetNeighbours(Node currentNode, Vector2Int inititalPosition, Vector2Int finalPosition)
     {
         List<Node> neighbours = new List<Node>();
         neighbours.Add(new Node(currentNode.x + 1, currentNode.y));
@@ -445,8 +501,8 @@ public class Node
 
         foreach (Node n in neighbours)
         {
-            n.CalculateGCost(n.getPosition(),inititalPosition);
-            n.CalculateHCost(n.getPosition(),finalPosition);
+            n.CalculateGCost(n.getPosition(), inititalPosition);
+            n.CalculateHCost(n.getPosition(), finalPosition);
             n.CalculateFCost();
         }
 

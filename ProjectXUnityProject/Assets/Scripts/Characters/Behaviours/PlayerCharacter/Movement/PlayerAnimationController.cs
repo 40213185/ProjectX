@@ -10,12 +10,21 @@ public class PlayerAnimationController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        previousPosition = transform.position;
-        newPosition = transform.position;
+        Initialise();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        UpdateRotation();
+    }
+
+    protected void Initialise()
+    {
+        previousPosition = transform.position;
+        newPosition = transform.position;
+    }
+    protected void UpdateRotation()
     {
         //store new position
         newPosition = transform.position;
@@ -23,9 +32,9 @@ public class PlayerAnimationController : MonoBehaviour
         //get the new direction vector
         directionVector = newPosition - previousPosition;
 
-        if(directionVector.magnitude>0)
-            transform.rotation = Quaternion.Euler(0,-90+ Mathf.Atan2(directionVector.z,-directionVector.x)*Mathf.Rad2Deg, 0);
-        
+        if (directionVector.magnitude > 0)
+            transform.rotation = Quaternion.Euler(0, -90 + Mathf.Atan2(directionVector.z, -directionVector.x) * Mathf.Rad2Deg, 0);
+
 
         //stores the old position
         previousPosition = newPosition;
