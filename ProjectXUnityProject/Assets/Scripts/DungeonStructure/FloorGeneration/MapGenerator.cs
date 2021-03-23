@@ -16,6 +16,8 @@ public class MapGenerator : MonoBehaviour
     public GameObject player;
     public List<GameObject> rooms { get; private set; }
 
+    public GameObject UI;
+
     private void GenerateMap(int roomsOnFloor)
     {
         //save rooms setup
@@ -86,6 +88,11 @@ public class MapGenerator : MonoBehaviour
         Instantiate(player, new Vector3(1, 0, 1), player.transform.rotation);
     }
 
+    private void PositionUI() 
+    {
+        Instantiate(UI, new Vector3(0, 0, 0), UI.transform.rotation);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +107,7 @@ public class MapGenerator : MonoBehaviour
         GenerateMap(roomsOnFloor);
         GenerateMapMatrix(roomsOnFloor);
         PositionPlayer();
+        PositionUI();
     }
 
     // Update is called once per frame

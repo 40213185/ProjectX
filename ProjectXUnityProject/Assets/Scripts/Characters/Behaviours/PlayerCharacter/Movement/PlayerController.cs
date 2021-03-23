@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stats = new Stats(100000, 3);                   //initial player stats
+        stats = new Stats(100000, 3,6);                   //initial player stats
         combatController = GetComponent<PlayerControllerCombat>();
         combatController.enabled = false;
 
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
                         }
 
                     }
-                    if (move&&moveToPoints!=null)
+                    if (move && moveToPoints != null)
                     {
                         //at the last point
                         if (transform.position.x == moveToPoints[moveToPoints.Length - 1].x &&
@@ -146,7 +146,7 @@ public class PlayerController : MonoBehaviour
         controllerState = ControllerState.Freeze;
 
         //set player to correct cell
-        transform.position = new Vector3(Mathf.Floor(transform.position.x),feetpos,Mathf.FloorToInt(transform.position.z));
+        transform.position = new Vector3(Mathf.Floor(transform.position.x), feetpos, Mathf.FloorToInt(transform.position.z));
 
         //swap controllers
         combatController.enabled = true;
@@ -158,8 +158,18 @@ public class PlayerController : MonoBehaviour
         controllerCamera.enabled = true;
     }
 
-    public void StopMovement() 
+    public void StopMovement()
     {
         move = false;
+    }
+
+    public Stats GetStats()
+    {
+        return stats;
+    }
+
+    public int GetCurrentActionPoints() 
+    {
+        return stats.GetCurrentActionPoints();
     }
 }

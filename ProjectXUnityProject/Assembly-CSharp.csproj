@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\StatusEffects\Effects\StatusEffect.cs" />
     <Compile Include="Assets\Scripts\DataContainer.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\Usable.cs" />
+    <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyAnimationController.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\FloorGeneration\MapHandler.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\Weapon.cs" />
@@ -80,7 +81,8 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\HideIfPlayerNotPresent.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyAnimationController.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuScripts.cs" />
+    <Compile Include="Assets\Scripts\UI\UIHandling.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
