@@ -11,7 +11,6 @@ public class UIHandling : MonoBehaviour
     
 
     public Slider hpSlider;
-    public Slider manaSlider;
 
     public GameObject usablesPanel;
     public GameObject apGroup;
@@ -21,7 +20,7 @@ public class UIHandling : MonoBehaviour
 
     private void Start()
     {
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().GetStats();
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().stats;
 
         hpSlider.maxValue = playerStats.GetMaxHealth();
 
@@ -31,7 +30,6 @@ public class UIHandling : MonoBehaviour
         for (int i = 0; i < playerStats.GetMaxActionPoints(); i++)
         {
             apCollection[i] = Instantiate(apPoint, apGroup.transform);
-            Debug.Log(i);
         }
 
         uiPlayerStats = playerStats;
@@ -40,8 +38,9 @@ public class UIHandling : MonoBehaviour
 
     public void UpdateUI() 
     {
-
-        if (uiPlayerStats.GetCurrentHealth() != playerStats.GetCurrentHealth()) hpSlider.value = playerStats.GetCurrentHealth(); 
+        Debug.Log("Updated");
+        if (hpSlider.value != playerStats.GetCurrentHealth())
+            hpSlider.value = playerStats.GetCurrentHealth(); 
         
         if(uiPlayerStats.GetCurrentActionPoints() != playerStats.GetCurrentActionPoints()) 
         {
@@ -74,14 +73,15 @@ public class UIHandling : MonoBehaviour
         }
     }
 
-    public void BasicAttackPressed(int index) 
+    public void BasicAttackPressed() 
     {
         Debug.Log("BASIC ATTACK PRESSED");
     }
 
-    public void WeaponSkillPressed(int index) 
+    public void WeaponSkillPressed() 
     {
         Debug.Log("WEAPON SKILL USED");
+        //InventorySystem.equipmentHeld.getCost();
     }
 
     public void SkipTurnPressed() 

@@ -290,10 +290,10 @@ public static class MapHandler
 
                 //check cost of lowest cost neighbor plus cost to move (1 tile)
                 float tentativeGcost = currentNode.gcost+Node.CalculateDistance(n.getPosition(),currentNode.getPosition());
-
+                float tentativeHCost = Node.CalculateDistance(n.getPosition(), finalPosition);
                 //if cost is lower or the same
-                //if (tentativeGcost <= n.gcost+1)
-                //{
+                if (tentativeHCost<=n.hcost)
+                {
                     //check if not in open list
                     bool found = false;
                     int index = 0;
@@ -319,11 +319,11 @@ public static class MapHandler
                         openList.Add(n);
 
                         //check if its the final node
-                        if (openList[openList.Count-1].getPosition() == endNode.getPosition())
-                            return CalculatedPath(openList,initialPosition);
+                        if (openList[openList.Count - 1].getPosition() == endNode.getPosition())
+                            return CalculatedPath(openList, initialPosition);
                     }
                     //if found
-                    else 
+                    else
                     {
                         //replace data
                         openList[index].parentNode = currentNode;
@@ -333,9 +333,9 @@ public static class MapHandler
 
                         //check if its the final node
                         if (openList[index].getPosition() == endNode.getPosition())
-                            return CalculatedPath(openList,initialPosition);
+                            return CalculatedPath(openList, initialPosition);
                     }
-
+                }
                 // }
             }
         }
@@ -490,6 +490,7 @@ public class Node
         neighbours.Add(new Node(currentNode.x - 1, currentNode.y));
         neighbours.Add(new Node(currentNode.x, currentNode.y + 1));
         neighbours.Add(new Node(currentNode.x, currentNode.y - 1));
+        /*
         //added diagonal movement outside of combat
         if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)
         {
@@ -497,7 +498,7 @@ public class Node
             neighbours.Add(new Node(currentNode.x - 1, currentNode.y - 1));
             neighbours.Add(new Node(currentNode.x - 1, currentNode.y + 1));
             neighbours.Add(new Node(currentNode.x + 1, currentNode.y - 1));
-        }
+        }*/
 
         foreach (Node n in neighbours)
         {

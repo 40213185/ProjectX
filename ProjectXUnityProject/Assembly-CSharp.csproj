@@ -69,20 +69,20 @@
     <Compile Include="Assets\Scripts\DungeonStructure\FloorGeneration\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\StatusEffects\Effects\StatusEffect.cs" />
     <Compile Include="Assets\Scripts\DataContainer.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuScripts.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\Usable.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyAnimationController.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\FloorGeneration\MapHandler.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\UI\UIHandling.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\Item.cs" />
-    <Compile Include="Assets\test.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Movement\PlayerControllerCombat.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyLibrary.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\HideIfPlayerNotPresent.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\UI\MenuScripts.cs" />
-    <Compile Include="Assets\Scripts\UI\UIHandling.cs" />
+    <Compile Include="Assets\Scripts\HighlightCells.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
