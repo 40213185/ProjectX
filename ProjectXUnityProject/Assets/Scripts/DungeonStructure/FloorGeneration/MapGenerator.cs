@@ -9,6 +9,8 @@ public class MapGenerator : MonoBehaviour
     //rooms should be lesser than 21x21 to accomodate hallway padding
     //Room prefab List(Update this as needed):
     //Room00: 20x20 floor
+    //Room08: StartingRoom
+
     public GameObject[] RoomPrefabs;
     public int[] RoomsPerFloor;
     public bool[,] roomsBuiltValidation { get; private set; }
@@ -43,8 +45,17 @@ public class MapGenerator : MonoBehaviour
             //check if room placed
             if (!roomsBuiltValidation[pointer.x, pointer.y])
             {
+                int pick;
+                if(i == 0) 
+                {
+                    pick = 8;
+                }
+                else 
+                { 
+                    pick = Random.Range(0, RoomPrefabs.Length-1); 
+                }
                 //pick a room
-                int pick = Random.Range(0, RoomPrefabs.Length);
+                
                 //create room and store it
                 rooms.Add(Instantiate(RoomPrefabs[pick], new Vector3(pointer.x * MapHandler.roomSizex, 0, pointer.y * MapHandler.roomSizey), RoomPrefabs[pick].transform.rotation));
                 //set room built here
@@ -85,7 +96,7 @@ public class MapGenerator : MonoBehaviour
 
     private void PositionPlayer() 
     {
-        Instantiate(player, new Vector3(1, 0, 1), player.transform.rotation);
+        Instantiate(player, new Vector3(3, 0, 1), player.transform.rotation);
     }
 
     private void PositionUI() 

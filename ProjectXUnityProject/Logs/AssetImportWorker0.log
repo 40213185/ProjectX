@@ -15,11 +15,11 @@ C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52734
+53231
 Successfully changed project path to: C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 20.20 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 24.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.4f1 (becced5a802b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,399 +35,264 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56036
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56568
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002136 seconds.
+Registered in 0.001952 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 21.70 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 20.06 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.905 seconds
+- Completed reload, in  0.899 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000891 seconds.
+Registered in 0.000650 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000257F4E2E020 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-0000027210D901F0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.696 seconds
+- Completed reload, in  0.689 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1104 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 57.4 MB.
-System memory in use after: 57.4 MB.
+System memory in use after: 57.5 MB.
 
 Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1549.
-Total: 1.567800 ms (FindLiveObjects: 0.151200 ms CreateObjectMapping: 0.028000 ms MarkObjects: 1.318100 ms  DeleteObjects: 0.069600 ms)
+Total: 2.112200 ms (FindLiveObjects: 0.190600 ms CreateObjectMapping: 0.030900 ms MarkObjects: 1.818800 ms  DeleteObjects: 0.070700 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d5362b4527c61987b6e42a32d0297fa') in 0.045217 seconds
-  Import took 0.047014 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 42.511799 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cafc20f5c282be9148476de1fc14b2e6') in 0.004136 seconds
-  Import took 0.006013 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.607799 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15e84f1ea68dfa6c88776b9ef9d0d495') in 0.004124 seconds
-  Import took 0.006379 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 561.683996 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f6fae647806c7f3639ba693709a8daf') in 0.071049 seconds
-  Import took 0.074341 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.026167 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/Materials/TestCobble.mat
-  artifactKey: Guid(90ee1ffb42f078d4eb64456fc6e3674b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/Materials/TestCobble.mat using Guid(90ee1ffb42f078d4eb64456fc6e3674b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a039ec49f31288036572137dd9c778c3') in 0.029550 seconds
-  Import took 0.031572 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000300 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/Materials/TestMossyWall.mat
-  artifactKey: Guid(4ae7ff1a65bbbb0418f33dc70ddb3400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/Materials/TestMossyWall.mat using Guid(4ae7ff1a65bbbb0418f33dc70ddb3400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbcd2a83ca546afc2b8ef2d27c65f792') in 0.014219 seconds
-  Import took 0.016281 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000412 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/Materials/TestMossyWall.mat
-  artifactKey: Guid(4ae7ff1a65bbbb0418f33dc70ddb3400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/Materials/TestMossyWall.mat using Guid(4ae7ff1a65bbbb0418f33dc70ddb3400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbcd2a83ca546afc2b8ef2d27c65f792') in 0.017476 seconds
-  Import took 0.019476 seconds .
+  path: Assets/Scripts/DungeonStructure/FloorGeneration/MapGenerator.prefab
+  artifactKey: Guid(a6f6f0c686d6f9942b92d869d81fad60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/FloorGeneration/MapGenerator.prefab using Guid(a6f6f0c686d6f9942b92d869d81fad60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d9df33c457b7db7c8887d6b0929d508') in 0.146839 seconds
+  Import took 0.160026 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000852 seconds.
+Registered in 0.000844 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000257F8CD0520 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-0000027210D22B10 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.658 seconds
+- Completed reload, in  0.681 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.0 MB.
+System memory in use after: 60.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1554.
+Total: 1.359300 ms (FindLiveObjects: 0.151000 ms CreateObjectMapping: 0.024900 ms MarkObjects: 1.164000 ms  DeleteObjects: 0.018500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001033 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000002720B9B99D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.662 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.8 MB.
-System memory in use after: 60.8 MB.
+System memory in use before: 60.1 MB.
+System memory in use after: 60.2 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1592.
-Total: 1.490500 ms (FindLiveObjects: 0.173700 ms CreateObjectMapping: 0.026800 ms MarkObjects: 1.272100 ms  DeleteObjects: 0.016600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 674.926621 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcdbadec6d5125950ccde3049e79f2f8') in 0.053999 seconds
-  Import took 0.056677 seconds .
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1556.
+Total: 2.006200 ms (FindLiveObjects: 0.161000 ms CreateObjectMapping: 0.026000 ms MarkObjects: 1.801100 ms  DeleteObjects: 0.016500 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000739 seconds.
+Registered in 0.000747 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000257FB619C60 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-00000272100BBFB0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.680 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.1 MB.
+System memory in use after: 60.2 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1558.
+Total: 1.493600 ms (FindLiveObjects: 0.162800 ms CreateObjectMapping: 0.024500 ms MarkObjects: 1.291800 ms  DeleteObjects: 0.013200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 533.223916 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cc0ad4597d3c0f2a7faab228a5935fb') in 0.087507 seconds
+  Import took 0.091300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.759966 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e06398457d68164cab81737241d0d629') in 0.021501 seconds
+  Import took 0.024696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.012751 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a586ce26d6081955df81d8d09724d841') in 0.020462 seconds
+  Import took 0.023254 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.389216 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0ffdd93b64c81e716f6883ffc918f02') in 0.039784 seconds
+  Import took 0.044096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.220044 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a539d531aa4ea04706ac4f16ff7d22') in 0.036648 seconds
+  Import took 0.040841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.082857 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room00.prefab
+  artifactKey: Guid(b379c9989cd965148849bd75b996154e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room00.prefab using Guid(b379c9989cd965148849bd75b996154e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be4794f894485d029db46f769648d12') in 0.010216 seconds
+  Import took 0.012489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '067f3406e48de1ccb75ccef4f65cbf7d') in 0.023044 seconds
+  Import took 0.025770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 76.234150 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '896a24e26d6a829517362ff2a392bfb6') in 0.020522 seconds
+  Import took 0.023455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.067645 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22142f3bc80f325c76e865a816f31726') in 0.019879 seconds
+  Import took 0.022824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.242232 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eeff6b78324ff5e960a00e510d831cd') in 0.020061 seconds
+  Import took 0.023070 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001010 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000272129E4A00 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.695 seconds
+Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.645 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.8 MB.
-System memory in use after: 60.9 MB.
+System memory in use before: 63.2 MB.
+System memory in use after: 63.2 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1595.
-Total: 1.342300 ms (FindLiveObjects: 0.147500 ms CreateObjectMapping: 0.023800 ms MarkObjects: 1.154100 ms  DeleteObjects: 0.016200 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1567.
+Total: 1.465300 ms (FindLiveObjects: 0.161000 ms CreateObjectMapping: 0.024300 ms MarkObjects: 1.262600 ms  DeleteObjects: 0.015900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000782 seconds.
+Registered in 0.000790 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000257F48C0650 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000002720B9E57B0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.626 seconds
+- Completed reload, in  0.667 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.8 MB.
-System memory in use after: 60.9 MB.
+System memory in use before: 63.2 MB.
+System memory in use after: 63.3 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1597.
-Total: 1.489700 ms (FindLiveObjects: 0.154600 ms CreateObjectMapping: 0.025300 ms MarkObjects: 1.292400 ms  DeleteObjects: 0.016500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 530.877207 seconds.
-  path: Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs
-  artifactKey: Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs using Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80cb29def49612efb01c0a0ffb5204b1') in 0.008323 seconds
-  Import took 0.010493 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.017492 seconds.
-  path: Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs
-  artifactKey: Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs using Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80cb29def49612efb01c0a0ffb5204b1') in 0.002747 seconds
-  Import took 0.004872 seconds .
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1569.
+Total: 1.618000 ms (FindLiveObjects: 0.181400 ms CreateObjectMapping: 0.028900 ms MarkObjects: 1.389900 ms  DeleteObjects: 0.016500 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000761 seconds.
+Registered in 0.000702 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000257FB66EDF0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.693 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.8 MB.
-System memory in use after: 60.9 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1599.
-Total: 1.430500 ms (FindLiveObjects: 0.157700 ms CreateObjectMapping: 0.027300 ms MarkObjects: 1.232900 ms  DeleteObjects: 0.011500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 90.225815 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d4f613059bc98dfd9d444c9d6eda551') in 0.067806 seconds
-  Import took 0.071156 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.631078 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224c77ccfc12678e765ce96da479acf5') in 0.019773 seconds
-  Import took 0.022698 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.317693 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a70cfdf261f420ccfb367149de87c5bc') in 0.026566 seconds
-  Import took 0.029921 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.623753 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f37adb331e7e520acc00e9c3e06902f0') in 0.025286 seconds
-  Import took 0.028858 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.047218 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4a6efbf3ffcf03f16c19dbf357d514e') in 0.024901 seconds
-  Import took 0.027765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.236594 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89ed3f34d548a07d6bd3df9a58f50b64') in 0.026683 seconds
-  Import took 0.030154 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.060916 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7976812673a6ea29343d452431346a57') in 0.025209 seconds
-  Import took 0.028235 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.879074 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fc4486afa3d4f8ae175a4aff559a43a') in 0.034786 seconds
-  Import took 0.038090 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.618108 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9beee7baed8581c1439ecd738d20447b') in 0.026788 seconds
-  Import took 0.030229 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.628191 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e61b0d2d2d70ee8d204150bf3ff499a3') in 0.025219 seconds
-  Import took 0.028312 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.786472 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da1cae0ae4e420cb0324062825db7666') in 0.026097 seconds
-  Import took 0.029216 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.282892 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d999cbb51987b63d1eb778cee3774f8') in 0.031022 seconds
-  Import took 0.036176 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.916561 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '828debff4bccb2d4060bcff684fe6179') in 0.034411 seconds
-  Import took 0.038212 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.157113 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fdf430fda1e5ff32d6c6c425f63c156') in 0.029166 seconds
-  Import took 0.032659 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.028407 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '278a634de27b01a7c6579831683f45be') in 0.029996 seconds
-  Import took 0.034671 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.409229 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e399aa62ac91ab77ff2190ef127720cd') in 0.035949 seconds
-  Import took 0.039516 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.800607 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efd9da3a158ba863d1329402c6073f9a') in 0.031405 seconds
-  Import took 0.035211 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.998361 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1ea1c32fd80081c5586751845f64ff3') in 0.028200 seconds
-  Import took 0.031975 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.152539 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '868c18d5adb30dccab9f843e440a6739') in 0.020220 seconds
-  Import took 0.022999 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.092621 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '057944830b2cc430831e449163189b6b') in 0.029427 seconds
-  Import took 0.032702 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.253356 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aba01f484b966cbeedab60a3eadb034c') in 0.034468 seconds
-  Import took 0.039158 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000769 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000257FB66EDF0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000002720B9E57B0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
@@ -438,61 +303,21 @@ RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.658 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 62.0 MB.
-System memory in use after: 62.1 MB.
+System memory in use before: 63.2 MB.
+System memory in use after: 63.3 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1602.
-Total: 1.357600 ms (FindLiveObjects: 0.147400 ms CreateObjectMapping: 0.024300 ms MarkObjects: 1.167100 ms  DeleteObjects: 0.018100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 79.187832 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d8876d88baf606918495bede3b51ef1') in 0.065986 seconds
-  Import took 0.069249 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.358013 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9c8cab10e4ab386ac00f8c57c7771df') in 0.022798 seconds
-  Import took 0.025617 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000897 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9c8cab10e4ab386ac00f8c57c7771df') in 0.023557 seconds
-  Import took 0.026154 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.795291 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd317033e0f866a14c25d1941cfaa6bb6') in 0.024039 seconds
-  Import took 0.027285 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.548625 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '812f867fbca221ede8f85e43cd364fa6') in 0.037404 seconds
-  Import took 0.041255 seconds .
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1571.
+Total: 2.217800 ms (FindLiveObjects: 0.153200 ms CreateObjectMapping: 0.025300 ms MarkObjects: 2.019600 ms  DeleteObjects: 0.018600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000799 seconds.
+Registered in 0.000863 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000257FB846680 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-00000272129E4A00 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
@@ -501,26 +326,26 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.640 seconds
+- Completed reload, in  0.635 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 62.0 MB.
-System memory in use after: 62.1 MB.
+System memory in use before: 63.2 MB.
+System memory in use after: 63.3 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1605.
-Total: 1.424500 ms (FindLiveObjects: 0.212000 ms CreateObjectMapping: 0.035600 ms MarkObjects: 1.158500 ms  DeleteObjects: 0.017200 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1573.
+Total: 1.476700 ms (FindLiveObjects: 0.132000 ms CreateObjectMapping: 0.026200 ms MarkObjects: 1.303700 ms  DeleteObjects: 0.013600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000703 seconds.
+Registered in 0.000745 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000257FB846680 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-00000272129E4A00 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -531,18 +356,149 @@ Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 62.0 MB.
-System memory in use after: 62.1 MB.
+System memory in use before: 63.2 MB.
+System memory in use after: 63.3 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1607.
-Total: 1.380500 ms (FindLiveObjects: 0.160000 ms CreateObjectMapping: 0.026400 ms MarkObjects: 1.179700 ms  DeleteObjects: 0.013000 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1575.
+Total: 1.461500 ms (FindLiveObjects: 0.138200 ms CreateObjectMapping: 0.025600 ms MarkObjects: 1.282600 ms  DeleteObjects: 0.013900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 390.325832 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a635ea5a85fa73eca10d918d6678112') in 0.065431 seconds
+  Import took 0.068834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.535317 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb407b69a8dc6ea42c05d437cce11de7') in 0.025686 seconds
+  Import took 0.029290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.975725 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2af8d92da6c9f678392d090653ceda77') in 0.023624 seconds
+  Import took 0.027101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.760940 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c3031ed44a5243d53aa5c743f2bf2d0') in 0.027551 seconds
+  Import took 0.031270 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000887 seconds.
+Registered in 0.000880 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000257FB846680 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-00000272337E00A0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.661 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.4 MB.
+System memory in use after: 63.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1578.
+Total: 1.370200 ms (FindLiveObjects: 0.150500 ms CreateObjectMapping: 0.025500 ms MarkObjects: 1.174300 ms  DeleteObjects: 0.018700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000826 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000272124A40D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.663 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.4 MB.
+System memory in use after: 63.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1580.
+Total: 1.487400 ms (FindLiveObjects: 0.151100 ms CreateObjectMapping: 0.024400 ms MarkObjects: 1.296600 ms  DeleteObjects: 0.014400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001042 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000027210371710 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.643 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.4 MB.
+System memory in use after: 63.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1582.
+Total: 1.497800 ms (FindLiveObjects: 0.177600 ms CreateObjectMapping: 0.026200 ms MarkObjects: 1.280600 ms  DeleteObjects: 0.012000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 225.937415 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c084d40cf3c4cfb47c9b5532c6c258e5') in 0.060342 seconds
+  Import took 0.063254 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096590 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55ec7f28ad64d5ab9e8146d384de6e59') in 0.019673 seconds
+  Import took 0.022815 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004743 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
+  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55ec7f28ad64d5ab9e8146d384de6e59') in 0.020585 seconds
+  Import took 0.023812 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000787 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000027212474F90 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
@@ -551,15 +507,546 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.601 seconds
+- Completed reload, in  0.613 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 62.0 MB.
-System memory in use after: 62.1 MB.
+System memory in use before: 63.4 MB.
+System memory in use after: 63.5 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1609.
-Total: 1.356700 ms (FindLiveObjects: 0.139000 ms CreateObjectMapping: 0.025200 ms MarkObjects: 1.180600 ms  DeleteObjects: 0.011000 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1585.
+Total: 1.473900 ms (FindLiveObjects: 0.147300 ms CreateObjectMapping: 0.024800 ms MarkObjects: 1.279800 ms  DeleteObjects: 0.021200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 225.734185 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
+  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b3c824341af97ca9efb918cdd9d876') in 0.069795 seconds
+  Import took 0.073561 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000807 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000272338D40C0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.641 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.4 MB.
+System memory in use after: 63.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1588.
+Total: 1.633800 ms (FindLiveObjects: 0.152600 ms CreateObjectMapping: 0.026000 ms MarkObjects: 1.428200 ms  DeleteObjects: 0.025800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000806 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000272338D40C0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.638 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.4 MB.
+System memory in use after: 63.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1590.
+Total: 1.511800 ms (FindLiveObjects: 0.183000 ms CreateObjectMapping: 0.026000 ms MarkObjects: 1.285600 ms  DeleteObjects: 0.016000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 325.265703 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9db138cc5e7a0edbc78020dbbbb0999') in 0.061352 seconds
+  Import took 0.064461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.771360 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1118d587c0e05b021d0f96ea296d8c1d') in 0.023681 seconds
+  Import took 0.026881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.586907 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5890ce9093d7cc216bf7d20ca58a447') in 0.025482 seconds
+  Import took 0.028683 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000858 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000027210371710 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.648 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.5 MB.
+System memory in use after: 63.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1593.
+Total: 1.689900 ms (FindLiveObjects: 0.191600 ms CreateObjectMapping: 0.026200 ms MarkObjects: 1.453000 ms  DeleteObjects: 0.017800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 67.066057 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1134ce1bb2508cc21921d7c8bd71c875') in 0.064724 seconds
+  Import took 0.067845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.841169 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7849b4ef82e22f13df0c24821140d628') in 0.025853 seconds
+  Import took 0.029157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.774272 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0ba7adf6302880356ab73a960c2d314') in 0.023198 seconds
+  Import took 0.026413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.591408 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f752ccc9fb9057f38f2a8a23db2676e4') in 0.025979 seconds
+  Import took 0.029053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.770665 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
+  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e151cc36f0a88951fec52a57914185cd') in 0.024108 seconds
+  Import took 0.027423 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000788 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000027210371710 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.624 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.5 MB.
+System memory in use after: 63.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1596.
+Total: 1.458400 ms (FindLiveObjects: 0.165600 ms CreateObjectMapping: 0.026900 ms MarkObjects: 1.244300 ms  DeleteObjects: 0.020400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 416.537866 seconds.
+  path: Assets/Scripts/DungeonStructure/FloorGeneration/MapGenerator.prefab
+  artifactKey: Guid(a6f6f0c686d6f9942b92d869d81fad60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/FloorGeneration/MapGenerator.prefab using Guid(a6f6f0c686d6f9942b92d869d81fad60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a70ecb6c41235ebdce13f81c690cb69') in 0.102307 seconds
+  Import took 0.118852 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000801 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000027210371710 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.647 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.5 MB.
+System memory in use after: 63.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1598.
+Total: 1.642200 ms (FindLiveObjects: 0.256700 ms CreateObjectMapping: 0.083100 ms MarkObjects: 1.280900 ms  DeleteObjects: 0.020500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 196.191010 seconds.
+  path: Assets/Scripts/DungeonStructure/FloorGeneration/MapGenerator.prefab
+  artifactKey: Guid(a6f6f0c686d6f9942b92d869d81fad60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/FloorGeneration/MapGenerator.prefab using Guid(a6f6f0c686d6f9942b92d869d81fad60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '819aa1e6de1121b04d9b8c3545184a88') in 0.114487 seconds
+  Import took 0.132831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.076670 seconds.
+  path: Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs
+  artifactKey: Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs using Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94603dec823574ff03b917ba941e4ee9') in 0.006291 seconds
+  Import took 0.008232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021651 seconds.
+  path: Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs
+  artifactKey: Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs using Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94603dec823574ff03b917ba941e4ee9') in 0.002676 seconds
+  Import took 0.004453 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000748 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000027210371710 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.657 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.6 MB.
+System memory in use after: 63.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1600.
+Total: 1.573500 ms (FindLiveObjects: 0.168900 ms CreateObjectMapping: 0.025500 ms MarkObjects: 1.350000 ms  DeleteObjects: 0.027800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.312529 seconds.
+  path: Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs
+  artifactKey: Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs using Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f50604d85640c2e081120cadbefdabb8') in 0.004440 seconds
+  Import took 0.006334 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.512556 seconds.
+  path: Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs
+  artifactKey: Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/FloorGeneration/MapHandler.cs using Guid(1b34712f0816a584e9d34d43a5769e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f50604d85640c2e081120cadbefdabb8') in 0.002495 seconds
+  Import took 0.004197 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001080 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000027210371710 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.625 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.6 MB.
+System memory in use after: 63.7 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1602.
+Total: 1.386900 ms (FindLiveObjects: 0.155900 ms CreateObjectMapping: 0.025000 ms MarkObjects: 1.193200 ms  DeleteObjects: 0.011800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.889026 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab66a4bdc6abd7a546fef2067a895413') in 0.056472 seconds
+  Import took 0.059454 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.148243 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83561897ef2c1b27d4b2deceb3c9c627') in 0.017867 seconds
+  Import took 0.020474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.371457 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6643d4ec72cb3090ac7024572df89892') in 0.018385 seconds
+  Import took 0.020960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.670680 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c846781de0dcccb4455d3dd0be681c0') in 0.020986 seconds
+  Import took 0.024020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.606567 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f867472232bc9dddfe43eb237960da8') in 0.017590 seconds
+  Import took 0.020996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.413147 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edcf8d6dc3d87c3ed70b60d35a0b4ece') in 0.019459 seconds
+  Import took 0.022397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.170949 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3523dbb862e7f1cf2c94987f030d2a6b') in 0.018084 seconds
+  Import took 0.020882 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.407946 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b573814bf156b0a6e7235c8e5f99cc6') in 0.019297 seconds
+  Import took 0.022288 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000823 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000272124A40D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.663 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 64.0 MB.
+System memory in use after: 64.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1605.
+Total: 1.697900 ms (FindLiveObjects: 0.191400 ms CreateObjectMapping: 0.028700 ms MarkObjects: 1.450500 ms  DeleteObjects: 0.026300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.403479 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7023bd60d37c4788ffc2b690cd309b84') in 0.053436 seconds
+  Import took 0.056008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.373384 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c60cfc53976d6fae35d94cde92b8775') in 0.018266 seconds
+  Import took 0.021158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.865782 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '660bd5f9278b016ef949298b6fbb5f03') in 0.017012 seconds
+  Import took 0.019708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001125 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '660bd5f9278b016ef949298b6fbb5f03') in 0.018960 seconds
+  Import took 0.021554 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.057227 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b52504660e68d9436d7099bea942109') in 0.018393 seconds
+  Import took 0.021216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.237474 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdd0798c2e82385650a61f8e8359ea10') in 0.017059 seconds
+  Import took 0.020089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.395433 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be9d0d0a11fb6154911c456ebea53ff9') in 0.016915 seconds
+  Import took 0.019553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.275485 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36679453043b9df33645f2a12f9b4e73') in 0.020036 seconds
+  Import took 0.022954 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001279 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000002721289FC10 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.656 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 64.1 MB.
+System memory in use after: 64.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1608.
+Total: 1.793600 ms (FindLiveObjects: 0.156500 ms CreateObjectMapping: 0.026400 ms MarkObjects: 1.590700 ms  DeleteObjects: 0.019100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001013 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000002721289FC10 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.649 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 64.1 MB.
+System memory in use after: 64.2 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1610.
+Total: 1.579400 ms (FindLiveObjects: 0.162100 ms CreateObjectMapping: 0.028300 ms MarkObjects: 1.373500 ms  DeleteObjects: 0.014400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 105.646329 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
+  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65c5c2568f06dcaf97f07052dd9540cc') in 0.060776 seconds
+  Import took 0.063418 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001558 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000027233E1F010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.642 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 64.1 MB.
+System memory in use after: 64.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1613.
+Total: 1.462500 ms (FindLiveObjects: 0.173500 ms CreateObjectMapping: 0.025900 ms MarkObjects: 1.244700 ms  DeleteObjects: 0.017500 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
