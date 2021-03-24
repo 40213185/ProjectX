@@ -98,8 +98,7 @@ public class MapGenerator : MonoBehaviour
     {
         //initialize game data
         GameData.SetFloor(4);
-        GlobalGameState.SetCombatState(false);
-        InventorySystem.init(1,10);
+        InventorySystem.init(4);
 
         //initialize map
         //rooms per floor on current floor
@@ -108,6 +107,7 @@ public class MapGenerator : MonoBehaviour
         GenerateMapMatrix(roomsOnFloor);
         PositionPlayer();
         PositionUI();
+        GlobalGameState.SetCombatState(false);
     }
 
     // Update is called once per frame

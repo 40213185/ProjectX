@@ -90,4 +90,15 @@ public static class CombatHandler
             return _combatants[combatantPointer];
         else return null;
     }
+
+    public static GameObject getCurrentCombatant() 
+    {
+        return _combatants[combatantPointer];
+    }
+    public static GameObject getNextCurrentCombatant()
+    {
+        int nextPointer = combatantPointer + 1;
+        if (nextPointer >= _combatants.Length) nextPointer = 0;
+        return _combatants[nextPointer];
+    }
 }

@@ -6,6 +6,8 @@ public class PlayerControllerCombat : MonoBehaviour
 {
     //camera
     public Camera controllerCamera;
+    //highlighting cells
+    private HighlightCells highlight;
 
     public enum CombatControllerState
     {
@@ -44,6 +46,9 @@ public class PlayerControllerCombat : MonoBehaviour
 
         waitTimer = Time.time + waitTime;
         wait = false;
+
+        //highlighting
+        highlight = HighlightCells.instance;
     }
 
     // Update is called once per frame
@@ -68,7 +73,7 @@ public class PlayerControllerCombat : MonoBehaviour
                             //set up ray
                             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                             //create a plane at floor level
-                            Plane hitPlane = new Plane(Vector3.up, new Vector3(0, 0, 0));
+                            Plane hitPlane = new Plane(Vector3.up, new Vector3(0, -0.5f, 0));
                             //Plane.Raycast stores the distance from ray.origin to the hit point in this variable
                             float distance = 0;
                             //if the ray hits the plane
@@ -81,31 +86,30 @@ public class PlayerControllerCombat : MonoBehaviour
                                 Vector2Int initpos = new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
                                 Vector2Int clickpos = new Vector2Int(Mathf.FloorToInt(mouseClickPos.x), Mathf.FloorToInt(mouseClickPos.z));
 
-                                
+
                                 if (CanMove(clickpos))
                                 {
-                                    //try
-                                   // {
-                                        if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
+                                    if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
+                                    {
+                                        //get the movetopoints
+                                        moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos, movementRange);
+                                        //change state
+                                        if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat && myTurn && moveToPoints != null)
                                         {
-                                            //get the movetopoints
-                                            moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos, movementRange);
-                                            //change state
-                                            if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat && myTurn&&moveToPoints!=null) combatControllerState = CombatControllerState.CombatMove;
-                                            else if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)
+                                            combatControllerState = CombatControllerState.CombatMove;
+                                            //highlight cell
+                                            if (moveToPoints != null && moveToPoints.Length > 0)
                                             {
-                                                //adjust click position
-                                                mouseClickPos = new Vector3(clickpos.x, feetpos, clickpos.y);
+                                                for (int i = 0; i < moveToPoints.Length; i++)
+                                                {
+                                                    highlight.PlaceHighlight(moveToPoints[i]);
+                                                }
                                             }
                                         }
-                                    //}
-                                   // catch
-                                   // {
-                                   //     Debug.Log("Index out of bounds error.");
-                                   // }
+
+                                    }
                                 }
                             }
-
                         }
 
                         break;
@@ -114,7 +118,13 @@ public class PlayerControllerCombat : MonoBehaviour
                 //combat movement
                 case CombatControllerState.CombatMove:
                     {
-                        if (MoveToPoint()) combatControllerState = CombatControllerState.EndTurn;
+                        if (MoveToPoint())
+                        {
+                            //clear highlights
+                            highlight.ClearHighlights();
+                            //change state on end movement
+                            combatControllerState = CombatControllerState.EndTurn;
+                        }
                         break;
                     }
 

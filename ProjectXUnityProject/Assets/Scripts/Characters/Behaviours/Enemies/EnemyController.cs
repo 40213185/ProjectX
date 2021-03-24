@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour
     Stats stats;
     //camera
     public Camera controllerCamera;
+    //highlighting cells
+    private HighlightCells highlight;
 
     public enum State {
     Idle,
@@ -57,6 +59,9 @@ public class EnemyController : MonoBehaviour
         weapons = EnemyLibrary.GetEnemyWeaponry(enemyType);
         weaponChoice = new List<int>();
         withinAttackRange = false;
+
+        //highlighting
+        highlight = HighlightCells.instance;
     }
 
     // Update is called once per frame
@@ -158,7 +163,6 @@ public class EnemyController : MonoBehaviour
                                 //have possible points with weapons?
                                 if (possiblePointsWithWeapon.Count > 0)
                                 {
-                                    Debug.Log("move with weapons");
                                     //reset pointpick
                                     pointPick = 0;
                                     weaponPick = 0;
@@ -211,7 +215,6 @@ public class EnemyController : MonoBehaviour
                                     //have possible points
                                     if (picked)
                                     {
-                                        Debug.Log("No weapon move");
                                         for (int i = 0; i < possiblePoints.Count; i++)
                                         {
                                             if (CalculateDistanceTo(movePoints[pointPick], playerPos) >
@@ -224,7 +227,6 @@ public class EnemyController : MonoBehaviour
                                     //if no point was picked
                                     else
                                     {
-                                        Debug.Log("random movement");
                                         //pick random
                                         pointPick = possiblePointsWithoutWeapon[Random.Range(0, possiblePointsWithoutWeapon.Count)];
                                     }
@@ -233,6 +235,12 @@ public class EnemyController : MonoBehaviour
                                 //ajust timing
                                 wait = true;
                                 waitTimer = Time.time + moveWaitTime;
+                                //highlight cell
+                                List<Vector3> highlightedPoints = new List<Vector3>();
+                                if (movePoints != null && movePoints.Length > 0)
+                                {
+                                    highlight.PlaceHighlight(movePoints[pointPick]);
+                                }
                                 //move
                                 actionState = State.Move;
                                 break;
@@ -269,6 +277,8 @@ public class EnemyController : MonoBehaviour
                             if (transform.position.x == movePoints[pointPick].x &&
                                 transform.position.z == movePoints[pointPick].y)
                             {
+                                //clear highlights
+                                highlight.ClearHighlights();
                                 //no more movement
                                 moved = true;
                                 //action

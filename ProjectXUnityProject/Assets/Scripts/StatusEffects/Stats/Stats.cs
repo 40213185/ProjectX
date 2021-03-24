@@ -32,10 +32,13 @@ public class Stats
     }
     public int ModifyHealthBy(int amount) 
     {
+        Debug.Log("Damaged:" + amount.ToString());
         //store current health
         int beforeHealth = currentHealth;
         //make changes
         currentHealth = Mathf.Clamp(currentHealth+amount,0,maxHealth);
+        //update ui
+        GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
         //return the difference between previous current health and new one
         return beforeHealth - currentHealth;
     }

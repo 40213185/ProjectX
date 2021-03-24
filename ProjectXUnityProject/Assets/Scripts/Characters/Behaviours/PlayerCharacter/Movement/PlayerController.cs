@@ -32,10 +32,13 @@ public class PlayerController : MonoBehaviour
     private Vector2Int[] moveToPoints;
     private int movePointsIndex;
 
+    //highlighting cells
+    private HighlightCells highlight;
+
     // Start is called before the first frame update
     void Start()
     {
-        stats = new Stats(100000, 3,6);                   //initial player stats
+        stats = new Stats(100, 3,6);                   //initial player stats
         combatController = GetComponent<PlayerControllerCombat>();
         combatController.enabled = false;
 
@@ -44,6 +47,8 @@ public class PlayerController : MonoBehaviour
         mouseClickPos = new Vector3();
         feetpos = 0;
         move = false;
+
+        highlight = HighlightCells.instance;
     }
 
     // Update is called once per frame
@@ -65,10 +70,12 @@ public class PlayerController : MonoBehaviour
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
+                        //clear highlights if they exist;
+                        highlight.ClearHighlights();
                         //set up ray
                         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                         //create a plane at floor level
-                        Plane hitPlane = new Plane(Vector3.up, new Vector3(0, 0, 0));
+                        Plane hitPlane = new Plane(Vector3.up, new Vector3(0, -0.5f, 0));
                         //Plane.Raycast stores the distance from ray.origin to the hit point in this variable
                         float distance = 0;
                         //if the ray hits the plane
@@ -90,11 +97,19 @@ public class PlayerController : MonoBehaviour
                                     movePointsIndex = 1;
                                     //reset mouseclick
                                     move = true;
+                                    //highlight cell
+                                    if (moveToPoints!=null&&moveToPoints.Length>0)
+                                    {
+                                        for (int i = 0; i < moveToPoints.Length; i++)
+                                        {
+                                            highlight.PlaceHighlight(moveToPoints[i]);
+                                        }
+                                    }
                                 }
                             }
-                            catch
+                            catch (UnityException e)
                             {
-                                Debug.Log("Index out of bounds error.");
+                                Debug.Log("Error: "+e.ToString());
                             }
                         }
 
@@ -105,6 +120,8 @@ public class PlayerController : MonoBehaviour
                         if (transform.position.x == moveToPoints[moveToPoints.Length - 1].x &&
                             transform.position.z == moveToPoints[moveToPoints.Length - 1].y)
                         {
+                            //clear highlights
+                            highlight.ClearHighlights();
                             //stop movement
                             move = false;
                             break;
@@ -125,8 +142,12 @@ public class PlayerController : MonoBehaviour
                                 movePointsIndex++;
                                 //moveindex out of range?
                                 if (movePointsIndex >= moveToPoints.Length)
+                                {
+                                    //clear highlights
+                                    highlight.ClearHighlights();
                                     //stop moving
                                     move = false;
+                                }
                             }
                         }
                     }

@@ -10,6 +10,7 @@ public class Weapon : Item
     private EquipmentType type;
     private Skills skill;
     private StatusEffect.EffectType effect;
+    private int cost;
 
     public static Weapon GetRandomWeapon(int modifier1, int modifier2)
     {
@@ -33,6 +34,7 @@ public class Weapon : Item
                 weaponRoll.SetNameAndDesc("Dagger", "A Small bladed dagger, used for stabbing things, Good at making holes that bleed");
                 weaponRoll.SetPotency(1, 3, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.skill);
+                weaponRoll.cost = 1;
                 break;
 
             case EquipmentType.Sword:
@@ -42,6 +44,7 @@ public class Weapon : Item
                 weaponRoll.SetNameAndDesc("Sword", "A long bladed weapon, Makes a nice whoosh sound when used in a slashing motion");
                 weaponRoll.SetPotency(2, 5, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.skill);
+                weaponRoll.cost = 1;
                 break;
 
             case EquipmentType.TwoHandedSword:
@@ -51,6 +54,7 @@ public class Weapon : Item
                 weaponRoll.SetNameAndDesc("TwoHandedSword", "A Massive sword, Surprised you can even hold it up, Good at cracking eggs");
                 weaponRoll.SetPotency(4, 8, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.skill);
+                weaponRoll.cost = 2;
                 break;
 
             case EquipmentType.FireBall:
@@ -60,6 +64,7 @@ public class Weapon : Item
                 weaponRoll.SetNameAndDesc("Fireball", "Summon a fireball from god knows where and use it for things such as cooking or other activities");
                 weaponRoll.SetPotency(3, 6, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.skill);
+                weaponRoll.cost = 3;
                 break;
 
             case EquipmentType.IceSpike:
@@ -69,6 +74,7 @@ public class Weapon : Item
                 weaponRoll.SetNameAndDesc("Icespike", "Summon a giant ice spike that can be launched like a rocket, remember to wear gloves when using this, can get chilly");
                 weaponRoll.SetPotency(3, 6, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.skill);
+                weaponRoll.cost = 3;
                 break;
         }
 
@@ -118,6 +124,10 @@ public class Weapon : Item
         }
     }
 
+    public int getCost() 
+    {
+        return cost;
+    }
     public int getRarity()
     {
         return rarity;
