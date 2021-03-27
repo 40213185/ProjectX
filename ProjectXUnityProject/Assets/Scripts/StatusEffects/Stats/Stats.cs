@@ -32,7 +32,6 @@ public class Stats
     }
     public int ModifyHealthBy(int amount) 
     {
-        Debug.Log("Damaged:" + amount.ToString());
         //store current health
         int beforeHealth = currentHealth;
         //make changes

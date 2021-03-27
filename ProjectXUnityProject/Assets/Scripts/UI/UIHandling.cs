@@ -38,7 +38,6 @@ public class UIHandling : MonoBehaviour
 
     public void UpdateUI() 
     {
-        Debug.Log("Updated");
         if (hpSlider.value != playerStats.GetCurrentHealth())
             hpSlider.value = playerStats.GetCurrentHealth(); 
         

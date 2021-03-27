@@ -118,7 +118,7 @@ public class Weapon : Item
                 }
             case Skills.Throw:
                 {
-                    SetRangeAndAoE(new Vector2(1, 4), new Vector2(0, 1));
+                    SetRangeAndAoE(new Vector2(3, 4), new Vector2(0, 1));
                     break;
                 }
         }

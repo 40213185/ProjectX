@@ -82,7 +82,8 @@ public class EnemyController : MonoBehaviour
                         for (int i = 0; i < weapons.Length; i++)
                         {
                             //check if within weapon range + aoe
-                            if (distanceToPlayer - Mathf.FloorToInt(weapons[i].GetRange().y) - Mathf.FloorToInt(weapons[i].GetAreaOfEffect().y) <= 0)
+                            if ((distanceToPlayer - Mathf.FloorToInt(weapons[i].GetRange().y) - Mathf.FloorToInt(weapons[i].GetAreaOfEffect().y) <= 0)&&
+                                (distanceToPlayer - Mathf.FloorToInt(weapons[i].GetRange().x) - Mathf.FloorToInt(weapons[i].GetAreaOfEffect().x) >= 0))
                             {
                                 //add weapon possibility to list
                                 weaponChoice.Add(i);
@@ -147,8 +148,9 @@ public class EnemyController : MonoBehaviour
                                     for (int w = 0; w < weaponChoice.Count; w++)
                                     {
                                         //if within range of weapon
-                                        if (CalculateDistanceTo(movePoints[i], playerPos) - weapons[weaponChoice[w]].GetRange().y - weapons[weaponChoice[w]].GetAreaOfEffect().y
-                                            <= 0)
+                                        distanceToPlayer = CalculateDistanceTo(movePoints[i], playerPos);
+                                        if ((distanceToPlayer - Mathf.FloorToInt(weapons[weaponChoice[w]].GetRange().y) - Mathf.FloorToInt(weapons[weaponChoice[w]].GetAreaOfEffect().y) <= 0) &&
+                                 (distanceToPlayer - Mathf.FloorToInt(weapons[weaponChoice[w]].GetRange().x) - Mathf.FloorToInt(weapons[weaponChoice[w]].GetAreaOfEffect().x) >= 0))
                                         {
                                             possiblePointsWithWeapon.Add(i);
                                             weaponChosenForPoint.Add(w);
@@ -169,15 +171,20 @@ public class EnemyController : MonoBehaviour
                                     //go through points
                                     for (int i = 0; i < possiblePointsWithWeapon.Count; i++)
                                     {
-                                        float pointDistanceToPlayer = CalculateDistanceTo(movePoints[possiblePointsWithWeapon[i]], playerPos);
-                                        float currentDistanceToPlayer = CalculateDistanceTo(movePoints[pointPick], playerPos);
+                                        float possiblePointDistanceToPlayer = CalculateDistanceTo(movePoints[possiblePointsWithWeapon[i]], playerPos);
+                                        float currentPointDistanceToPlayer = CalculateDistanceTo(movePoints[pointPick], playerPos);
                                         float weaponMinDistance = weapons[weaponChosenForPoint[i]].GetRange().x + weapons[weaponChosenForPoint[i]].GetAreaOfEffect().x;
+                                        float weaponMaxDistance = weapons[weaponChosenForPoint[i]].GetRange().y + weapons[weaponChosenForPoint[i]].GetAreaOfEffect().y;
+                                        //within range
+                                        if ((currentPointDistanceToPlayer - possiblePointDistanceToPlayer + weaponMinDistance >= 0) &&
+                                            (currentPointDistanceToPlayer - possiblePointDistanceToPlayer + weaponMaxDistance <= 0))
+                                        /*
                                         //highest dmg weapon
                                         if ((pointDistanceToPlayer < currentDistanceToPlayer) &&
-                                            (currentDistanceToPlayer >= pointDistanceToPlayer + weaponMinDistance))
+                                        (currentDistanceToPlayer >= pointDistanceToPlayer + weaponMinDistance))*/
                                         {
                                             pointPick = possiblePointsWithWeapon[i];
-                                            weaponPick = i;
+                                            weaponPick = weaponChosenForPoint[i];
                                         }
                                     }
                                 }
@@ -200,11 +207,11 @@ public class EnemyController : MonoBehaviour
                                     List<int> possiblePoints = new List<int>();
                                     for (int i = 0; i < possiblePointsWithoutWeapon.Count; i++)
                                     {
-                                        float pointDistanceToPlayer = CalculateDistanceTo(movePoints[possiblePointsWithoutWeapon[i]], playerPos);
-                                        float currentDistanceToPlayer = CalculateDistanceTo(movePoints[pointPick], playerPos);
+                                        float possiblePointDistanceToPlayer = CalculateDistanceTo(movePoints[possiblePointsWithoutWeapon[i]], playerPos);
+                                        float currentPointDistanceToPlayer = CalculateDistanceTo(movePoints[pointPick], playerPos);
                                         float weaponMinDistance = weapons[weaponPick].GetRange().x + weapons[weaponPick].GetAreaOfEffect().x;
                                         //closest distance
-                                        if ( currentDistanceToPlayer>= pointDistanceToPlayer + weaponMinDistance) 
+                                        if ( currentPointDistanceToPlayer >= possiblePointDistanceToPlayer + weaponMinDistance) 
                                         {
                                             //store point
                                             possiblePoints.Add(possiblePointsWithoutWeapon[i]);
@@ -236,7 +243,6 @@ public class EnemyController : MonoBehaviour
                                 wait = true;
                                 waitTimer = Time.time + moveWaitTime;
                                 //highlight cell
-                                List<Vector3> highlightedPoints = new List<Vector3>();
                                 if (movePoints != null && movePoints.Length > 0)
                                 {
                                     highlight.PlaceHighlight(movePoints[pointPick]);
@@ -299,6 +305,22 @@ public class EnemyController : MonoBehaviour
                     {
                         if (!actionComplete)
                         {
+                            //create highlights
+                            for (int x = -(int)(weapons[weaponChoice[0]].GetRange().y + weapons[weaponChoice[0]].GetAreaOfEffect().y)
+                                ; x <= (int)(weapons[weaponChoice[0]].GetRange().y + weapons[weaponChoice[0]].GetAreaOfEffect().y)
+                                ; x++)
+                            {
+                                for (int y = -(int)(weapons[weaponChoice[0]].GetRange().y + weapons[weaponChoice[0]].GetAreaOfEffect().y)
+                                  ; y <= (int)(weapons[weaponChoice[0]].GetRange().y + weapons[weaponChoice[0]].GetAreaOfEffect().y)
+                                  ; y++)
+                                {
+                                    Vector2Int checkPos = new Vector2Int(x, y)+GetMatrixPos();
+                                    if((CalculateDistanceTo(GetMatrixPos(),checkPos)-weapons[weaponChoice[0]].GetRange().x-weapons[weaponChoice[0]].GetAreaOfEffect().x>=0)&&
+                                        (CalculateDistanceTo(GetMatrixPos(), checkPos) - weapons[weaponChoice[0]].GetRange().y - weapons[weaponChoice[0]].GetAreaOfEffect().y <= 0))
+                                        highlight.PlaceHighlight(checkPos);
+                                }
+                            }
+                            //roll
                             int roll = weapons[weaponChoice[0]].RollForDamage();
                             //attack
                             player.GetComponent<PlayerController>().stats.ModifyHealthBy(-roll);
@@ -310,10 +332,12 @@ public class EnemyController : MonoBehaviour
                         //delay
                         if (waitTimer < Time.time)
                         {
+                            //clear highlights
+                            highlight.ClearHighlights();
                             //back to wait
-                            //actionState = State.Wait;
+                            actionState = State.Wait;
                             //end for now
-                            actionState = State.TurnEnd;
+                            //actionState = State.TurnEnd;
                         }
                         break;
                     }
