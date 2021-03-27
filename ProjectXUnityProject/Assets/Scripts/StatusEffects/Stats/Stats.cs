@@ -61,4 +61,26 @@ public class Stats
     {
         return maxMovementPoints;
     }
+
+    public int ModifyMovementPointsBy(int amount) 
+    {
+        //store current health
+        int beforeMP = currentHealth;
+        //make changes
+        currentMovementPoints = Mathf.Clamp(currentMovementPoints + amount, 0, maxMovementPoints);
+        //update ui
+        GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
+        //return the difference between previous current health and new one
+        return beforeMP - currentMovementPoints;
+    }
+
+    public int RefillMovementPoints() 
+    {
+        int amount=currentMovementPoints;
+        currentMovementPoints = maxMovementPoints;
+        amount = maxMovementPoints - amount;
+        //ui
+        GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
+        return amount;
+    }
 }

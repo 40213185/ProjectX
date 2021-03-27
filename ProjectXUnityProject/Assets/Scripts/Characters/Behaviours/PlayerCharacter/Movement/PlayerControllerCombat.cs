@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControllerCombat : MonoBehaviour
 {
+    private Stats stats;
     //camera
     public Camera controllerCamera;
     //highlighting cells
@@ -38,6 +39,7 @@ public class PlayerControllerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        stats = gameObject.GetComponent<PlayerController>().stats;
         combatControllerState = CombatControllerState.Freeze;
 
         mouseClickPos = new Vector3();
@@ -169,6 +171,7 @@ public class PlayerControllerCombat : MonoBehaviour
             {
                 //get the next move point
                 Vector3 movePoint = new Vector3(moveToPoints[moveIndex].x, feetpos, moveToPoints[moveIndex].y);
+                //tile not occupied?
                 if (CanMove(new Vector2Int(Mathf.FloorToInt(movePoint.x), Mathf.FloorToInt(movePoint.z))))
                 {
                     //move towards that point
@@ -179,6 +182,8 @@ public class PlayerControllerCombat : MonoBehaviour
                         moveIndex++;
                         wait = true;
                         waitTimer = Time.time + waitTime;
+                        //decrease mp
+                        stats.ModifyMovementPointsBy(-1);
                     }
                     //not reached last point return false
                     return false;
@@ -210,8 +215,13 @@ public class PlayerControllerCombat : MonoBehaviour
 
     public void MyTurn()
     {
+        //mp
+        stats.RefillMovementPoints();
+        //camera
         controllerCamera.enabled = true;
+        //controller
         combatControllerState = CombatControllerState.Wait;
+        //turn
         myTurn = true;
     }
 
