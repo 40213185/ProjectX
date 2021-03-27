@@ -56,6 +56,12 @@ public class PlayerControllerCombat : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //speed up in combat
+        if (Input.GetButton("Jump"))
+            Time.timeScale = 4;
+        else if (Time.timeScale > 1)
+            Time.timeScale = 1;
+
         //only perform actions if players turn
         //this is always set to true outside of combat
         if (myTurn)
