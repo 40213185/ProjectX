@@ -11,11 +11,11 @@ public static class CombatHandler
     //index pointer for current combatant turn
     private static int combatantPointer;
 
-    private static void ResetCombat(GameObject[] combatants) 
+    private static void ResetCombat(GameObject[] combatants)
     {
         //set list of combatants/battle participants
-        _combatants = combatants; 
-        
+        _combatants = combatants;
+
         //reset turn time
         turnTime = 0;
         //set pointer to the first combatant index
@@ -50,10 +50,10 @@ public static class CombatHandler
         turnTime = 0;
     }
 
-    public static void NextCombatantTurn() 
+    public static void NextCombatantTurn()
     {
         //increment counter
-        if (combatantPointer >= _combatants.Length-1)
+        if (combatantPointer >= _combatants.Length - 1)
         {
             AddTurnTime();
             combatantPointer = 0;
@@ -66,13 +66,16 @@ public static class CombatHandler
 
     }
 
-    public static void EndCombat() 
+    public static void EndCombat()
     {
+        //in case of speed up
+        if (Time.timeScale > 1)
+            Time.timeScale = 1;
         //clear combatants list
-        _combatants=null;
+        _combatants = null;
     }
 
-    public static Vector2Int GetCombatantMatrixPos(int index) 
+    public static Vector2Int GetCombatantMatrixPos(int index)
     {
         if (index < _combatants.Length)
         {
@@ -81,24 +84,23 @@ public static class CombatHandler
 
             return matrixPos;
         }
-        else return new Vector2Int(0,0);
+        else return new Vector2Int(0, 0);
     }
 
-    public static GameObject GetCurrentTurnCombatant() 
+    public static GameObject GetCurrentTurnCombatant()
     {
         if (_combatants != null)
             return _combatants[combatantPointer];
         else return null;
     }
-
-    public static GameObject getCurrentCombatant() 
+    public static GameObject getNextTurnCombatant()
     {
-        return _combatants[combatantPointer];
-    }
-    public static GameObject getNextCurrentCombatant()
-    {
-        int nextPointer = combatantPointer + 1;
-        if (nextPointer >= _combatants.Length) nextPointer = 0;
-        return _combatants[nextPointer];
+        if (_combatants != null)
+        {
+            int nextPointer = combatantPointer + 1;
+            if (nextPointer >= _combatants.Length) nextPointer = 0;
+            return _combatants[nextPointer];
+        }
+        else return null;
     }
 }

@@ -22,22 +22,22 @@ public static class MapHandler
     {
         //room 00
         roomMatrixes.Add(new int[roomSizex, roomSizey]{
-        { 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0},
-        { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        { 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0},
+        { 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0},
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -182,7 +182,7 @@ public static class MapHandler
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }});
-        //SmallJoinedRooms
+        //SmallRoom
         roomMatrixes.Add(new int[roomSizex, roomSizey]{
         { 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0 },
         { 2,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0 },
@@ -192,8 +192,8 @@ public static class MapHandler
         { 2,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0 },
         { 2,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0 },
         { 2,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0 },
+        { 2,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0 },
         { 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0 },
-        { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
         { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
@@ -388,7 +388,11 @@ public static class MapHandler
                 if (n.gcost > range * 1.5f) continue;
 
                 //if its not a valid position
-                if (!isValideMovementPosition(n)) continue;
+                if (!isValidMovementPosition(n))
+                {
+                    closedList.Add(n);
+                    continue;
+                }
 
                 //check if its already in closed list
                 for (int i = 0; i < closedList.Count; i++)
@@ -398,9 +402,10 @@ public static class MapHandler
 
                 //check cost of lowest cost neighbor plus cost to move (1 tile)
                 float tentativeGcost = currentNode.gcost+Node.CalculateDistance(n.getPosition(),currentNode.getPosition());
-                float tentativeHCost = Node.CalculateDistance(n.getPosition(), finalPosition);
+                float tentativeHCost = Node.CalculateDistance(currentNode.getPosition(), finalPosition);
+                //float tentativeFCost = currentNode.fcost + Node.CalculateDistance(currentNode.getPosition(), n.getPosition());
                 //if cost is lower or the same
-                if (tentativeHCost<=n.hcost)
+                if (tentativeGcost<=n.gcost)//||tentativeHCost>n.hcost)
                 {
                     //check if not in open list
                     bool found = false;
@@ -451,7 +456,7 @@ public static class MapHandler
         return null;
     }
 
-    private static bool isValideMovementPosition(Node currentNode) 
+    private static bool isValidMovementPosition(Node currentNode) 
     {
         bool valid = true;
         if (GetTileTypeFromMatrix(currentNode.getPosition()) != TileType.Walkable) valid = false;
@@ -484,6 +489,7 @@ public static class MapHandler
         {
             points.Add(path[i].getPosition());
         }
+        /*
         List<int> aIndex = new List<int>();
         List<int> bIndex = new List<int>();
 
@@ -531,6 +537,7 @@ public static class MapHandler
                 }
             }
         }
+        */
 
         return points.ToArray();
     }

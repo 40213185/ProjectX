@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControllerCombat : MonoBehaviour
 {
+    private Stats stats;
     //camera
     public Camera controllerCamera;
     //highlighting cells
@@ -26,6 +27,7 @@ public class PlayerControllerCombat : MonoBehaviour
 
     //mostly movement things
     private Vector3 mouseClickPos;
+    private Vector2Int initialPos;
     private int moveIndex;
     private float feetpos;
     public float waitTime;
@@ -38,6 +40,7 @@ public class PlayerControllerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        stats = gameObject.GetComponent<PlayerController>().stats;
         combatControllerState = CombatControllerState.Freeze;
 
         mouseClickPos = new Vector3();
@@ -54,6 +57,12 @@ public class PlayerControllerCombat : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //speed up in combat
+        if (Input.GetButton("Jump"))
+            Time.timeScale = 4;
+        else if (Time.timeScale > 1)
+            Time.timeScale = 1;
+
         //only perform actions if players turn
         //this is always set to true outside of combat
         if (myTurn)
@@ -85,7 +94,7 @@ public class PlayerControllerCombat : MonoBehaviour
                                 //setup for maphandler functions
                                 Vector2Int initpos = new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
                                 Vector2Int clickpos = new Vector2Int(Mathf.FloorToInt(mouseClickPos.x), Mathf.FloorToInt(mouseClickPos.z));
-
+                                initialPos = initpos;
 
                                 if (CanMove(clickpos))
                                 {
@@ -96,6 +105,9 @@ public class PlayerControllerCombat : MonoBehaviour
                                         //change state
                                         if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat && myTurn && moveToPoints != null)
                                         {
+                                            //reset index for next movement
+                                            moveIndex = 0;
+                                            //move
                                             combatControllerState = CombatControllerState.CombatMove;
                                             //highlight cell
                                             if (moveToPoints != null && moveToPoints.Length > 0)
@@ -103,6 +115,7 @@ public class PlayerControllerCombat : MonoBehaviour
                                                 for (int i = 0; i < moveToPoints.Length; i++)
                                                 {
                                                     highlight.PlaceHighlight(moveToPoints[i]);
+                                                    if (Node.CalculateDistance(initialPos, moveToPoints[i]) >= stats.GetCurrentMovementPoints()) break;
                                                 }
                                             }
                                         }
@@ -120,6 +133,10 @@ public class PlayerControllerCombat : MonoBehaviour
                     {
                         if (MoveToPoint())
                         {
+                            //round transform position
+                            transform.position = new Vector3(Mathf.RoundToInt(transform.position.x),
+                                feetpos,
+                                Mathf.RoundToInt(transform.position.z));
                             //clear highlights
                             highlight.ClearHighlights();
                             //change state on end movement
@@ -162,13 +179,14 @@ public class PlayerControllerCombat : MonoBehaviour
 
     private bool MoveToPoint()
     {
-        //if it hasnt reached the array point limit + 1
+        //if it hasnt reached the array point limit
         if (moveIndex < moveToPoints.Length)
         {
             if (!wait)
             {
                 //get the next move point
                 Vector3 movePoint = new Vector3(moveToPoints[moveIndex].x, feetpos, moveToPoints[moveIndex].y);
+                //tile not occupied?
                 if (CanMove(new Vector2Int(Mathf.FloorToInt(movePoint.x), Mathf.FloorToInt(movePoint.z))))
                 {
                     //move towards that point
@@ -179,12 +197,23 @@ public class PlayerControllerCombat : MonoBehaviour
                         moveIndex++;
                         wait = true;
                         waitTimer = Time.time + waitTime;
+                        //check if the distance travelled is bigger or equal to movement points available
+                        if (Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)) >= stats.GetCurrentMovementPoints())
+                        {
+                            //take mp
+                            stats.ModifyMovementPointsBy((int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
+                            return true;
+                        }
                     }
                     //not reached last point return false
                     return false;
                 }
                 else
                 {
+                    //get the previous move point
+                    movePoint = new Vector3(moveToPoints[moveIndex-1].x, feetpos, moveToPoints[moveIndex-1].y);
+                    //take mp
+                    stats.ModifyMovementPointsBy((int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
                     //reset index for next movement
                     moveIndex = 0;
                     //return finished
@@ -210,8 +239,15 @@ public class PlayerControllerCombat : MonoBehaviour
 
     public void MyTurn()
     {
+        //ap
+        stats.RefillActionPoints();
+        //mp
+        stats.RefillMovementPoints();
+        //camera
         controllerCamera.enabled = true;
+        //controller
         combatControllerState = CombatControllerState.Wait;
+        //turn
         myTurn = true;
     }
 

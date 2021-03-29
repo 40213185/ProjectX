@@ -183,14 +183,4 @@ public class PlayerController : MonoBehaviour
     {
         move = false;
     }
-
-    public Stats GetStats()
-    {
-        return stats;
-    }
-
-    public int GetCurrentActionPoints() 
-    {
-        return stats.GetCurrentActionPoints();
-    }
 }
