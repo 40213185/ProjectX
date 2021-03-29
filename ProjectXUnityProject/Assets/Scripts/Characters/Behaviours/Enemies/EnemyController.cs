@@ -34,11 +34,15 @@ public class EnemyController : MonoBehaviour
     private int pointPick;
     private int weaponPick;
     private bool moved;
+    private bool usingAoe ;
+    private Vector2Int aoePoint;
+    private List<int> aoePointsWeapon;
+    private List<Vector2Int> aoePoints;
 
     //equipment
     private Weapon[] weapons;
-    List<int> weaponChoice;
-    bool withinAttackRange;
+    private List<int> weaponChoice;
+    private bool withinAttackRange;
     private bool actionComplete;
 
     //player reference
@@ -59,6 +63,8 @@ public class EnemyController : MonoBehaviour
         weapons = EnemyLibrary.GetEnemyWeaponry(enemyType);
         weaponChoice = new List<int>();
         withinAttackRange = false;
+        aoePoints = new List<Vector2Int>();
+        aoePointsWeapon = new List<int>();
 
         //highlighting
         highlight = HighlightCells.instance;
@@ -73,41 +79,63 @@ public class EnemyController : MonoBehaviour
             {
                 case State.Wait:
                     {
+                        //check end turn conditions
+                        if ((moved && !canUseWeapon()) || actionComplete)
+                        {
+                            actionState = State.TurnEnd;
+                            break;
+                        }
                         //setup for weapon decision
                         weaponChoice.Clear();
+                        aoePoints.Clear();
+                        aoePointsWeapon.Clear();
 
-                        float distanceToPlayer = CalculateDistanceTo(transform.position,player.transform.position);
+                        Vector2Int playerPos = new Vector2Int(Mathf.FloorToInt(player.transform.position.x),
+                            Mathf.FloorToInt(player.transform.position.z));
                         bool moveDecision = false;
+                        bool inrange = false;
                         withinAttackRange = false;
+                        usingAoe = false;
                         for (int i = 0; i < weapons.Length; i++)
                         {
+                            aoePoint = new Vector2Int();
                             //check if within weapon range + aoe
-                            if ((distanceToPlayer - Mathf.FloorToInt(weapons[i].GetRange().y) - Mathf.FloorToInt(weapons[i].GetAreaOfEffect().y) <= 0)&&
-                                (distanceToPlayer - Mathf.FloorToInt(weapons[i].GetRange().x) - Mathf.FloorToInt(weapons[i].GetAreaOfEffect().x) >= 0))
+                            foreach (Vector2Int v in weapons[i].GetRangeTiles(GetMatrixPos()))
+                            {
+                                foreach (Vector2Int t in weapons[i].GetAoeTiles(v, GetMatrixPos()))
+                                    if (playerPos == t) { 
+                                        inrange = true;
+                                        usingAoe = true;
+                                        aoePoint = v;
+                                        Debug.Log("using aoe"); 
+                                        break; 
+                                    }
+                                if (playerPos == v) { inrange = true; break; }
+                            }
+                            if (inrange)
                             {
                                 //add weapon possibility to list
-                                weaponChoice.Add(i);
+                                if (usingAoe)
+                                {
+                                    aoePoints.Add(aoePoint);
+                                    aoePointsWeapon.Add(i);
+                                }
+                                else {
+                                    weaponChoice.Add(i);
+                                }
                                 //set to attack
                                 withinAttackRange = true;
                             }
-                            //if above fails check with moving distance
-                            else if (!moved && distanceToPlayer - Mathf.FloorToInt(weapons[i].GetRange().y) - Mathf.FloorToInt(weapons[i].GetAreaOfEffect().y) - GetStats().GetMaxMovementPoints() <= 0)
-                            {
-                                //add weapon possibility to list
-                                weaponChoice.Add(i);
-                                //set move
-                                moveDecision = true;
-                            }
-                            //if above fails
-                            else
-                            {
-                                //move
-                                if (!moved) moveDecision = true;
-                                else moveDecision = false;
-                            }
                         }
+                        //if above fails check with moving distance
+                        if (!moved && !withinAttackRange)
+                        {
+                            //set move
+                            moveDecision = true;
+                        }
+
                         //if it doesnt need to move to attack
-                        if (withinAttackRange && !moveDecision)
+                        if (withinAttackRange)
                         {
                             //go to action
                             actionState = State.Action;
@@ -125,71 +153,54 @@ public class EnemyController : MonoBehaviour
                             //if there are valid movement points
                             if (movePoints.Length > 0)
                             {
-                                //create player vector2Int reference
-                                Vector2Int playerPos = new Vector2Int(Mathf.FloorToInt(player.transform.position.x),
-                                    Mathf.FloorToInt(player.transform.position.z));
-
                                 //store possible points
                                 List<int> possiblePointsWithWeapon = new List<int>();
                                 List<int> weaponChosenForPoint = new List<int>();
-                                List<int> possiblePointsWithoutWeapon = new List<int>();
+
+                                //if theres no weapon choices
+                                if (weaponChoice.Count <= 0)
+                                {
+                                    //add all weapons to weapon choice list
+                                    for (int x = 0; x < weapons.Length; x++) weaponChoice.Add(x);
+                                }
 
                                 //pick movement point
                                 for (int i = 0; i < movePoints.Length; i++)
                                 {
-                                    //if theres no weapon choices
-                                    if (weaponChoice.Count <= 0)
-                                    {
-                                        //add all weapons to weapon choice list
-                                        for (int x = 0; x < weapons.Length; x++) weaponChoice.Add(x);
-                                    }
-
                                     //go though weapon choices
                                     for (int w = 0; w < weaponChoice.Count; w++)
                                     {
-                                        //if within range of weapon
-                                        distanceToPlayer = CalculateDistanceTo(movePoints[i], playerPos);
-                                        if ((distanceToPlayer - Mathf.FloorToInt(weapons[weaponChoice[w]].GetRange().y) - Mathf.FloorToInt(weapons[weaponChoice[w]].GetAreaOfEffect().y) <= 0) &&
-                                 (distanceToPlayer - Mathf.FloorToInt(weapons[weaponChoice[w]].GetRange().x) - Mathf.FloorToInt(weapons[weaponChoice[w]].GetAreaOfEffect().x) >= 0))
+                                        //check if within weapon range + aoe
+                                        foreach (Vector2Int v in weapons[weaponChoice[w]].GetRangeTiles(movePoints[i]))
                                         {
-                                            possiblePointsWithWeapon.Add(i);
-                                            weaponChosenForPoint.Add(w);
-                                        }
-                                        //if not within weapon range
-                                        else
-                                        {
-                                            possiblePointsWithoutWeapon.Add(i);
+                                            if (playerPos == v)
+                                            {
+                                                possiblePointsWithWeapon.Add(i);
+                                                weaponChosenForPoint.Add(w);
+                                                break;
+                                            }
+
+                                            foreach (Vector2Int t in weapons[weaponChoice[w]].GetAoeTiles(v, movePoints[i]))
+                                                if (playerPos == t)
+                                                {
+                                                    possiblePointsWithWeapon.Add(i);
+                                                    weaponChosenForPoint.Add(w);
+                                                    break;
+                                                }
                                         }
                                     }
                                 }
-                                //have possible points with weapons?
+
+                                //points with weapons
                                 if (possiblePointsWithWeapon.Count > 0)
                                 {
-                                    //reset pointpick
-                                    pointPick = 0;
-                                    weaponPick = 0;
-                                    //go through points
-                                    for (int i = 0; i < possiblePointsWithWeapon.Count; i++)
-                                    {
-                                        float possiblePointDistanceToPlayer = CalculateDistanceTo(movePoints[possiblePointsWithWeapon[i]], playerPos);
-                                        float currentPointDistanceToPlayer = CalculateDistanceTo(movePoints[pointPick], playerPos);
-                                        float weaponMinDistance = weapons[weaponChosenForPoint[i]].GetRange().x + weapons[weaponChosenForPoint[i]].GetAreaOfEffect().x;
-                                        float weaponMaxDistance = weapons[weaponChosenForPoint[i]].GetRange().y + weapons[weaponChosenForPoint[i]].GetAreaOfEffect().y;
-                                        //within range
-                                        if ((currentPointDistanceToPlayer - possiblePointDistanceToPlayer + weaponMinDistance >= 0) &&
-                                            (currentPointDistanceToPlayer - possiblePointDistanceToPlayer + weaponMaxDistance <= 0))
-                                        /*
-                                        //highest dmg weapon
-                                        if ((pointDistanceToPlayer < currentDistanceToPlayer) &&
-                                        (currentDistanceToPlayer >= pointDistanceToPlayer + weaponMinDistance))*/
-                                        {
-                                            pointPick = possiblePointsWithWeapon[i];
-                                            weaponPick = weaponChosenForPoint[i];
-                                        }
-                                    }
+                                    //pick random
+                                    int rnd = Random.Range(0, possiblePointsWithWeapon.Count);
+                                    pointPick = possiblePointsWithWeapon[rnd];
+                                    weaponPick = weaponChosenForPoint[rnd];
                                 }
                                 //no points with weapons?
-                                else if (possiblePointsWithoutWeapon.Count > 0)
+                                else
                                 {
                                     //store highest dmg weapon
                                     weaponPick = 0;
@@ -205,16 +216,16 @@ public class EnemyController : MonoBehaviour
                                     bool picked = false;
                                     //store possibilities
                                     List<int> possiblePoints = new List<int>();
-                                    for (int i = 0; i < possiblePointsWithoutWeapon.Count; i++)
+                                    for (int i = 0; i < movePoints.Length; i++)
                                     {
-                                        float possiblePointDistanceToPlayer = CalculateDistanceTo(movePoints[possiblePointsWithoutWeapon[i]], playerPos);
+                                        float possiblePointDistanceToPlayer = CalculateDistanceTo(movePoints[i], playerPos);
                                         float currentPointDistanceToPlayer = CalculateDistanceTo(movePoints[pointPick], playerPos);
                                         float weaponMinDistance = weapons[weaponPick].GetRange().x + weapons[weaponPick].GetAreaOfEffect().x;
                                         //closest distance
-                                        if ( currentPointDistanceToPlayer >= possiblePointDistanceToPlayer + weaponMinDistance) 
+                                        if (currentPointDistanceToPlayer >= possiblePointDistanceToPlayer + weaponMinDistance)
                                         {
                                             //store point
-                                            possiblePoints.Add(possiblePointsWithoutWeapon[i]);
+                                            possiblePoints.Add(i);
                                             //point was picked
                                             picked = true;
                                         }
@@ -227,7 +238,7 @@ public class EnemyController : MonoBehaviour
                                             if (CalculateDistanceTo(movePoints[pointPick], playerPos) >
                                                 CalculateDistanceTo(movePoints[possiblePoints[i]], playerPos))
                                             {
-                                                pointPick = possiblePoints[i];
+                                                pointPick = i;
                                             }
                                         }
                                     }
@@ -235,7 +246,7 @@ public class EnemyController : MonoBehaviour
                                     else
                                     {
                                         //pick random
-                                        pointPick = possiblePointsWithoutWeapon[Random.Range(0, possiblePointsWithoutWeapon.Count)];
+                                        pointPick = Random.Range(0, movePoints.Length);
                                     }
                                 }
 
@@ -251,12 +262,6 @@ public class EnemyController : MonoBehaviour
                                 actionState = State.Move;
                                 break;
                             }
-                        }
-                        //already moved before?
-                        else
-                        {
-                            actionState = State.TurnEnd;
-                            break;
                         }
 
                         //if cant move or attack then end turn
@@ -305,29 +310,93 @@ public class EnemyController : MonoBehaviour
                     {
                         if (!actionComplete)
                         {
-                            //create highlights
-                            for (int x = -(int)(weapons[weaponChoice[0]].GetRange().y + weapons[weaponChoice[0]].GetAreaOfEffect().y)
-                                ; x <= (int)(weapons[weaponChoice[0]].GetRange().y + weapons[weaponChoice[0]].GetAreaOfEffect().y)
-                                ; x++)
+                            //get player pos
+                            Vector2Int playerPos = new Vector2Int(Mathf.FloorToInt(player.transform.position.x),
+                                Mathf.FloorToInt(player.transform.position.z));
+                            //pick highest damage weapon
+                            if (!usingAoe)
                             {
-                                for (int y = -(int)(weapons[weaponChoice[0]].GetRange().y + weapons[weaponChoice[0]].GetAreaOfEffect().y)
-                                  ; y <= (int)(weapons[weaponChoice[0]].GetRange().y + weapons[weaponChoice[0]].GetAreaOfEffect().y)
-                                  ; y++)
+                                for (int i = 0; i < weaponChoice.Count; i++)
                                 {
-                                    Vector2Int checkPos = new Vector2Int(x, y)+GetMatrixPos();
-                                    if((CalculateDistanceTo(GetMatrixPos(),checkPos)-weapons[weaponChoice[0]].GetRange().x-weapons[weaponChoice[0]].GetAreaOfEffect().x>=0)&&
-                                        (CalculateDistanceTo(GetMatrixPos(), checkPos) - weapons[weaponChoice[0]].GetRange().y - weapons[weaponChoice[0]].GetAreaOfEffect().y <= 0))
-                                        highlight.PlaceHighlight(checkPos);
+                                    /*
+                                    //check if within weapon range + aoe
+                                    foreach (Vector2Int v in weapons[weaponChoice[i]].GetRangeTiles(GetMatrixPos()))
+                                    {
+                                        foreach (Vector2Int t in weapons[weaponChoice[i]].GetAoeTiles(v, GetMatrixPos()))
+                                            if (playerPos == t)
+                                            {*/
+                                    if (weapons[weaponChoice[i]].GetPotency().y > weapons[weaponChoice[0]].GetPotency().y)
+                                    {
+                                        //store in 0 index of weapon choice
+                                        weaponChoice[0] = weaponChoice[i];
+                                        //usingAoe = true;
+                                        //aoePoint = v;
+                                        //i = weaponChoice.Count;
+                                        break;
+                                    }
+                                    //}
+                                    /*
+                                if (playerPos == v&&!usingAoe)
+                                {
+                                    if (weapons[weaponChoice[i]].GetPotency().y > weapons[weaponChoice[0]].GetPotency().y)
+                                    {
+                                        //store in 0 index of weapon choice
+                                        weaponChoice[0] = weaponChoice[i];
+                                        i = weaponChoice.Count;
+                                        break;
+                                    }
+                                }
+                                    */
+                                    // }
                                 }
                             }
+                            //using aoe
+                            else
+                            {
+                                for (int i = 0; i < aoePointsWeapon.Count; i++)
+                                {
+                                    if (weapons[aoePointsWeapon[0]].GetPotency().y < weapons[aoePointsWeapon[i]].GetPotency().y)
+                                    {
+                                        aoePointsWeapon[0] = aoePointsWeapon[i];
+                                        aoePoint = aoePoints[i];
+                                    }
+                                }
+                            }
+                            //create highlights
+                            Vector2Int[] attackTiles ;
+                            if (usingAoe)
+                            {
+                                Vector2Int[] aoeTiles = weapons[aoePointsWeapon[0]].GetAoeTiles(aoePoint, GetMatrixPos());
+                                if (aoeTiles != null)
+                                {
+                                    for (int i = 0; i < aoeTiles.Length; i++)
+                                    {
+                                        highlight.PlaceHighlight(aoeTiles[i]);
+                                    }
+                                }
+                                //range tiles
+                                attackTiles = weapons[aoePointsWeapon[0]].GetRangeTiles(GetMatrixPos());
+                            }else attackTiles = weapons[weaponChoice[0]].GetRangeTiles(GetMatrixPos());
+
+                            if (attackTiles != null)
+                            {
+                                for (int i = 0; i < attackTiles.Length; i++)
+                                {
+                                    highlight.PlaceHighlight(attackTiles[i]);
+                                }
+                            }
+
                             //roll
-                            int roll = weapons[weaponChoice[0]].RollForDamage();
+                            int roll;
+                            if (!usingAoe) roll = weapons[weaponChoice[0]].RollForDamage();
+                            else roll= weapons[aoePointsWeapon[0]].RollForDamage();
                             //attack
                             player.GetComponent<PlayerController>().stats.ModifyHealthBy(-roll);
+                            //take ap
+                            if(!usingAoe) stats.ModifyActionPointsBy(-weapons[weaponChoice[0]].getCost());
+                            else stats.ModifyActionPointsBy(-weapons[aoePointsWeapon[0]].getCost());
                             //setup for wait
                             actionComplete = true;
-                            //take out times it can attack
-
                         }
                         //delay
                         if (waitTimer < Time.time)
@@ -341,7 +410,7 @@ public class EnemyController : MonoBehaviour
                         }
                         break;
                     }
-                case State.TurnEnd: 
+                case State.TurnEnd:
                     {
                         //end turn pipeline
                         EndTurn();
@@ -389,6 +458,14 @@ public class EnemyController : MonoBehaviour
         else return lastPoint;
     }
 
+    private bool canUseWeapon() 
+    {
+        bool canUse = true;
+        foreach (Weapon w in weapons)
+            if (w.getCost() > stats.GetCurrentActionPoints()) canUse = false;
+        return canUse;
+    }
+
     public void CombatStart() 
     {
         actionState = State.Wait;
@@ -397,10 +474,25 @@ public class EnemyController : MonoBehaviour
 
     public void MyTurn()
     {
+        //stats and action points
+        if(stats!=null)
+            //refill ap
+            stats.RefillActionPoints();
+        else
+            stats = EnemyLibrary.GetEnemyStats(enemyType);
         //set camera
         controllerCamera.enabled = true;
         //move reset
         moved = false;
+        //action reset
+        actionComplete = false;
+        //weapon pick reset
+        weaponPick = -1;
+        //aoe setup
+        if (aoePoints != null) aoePoints.Clear();
+        else aoePoints = new List<Vector2Int>();
+        if (aoePointsWeapon != null) aoePointsWeapon.Clear();
+        else aoePointsWeapon = new List<int>();
         //set initial state
         actionState = State.Wait;
         //tick effects
@@ -411,6 +503,11 @@ public class EnemyController : MonoBehaviour
         }
         //play
         myTurn = true;
+        waitToCreate();
+    }
+    private IEnumerator waitToCreate() 
+    {
+        yield return new WaitForSeconds(0.5f);
     }
 
     public void EndTurn()

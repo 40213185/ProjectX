@@ -115,7 +115,7 @@ public class PortalContainer : MonoBehaviour
         }
         catch
         {
-            Debug.Log("Portal Container invalid index");
+            //Debug.Log("Portal Container invalid index");
         }
         
     }
