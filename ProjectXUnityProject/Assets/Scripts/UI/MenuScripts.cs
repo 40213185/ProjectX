@@ -13,8 +13,6 @@ public class MenuScripts : MonoBehaviour
 
     public GameObject settingsTab;
     public GameObject main;
-    public Slider soundSlider;
-    public Slider musicSlider;
     public Text resSizeButton;
 
     //Main
@@ -25,7 +23,7 @@ public class MenuScripts : MonoBehaviour
 
     public void ToggleSettings() 
     {
-        main.SetActive(settingsTab.activeSelf);
+        //main.SetActive(settingsTab.activeSelf);
         settingsTab.SetActive(!settingsTab.activeSelf);
         resSizeButton.text = Screen.currentResolution.ToString();
         Vector2Int res = new Vector2Int(Screen.width, Screen.height);
@@ -45,25 +43,4 @@ public class MenuScripts : MonoBehaviour
         Application.Quit();
     }
 
-    //Settings
-
-    public void ChangeResolution() 
-    {
-        currentResLoc++;
-        if (currentResLoc > 3) currentResLoc = 0;
-        Debug.Log("Res at pos" + resolutions[currentResLoc]);
-        resSizeButton.text = resolutions[currentResLoc].ToString();
-        Screen.SetResolution(resolutions[currentResLoc].x, resolutions[currentResLoc].y, true);
-        Debug.Log("New Resolution is " + Screen.currentResolution);
-    }
-
-    public void SoundEffectChange() 
-    {
-        Debug.Log("Sound Effect Vol now" + soundSlider.value);
-    }
-
-    public void MusicVolChange() 
-    {
-        Debug.Log("Music Vol now" + musicSlider.value);
-    }
 }

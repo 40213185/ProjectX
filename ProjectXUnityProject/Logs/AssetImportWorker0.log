@@ -15,11 +15,11 @@ C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63528
+53074
 Successfully changed project path to: C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 20.66 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 26.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.4f1 (becced5a802b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,1110 +35,165 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56424
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56008
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001947 seconds.
+Registered in 0.002471 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 19.52 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 22.74 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.841 seconds
+- Completed reload, in  0.985 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000635 seconds.
+Registered in 0.000866 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000223F9B4E240 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000001BE7C718880 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.646 seconds
+- Completed reload, in  0.729 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1104 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
-System memory in use after: 57.5 MB.
+System memory in use before: 57.7 MB.
+System memory in use after: 57.7 MB.
 
 Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1549.
-Total: 1.733600 ms (FindLiveObjects: 0.142800 ms CreateObjectMapping: 0.026500 ms MarkObjects: 1.495400 ms  DeleteObjects: 0.067600 ms)
+Total: 1.787800 ms (FindLiveObjects: 0.177300 ms CreateObjectMapping: 0.029000 ms MarkObjects: 1.508100 ms  DeleteObjects: 0.072100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts
-  artifactKey: Guid(4093ff767798c4e498bc120ace511fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(4093ff767798c4e498bc120ace511fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6806dcc1c2e91083ae5b72084011ff6e') in 0.004748 seconds
-  Import took 0.006447 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000723 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223F51718F0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.638 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
-System memory in use after: 57.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1551.
-Total: 1.606800 ms (FindLiveObjects: 0.280600 ms CreateObjectMapping: 0.025200 ms MarkObjects: 1.285000 ms  DeleteObjects: 0.014500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000886 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223F9AA59B0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.631 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
-System memory in use after: 57.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1553.
-Total: 1.581900 ms (FindLiveObjects: 0.166300 ms CreateObjectMapping: 0.025400 ms MarkObjects: 1.376400 ms  DeleteObjects: 0.012400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000760 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FAE3E060 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.635 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
-System memory in use after: 57.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1555.
-Total: 1.492400 ms (FindLiveObjects: 0.167100 ms CreateObjectMapping: 0.024900 ms MarkObjects: 1.284900 ms  DeleteObjects: 0.013900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000708 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD65060 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.645 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
-System memory in use after: 57.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1557.
-Total: 2.030800 ms (FindLiveObjects: 0.163600 ms CreateObjectMapping: 0.025600 ms MarkObjects: 1.818500 ms  DeleteObjects: 0.021200 ms)
+  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
+  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2f3c43333ee610c4229b659cdd61ccf') in 0.081571 seconds
+  Import took 0.083885 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1614.836493 seconds.
-  path: Assets/Art&Sound/Art
-  artifactKey: Guid(362ce8fd9576ae042b70030391228c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art using Guid(362ce8fd9576ae042b70030391228c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e9cfdc75fb93d5afac5c47b82831fe0') in 0.006120 seconds
-  Import took 0.008006 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000718 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241D40E4E0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.618 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
-System memory in use after: 57.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1559.
-Total: 1.439900 ms (FindLiveObjects: 0.130200 ms CreateObjectMapping: 0.023600 ms MarkObjects: 1.270300 ms  DeleteObjects: 0.015000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.606362 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame
-  artifactKey: Guid(0d1b2d43bf2bb4a46a0ac44e8a702725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame using Guid(0d1b2d43bf2bb4a46a0ac44e8a702725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c2d9b46eb85ec9571f376d66e4ece9d') in 0.004664 seconds
-  Import took 0.006284 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.127268 seconds.
+  Time since last request: 13.015180 seconds.
   path: Assets/Art&Sound/Art/UI/Menu
   artifactKey: Guid(671e0f3c722a12a4eb6ce9853f0a9a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu using Guid(671e0f3c722a12a4eb6ce9853f0a9a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5c87ae367de929ad992bd2a56f38eb0') in 0.006226 seconds
-  Import took 0.008271 seconds .
+Start importing Assets/Art&Sound/Art/UI/Menu using Guid(671e0f3c722a12a4eb6ce9853f0a9a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f25cd226edc08e7d8034ab8933581a2') in 0.002495 seconds
+  Import took 0.004162 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.501868 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea4c74c46822f0849ae3dd14593c432d') in 0.073285 seconds
-  Import took 0.075283 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004202 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea4c74c46822f0849ae3dd14593c432d') in 0.004706 seconds
-  Import took 0.006246 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 94.358960 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Settings.controller
-  artifactKey: Guid(42de025b365313643bd603c3bafd45a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Settings.controller using Guid(42de025b365313643bd603c3bafd45a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83ced3c9116c8e4c734784ca1291b11') in 0.006013 seconds
-  Import took 0.008066 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.677778 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8f87829e5c5edfb19cc3ca339696cbb') in 0.004839 seconds
-  Import took 0.007145 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.857458 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/SettingsAnim.anim
-  artifactKey: Guid(e781ec97815287f488c86c5472365c6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/SettingsAnim.anim using Guid(e781ec97815287f488c86c5472365c6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '012180ecf06adcbdb8a4c908ceb11cad') in 0.005751 seconds
-  Import took 0.007613 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002707 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/SettingsAnim.anim
-  artifactKey: Guid(e781ec97815287f488c86c5472365c6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/SettingsAnim.anim using Guid(e781ec97815287f488c86c5472365c6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '012180ecf06adcbdb8a4c908ceb11cad') in 0.003156 seconds
-  Import took 0.005019 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.468932 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/FadeIn.anim
-  artifactKey: Guid(e781ec97815287f488c86c5472365c6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/FadeIn.anim using Guid(e781ec97815287f488c86c5472365c6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a7de7991b7d229eb472909e961c269c') in 0.003727 seconds
-  Import took 0.005454 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 197.363134 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Anims
-  artifactKey: Guid(1765b27fd91e7b149b24a121089e97ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Anims using Guid(1765b27fd91e7b149b24a121089e97ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b66f0183e5a28148c1a4bdf9d3afff9e') in 0.007059 seconds
-  Import took 0.009298 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.334885 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/FadeOut.anim
-  artifactKey: Guid(7a4581b6f7473f64ca5428067383df94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/FadeOut.anim using Guid(7a4581b6f7473f64ca5428067383df94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '188ff9f66df05529aa3be9a6f374eeec') in 0.004279 seconds
-  Import took 0.006246 seconds .
+  Time since last request: 0.010429 seconds.
+  path: Assets/Art&Sound/Art/UI/Menu
+  artifactKey: Guid(671e0f3c722a12a4eb6ce9853f0a9a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/UI/Menu using Guid(671e0f3c722a12a4eb6ce9853f0a9a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f25cd226edc08e7d8034ab8933581a2') in 0.002421 seconds
+  Import took 0.003938 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000781 seconds.
+Registered in 0.001537 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA3C7180 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000001BC8102B9A0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.618 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.5 MB.
-System memory in use after: 57.6 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1563.
-Total: 1.452500 ms (FindLiveObjects: 0.160800 ms CreateObjectMapping: 0.024900 ms MarkObjects: 1.247000 ms  DeleteObjects: 0.018900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 133.387514 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '677c723d5c8762c016a6d9a6a6733d54') in 0.035683 seconds
-  Import took 0.037529 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.666547 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15229e578197b84324ea4fa1a55b2851') in 0.004671 seconds
-  Import took 0.006633 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000738 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FCAB6790 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.607 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.5 MB.
-System memory in use after: 57.6 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1565.
-Total: 1.409200 ms (FindLiveObjects: 0.141900 ms CreateObjectMapping: 0.025400 ms MarkObjects: 1.221300 ms  DeleteObjects: 0.019300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 58.756420 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/PanelAnimations/PanelController.controller
-  artifactKey: Guid(93e322c6f43ddef4db5e4c93aa7dd8d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/PanelAnimations/PanelController.controller using Guid(93e322c6f43ddef4db5e4c93aa7dd8d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '823fc41a41d7a2d0a019edcf71ccff52') in 0.013411 seconds
-  Import took 0.015463 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.892372 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/PanelAnimations/Open.anim
-  artifactKey: Guid(c1c347e05682db04c9f15957421d86ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/PanelAnimations/Open.anim using Guid(c1c347e05682db04c9f15957421d86ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e49999cc038d0b95ba7351f81dcc3e8') in 0.003982 seconds
-  Import took 0.005869 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002150 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/PanelAnimations/Open.anim
-  artifactKey: Guid(c1c347e05682db04c9f15957421d86ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/PanelAnimations/Open.anim using Guid(c1c347e05682db04c9f15957421d86ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e49999cc038d0b95ba7351f81dcc3e8') in 0.003691 seconds
-  Import took 0.005754 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000734 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA3C7180 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.616 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.5 MB.
-System memory in use after: 57.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1567.
-Total: 1.416800 ms (FindLiveObjects: 0.138200 ms CreateObjectMapping: 0.024200 ms MarkObjects: 1.239500 ms  DeleteObjects: 0.014000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000657 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CE3C420 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.619 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.5 MB.
-System memory in use after: 57.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1569.
-Total: 1.732000 ms (FindLiveObjects: 0.210500 ms CreateObjectMapping: 0.025900 ms MarkObjects: 1.479900 ms  DeleteObjects: 0.014500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000830 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FC10A020 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.654 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.5 MB.
-System memory in use after: 57.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1571.
-Total: 1.505700 ms (FindLiveObjects: 0.150600 ms CreateObjectMapping: 0.024100 ms MarkObjects: 1.316100 ms  DeleteObjects: 0.013800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 566.344885 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Anims/Closed.anim
-  artifactKey: Guid(d0658a21144825b47960abb60716d8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Anims/Closed.anim using Guid(d0658a21144825b47960abb60716d8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27aa2e593801ca07775796c4f9a8871d') in 0.010703 seconds
-  Import took 0.012545 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.386871 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dfd6fb92b0c43f8378d77067d07852d') in 0.030779 seconds
-  Import took 0.032877 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000661 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA3C7180 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.657 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.6 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1573.
-Total: 1.524000 ms (FindLiveObjects: 0.174800 ms CreateObjectMapping: 0.026000 ms MarkObjects: 1.302400 ms  DeleteObjects: 0.019900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 144.966085 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2d92120e0eb52e243a8a81fe8b71b10') in 0.036331 seconds
-  Import took 0.038330 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.286297 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2d92120e0eb52e243a8a81fe8b71b10') in 0.004733 seconds
-  Import took 0.006629 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000798 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA3C7180 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.606 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1575.
-Total: 1.354000 ms (FindLiveObjects: 0.141700 ms CreateObjectMapping: 0.024000 ms MarkObjects: 1.172300 ms  DeleteObjects: 0.015200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.408511 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d5c46ebe780316dda272d73b9725e7e') in 0.036246 seconds
-  Import took 0.038163 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.653648 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cb28facceaac441f54ae766b0d74999') in 0.005363 seconds
-  Import took 0.007706 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000685 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241D665C60 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.623 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1577.
-Total: 1.655700 ms (FindLiveObjects: 0.125600 ms CreateObjectMapping: 0.025700 ms MarkObjects: 1.482800 ms  DeleteObjects: 0.020400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000791 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241D665C60 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.623 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1579.
-Total: 1.430900 ms (FindLiveObjects: 0.150900 ms CreateObjectMapping: 0.024800 ms MarkObjects: 1.243600 ms  DeleteObjects: 0.010600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 100.934364 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '338ecc52d83072404f56295761c8c8c8') in 0.034240 seconds
-  Import took 0.036182 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.954770 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9861b0fccf73a1e96132e61a53c568b') in 0.005389 seconds
-  Import took 0.007366 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.305063 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44a08afccbd6655041430fdaf9c962cc') in 0.005150 seconds
-  Import took 0.007236 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000718 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241D665C60 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.612 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1581.
-Total: 1.441100 ms (FindLiveObjects: 0.144000 ms CreateObjectMapping: 0.024300 ms MarkObjects: 1.252400 ms  DeleteObjects: 0.019600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001688 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CE78050 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.602 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1583.
-Total: 1.491300 ms (FindLiveObjects: 0.152500 ms CreateObjectMapping: 0.026100 ms MarkObjects: 1.297400 ms  DeleteObjects: 0.013800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000716 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CE78050 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.625 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1585.
-Total: 1.503100 ms (FindLiveObjects: 0.204500 ms CreateObjectMapping: 0.024500 ms MarkObjects: 1.259000 ms  DeleteObjects: 0.014300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001061 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CE78050 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.630 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1587.
-Total: 1.551200 ms (FindLiveObjects: 0.164400 ms CreateObjectMapping: 0.025500 ms MarkObjects: 1.345300 ms  DeleteObjects: 0.014800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000735 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD647D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.633 seconds
+- Completed reload, in  0.796 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1589.
-Total: 1.624700 ms (FindLiveObjects: 0.301400 ms CreateObjectMapping: 0.024800 ms MarkObjects: 1.284800 ms  DeleteObjects: 0.012900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000748 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD647D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.632 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1591.
-Total: 1.409600 ms (FindLiveObjects: 0.159200 ms CreateObjectMapping: 0.024200 ms MarkObjects: 1.214600 ms  DeleteObjects: 0.010700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000883 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA952010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.626 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1593.
-Total: 1.494900 ms (FindLiveObjects: 0.149400 ms CreateObjectMapping: 0.024100 ms MarkObjects: 1.306200 ms  DeleteObjects: 0.013900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000745 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA952010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.618 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1595.
-Total: 1.437100 ms (FindLiveObjects: 0.156200 ms CreateObjectMapping: 0.025700 ms MarkObjects: 1.238300 ms  DeleteObjects: 0.015900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000692 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CE78050 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.622 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1597.
-Total: 1.438300 ms (FindLiveObjects: 0.162700 ms CreateObjectMapping: 0.026900 ms MarkObjects: 1.236600 ms  DeleteObjects: 0.010900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000758 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FBBCBE40 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.636 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1599.
-Total: 1.417900 ms (FindLiveObjects: 0.146200 ms CreateObjectMapping: 0.024300 ms MarkObjects: 1.235100 ms  DeleteObjects: 0.011500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000686 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002224B76EBD0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.618 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1601.
-Total: 1.448400 ms (FindLiveObjects: 0.145700 ms CreateObjectMapping: 0.024100 ms MarkObjects: 1.263900 ms  DeleteObjects: 0.013900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000864 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA3C7180 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.614 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1603.
-Total: 1.348200 ms (FindLiveObjects: 0.137000 ms CreateObjectMapping: 0.025100 ms MarkObjects: 1.176000 ms  DeleteObjects: 0.009400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000780 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD647D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.639 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1605.
-Total: 1.530700 ms (FindLiveObjects: 0.211600 ms CreateObjectMapping: 0.025700 ms MarkObjects: 1.278900 ms  DeleteObjects: 0.013100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000774 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD647D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.600 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1607.
-Total: 1.445600 ms (FindLiveObjects: 0.147700 ms CreateObjectMapping: 0.026500 ms MarkObjects: 1.258600 ms  DeleteObjects: 0.011900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000724 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD647D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.636 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.6 MB.
-System memory in use after: 57.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1609.
-Total: 1.425700 ms (FindLiveObjects: 0.135800 ms CreateObjectMapping: 0.024100 ms MarkObjects: 1.251900 ms  DeleteObjects: 0.013100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1644.072551 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ce69397700a6f57867b878eab9f79a4') in 0.035616 seconds
-  Import took 0.037795 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000806 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CE78050 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.608 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 57.7 MB.
 System memory in use after: 57.8 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1611.
-Total: 1.373700 ms (FindLiveObjects: 0.143600 ms CreateObjectMapping: 0.023900 ms MarkObjects: 1.186500 ms  DeleteObjects: 0.018900 ms)
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 0.99 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 35.9 MB.
-System memory in use after: 36.0 MB.
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1611.
-Total: 1.578900 ms (FindLiveObjects: 0.172200 ms CreateObjectMapping: 0.027100 ms MarkObjects: 1.363400 ms  DeleteObjects: 0.015400 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1553.
+Total: 2.449500 ms (FindLiveObjects: 0.267600 ms CreateObjectMapping: 0.042300 ms MarkObjects: 2.110300 ms  DeleteObjects: 0.027400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 222.041878 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'debd8e76df9cde5019a7606d8772fe67') in 0.034193 seconds
-  Import took 0.036319 seconds .
+  Time since last request: 34.541624 seconds.
+  path: Assets/Scripts/UI/SettingsScript.cs
+  artifactKey: Guid(57175ff8ade84294e85f5a7bdf0aaa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/SettingsScript.cs using Guid(57175ff8ade84294e85f5a7bdf0aaa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efc0cef649f1a0d2622e4e2b59e019b4') in 0.013324 seconds
+  Import took 0.016119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003724 seconds.
+  path: Assets/Scripts/UI/SettingsScript.cs
+  artifactKey: Guid(57175ff8ade84294e85f5a7bdf0aaa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/SettingsScript.cs using Guid(57175ff8ade84294e85f5a7bdf0aaa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efc0cef649f1a0d2622e4e2b59e019b4') in 0.003550 seconds
+  Import took 0.005891 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000693 seconds.
+Registered in 0.000865 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA952010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000001BC8563F060 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.628 seconds
+- Completed reload, in  0.813 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.9 MB.
-System memory in use after: 58.0 MB.
+Unloading 1100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.8 MB.
+System memory in use after: 57.8 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1613.
-Total: 1.441500 ms (FindLiveObjects: 0.156600 ms CreateObjectMapping: 0.027000 ms MarkObjects: 1.239300 ms  DeleteObjects: 0.017300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 40.283415 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '445f5924e2c7b8e26e09e67f2f0289a9') in 0.042427 seconds
-  Import took 0.044293 seconds .
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1556.
+Total: 1.744000 ms (FindLiveObjects: 0.155900 ms CreateObjectMapping: 0.027300 ms MarkObjects: 1.544900 ms  DeleteObjects: 0.014800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.029634 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '445f5924e2c7b8e26e09e67f2f0289a9') in 0.005516 seconds
-  Import took 0.008079 seconds .
+  Time since last request: 79.650069 seconds.
+  path: Assets/Scripts/UI/SettingsScript.cs
+  artifactKey: Guid(57175ff8ade84294e85f5a7bdf0aaa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/SettingsScript.cs using Guid(57175ff8ade84294e85f5a7bdf0aaa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abce729f21434fda5b90b5236f01bc1f') in 0.005938 seconds
+  Import took 0.008077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Scripts/UI/SettingsScript.cs
+  artifactKey: Guid(57175ff8ade84294e85f5a7bdf0aaa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/SettingsScript.cs using Guid(57175ff8ade84294e85f5a7bdf0aaa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abce729f21434fda5b90b5236f01bc1f') in 0.002764 seconds
+  Import took 0.004567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.408757 seconds.
+  path: Assets/Scripts/UI/SettingsScript.cs
+  artifactKey: Guid(57175ff8ade84294e85f5a7bdf0aaa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/SettingsScript.cs using Guid(57175ff8ade84294e85f5a7bdf0aaa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8004ace453610f02a69e4d1bb2c193cc') in 0.003329 seconds
+  Import took 0.005836 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000697 seconds.
+Registered in 0.000923 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA952010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.641 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.9 MB.
-System memory in use after: 58.0 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1615.
-Total: 1.556100 ms (FindLiveObjects: 0.233000 ms CreateObjectMapping: 0.025000 ms MarkObjects: 1.276300 ms  DeleteObjects: 0.020500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000848 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FC46B6B0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000001BC854078E0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
@@ -1147,167 +202,73 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.607 seconds
+- Completed reload, in  0.693 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.9 MB.
-System memory in use after: 58.0 MB.
+Unloading 1100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.8 MB.
+System memory in use after: 57.9 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1617.
-Total: 1.419000 ms (FindLiveObjects: 0.163600 ms CreateObjectMapping: 0.025900 ms MarkObjects: 1.216700 ms  DeleteObjects: 0.011600 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1558.
+Total: 1.453800 ms (FindLiveObjects: 0.163700 ms CreateObjectMapping: 0.025300 ms MarkObjects: 1.250200 ms  DeleteObjects: 0.013500 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000753 seconds.
+Registered in 0.000703 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA3C7180 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000001BC848C1DC0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.640 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.9 MB.
-System memory in use after: 58.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1619.
-Total: 1.538000 ms (FindLiveObjects: 0.165100 ms CreateObjectMapping: 0.025200 ms MarkObjects: 1.332700 ms  DeleteObjects: 0.013900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000904 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA952010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.629 seconds
+- Completed reload, in  0.737 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.9 MB.
-System memory in use after: 58.0 MB.
+Unloading 1100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.8 MB.
+System memory in use after: 57.9 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1621.
-Total: 1.402800 ms (FindLiveObjects: 0.155900 ms CreateObjectMapping: 0.024700 ms MarkObjects: 1.209100 ms  DeleteObjects: 0.012400 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1560.
+Total: 1.463900 ms (FindLiveObjects: 0.149200 ms CreateObjectMapping: 0.026800 ms MarkObjects: 1.273100 ms  DeleteObjects: 0.013600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000735 seconds.
+Registered in 0.000752 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD647D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000001BC80C1EA30 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.622 seconds
+- Completed reload, in  0.735 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.9 MB.
-System memory in use after: 58.0 MB.
+Unloading 1100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.8 MB.
+System memory in use after: 57.9 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1623.
-Total: 1.504700 ms (FindLiveObjects: 0.152900 ms CreateObjectMapping: 0.025400 ms MarkObjects: 1.311600 ms  DeleteObjects: 0.013300 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1562.
+Total: 1.514200 ms (FindLiveObjects: 0.194300 ms CreateObjectMapping: 0.026400 ms MarkObjects: 1.274900 ms  DeleteObjects: 0.016600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000843 seconds.
+Registered in 0.000845 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD647D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.598 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.9 MB.
-System memory in use after: 58.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1625.
-Total: 1.450200 ms (FindLiveObjects: 0.158800 ms CreateObjectMapping: 0.025900 ms MarkObjects: 1.251500 ms  DeleteObjects: 0.012900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000734 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FC325890 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.623 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.9 MB.
-System memory in use after: 58.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1627.
-Total: 1.462600 ms (FindLiveObjects: 0.160700 ms CreateObjectMapping: 0.027100 ms MarkObjects: 1.261400 ms  DeleteObjects: 0.012400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 223.928893 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'defe3c0b191e8231555c10bbcda4e483') in 0.036612 seconds
-  Import took 0.038550 seconds .
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 0.80 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 36.8 MB.
-System memory in use after: 36.9 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1627.
-Total: 1.855700 ms (FindLiveObjects: 0.175000 ms CreateObjectMapping: 0.024300 ms MarkObjects: 1.639800 ms  DeleteObjects: 0.015700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000775 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FCAB6790 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000001BE7C77C020 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
@@ -1316,79 +277,23 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.614 seconds
+- Completed reload, in  0.715 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.9 MB.
-System memory in use after: 58.0 MB.
+Unloading 1100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.8 MB.
+System memory in use after: 57.9 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1629.
-Total: 1.467200 ms (FindLiveObjects: 0.169000 ms CreateObjectMapping: 0.025200 ms MarkObjects: 1.259000 ms  DeleteObjects: 0.012900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 444.283158 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdde60244e34fbe09e60aef58a169b7b') in 0.037729 seconds
-  Import took 0.039809 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.308056 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6a9e2e8d261ee67d76127b60e304bcd') in 0.006145 seconds
-  Import took 0.008505 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.428788 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '187c1f1a965866aea4cd9b1a50cc3860') in 0.006050 seconds
-  Import took 0.008588 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.019732 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7186344c8b0fcf0bd89ebe45972289b8') in 0.004993 seconds
-  Import took 0.006939 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.021448 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9f02b5f540616c631c28b8ed9ef55e3') in 0.004839 seconds
-  Import took 0.006820 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.199943 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afc7e7b5798a644a4ad5ba3fc6a31130') in 0.005000 seconds
-  Import took 0.006840 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.222183 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c086d72217e50da8e03b10ddd0ce9c7') in 0.007588 seconds
-  Import took 0.010797 seconds .
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1564.
+Total: 1.775400 ms (FindLiveObjects: 0.240200 ms CreateObjectMapping: 0.036400 ms MarkObjects: 1.476400 ms  DeleteObjects: 0.021000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000808 seconds.
+Registered in 0.001105 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD647D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000001BC8454FF70 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
@@ -1397,215 +302,23 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.656 seconds
+- Completed reload, in  0.694 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 58.0 MB.
-System memory in use after: 58.0 MB.
+Unloading 1100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.8 MB.
+System memory in use after: 57.9 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1631.
-Total: 1.679600 ms (FindLiveObjects: 0.186900 ms CreateObjectMapping: 0.026400 ms MarkObjects: 1.445500 ms  DeleteObjects: 0.019100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 45.177087 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b81b910417cbda4a87e4d48b8a8fd17') in 0.039220 seconds
-  Import took 0.041374 seconds .
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1566.
+Total: 1.577300 ms (FindLiveObjects: 0.162300 ms CreateObjectMapping: 0.025400 ms MarkObjects: 1.372300 ms  DeleteObjects: 0.016000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001252 seconds.
+Registered in 0.000980 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD647D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.617 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 58.0 MB.
-System memory in use after: 58.1 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1633.
-Total: 1.419500 ms (FindLiveObjects: 0.143800 ms CreateObjectMapping: 0.025400 ms MarkObjects: 1.234000 ms  DeleteObjects: 0.015500 ms)
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 36.2 MB.
-System memory in use after: 36.3 MB.
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1633.
-Total: 1.555300 ms (FindLiveObjects: 0.205800 ms CreateObjectMapping: 0.025000 ms MarkObjects: 1.308200 ms  DeleteObjects: 0.015300 ms)
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 36.2 MB.
-System memory in use after: 36.3 MB.
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1633.
-Total: 1.501200 ms (FindLiveObjects: 0.156800 ms CreateObjectMapping: 0.024900 ms MarkObjects: 1.306200 ms  DeleteObjects: 0.012500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000733 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000223FA952010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.627 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 58.0 MB.
-System memory in use after: 58.1 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1635.
-Total: 1.372700 ms (FindLiveObjects: 0.147400 ms CreateObjectMapping: 0.024700 ms MarkObjects: 1.188700 ms  DeleteObjects: 0.011000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 154.094607 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85eb8757deeb7837a4227142dea45e86') in 0.038603 seconds
-  Import took 0.041059 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.158826 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44b2e0458768ef2a5f22421a0c626ee5') in 0.005383 seconds
-  Import took 0.007538 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.411463 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c6f174ae50ff42127d86742759d165a') in 0.005342 seconds
-  Import took 0.007438 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.093343 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fb9e9860d984c7c8e3a0af02f1988df') in 0.005388 seconds
-  Import took 0.007748 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 41.555143 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60fcb37fd275a3d113c7d9a74e880039') in 0.004914 seconds
-  Import took 0.006785 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.423773 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5fa93dc0459136d701e8b1d5f2f958b') in 0.005013 seconds
-  Import took 0.006887 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.852665 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25a45a1514773496f280e23bcc6d1c62') in 0.004905 seconds
-  Import took 0.006870 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.823361 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04093255102627bc8a2123110057bd87') in 0.005984 seconds
-  Import took 0.008343 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.198376 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20d327e220f45749d4c59c213dda97a0') in 0.004952 seconds
-  Import took 0.006850 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.800616 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51614cfdc69a625337d4bb2719258630') in 0.004805 seconds
-  Import took 0.006655 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.101210 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b482c00581cef8c05e4d891f618fa6c') in 0.004930 seconds
-  Import took 0.006801 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.604959 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a9f791193a8b4e6badf7a08c363414f') in 0.006101 seconds
-  Import took 0.008629 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.638216 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd30b327fba3f248028066a79cee6467d') in 0.004836 seconds
-  Import took 0.006689 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.811447 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '481fb6060be654b4a5ad7065c1a28c8b') in 0.004807 seconds
-  Import took 0.006709 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000794 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002241CD647D0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000001BC80C1EA30 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
@@ -1614,66 +327,40 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.603 seconds
+- Completed reload, in  0.673 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 58.0 MB.
-System memory in use after: 58.1 MB.
+Unloading 1100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.8 MB.
+System memory in use after: 57.9 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1637.
-Total: 1.558400 ms (FindLiveObjects: 0.156700 ms CreateObjectMapping: 0.025200 ms MarkObjects: 1.358100 ms  DeleteObjects: 0.017700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.443086 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffeeb3c7bf1ddc9434e6a7904b11fd6b') in 0.037029 seconds
-  Import took 0.038998 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.321751 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03e6405c351648216fe1d0c7cd7c7b8c') in 0.005199 seconds
-  Import took 0.007293 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.814296 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93a5c77e0d996a5c8301a589a5be89d2') in 0.005540 seconds
-  Import took 0.007927 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.863077 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f9d54a6487eafd8acc5605c3b2672c0') in 0.004882 seconds
-  Import took 0.006896 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.431886 seconds.
-  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
-  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d9bfa9c127cbe14e5301feb1a87824e') in 0.005446 seconds
-  Import took 0.007582 seconds .
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1568.
+Total: 1.514000 ms (FindLiveObjects: 0.192200 ms CreateObjectMapping: 0.026200 ms MarkObjects: 1.279800 ms  DeleteObjects: 0.014400 ms)
 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 0.81 ms, found 0 plugins.
+Registering precompiled user dll's ...
+Registered in 0.000834 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001BC83B3F780 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 36.8 MB.
-System memory in use after: 36.9 MB.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.682 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.8 MB.
+System memory in use after: 57.9 MB.
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1637.
-Total: 2.016000 ms (FindLiveObjects: 0.274000 ms CreateObjectMapping: 0.073300 ms MarkObjects: 1.645600 ms  DeleteObjects: 0.022000 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1570.
+Total: 1.422300 ms (FindLiveObjects: 0.158800 ms CreateObjectMapping: 0.024700 ms MarkObjects: 1.222000 ms  DeleteObjects: 0.015200 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
