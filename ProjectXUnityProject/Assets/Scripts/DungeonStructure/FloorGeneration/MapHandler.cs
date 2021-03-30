@@ -346,6 +346,32 @@ public static class MapHandler
         return GetTileTypeFromMatrix(vec2int);
     }
 
+    public static void ConvertTileToType(Vector2Int matrixPos, TileType ttype)
+    {
+        switch(ttype){
+            case TileType.Empty:
+                {
+                    mapMatrix[matrixPos.x, matrixPos.y] = 0;
+                    break;
+                }
+            case TileType.Walkable:
+                {
+                    mapMatrix[matrixPos.x, matrixPos.y] = 1;
+                    break;
+                }
+            case TileType.Obstacle:
+                {
+                    mapMatrix[matrixPos.x, matrixPos.y] = 2;
+                    break;
+                }
+            case TileType.None:
+                {
+                    mapMatrix[matrixPos.x, matrixPos.y] = -1;
+                    break;
+                }
+            }
+    }
+
     public static Vector2Int[] GetMoveToPoints(Vector2Int initialPosition, Vector2Int finalPosition, int range)
     {
         //start node
