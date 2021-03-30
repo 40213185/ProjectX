@@ -15,11 +15,11 @@ C:/Users/graha_000/Desktop/ProjectX Repo/ProjectX/ProjectXUnityProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58993
+50374
 Successfully changed project path to: C:/Users/graha_000/Desktop/ProjectX Repo/ProjectX/ProjectXUnityProject
 C:/Users/graha_000/Desktop/ProjectX Repo/ProjectX/ProjectXUnityProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 24.92 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 25.11 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.4f1 (becced5a802b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,809 +35,225 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56568
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56744
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003080 seconds.
+Registered in 0.008795 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 24.52 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 36.52 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.152 seconds
+- Completed reload, in  1.876 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000748 seconds.
+Registered in 0.001316 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.990 seconds
+- Completed reload, in  0.929 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1104 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
-System memory in use after: 57.5 MB.
+System memory in use before: 57.5 MB.
+System memory in use after: 57.6 MB.
 
 Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1549.
-Total: 2.081600 ms (FindLiveObjects: 0.184800 ms CreateObjectMapping: 0.072200 ms MarkObjects: 1.739100 ms  DeleteObjects: 0.074500 ms)
+Total: 2.089300 ms (FindLiveObjects: 0.223900 ms CreateObjectMapping: 0.063700 ms MarkObjects: 1.720100 ms  DeleteObjects: 0.080500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Art&Sound/Art/Models/Clutter/Textures/4-seamless-bark-texture.jpg
-  artifactKey: Guid(adc47a94dcdfbdf4c9ae80a419d9e4de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Textures/4-seamless-bark-texture.jpg using Guid(adc47a94dcdfbdf4c9ae80a419d9e4de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6b7b9bb26597ac18518f13e88a8f8bf') in 0.127974 seconds
-  Import took 0.130238 seconds .
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter00.prefab
+  artifactKey: Guid(c77fe057b52c1c74389a42dec359b53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter00.prefab using Guid(c77fe057b52c1c74389a42dec359b53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e84296c36e75659f9698893e53936c9a') in 0.062310 seconds
+  Import took 0.064961 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000340 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Torch.prefab
-  artifactKey: Guid(46862a6f782780d4a86b23ef0f45342f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Torch.prefab using Guid(46862a6f782780d4a86b23ef0f45342f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f711d05182846aae6ce019eb3f1b849') in 0.075009 seconds
-  Import took 0.077481 seconds .
+  Time since last request: 1546.592489 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter00.prefab
+  artifactKey: Guid(c77fe057b52c1c74389a42dec359b53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter00.prefab using Guid(c77fe057b52c1c74389a42dec359b53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79ec47351a17a62e03400ed80f6ace1d') in 0.090463 seconds
+  Import took 0.094036 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Textures
-  artifactKey: Guid(8443b99ded5172a4d8a4ec935e160ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Textures using Guid(8443b99ded5172a4d8a4ec935e160ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3501f644372ccc88b9f6bdf4205f4592') in 0.008285 seconds
-  Import took 0.010404 seconds .
+  Time since last request: 26.101698 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter01.prefab
+  artifactKey: Guid(21e8dd45c37c4bb43acb4fbf15e206a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter01.prefab using Guid(21e8dd45c37c4bb43acb4fbf15e206a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a179fe7ceedad2b510b868dadb8ddeeb') in 0.030554 seconds
+  Import took 0.034273 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/RagTorch.fbx
-  artifactKey: Guid(01f39c8909e442343bc60768d15d5947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/RagTorch.fbx using Guid(01f39c8909e442343bc60768d15d5947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e07a5072c2363126a94fff1adb78823c') in 0.088116 seconds
-  Import took 0.090555 seconds .
+  Time since last request: 21.000714 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter01.prefab
+  artifactKey: Guid(21e8dd45c37c4bb43acb4fbf15e206a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter01.prefab using Guid(21e8dd45c37c4bb43acb4fbf15e206a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76db5959e6ce73877a60a50e5b4877bf') in 0.017451 seconds
+  Import took 0.020163 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Textures/FabricPlain0020_1_270.jpg
-  artifactKey: Guid(0c3c8730ecbbe8d419d628597b034342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Textures/FabricPlain0020_1_270.jpg using Guid(0c3c8730ecbbe8d419d628597b034342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5051c27c776984ced8d7e5c8abc1f50') in 0.020784 seconds
-  Import took 0.022822 seconds .
+  Time since last request: 181.242380 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter01.prefab
+  artifactKey: Guid(21e8dd45c37c4bb43acb4fbf15e206a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter01.prefab using Guid(21e8dd45c37c4bb43acb4fbf15e206a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19f1595222ce41a5e73f98c82a9feb1c') in 0.016906 seconds
+  Import took 0.019778 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.237116 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter
-  artifactKey: Guid(714f08a17cb7bef45815b7e8364f2c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter using Guid(714f08a17cb7bef45815b7e8364f2c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4abe4ef3646e5ed868f830189b9a86d6') in 0.009653 seconds
-  Import took 0.012085 seconds .
+  Time since last request: 3.044202 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room02.prefab
+  artifactKey: Guid(72cfcdde7b17a6542bd83b0d58c4cbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room02.prefab using Guid(72cfcdde7b17a6542bd83b0d58c4cbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd354150531d059aba5db1c2d8942e68f') in 0.084474 seconds
+  Import took 0.090923 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 21.475290 seconds.
-  path: Assets/Scripts/DungeonStructure/FloorGeneration/MapGenerator.prefab
-  artifactKey: Guid(a6f6f0c686d6f9942b92d869d81fad60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/FloorGeneration/MapGenerator.prefab using Guid(a6f6f0c686d6f9942b92d869d81fad60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6576a2eea8c74e6a2d4864c534853418') in 0.124301 seconds
-  Import took 0.145187 seconds .
+  Time since last request: 21.263890 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room02.prefab
+  artifactKey: Guid(72cfcdde7b17a6542bd83b0d58c4cbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room02.prefab using Guid(72cfcdde7b17a6542bd83b0d58c4cbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f645f6744e818300244b3bc2729862') in 0.055636 seconds
+  Import took 0.063428 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 74.567907 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Bookshelf-Large.fbx
-  artifactKey: Guid(0c78e42f41cb58b439b49dfd6a064a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Bookshelf-Large.fbx using Guid(0c78e42f41cb58b439b49dfd6a064a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a450400756b5180ea2b77eef78fd2f3') in 0.026410 seconds
-  Import took 0.029169 seconds .
+  Time since last request: 21.951355 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter02.prefab
+  artifactKey: Guid(7dea2c054c930114bbcf472fb7881935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter02.prefab using Guid(7dea2c054c930114bbcf472fb7881935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b418e5d22d23e6d7d73f83fd75825f2b') in 0.024769 seconds
+  Import took 0.028046 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 67.415345 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Bookshelf-Medium.fbx
-  artifactKey: Guid(9bd09d5f0db99084ea33f68d2fbe28bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Bookshelf-Medium.fbx using Guid(9bd09d5f0db99084ea33f68d2fbe28bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd160be367cdf3ab3bcb0d66148106389') in 0.032142 seconds
-  Import took 0.034848 seconds .
+  Time since last request: 0.003205 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter02.prefab
+  artifactKey: Guid(7dea2c054c930114bbcf472fb7881935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter02.prefab using Guid(7dea2c054c930114bbcf472fb7881935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b418e5d22d23e6d7d73f83fd75825f2b') in 0.011248 seconds
+  Import took 0.014003 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.105508 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Bookshelf-Small.fbx
-  artifactKey: Guid(4218791914b6c4d409cd42cc0dbf64b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Bookshelf-Small.fbx using Guid(4218791914b6c4d409cd42cc0dbf64b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9edfb419287fa4977beabd1294bf506') in 0.027821 seconds
-  Import took 0.031778 seconds .
+  Time since last request: 7.456179 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter02.prefab
+  artifactKey: Guid(7dea2c054c930114bbcf472fb7881935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter02.prefab using Guid(7dea2c054c930114bbcf472fb7881935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7aab978db8e681351ef99845926cbc2') in 0.017125 seconds
+  Import took 0.019668 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.003423 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Bookshelf-Small.fbx
-  artifactKey: Guid(4218791914b6c4d409cd42cc0dbf64b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Bookshelf-Small.fbx using Guid(4218791914b6c4d409cd42cc0dbf64b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9edfb419287fa4977beabd1294bf506') in 0.029051 seconds
-  Import took 0.031999 seconds .
+  Time since last request: 573.579176 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter02.prefab
+  artifactKey: Guid(7dea2c054c930114bbcf472fb7881935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room02/Clutter02.prefab using Guid(7dea2c054c930114bbcf472fb7881935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a137d2a2cd5bde2a1dceb6520c6efc4') in 0.018510 seconds
+  Import took 0.021807 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 93.795358 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/FloorRoom
-  artifactKey: Guid(521ab596fd3e99b4eb7dff7b143dd31a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/FloorRoom using Guid(521ab596fd3e99b4eb7dff7b143dd31a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5003e2d9f60eeeec9f47a0b1466b41aa') in 0.010145 seconds
-  Import took 0.012657 seconds .
+  Time since last request: 11.712837 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room02.prefab
+  artifactKey: Guid(72cfcdde7b17a6542bd83b0d58c4cbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room02.prefab using Guid(72cfcdde7b17a6542bd83b0d58c4cbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f99daa3ba09ee9cbb29ed03546010168') in 0.054126 seconds
+  Import took 0.060173 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.095949 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room04.prefab
-  artifactKey: Guid(76606e859a4b4ae46a212a8fb4769cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room04.prefab using Guid(76606e859a4b4ae46a212a8fb4769cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80cde067b5b9837db161aef6b4c259bb') in 0.053593 seconds
-  Import took 0.058058 seconds .
+  Time since last request: 10.716259 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room02.prefab
+  artifactKey: Guid(72cfcdde7b17a6542bd83b0d58c4cbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room02.prefab using Guid(72cfcdde7b17a6542bd83b0d58c4cbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bd62627c16403893d02f2a7be367e38') in 0.059486 seconds
+  Import took 0.066731 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 31.886401 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms
-  artifactKey: Guid(e50411f25632a1f41ae65807a2239706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms using Guid(e50411f25632a1f41ae65807a2239706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58bcef48832282df516e78da64b0ce42') in 0.009778 seconds
-  Import took 0.012336 seconds .
+  Time since last request: 38.059455 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01
+  artifactKey: Guid(ba01f05efce25c14885d943360c8c347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01 using Guid(ba01f05efce25c14885d943360c8c347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a84ed78a215bfc029147e2170efc9313') in 0.009819 seconds
+  Import took 0.012459 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 34.806755 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room04
-  artifactKey: Guid(f275030183cb5a446823d64f61337eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room04 using Guid(f275030183cb5a446823d64f61337eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cc590be506e8a3db0dd7b76b84ea424') in 0.004542 seconds
-  Import took 0.007366 seconds .
+  Time since last request: 32.065626 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter00.prefab
+  artifactKey: Guid(68594717d44d95e45ae029dacf510634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter00.prefab using Guid(68594717d44d95e45ae029dacf510634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d351544de69b6591c8c7a0ca49480c3') in 0.006998 seconds
+  Import took 0.010391 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 37.856707 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room04/Clutter00.prefab
-  artifactKey: Guid(801f1e1a1ca47584b8325f18eb93c954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room04/Clutter00.prefab using Guid(801f1e1a1ca47584b8325f18eb93c954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e89a063e0e472136c29eb3d41e3646d') in 0.011914 seconds
-  Import took 0.014946 seconds .
+  Time since last request: 0.001431 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter00.prefab
+  artifactKey: Guid(68594717d44d95e45ae029dacf510634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter00.prefab using Guid(68594717d44d95e45ae029dacf510634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d351544de69b6591c8c7a0ca49480c3') in 0.006909 seconds
+  Import took 0.009463 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1753.389279 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Bookset2.fbx
-  artifactKey: Guid(d84fcbf4b4962be4f888871bad24dc75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Bookset2.fbx using Guid(d84fcbf4b4962be4f888871bad24dc75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cd74bc35380b48b69f870856e1a5fa9') in 0.028889 seconds
-  Import took 0.032356 seconds .
+  Time since last request: 1560.470107 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter00.prefab
+  artifactKey: Guid(68594717d44d95e45ae029dacf510634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter00.prefab using Guid(68594717d44d95e45ae029dacf510634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7fac05708d5f0c140fc4a20d1e67f69') in 0.027619 seconds
+  Import took 0.030587 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 22.415400 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Book-Medium (1).fbx
-  artifactKey: Guid(6321205ea45234442b155bfea8c589cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Book-Medium (1).fbx using Guid(6321205ea45234442b155bfea8c589cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '344a736b27cfb0cc60d044572fa04bed') in 0.035079 seconds
-  Import took 0.038520 seconds .
+  Time since last request: 23.705044 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter01.prefab
+  artifactKey: Guid(704b6d69a1659d9428f30942477a562b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter01.prefab using Guid(704b6d69a1659d9428f30942477a562b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0393563435c038634d029fa78102a966') in 0.022909 seconds
+  Import took 0.026228 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.212000 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Candle-Large.fbx
-  artifactKey: Guid(f9dd03c3994a3d94a8e6b385a337666e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Candle-Large.fbx using Guid(f9dd03c3994a3d94a8e6b385a337666e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b831e81b9d4e1a039a9482cce6b87497') in 0.029191 seconds
-  Import took 0.032369 seconds .
+  Time since last request: 17.385465 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter01.prefab
+  artifactKey: Guid(704b6d69a1659d9428f30942477a562b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter01.prefab using Guid(704b6d69a1659d9428f30942477a562b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30920c0115d86b2c69d8dece8b6bc7dc') in 0.018037 seconds
+  Import took 0.020679 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.003670 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Candle-Large.fbx
-  artifactKey: Guid(f9dd03c3994a3d94a8e6b385a337666e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Candle-Large.fbx using Guid(f9dd03c3994a3d94a8e6b385a337666e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b831e81b9d4e1a039a9482cce6b87497') in 0.020339 seconds
-  Import took 0.023268 seconds .
+  Time since last request: 637.458645 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room01.prefab
+  artifactKey: Guid(ec691e28836511945b39e5468aa96185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room01.prefab using Guid(ec691e28836511945b39e5468aa96185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa74e0e6745b0ca119b2f3d6a4e0229') in 0.058021 seconds
+  Import took 0.064202 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.153849 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Candle-Medium.fbx
-  artifactKey: Guid(29798ae986109194e80c2d6f3a01e9a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Candle-Medium.fbx using Guid(29798ae986109194e80c2d6f3a01e9a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92d25f4e04167619342dabcca4573f9f') in 0.036040 seconds
-  Import took 0.039316 seconds .
+  Time since last request: 9.534486 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room01.prefab
+  artifactKey: Guid(ec691e28836511945b39e5468aa96185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room01.prefab using Guid(ec691e28836511945b39e5468aa96185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5d07e0c373641877dcca61a1c93aa1f') in 0.052427 seconds
+  Import took 0.058093 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.815410 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Lamp-Floating.fbx
-  artifactKey: Guid(e165c9a03a61f1c4e8c98557e9a17e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Lamp-Floating.fbx using Guid(e165c9a03a61f1c4e8c98557e9a17e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '264d06b933d9d70b01759e7f6d305e5f') in 0.029598 seconds
-  Import took 0.032412 seconds .
+  Time since last request: 3.900332 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter01.prefab
+  artifactKey: Guid(704b6d69a1659d9428f30942477a562b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room01/Clutter01.prefab using Guid(704b6d69a1659d9428f30942477a562b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '584e598ef6c1e7779bd20b19f7054a9c') in 0.021480 seconds
+  Import took 0.024040 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.396038 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Lamp-Regular.fbx
-  artifactKey: Guid(dd9d689f9a821cc4288fd42cb620adb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Lamp-Regular.fbx using Guid(dd9d689f9a821cc4288fd42cb620adb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aab8733efb4a9144480b69ca1b943e7') in 0.034683 seconds
-  Import took 0.038079 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.124689 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Simple-Torch.fbx
-  artifactKey: Guid(ea3f2518915ba1d4e8dc43cc68e2931e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Simple-Torch.fbx using Guid(ea3f2518915ba1d4e8dc43cc68e2931e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee16f310a32599dc758270d0af725d7e') in 0.030620 seconds
-  Import took 0.033253 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 792.519810 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room04.prefab
-  artifactKey: Guid(76606e859a4b4ae46a212a8fb4769cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room04.prefab using Guid(76606e859a4b4ae46a212a8fb4769cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46f706a619a14cf5ece9da22ed66ad1a') in 0.050510 seconds
-  Import took 0.056361 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 616.492896 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room04/Clutter00.prefab
-  artifactKey: Guid(801f1e1a1ca47584b8325f18eb93c954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room04/Clutter00.prefab using Guid(801f1e1a1ca47584b8325f18eb93c954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c049d85ed0362b7121638cfd38f7e3d2') in 0.037812 seconds
-  Import took 0.041371 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.985562 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room04.prefab
-  artifactKey: Guid(76606e859a4b4ae46a212a8fb4769cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/Room04.prefab using Guid(76606e859a4b4ae46a212a8fb4769cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fc711f8c00ba2213eb7bba1fe224b22') in 0.048785 seconds
-  Import took 0.053636 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 95.659279 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom
-  artifactKey: Guid(b32db1e2ae91f2146a4cb1d82dc493f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom using Guid(b32db1e2ae91f2146a4cb1d82dc493f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c20432bd1d5b6eb99b347c1739981c9f') in 0.010028 seconds
-  Import took 0.012589 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 115.026659 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78f099d5147e1a93eef693b24c4ef825') in 0.034642 seconds
-  Import took 0.038191 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.052212 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5707991e7dd6e2a045b81c145d5d4b4') in 0.030215 seconds
-  Import took 0.033723 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 56.585718 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter00.prefab
-  artifactKey: Guid(be47cf3e2f8a54c49924df3fe62a5e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter00.prefab using Guid(be47cf3e2f8a54c49924df3fe62a5e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '839d29fbb7098339273f4761bd6fe2d0') in 0.009413 seconds
-  Import took 0.011981 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1090.691660 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter00.prefab
-  artifactKey: Guid(be47cf3e2f8a54c49924df3fe62a5e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter00.prefab using Guid(be47cf3e2f8a54c49924df3fe62a5e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35d0c88dea1e6e9c2bbe76b5b355192d') in 0.019024 seconds
-  Import took 0.022084 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 43.508505 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter01.prefab
-  artifactKey: Guid(e70ef605216b4094193c1509158d294d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter01.prefab using Guid(e70ef605216b4094193c1509158d294d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e44ceba4f41dae9fc6a27030f26fbc') in 0.029189 seconds
-  Import took 0.033365 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005181 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter01.prefab
-  artifactKey: Guid(e70ef605216b4094193c1509158d294d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter01.prefab using Guid(e70ef605216b4094193c1509158d294d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e44ceba4f41dae9fc6a27030f26fbc') in 0.017913 seconds
-  Import took 0.021738 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 976.456220 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter01.prefab
-  artifactKey: Guid(e70ef605216b4094193c1509158d294d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter01.prefab using Guid(e70ef605216b4094193c1509158d294d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d32a4e37174bda1683165efc15f7ace') in 0.021888 seconds
-  Import took 0.024948 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 49.692485 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab
-  artifactKey: Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab using Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8644d28e59d4bd55b984e39f82667d0') in 0.023624 seconds
-  Import took 0.026597 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000521 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab
-  artifactKey: Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab using Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8644d28e59d4bd55b984e39f82667d0') in 0.014009 seconds
-  Import took 0.016332 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 69.464501 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab
-  artifactKey: Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab using Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec94d1834f78ad38f6f8ff55338cfbd') in 0.018636 seconds
-  Import took 0.021323 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.606951 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab
-  artifactKey: Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab using Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5afa0bd15d66fc7c1d0afe4654013092') in 0.018325 seconds
-  Import took 0.021075 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 68.094187 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Tombstone-Smashed.fbx
-  artifactKey: Guid(ebeddde48c96e60428651966c42b0248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Tombstone-Smashed.fbx using Guid(ebeddde48c96e60428651966c42b0248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c10d5d3b22fa3c1068d0d224c0ee712') in 0.029465 seconds
-  Import took 0.032236 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.291879 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Obelisk-Detailed.fbx
-  artifactKey: Guid(c45c51a82a8733848a94fc5b59290168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Obelisk-Detailed.fbx using Guid(c45c51a82a8733848a94fc5b59290168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60f1cf125e886d94d2ef2afe8128ee1b') in 0.048951 seconds
-  Import took 0.051896 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.414241 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Monolith-Damaged.fbx
-  artifactKey: Guid(39d099ecb62b1f64c89da70cf870f8f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Monolith-Damaged.fbx using Guid(39d099ecb62b1f64c89da70cf870f8f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef4011a76e94de6add168fbbf8f0afa') in 0.054281 seconds
-  Import took 0.058548 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.977476 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Coffin-Closed.fbx
-  artifactKey: Guid(e89ce8bb9f938f44996f4b4b6a6ddea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Coffin-Closed.fbx using Guid(e89ce8bb9f938f44996f4b4b6a6ddea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef797c8fe86b509325b7d72e6767fe58') in 0.037745 seconds
-  Import took 0.041034 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.774419 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Altair-Large.fbx
-  artifactKey: Guid(3ce297a2b80184b48a41f61e275094fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Altair-Large.fbx using Guid(3ce297a2b80184b48a41f61e275094fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9021de90901cefc9b4e9bb59b7ab097') in 0.038425 seconds
-  Import took 0.041126 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 135.600750 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab
-  artifactKey: Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab using Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e82e8084d7fd491f0871dc66643b83b') in 0.016451 seconds
-  Import took 0.019209 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.055728 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33d82019783a8886be43245c001c56d7') in 0.038941 seconds
-  Import took 0.042714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 58.438533 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b02f62f91ba9a2272a8b91b3178ebff') in 0.036849 seconds
-  Import took 0.040493 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.015726 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1be33c4961b056f317c1f466e3b2ab7') in 0.033540 seconds
-  Import took 0.037426 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.005862 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd03e0788cc69ed320736f299884c5fb4') in 0.031621 seconds
-  Import took 0.036056 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.864877 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8127df109741b527b65ef0db481f28c') in 0.037372 seconds
-  Import took 0.040774 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.111761 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c463857348f924b25b7c5db4ea5cb478') in 0.031426 seconds
-  Import took 0.035182 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.417412 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '820b1acaa026a9086a410c79653529a3') in 0.030120 seconds
-  Import took 0.034966 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.029286 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e37ac8773a244faf4d17d95ad8a9f84') in 0.044188 seconds
-  Import took 0.049424 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.587133 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10fa1a0395c7eb34083aa06aa93b938a') in 0.036650 seconds
-  Import took 0.040578 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.575237 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48ef5b0f2106071315972a6003e5fa9b') in 0.031099 seconds
-  Import took 0.034874 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 824.847674 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab
-  artifactKey: Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallCrossRoom/Clutter02.prefab using Guid(ecba45ca2f1397e48babcb0f10b2e7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77b48145ce428d5ae6f0cbd0376d76a6') in 0.019553 seconds
-  Import took 0.023437 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.825069 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab
-  artifactKey: Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallCrossRoom.prefab using Guid(61e59555099765d41a313b3db741dd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bd81c9ccfa89a07d64d9164f4424177') in 0.036175 seconds
-  Import took 0.040484 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 36.478064 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom
-  artifactKey: Guid(2c97a27e59a720541ab6270d645ceded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom using Guid(2c97a27e59a720541ab6270d645ceded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43b960dfde47740b89875a4fcfd323be') in 0.009909 seconds
-  Import took 0.012520 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000709 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom
-  artifactKey: Guid(2c97a27e59a720541ab6270d645ceded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom using Guid(2c97a27e59a720541ab6270d645ceded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43b960dfde47740b89875a4fcfd323be') in 0.003662 seconds
-  Import took 0.006053 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 51.516127 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom/Clutter00.prefab
-  artifactKey: Guid(51fa4885bc6b5b74d9d2a8c860622143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom/Clutter00.prefab using Guid(51fa4885bc6b5b74d9d2a8c860622143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84ac8ab95928c91c37233a2aeb7b17b1') in 0.010261 seconds
-  Import took 0.012922 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 320.355735 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom/Clutter00.prefab
-  artifactKey: Guid(51fa4885bc6b5b74d9d2a8c860622143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom/Clutter00.prefab using Guid(51fa4885bc6b5b74d9d2a8c860622143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c1b1b2823002ded41f415aa5b839e75') in 0.017448 seconds
-  Import took 0.020335 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.264596 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom/Clutter01.prefab
-  artifactKey: Guid(ec5393533a800614cab40600cff45b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom/Clutter01.prefab using Guid(ec5393533a800614cab40600cff45b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf1b2699497a90d9197a316426b83883') in 0.016169 seconds
-  Import took 0.018668 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 138.892999 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom/Clutter01.prefab
-  artifactKey: Guid(ec5393533a800614cab40600cff45b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom/Clutter01.prefab using Guid(ec5393533a800614cab40600cff45b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83b597cd3eccceb2c266e30f9c238cd4') in 0.022366 seconds
-  Import took 0.024917 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.163443 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab
-  artifactKey: Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/StartRoom.prefab using Guid(adf1810752adf4a40a74f90e9c2b3836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8076297f4f4851ee3fa4e91f11eeefd') in 0.036287 seconds
-  Import took 0.039805 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 71.170047 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom
-  artifactKey: Guid(6c80c2654fe638844bbced80880063cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom using Guid(6c80c2654fe638844bbced80880063cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e1dfdf06a462fa56c74b10ea875768') in 0.009497 seconds
-  Import took 0.012207 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 102.704063 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter00.prefab
-  artifactKey: Guid(180a1e9139421f04d9a1ee7430d61be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter00.prefab using Guid(180a1e9139421f04d9a1ee7430d61be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9f85024975caeb6442963edf9331880') in 0.009336 seconds
-  Import took 0.012622 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 833.374895 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter00.prefab
-  artifactKey: Guid(180a1e9139421f04d9a1ee7430d61be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter00.prefab using Guid(180a1e9139421f04d9a1ee7430d61be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c81f95d67d208b5945d7d5c5a6817071') in 0.021506 seconds
-  Import took 0.024648 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 48.751432 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter01.prefab
-  artifactKey: Guid(86e5f83fb4b78f949a4dd27d6025ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter01.prefab using Guid(86e5f83fb4b78f949a4dd27d6025ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98f35b5abf5bff3284a41550a5f043c9') in 0.024968 seconds
-  Import took 0.027710 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 26.485616 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '158d9e81ed0d175f49a7c94a6818d2b3') in 0.042643 seconds
-  Import took 0.046811 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.017379 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e89ce7474b81481aa0ffef3061416e0') in 0.042013 seconds
-  Import took 0.046517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.757468 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter00 1.prefab
-  artifactKey: Guid(e1eeed2330f3cf946978e57a5ee453cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter00 1.prefab using Guid(e1eeed2330f3cf946978e57a5ee453cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '336e8359892f4dc625cb981628b99629') in 0.025601 seconds
-  Import took 0.028457 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000821 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter00 1.prefab
-  artifactKey: Guid(e1eeed2330f3cf946978e57a5ee453cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter00 1.prefab using Guid(e1eeed2330f3cf946978e57a5ee453cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '336e8359892f4dc625cb981628b99629') in 0.016437 seconds
-  Import took 0.019221 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.069047 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter00.prefab
-  artifactKey: Guid(180a1e9139421f04d9a1ee7430d61be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter00.prefab using Guid(180a1e9139421f04d9a1ee7430d61be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5560dcff75d121eca1186a2408011e02') in 0.024377 seconds
-  Import took 0.027814 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.383134 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter01.prefab
-  artifactKey: Guid(86e5f83fb4b78f949a4dd27d6025ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter01.prefab using Guid(86e5f83fb4b78f949a4dd27d6025ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5586980bac184260e11c9934ebd72795') in 0.019906 seconds
-  Import took 0.023011 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003122 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter01.prefab
-  artifactKey: Guid(86e5f83fb4b78f949a4dd27d6025ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter01.prefab using Guid(86e5f83fb4b78f949a4dd27d6025ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5586980bac184260e11c9934ebd72795') in 0.014341 seconds
-  Import took 0.017059 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.550646 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter01.prefab
-  artifactKey: Guid(86e5f83fb4b78f949a4dd27d6025ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter01.prefab using Guid(86e5f83fb4b78f949a4dd27d6025ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e715136f7af8f4f640e22ff14903e5a') in 0.020765 seconds
-  Import took 0.023512 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 99.197338 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter01.prefab
-  artifactKey: Guid(86e5f83fb4b78f949a4dd27d6025ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom/Clutter01.prefab using Guid(86e5f83fb4b78f949a4dd27d6025ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '153b9a98a4b98b31f44d30da311a4628') in 0.019459 seconds
-  Import took 0.022236 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.599937 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f43f0ff24d8d6ac7013b87424cc8044') in 0.041372 seconds
-  Import took 0.045691 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.123454 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab
-  artifactKey: Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom.prefab using Guid(aaa9b8cbb01a1344d9a1cb60ac3ee08f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '110a1592bf7c2e57e32c63e4e98bd885') in 0.040374 seconds
-  Import took 0.044677 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 59.032599 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94d74cb8f6c2baf4b7643efac0587e2d') in 0.049425 seconds
-  Import took 0.053945 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.594029 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ac38b2bd99558a8b7f6e8c45b5d1e3') in 0.044209 seconds
-  Import took 0.048614 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.471256 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2
-  artifactKey: Guid(476f322e5e08f7949a5059b7f6a5e6ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2 using Guid(476f322e5e08f7949a5059b7f6a5e6ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '632683a1c453bdb678773247d6fd5bba') in 0.004278 seconds
-  Import took 0.007265 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.535476 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter00.prefab
-  artifactKey: Guid(8bb43180c2d6c0544bf5da236e5a29d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter00.prefab using Guid(8bb43180c2d6c0544bf5da236e5a29d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dae35ed89aa259638ed5017d324ff7c') in 0.009978 seconds
-  Import took 0.012866 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 303.867185 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter00.prefab
-  artifactKey: Guid(8bb43180c2d6c0544bf5da236e5a29d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter00.prefab using Guid(8bb43180c2d6c0544bf5da236e5a29d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66bb5c057b17247f6aa5b1963327625a') in 0.019715 seconds
-  Import took 0.022842 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.246786 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter01.prefab
-  artifactKey: Guid(e86609c7dc99d34418228f2dc8fbafaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter01.prefab using Guid(e86609c7dc99d34418228f2dc8fbafaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ddcada06d84c00bb2e7054da8b171c0') in 0.018798 seconds
-  Import took 0.022378 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.053963 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter01.prefab
-  artifactKey: Guid(e86609c7dc99d34418228f2dc8fbafaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter01.prefab using Guid(e86609c7dc99d34418228f2dc8fbafaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2142d2d9a321f70c49597e001c230a84') in 0.006084 seconds
-  Import took 0.008878 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 182.040665 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter01.prefab
-  artifactKey: Guid(e86609c7dc99d34418228f2dc8fbafaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter01.prefab using Guid(e86609c7dc99d34418228f2dc8fbafaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65872f7fb2403cfe015a9365a32e0362') in 0.018769 seconds
-  Import took 0.021673 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.950000 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de8e2f0b9dca3e74da0bf094af233f00') in 0.041125 seconds
-  Import took 0.047020 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.142305 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5050eeafd6b6c4cff6174879ce98ac6') in 0.043232 seconds
-  Import took 0.047895 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 41.574725 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter02.prefab
-  artifactKey: Guid(9c20883969e931946b5ffdf8a074055d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter02.prefab using Guid(9c20883969e931946b5ffdf8a074055d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '213eea4b9c35ab248c763535d7a23feb') in 0.020350 seconds
-  Import took 0.023892 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.597951 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter02.prefab
-  artifactKey: Guid(9c20883969e931946b5ffdf8a074055d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter02.prefab using Guid(9c20883969e931946b5ffdf8a074055d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2dc21c56c1aea262dbefe73fe5d1135') in 0.006105 seconds
-  Import took 0.009401 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 95.877017 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Coffin-Lid.fbx
-  artifactKey: Guid(419f5abdbe9465749819fc4aa66c67db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Coffin-Lid.fbx using Guid(419f5abdbe9465749819fc4aa66c67db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eba693b8cecf0f913369b4f3e7a147fe') in 0.032505 seconds
-  Import took 0.035128 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.726597 seconds.
-  path: Assets/Art&Sound/Art/Models/Clutter/Coffin-Open.fbx
-  artifactKey: Guid(35318fca014d0824ba24e978db9db11b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Clutter/Coffin-Open.fbx using Guid(35318fca014d0824ba24e978db9db11b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79033ff3f7d0789ff7fc1ad67e66a361') in 0.038195 seconds
-  Import took 0.043046 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 358.823172 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter02.prefab
-  artifactKey: Guid(9c20883969e931946b5ffdf8a074055d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/SmallRoom2/Clutter02.prefab using Guid(9c20883969e931946b5ffdf8a074055d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7715110b176db98ccba1e2a5b0113e9f') in 0.018686 seconds
-  Import took 0.021722 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.724701 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88fff0725584bb78c13a28d56ff2ea42') in 0.048166 seconds
-  Import took 0.054766 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.373998 seconds.
-  path: Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab
-  artifactKey: Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DungeonStructure/Rooms/RegularRooms/SmallRoom2.prefab using Guid(b454004a79c326f4bbe4775903643953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c3177a4c40c6518cf7d4975b6021551') in 0.050642 seconds
-  Import took 0.056916 seconds .
+  Time since last request: 10.684969 seconds.
+  path: Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room00
+  artifactKey: Guid(ee53ab5c8f85fe5429fbbdc13d547677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/Room00 using Guid(ee53ab5c8f85fe5429fbbdc13d547677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '999a769e0442fcc606587b6fff046ec7') in 0.009236 seconds
+  Import took 0.011917 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

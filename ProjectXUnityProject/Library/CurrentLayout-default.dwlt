@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 146
+  controlID: 19
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 100
+  controlID: 28
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 101
+  controlID: 29
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -399,10 +399,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 449e0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 54fbffff
+      scrollPos: {x: 0, y: 505}
+      m_SelectedIDs: bccefbff
+      m_LastClickedID: -274756
+      m_ExpandedIDs: bccefbff04f0ffffaef0ffff76a6000098a60000a0a60000a4a60000a8a60000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 6917529027641081856
+  m_OverrideSceneCullingMask: 0
   m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 0
@@ -463,9 +463,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 11.446069, y: -12.770845, z: 14.766669}
+    m_Target: {x: 6.679346, y: -7.4117336, z: 11.377691}
     speed: 2
-    m_Value: {x: 9.921826, y: -17.851833, z: 28.661604}
+    m_Value: {x: 6.679346, y: -7.4117336, z: 11.377691}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -512,13 +512,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.4119567, y: 0.40895745, z: -0.2144684, w: 0.78553224}
+    m_Target: {x: -0.3755363, y: -0.16764995, z: 0.06926569, w: -0.9089088}
     speed: 2
-    m_Value: {x: -0.38623863, y: 0.03311558, z: -0.013873456, w: -0.92172986}
+    m_Value: {x: -0.37573358, y: -0.16491862, z: 0.06813718, w: -0.9093864}
   m_Size:
-    m_Target: 17.575783
+    m_Target: 8.899274
     speed: 2
-    m_Value: 17.51684
+    m_Value: 8.899274
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -582,22 +582,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom
+    - Assets/Scripts/DungeonStructure/Rooms
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Assets/Scripts/DungeonStructure/Rooms/ClutterRooms/StartRoom
+  - Assets/Scripts/DungeonStructure/Rooms
   m_LastFoldersGridSize: 46
   m_LastProjectPath: C:\Users\graha_000\Desktop\ProjectX Repo\ProjectX\ProjectXUnityProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 244}
-    m_SelectedIDs: 449e0000
-    m_LastClickedID: 40516
-    m_ExpandedIDs: 00000000d89d0000da9d0000dc9d0000de9d0000e09d0000e29d0000e49d0000e69d0000e89d0000ea9d0000ec9d0000ee9d00000c9e000000ca9a3b
+    scrollPos: {x: 0, y: 320}
+    m_SelectedIDs: e0a00000
+    m_LastClickedID: 41184
+    m_ExpandedIDs: 00000000d4a00000d6a00000d8a00000daa00000dca00000dea00000e0a00000e2a00000e4a00000e6a00000e8a00000eaa0000008a1000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -625,7 +625,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d89d0000da9d0000dc9d0000de9d0000e09d0000e29d0000e49d0000e69d0000e89d0000ea9d0000ec9d0000ee9d0000
+    m_ExpandedIDs: 00000000d4a00000d6a00000d8a00000daa00000dca00000dea00000e0a00000e2a00000e4a00000e6a00000e8a00000eaa00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
