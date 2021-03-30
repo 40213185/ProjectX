@@ -133,7 +133,7 @@ public class MapGenerator : MonoBehaviour
                     {
                         case 0:
                             {
-                                if (clutter00 != null)
+                                if (clutter00.Length>0)
                                 {
                                     //pick random clutter
                                     pick = Random.Range(0, clutter00.Length);
@@ -157,7 +157,7 @@ public class MapGenerator : MonoBehaviour
                             }
                         case 1:
                             {
-                                if (clutter01 != null)
+                                if (clutter01.Length > 0)
                                 {
                                     //pick random clutter
                                     pick = Random.Range(0, clutter01.Length);
@@ -181,7 +181,7 @@ public class MapGenerator : MonoBehaviour
                             }
                         case 2:
                             {
-                                if (clutter02 != null)
+                                if (clutter02.Length > 0)
                                 {
                                     //pick random clutter
                                     pick = Random.Range(0, clutter02.Length);
@@ -205,7 +205,7 @@ public class MapGenerator : MonoBehaviour
                             }
                         case 3:
                             {
-                                if (clutter03 != null)
+                                if (clutter03.Length > 0)
                                 {
                                     //pick random clutter
                                     pick = Random.Range(0, clutter03.Length);
@@ -229,7 +229,7 @@ public class MapGenerator : MonoBehaviour
                             }
                         case 4:
                             {
-                                if (clutter04 != null)
+                                if (clutter04.Length > 0)
                                 {
                                     //pick random clutter
                                     pick = Random.Range(0, clutter04.Length);
@@ -253,7 +253,7 @@ public class MapGenerator : MonoBehaviour
                             }
                         case 5:
                             {
-                                if (clutterSCR != null)
+                                if (clutterSCR.Length > 0)
                                 {
                                     //pick random clutter
                                     pick = Random.Range(0, clutterSCR.Length);
@@ -277,7 +277,7 @@ public class MapGenerator : MonoBehaviour
                             }
                         case 6:
                             {
-                                if (clutterSR != null)
+                                if (clutterSR.Length > 0)
                                 {
                                     //pick random clutter
                                     pick = Random.Range(0, clutterSR.Length);
@@ -301,7 +301,7 @@ public class MapGenerator : MonoBehaviour
                             }
                         case 7:
                             {
-                                if (clutterSR02 != null)
+                                if (clutterSR02.Length > 0)
                                 {
                                     //pick random clutter
                                     pick = Random.Range(0, clutterSR02.Length);
@@ -325,7 +325,7 @@ public class MapGenerator : MonoBehaviour
                             }
                         case 8:
                             {
-                                if (clutterStart != null)
+                                if (clutterStart.Length > 0)
                                 {
                                     //pick random clutter
                                     pick = Random.Range(0, clutterStart.Length);

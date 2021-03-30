@@ -201,7 +201,8 @@ public class PlayerControllerCombat : MonoBehaviour
                         if (Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)) >= stats.GetCurrentMovementPoints())
                         {
                             //take mp
-                            stats.ModifyMovementPointsBy((int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
+                            stats.ModifyMovementPointsBy(-(int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
+                            GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
                             return true;
                         }
                     }
@@ -213,7 +214,8 @@ public class PlayerControllerCombat : MonoBehaviour
                     //get the previous move point
                     movePoint = new Vector3(moveToPoints[moveIndex-1].x, feetpos, moveToPoints[moveIndex-1].y);
                     //take mp
-                    stats.ModifyMovementPointsBy((int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
+                    stats.ModifyMovementPointsBy(-(int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
+                    GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
                     //reset index for next movement
                     moveIndex = 0;
                     //return finished
@@ -232,6 +234,9 @@ public class PlayerControllerCombat : MonoBehaviour
         {
             //reset index for next movement
             moveIndex = 0;
+            //take mp
+            stats.ModifyMovementPointsBy(-(int)Node.CalculateDistance(initialPos, new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z))));
+            GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
             //return finished
             return true;
         }

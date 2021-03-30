@@ -6,44 +6,63 @@ using UnityEngine.UI;
 public class UIHandling : MonoBehaviour
 {
     private Stats playerStats;
-    private Stats uiPlayerStats;
     private GameObject[] apCollection;
+    private GameObject[] mpCollection;
     
 
     public Slider hpSlider;
 
+    public GameObject pauseMenu; 
+
     public GameObject usablesPanel;
     public GameObject apGroup;
+    public GameObject mpGroup;
     public GameObject apPoint;
+    private int ap;
+    public GameObject mpPoint;
+    private int mp;
     public GameObject[] combatObjectCollection;
     public GameObject[] usablesButtons;
 
     private void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().stats;
-
+        ap = playerStats.GetCurrentActionPoints();
+        mp = playerStats.GetCurrentMovementPoints();
         hpSlider.maxValue = playerStats.GetMaxHealth();
 
         hpSlider.value = playerStats.GetCurrentHealth();
 
         apCollection = new GameObject[playerStats.GetMaxActionPoints()];
+        mpCollection = new GameObject[playerStats.GetMaxMovementPoints()];
+
         for (int i = 0; i < playerStats.GetMaxActionPoints(); i++)
         {
             apCollection[i] = Instantiate(apPoint, apGroup.transform);
         }
+        for (int i = 0; i < playerStats.GetMaxMovementPoints(); i++)
+        {
+            mpCollection[i] = Instantiate(mpPoint, mpGroup.transform);
+        }
+    }
 
-        uiPlayerStats = playerStats;
-        
+    public void PausePressed() 
+    {
+        GlobalGameState.Pause(true);
+        pauseMenu.SetActive(true);
     }
 
     public void UpdateUI() 
     {
+        Debug.Log("Updated");
         if (hpSlider.value != playerStats.GetCurrentHealth())
             hpSlider.value = playerStats.GetCurrentHealth(); 
         
-        if(uiPlayerStats.GetCurrentActionPoints() != playerStats.GetCurrentActionPoints()) 
+        //ap handling
+        if( ap!= playerStats.GetCurrentActionPoints()) 
         {
-            foreach(GameObject e in apCollection) 
+            ap = playerStats.GetCurrentActionPoints();
+            foreach (GameObject e in apCollection) 
             {
                 e.SetActive(false);
             }
@@ -52,6 +71,20 @@ public class UIHandling : MonoBehaviour
                 apCollection[i].SetActive(true);
             }
         }
+        //mp handling
+        if ( mp!= playerStats.GetCurrentMovementPoints())
+        {
+            mp = playerStats.GetCurrentMovementPoints();
+            foreach (GameObject e in mpCollection)
+            {
+                e.SetActive(false);
+            }
+            for (int i = 0; i < playerStats.GetCurrentMovementPoints(); i++)
+            {
+                mpCollection[i].SetActive(true);
+            }
+        }
+
     }
 
     public void setCombat(bool inCombat) 
@@ -86,6 +119,7 @@ public class UIHandling : MonoBehaviour
     public void SkipTurnPressed() 
     {
         Debug.Log("SKIPPING TURN");
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControllerCombat>().EndTurn();
     }
 
     public void UsablesToggle() 

@@ -183,4 +183,9 @@ public class PlayerController : MonoBehaviour
     {
         move = false;
     }
+
+    public Stats GetPlayerStatValues() 
+    {
+        return stats;
+    }
 }
