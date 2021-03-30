@@ -13,6 +13,8 @@ public class UIHandling : MonoBehaviour
 
     public Slider hpSlider;
 
+    public GameObject pauseMenu; 
+
     public GameObject usablesPanel;
     public GameObject apGroup;
     public GameObject mpGroup;
@@ -43,6 +45,12 @@ public class UIHandling : MonoBehaviour
 
         uiPlayerStats = playerStats;
         
+    }
+
+    public void PausePressed() 
+    {
+        GlobalGameState.Pause(true);
+        pauseMenu.SetActive(true);
     }
 
     public void UpdateUI() 
