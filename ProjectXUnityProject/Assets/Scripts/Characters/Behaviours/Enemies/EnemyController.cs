@@ -527,4 +527,10 @@ public class EnemyController : MonoBehaviour
     {
         return stats;
     }
+
+    public int ModifyHealthBy(int amount)
+    {
+        int value= stats.ModifyHealthBy(amount);
+        return value;
+    }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerControllerCombat : MonoBehaviour
 {
@@ -37,6 +38,11 @@ public class PlayerControllerCombat : MonoBehaviour
     //combat
     private bool myTurn;
 
+    //actions
+    private Weapon weaponSelected;
+    private List<GameObject> combatantsInfluenceByAction;
+    private bool actionComplete;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +58,9 @@ public class PlayerControllerCombat : MonoBehaviour
 
         //highlighting
         highlight = HighlightCells.instance;
+
+        //actions
+        combatantsInfluenceByAction = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -79,6 +88,7 @@ public class PlayerControllerCombat : MonoBehaviour
                     {
                         if (Input.GetMouseButtonDown(0))
                         {
+                            if (UIBlock()) break;
                             //set up ray
                             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                             //create a plane at floor level
@@ -96,7 +106,7 @@ public class PlayerControllerCombat : MonoBehaviour
                                 Vector2Int clickpos = new Vector2Int(Mathf.FloorToInt(mouseClickPos.x), Mathf.FloorToInt(mouseClickPos.z));
                                 initialPos = initpos;
 
-                                if (CanMove(clickpos))
+                                if (CanMove(clickpos)&&stats.GetCurrentMovementPoints()>0)
                                 {
                                     if (MapHandler.GetTileTypeFromMatrix(clickpos) == MapHandler.TileType.Walkable)
                                     {
@@ -140,11 +150,125 @@ public class PlayerControllerCombat : MonoBehaviour
                             //clear highlights
                             highlight.ClearHighlights();
                             //change state on end movement
-                            combatControllerState = CombatControllerState.EndTurn;
+                            combatControllerState = CombatControllerState.Wait;
                         }
                         break;
                     }
 
+                case CombatControllerState.SelectAction:
+                    {
+                        //if (waitTimer <= Time.time)
+                        //{
+                            if (UIBlock()) break;
+                            if (Input.GetMouseButtonDown(0))
+                            {
+                                //set up ray
+                                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                                //create a plane at floor level
+                                Plane hitPlane = new Plane(Vector3.up, new Vector3(0, -0.5f, 0));
+                                //Plane.Raycast stores the distance from ray.origin to the hit point in this variable
+                                float distance = 0;
+                                //if the ray hits the plane
+                                if (hitPlane.Raycast(ray, out distance))
+                                {
+                                    //get the hit point
+                                    mouseClickPos = ray.GetPoint(distance);
+
+                                    //setup for maphandler functions
+                                    Vector2Int clickpos = new Vector2Int(Mathf.FloorToInt(mouseClickPos.x), Mathf.FloorToInt(mouseClickPos.z));
+                                    Vector2Int[] selectionTiles = weaponSelected.GetRangeTiles(getMatrixPos());
+                                    Debug.Log(clickpos.ToString());
+                                    //check for outside range click
+                                    bool outsideRange = true;
+                                //go through range tiles
+                                for (int i = 0; i < selectionTiles.Length; i++)
+                                {
+                                    //if the tile is at click pos
+                                    if (selectionTiles[i] == clickpos)
+                                    {
+                                        Debug.Log("Click in range");
+                                        outsideRange = false;
+                                        //clear highlights
+                                        highlight.ClearHighlights();
+                                        //go through aoetiles at click pos
+                                        Vector2Int[] aoeTiles = weaponSelected.GetAoeTiles(selectionTiles[i], getMatrixPos());
+                                        for (int z = 0; z < aoeTiles.Length; z++)
+                                        {
+                                            //place aoe highlights
+                                            highlight.PlaceHighlight(aoeTiles[z]);
+                                            //check against combatants in area
+                                            for (int c = 0; c < CombatHandler._combatants.Length; c++)
+                                            {
+                                                Vector2Int curcombatantMatrixPos =
+                                                    new Vector2Int(Mathf.FloorToInt(CombatHandler._combatants[c].transform.position.x),
+                                                    Mathf.FloorToInt(CombatHandler._combatants[c].transform.position.z));
+                                                //add to list if combatant within the area but not self
+                                                if (curcombatantMatrixPos != getMatrixPos() &&
+                                                    curcombatantMatrixPos == aoeTiles[z])
+                                                {
+                                                    bool add = true;
+                                                    //go through combatants influenced list
+                                                    for (int ciba = 0; ciba < combatantsInfluenceByAction.Count; ciba++)
+                                                    {
+                                                        //and only add if not added already
+                                                        if (combatantsInfluenceByAction[ciba] != CombatHandler._combatants[c])
+                                                        {
+                                                            add = false;
+                                                            break;
+                                                        }
+                                                    }
+                                                    if(add) combatantsInfluenceByAction.Add(CombatHandler._combatants[c]);
+                                                }
+                                            }
+                                        }
+                                        if (combatantsInfluenceByAction != null && combatantsInfluenceByAction.Count > 0)
+                                        {
+                                            //take ap
+                                            stats.ModifyActionPointsBy(-weaponSelected.getCost());
+                                            //set up wait
+                                            waitTimer = Time.time + waitTime;
+                                            //setup action used once
+                                            actionComplete = false;
+                                            //use action
+                                            combatControllerState = CombatControllerState.UseAction;
+                                        }
+                                        break;
+                                    }
+                                }
+
+                                    //go back to wait state if clicked outside range
+                                    if (outsideRange)
+                                    {
+                                        highlight.ClearHighlights();
+                                        combatControllerState = CombatControllerState.Wait;
+                                    }
+                                }
+                            }
+                        //}
+                        break;
+                    }
+                case CombatControllerState.UseAction:
+                    {
+                        if (!actionComplete)
+                        {
+                            //use weapon on every combatant
+                            for (int i = 0; i < combatantsInfluenceByAction.Count; i++)
+                            {
+                                if (combatantsInfluenceByAction[i].GetComponent<EnemyController>())
+                                {
+                                    int amount = combatantsInfluenceByAction[i].GetComponent<EnemyController>().ModifyHealthBy(-weaponSelected.RollForDamage());
+                                    Debug.Log("Dealt " + amount);
+                                }
+                            }
+                            actionComplete = true;
+                        }else if (waitTimer <= Time.time)
+                        {
+                            //clear highlights
+                            highlight.ClearHighlights();
+                            combatControllerState = CombatControllerState.Wait;
+                        }
+                        break;
+                    }
                 //end turn
                 case CombatControllerState.EndTurn:
                     {
@@ -155,7 +279,20 @@ public class PlayerControllerCombat : MonoBehaviour
         }
     }
 
-    private bool CanMove(Vector2Int clickpos) 
+    private bool UIBlock() 
+    {
+        bool blocked = false;
+        //block on ui hit
+#if !UNITY_EDITOR
+
+                        if (EventSystem.current.IsPointerOverGameObject(0)) blocked=true;
+#else
+        if (EventSystem.current.IsPointerOverGameObject(-1)) blocked = true; ;
+#endif
+        return blocked;
+    }
+
+    private bool CanMove(Vector2Int clickpos)
     {
         //check enemy position
         bool canmove = true;
@@ -212,7 +349,7 @@ public class PlayerControllerCombat : MonoBehaviour
                 else
                 {
                     //get the previous move point
-                    movePoint = new Vector3(moveToPoints[moveIndex-1].x, feetpos, moveToPoints[moveIndex-1].y);
+                    movePoint = new Vector3(moveToPoints[moveIndex - 1].x, feetpos, moveToPoints[moveIndex - 1].y);
                     //take mp
                     stats.ModifyMovementPointsBy(-(int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
                     GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
@@ -262,5 +399,27 @@ public class PlayerControllerCombat : MonoBehaviour
         combatControllerState = CombatControllerState.Freeze;
         myTurn = false;
         CombatHandler.NextCombatantTurn();
+    }
+
+    public Vector2Int getMatrixPos()
+    {
+        return new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
+    }
+
+    public void SelectAction(Weapon w)
+    {
+        weaponSelected = w;
+        //clear highlights
+        highlight.ClearHighlights();
+        //prep and place highlights
+        Vector2Int[] rangeTiles = weaponSelected.GetRangeTiles(getMatrixPos());
+        for (int i = 0; i < rangeTiles.Length; i++)
+        {
+            highlight.PlaceHighlight(rangeTiles[i]);
+        }
+        //change to wait for select action
+        combatControllerState = CombatControllerState.SelectAction;
+        //setup small delay for mouse intput delayed action
+        waitTimer = Time.time + 1;
     }
 }

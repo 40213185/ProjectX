@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerControllerCombat))]
 
@@ -70,6 +71,13 @@ public class PlayerController : MonoBehaviour
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
+                        //block on ui hit
+#if !UNITY_EDITOR
+
+                        if (EventSystem.current.IsPointerOverGameObject(0)) break;
+#else
+                        if (EventSystem.current.IsPointerOverGameObject(-1)) break;
+#endif
                         //clear highlights if they exist;
                         highlight.ClearHighlights();
                         //set up ray
