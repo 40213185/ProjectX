@@ -15,6 +15,7 @@ public static class InventorySystem
         usableSlots = useSlots;
         equipmentHeld = new Weapon();
         usablesHeld = new Usable[usableSlots];
+        equipmentHeld = Weapon.GetRandomWeapon(1,1);
     }
     //
     //public static void AddToInventory(Weapon equip,int index) 

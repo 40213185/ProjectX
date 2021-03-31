@@ -24,6 +24,9 @@ public class UIHandling : MonoBehaviour
     public GameObject[] combatObjectCollection;
     public GameObject[] usablesButtons;
 
+    //combat controller
+    private PlayerControllerCombat playerCombatController;
+
     private void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().stats;
@@ -44,6 +47,9 @@ public class UIHandling : MonoBehaviour
         {
             mpCollection[i] = Instantiate(mpPoint, mpGroup.transform);
         }
+
+        //combat controller
+        playerCombatController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControllerCombat>();
     }
 
     public void PausePressed() 
@@ -112,14 +118,16 @@ public class UIHandling : MonoBehaviour
 
     public void WeaponSkillPressed() 
     {
-        Debug.Log("WEAPON SKILL USED");
-        //InventorySystem.equipmentHeld.getCost();
+        if (playerStats.GetCurrentActionPoints() >= InventorySystem.equipmentHeld.getCost())
+        {
+            playerCombatController.SelectAction(InventorySystem.equipmentHeld);
+        }
     }
 
     public void SkipTurnPressed() 
     {
         Debug.Log("SKIPPING TURN");
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControllerCombat>().EndTurn();
+        playerCombatController.EndTurn();
     }
 
     public void UsablesToggle() 
