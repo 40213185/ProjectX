@@ -39,7 +39,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stats = new Stats(100, 3,6);                   //initial player stats
+
+        stats = new Stats(100, 3,6,5);                   //initial player stats
         combatController = GetComponent<PlayerControllerCombat>();
         combatController.enabled = false;
 
@@ -60,6 +61,8 @@ public class PlayerController : MonoBehaviour
             //disable any kind of interaction until conditions are met
             case ControllerState.Freeze:
                 {
+                    if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)
+                        controllerState = ControllerState.FreeMovement;
                     break;
                 }
 
@@ -179,7 +182,20 @@ public class PlayerController : MonoBehaviour
 
         //swap controllers
         combatController.enabled = true;
+        //camera
+        controllerCamera.enabled = false;
         enabled = false;
+    }
+
+    public void CombatEndPhase() 
+    {
+        GlobalGameState.SetCombatState(false);
+        //camera
+        controllerCamera.enabled = true;
+        //movement
+        controllerState = ControllerState.Freeze;
+        //if lost combat
+        if (stats.GetCurrentHealth() <= 0) Debug.Log("Dead");
     }
 
     public void OnEnable()

@@ -39,4 +39,10 @@ public class PlayerAnimationController : MonoBehaviour
         //stores the old position
         previousPosition = newPosition;
     }
+
+    public void RotateToFace(Vector3 point) 
+    {
+        directionVector = point - transform.position;
+        transform.rotation = Quaternion.Euler(0, -90 + Mathf.Atan2(directionVector.z, -directionVector.x) * Mathf.Rad2Deg, 0);
+    }
 }

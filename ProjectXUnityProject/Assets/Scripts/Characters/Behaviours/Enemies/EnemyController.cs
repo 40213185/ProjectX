@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     //stats
-    Stats stats;
+    public Stats stats { get; private set; }
     //camera
     public Camera controllerCamera;
     //highlighting cells
@@ -16,7 +16,8 @@ public class EnemyController : MonoBehaviour
     Wait,
     Move,
     Action,
-    TurnEnd
+    TurnEnd,
+    Dead
     }
 
     public State actionState;
@@ -48,11 +49,20 @@ public class EnemyController : MonoBehaviour
     //player reference
     private GameObject player;
 
+    //animation
+    public GameObject animationObject;
+    private EnemyAnimationController animationController;
+
+    public void SetStats() 
+    {
+        stats = EnemyLibrary.GetEnemyStats(enemyType);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         //actionState = State.Idle;
-        stats = EnemyLibrary.GetEnemyStats(enemyType);
+        SetStats();
 
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -68,11 +78,15 @@ public class EnemyController : MonoBehaviour
 
         //highlighting
         highlight = HighlightCells.instance;
+
+        //animation
+        animationController = animationObject.GetComponent<EnemyAnimationController>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (stats.GetCurrentHealth() <= 0) actionState = State.Dead;
         if (myTurn)
         {
             switch (actionState)
@@ -107,7 +121,6 @@ public class EnemyController : MonoBehaviour
                                         inrange = true;
                                         usingAoe = true;
                                         aoePoint = v;
-                                        Debug.Log("using aoe"); 
                                         break; 
                                     }
                                 if (playerPos == v) { inrange = true; break; }
@@ -371,7 +384,7 @@ public class EnemyController : MonoBehaviour
                                 {
                                     for (int i = 0; i < aoeTiles.Length; i++)
                                     {
-                                        highlight.PlaceHighlight(aoeTiles[i]);
+                                        highlight.PlaceHighlight(aoeTiles[i],Color.red);
                                     }
                                 }
                                 //range tiles
@@ -390,6 +403,12 @@ public class EnemyController : MonoBehaviour
                             int roll;
                             if (!usingAoe) roll = weapons[weaponChoice[0]].RollForDamage();
                             else roll= weapons[aoePointsWeapon[0]].RollForDamage();
+                            //rotate
+                            if (animationController!=null)
+                            {
+                                Vector3 point = new Vector3(player.transform.position.x,0,player.transform.position.z);
+                                animationController.RotateToFace(point);
+                            }
                             //attack
                             player.GetComponent<PlayerController>().stats.ModifyHealthBy(-roll);
                             //take ap
@@ -414,6 +433,10 @@ public class EnemyController : MonoBehaviour
                     {
                         //end turn pipeline
                         EndTurn();
+                        break;
+                    }
+                case State.Dead: 
+                    {
                         break;
                     }
             }
@@ -469,13 +492,19 @@ public class EnemyController : MonoBehaviour
     public void CombatStart() 
     {
         actionState = State.Wait;
+        controllerCamera.enabled = false;
         myTurn = false;
     }
 
     public void MyTurn()
     {
+        if (actionState == State.Dead)
+        {
+            EndTurn();
+            return;
+        }
         //stats and action points
-        if(stats!=null)
+        if (stats!=null)
             //refill ap
             stats.RefillActionPoints();
         else
@@ -503,11 +532,6 @@ public class EnemyController : MonoBehaviour
         }
         //play
         myTurn = true;
-        waitToCreate();
-    }
-    private IEnumerator waitToCreate() 
-    {
-        yield return new WaitForSeconds(0.5f);
     }
 
     public void EndTurn()

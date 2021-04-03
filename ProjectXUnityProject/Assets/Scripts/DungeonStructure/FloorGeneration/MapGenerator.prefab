@@ -53,24 +53,37 @@ MonoBehaviour:
   - {fileID: 3138624938076488579, guid: aaa9b8cbb01a1344d9a1cb60ac3ee08f, type: 3}
   - {fileID: 5086946657715441876, guid: b454004a79c326f4bbe4775903643953, type: 3}
   - {fileID: 3828890168647988909, guid: adf1810752adf4a40a74f90e9c2b3836, type: 3}
-  type00: 0
-  clutter00: []
-  type01: 1
-  clutter01: []
-  type02: 2
-  clutter02: []
-  type03: 3
-  clutter03: []
-  type04: 4
-  clutter04: []
-  typeSCR: 5
-  clutterSCR: []
-  typeSR: 6
-  clutterSR: []
-  typeSR02: 7
-  clutterSR02: []
-  typeStart: 8
-  clutterStart: []
+  clutter00:
+  - {fileID: 8482892938881309036, guid: c25d0531d69cae343826a96dcbfeb5f7, type: 3}
+  - {fileID: 3250807544024708277, guid: 4b0171768a05b1e4d80f28cb41778c8f, type: 3}
+  clutter01:
+  - {fileID: 5243515227798928563, guid: 68594717d44d95e45ae029dacf510634, type: 3}
+  - {fileID: 7516189621264552539, guid: 704b6d69a1659d9428f30942477a562b, type: 3}
+  clutter02:
+  - {fileID: 1069172097645705978, guid: c77fe057b52c1c74389a42dec359b53d, type: 3}
+  - {fileID: 1628781301385829341, guid: 21e8dd45c37c4bb43acb4fbf15e206a1, type: 3}
+  - {fileID: 5488144916599463656, guid: 7dea2c054c930114bbcf472fb7881935, type: 3}
+  clutter03:
+  - {fileID: 8051501196744390368, guid: fd50fc9c673e9ce47ad4b77f95fd8340, type: 3}
+  - {fileID: 2342550416663845672, guid: 3ee0dc4db4377b141b16e6037dd86790, type: 3}
+  clutter04:
+  - {fileID: 4275389106061756180, guid: 801f1e1a1ca47584b8325f18eb93c954, type: 3}
+  - {fileID: 8773961649999882989, guid: e4c27c1db7b2cf9419872d2d785fda9b, type: 3}
+  - {fileID: 195590561920727205, guid: 624d1fbddeac37a4a824855fd88640f0, type: 3}
+  clutterSCR:
+  - {fileID: 7212961460611059106, guid: be47cf3e2f8a54c49924df3fe62a5e1a, type: 3}
+  - {fileID: 4842650488956735431, guid: e70ef605216b4094193c1509158d294d, type: 3}
+  - {fileID: 3623215810433496227, guid: ecba45ca2f1397e48babcb0f10b2e7c1, type: 3}
+  clutterSR:
+  - {fileID: 8075337503570979180, guid: 180a1e9139421f04d9a1ee7430d61be0, type: 3}
+  - {fileID: 5015156303004041176, guid: 86e5f83fb4b78f949a4dd27d6025ba6b, type: 3}
+  clutterSR02:
+  - {fileID: 1053923686483483262, guid: 8bb43180c2d6c0544bf5da236e5a29d7, type: 3}
+  - {fileID: 8617978075698761541, guid: e86609c7dc99d34418228f2dc8fbafaf, type: 3}
+  - {fileID: 8575561790708834948, guid: 9c20883969e931946b5ffdf8a074055d, type: 3}
+  clutterStart:
+  - {fileID: 3761294461106221014, guid: 51fa4885bc6b5b74d9d2a8c860622143, type: 3}
+  - {fileID: 6575361948393333690, guid: ec5393533a800614cab40600cff45b00, type: 3}
   RoomsPerFloor: 0400000006000000080000000a0000000f000000
   player: {fileID: 6315204001475452088, guid: 15785bf9296c07b47b5b056c637004fc, type: 3}
   UI: {fileID: 1253594410327910640, guid: ed780079e28d96e4f92eb3b40d3160f6, type: 3}

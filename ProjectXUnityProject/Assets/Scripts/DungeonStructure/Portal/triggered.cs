@@ -16,6 +16,7 @@ public class triggered : MonoBehaviour
         delay = 3.0f+Time.time;
     }
 
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -24,7 +25,7 @@ public class triggered : MonoBehaviour
             {
                 trig = true;
 
-                delay = Time.time + 3.0f;
+                delay = Time.time + 1.0f;
             }
         }
     }
@@ -35,5 +36,8 @@ public class triggered : MonoBehaviour
         {
             trig = false;
         }
+    }
+    public void ResetTrigger() {
+        trig = false;
     }
 }

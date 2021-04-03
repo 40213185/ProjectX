@@ -23,6 +23,7 @@ public class PortalBehavior : MonoBehaviour
     {
         if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat)
         {
+            trigger.GetComponent<triggered>().ResetTrigger();
             if (trigger.activeSelf) trigger.SetActive(false);
         }
         else

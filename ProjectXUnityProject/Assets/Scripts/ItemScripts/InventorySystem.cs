@@ -17,11 +17,11 @@ public static class InventorySystem
         usablesHeld = new Usable[usableSlots];
         equipmentHeld = Weapon.GetRandomWeapon(1,1);
     }
-    //
-    //public static void AddToInventory(Weapon equip,int index) 
-    //{
-    //    equipmentHeld[index] = equip;
-    //}
+
+    public static void ReplaceWeapon(Weapon equip)
+    {
+        equipmentHeld = equip;
+    }
     public static void AddToInventory(Usable usable,int index)
     {
         usablesHeld[index] = usable;

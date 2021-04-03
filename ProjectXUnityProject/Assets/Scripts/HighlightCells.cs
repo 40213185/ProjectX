@@ -33,6 +33,17 @@ public class HighlightCells : MonoBehaviour
         foreach (GameObject go in highlights) if (go.transform.position == pos) found = true;
         if (!found) highlights.Add(Instantiate(highlight, pos, highlight.transform.rotation));
     }
+    public void PlaceHighlight(Vector2Int position,Color color)
+    {
+        bool found = false;
+        Vector3 pos = new Vector3(position.x, 0.01f, position.y);
+        foreach (GameObject go in highlights) if (go.transform.position == pos) found = true;
+        if (!found)
+        {
+            highlights.Add(Instantiate(highlight, pos, highlight.transform.rotation));
+            highlights[highlights.Count - 1].GetComponent<Renderer>().material.color = color;
+        }
+    }
 
     public void ClearHighlights()
     {

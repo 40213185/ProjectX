@@ -27,6 +27,12 @@ public class UIHandling : MonoBehaviour
     //combat controller
     private PlayerControllerCombat playerCombatController;
 
+    //disabling and enabling objects
+    public GameObject skipTurnButton;
+    public GameObject basicAttack;
+    public GameObject weaponSkill;
+    public GameObject itemsPanel;
+
     private void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().stats;
@@ -60,7 +66,6 @@ public class UIHandling : MonoBehaviour
 
     public void UpdateUI() 
     {
-        Debug.Log("Updated");
         if (hpSlider.value != playerStats.GetCurrentHealth())
             hpSlider.value = playerStats.GetCurrentHealth(); 
         
@@ -113,21 +118,68 @@ public class UIHandling : MonoBehaviour
 
     public void BasicAttackPressed() 
     {
-        Debug.Log("BASIC ATTACK PRESSED");
-    }
-
-    public void WeaponSkillPressed() 
-    {
-        if (playerStats.GetCurrentActionPoints() >= InventorySystem.equipmentHeld.getCost())
+        //check if not moving
+        if (playerCombatController.combatControllerState == PlayerControllerCombat.CombatControllerState.Wait)
         {
-            playerCombatController.SelectAction(InventorySystem.equipmentHeld);
+            //check if can attack
+            if (playerStats.GetCurrentActionPoints() >= InventorySystem.equipmentHeld.getCost())
+            {
+                playerCombatController.SelectAction(InventorySystem.equipmentHeld,false);
+            }
+            //check if cant use anymore
+            if (playerStats.GetCurrentActionPoints() < InventorySystem.equipmentHeld.getCost())
+            {
+                basicAttack.GetComponent<Button>().interactable = false;
+                weaponSkill.GetComponent<Button>().interactable = false;
+            }
         }
     }
 
-    public void SkipTurnPressed() 
+    public void WeaponSkillPressed()
     {
-        Debug.Log("SKIPPING TURN");
-        playerCombatController.EndTurn();
+        //check if not moving
+        if (playerCombatController.combatControllerState == PlayerControllerCombat.CombatControllerState.Wait)
+        {
+            //check if can attack
+            if (playerStats.GetCurrentActionPoints() >= InventorySystem.equipmentHeld.getCost())
+            {
+                playerCombatController.SelectAction(InventorySystem.equipmentHeld,true);
+            }
+            //check if cant use anymore
+            if (playerStats.GetCurrentActionPoints() < InventorySystem.equipmentHeld.getCost())
+            {
+                basicAttack.GetComponent<Button>().interactable = false;
+                weaponSkill.GetComponent<Button>().interactable = false;
+            }
+        }
+    }
+
+    public void SkipTurnPressed()
+    {
+        if (playerCombatController.combatControllerState == PlayerControllerCombat.CombatControllerState.Wait||
+            playerCombatController.combatControllerState==PlayerControllerCombat.CombatControllerState.SelectAction)
+        {
+            playerCombatController.EndTurn();
+            //disable button
+            skipTurnButton.GetComponent<Button>().interactable = false;
+            //disable other buttons
+            weaponSkill.GetComponent<Button>().interactable = false;
+            basicAttack.GetComponent<Button>().interactable = false;
+            itemsPanel.SetActive(false);
+        }
+    }
+
+    public void ReEnableButtonsForTurnStart()
+    {
+        //enable skip turn button
+        skipTurnButton.GetComponent<Button>().interactable = true;
+        //enable other buttons
+        if (playerStats.GetCurrentActionPoints() >= InventorySystem.equipmentHeld.getCost())
+        {
+            weaponSkill.GetComponent<Button>().interactable = true;
+            basicAttack.GetComponent<Button>().interactable = true;
+        }
+        itemsPanel.SetActive(true);
     }
 
     public void UsablesToggle() 
