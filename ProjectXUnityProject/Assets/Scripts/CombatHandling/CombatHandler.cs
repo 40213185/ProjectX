@@ -28,7 +28,7 @@ public static class CombatHandler
         GlobalGameState.SetCombatState(true);
 
         //if its the fist call of combat handling
-        if (_combatants == null) CombatHandler.ResetCombat(combatants);
+        if (_combatants == null) ResetCombat(combatants);
         for (int i = 0; i < _combatants.Length; i++)
         {
             //set them to their respective combat start phase state
@@ -36,7 +36,67 @@ public static class CombatHandler
             else if (_combatants[i].transform.tag == "Enemy") _combatants[i].GetComponent<EnemyController>().CombatStart();
         }
 
-        //set them to their respective combat start phase state
+        //order combatants according to initiative roles
+        int[] rolls = new int[_combatants.Length];
+        //roll
+        for (int i = 0; i < _combatants.Length; i++) 
+        {
+            if (_combatants[i].GetComponent<PlayerController>())
+                rolls[i] = _combatants[i].GetComponent<PlayerController>().stats.RollInitiative();
+            else if (_combatants[i].GetComponent<EnemyController>())
+            {
+                if (_combatants[i].GetComponent<EnemyController>().stats == null)
+                {
+                    _combatants[i].GetComponent<EnemyController>().SetStats();
+                }
+                rolls[i] = _combatants[i].GetComponent<EnemyController>().stats.RollInitiative();
+            }
+        }
+
+        //sort
+        bool sorted = false;
+        GameObject tempSortCombatant;
+        int tempSortRoll;
+        int tempSortIndex = 0;
+        int startIndex = 0;
+        while (!sorted)
+        {
+            //reset roll for check
+            tempSortRoll = 0;
+            //go through combatants
+            for (int i =startIndex; i < _combatants.Length; i++)
+            {
+                //find highest roll and store index
+                if (rolls[i] > tempSortRoll)
+                {
+                    tempSortRoll = rolls[i];
+                    tempSortIndex = i;
+                }
+            }
+            //swap combatants
+            tempSortCombatant = _combatants[startIndex];
+            _combatants[startIndex] = _combatants[tempSortIndex];
+            _combatants[tempSortIndex] = tempSortCombatant;
+            //swap rolls
+            tempSortRoll = rolls[startIndex];
+            rolls[startIndex] = rolls[tempSortIndex];
+            rolls[tempSortIndex] = tempSortRoll;
+            //check
+            sorted = true;
+            for (int i = 0; i < _combatants.Length - 1; i++)
+            {
+                if (rolls[i] < rolls[i + 1])
+                {
+                    sorted = false;
+                    break;
+                }
+            }
+            //increase for next highest
+            startIndex++;
+            if (startIndex >= _combatants.Length) startIndex=0;
+        }
+
+        //set the first combatant to its turn start
         if (_combatants[0].transform.tag == "Player") _combatants[0].GetComponent<PlayerControllerCombat>().MyTurn();
         else if (_combatants[0].transform.tag == "Enemy") _combatants[0].GetComponent<EnemyController>().MyTurn();
     }

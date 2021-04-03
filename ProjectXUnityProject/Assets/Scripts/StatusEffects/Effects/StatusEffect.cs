@@ -8,8 +8,8 @@ public class StatusEffect : MonoBehaviour
     {
         Burn,
         Freeze,
-        Poisoned,
         Bleed,
+        Poisoned,
         Healing,
         StrengthBuff,
         IntBuff,
@@ -37,6 +37,8 @@ public class StatusEffect : MonoBehaviour
         ///code here. Switch case?
         ///
         currentDuration--;
+        //remove after duration is done
+        if (currentDuration <= 0) Destroy(this);
     }
 
     public EffectType GetEffectType() 

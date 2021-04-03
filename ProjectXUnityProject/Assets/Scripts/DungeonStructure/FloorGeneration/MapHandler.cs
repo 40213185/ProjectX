@@ -431,7 +431,7 @@ public static class MapHandler
                 float tentativeHCost = Node.CalculateDistance(currentNode.getPosition(), finalPosition);
                 //float tentativeFCost = currentNode.fcost + Node.CalculateDistance(currentNode.getPosition(), n.getPosition());
                 //if cost is lower or the same
-                if (tentativeGcost<=n.gcost)//||tentativeHCost>n.hcost)
+                if (tentativeGcost<=n.gcost||tentativeHCost>=n.hcost)
                 {
                     //check if not in open list
                     bool found = false;

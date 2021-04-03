@@ -11,8 +11,9 @@ public class Stats
     private int currentMovementPoints;
     private int maxActionPoints;
     private int currentActionPoints;
+    private int baseInitiative;
 
-    public Stats(int maxhealth,int maxmovementPoints,int maxactionPoints) 
+    public Stats(int maxhealth,int maxmovementPoints,int maxactionPoints,int initiative) 
     {
         maxHealth = maxhealth;
         currentHealth = maxHealth;
@@ -20,6 +21,7 @@ public class Stats
         currentMovementPoints = maxMovementPoints;
         maxActionPoints = maxactionPoints;
         currentActionPoints = maxActionPoints;
+        baseInitiative = initiative;
     }
 
     public int GetMaxHealth() 
@@ -103,5 +105,12 @@ public class Stats
         //ui
         GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
         return amount;
+    }
+
+    public int RollInitiative()
+    {
+        int temp = UnityEngine.Random.Range(1, 7);
+        temp += baseInitiative;
+        return temp;
     }
 }

@@ -126,6 +126,7 @@ MonoBehaviour:
   movementSpeed: 0.8
   moveWaitTime: 0.2
   attackWaitTime: 2
+  animationObject: {fileID: 3587486538117349238}
 --- !u!1 &3587486538117349238
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +139,7 @@ GameObject:
   - component: {fileID: 3587486538117349258}
   - component: {fileID: 3587486538117349259}
   - component: {fileID: 3587486538117349236}
+  - component: {fileID: 7792178303936019179}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -221,6 +223,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7792178303936019179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587486538117349238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fdad7560003ea48932d5d41d87db98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7100889975878240699
 GameObject:
   m_ObjectHideFlags: 0

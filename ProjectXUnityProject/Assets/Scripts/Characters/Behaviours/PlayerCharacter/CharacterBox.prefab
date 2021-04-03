@@ -207,7 +207,9 @@ MonoBehaviour:
   combatControllerState: 0
   movementSpeed: 1
   movementRange: 5
-  waitTime: 0
+  moveDelay: 0.2
+  actionDelay: 2
+  animationObject: {fileID: 6315204000534098326}
 --- !u!65 &4215286237275497083
 BoxCollider:
   m_ObjectHideFlags: 0

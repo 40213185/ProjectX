@@ -18,7 +18,8 @@ public class PlayerControllerCombat : MonoBehaviour
         UseAction,
         Wait,
         EndTurn,
-        Freeze
+        Freeze,
+        Dead
     }
     //set to public for testing -  reset to private after testing cycle done
     public CombatControllerState combatControllerState;
@@ -31,17 +32,23 @@ public class PlayerControllerCombat : MonoBehaviour
     private Vector2Int initialPos;
     private int moveIndex;
     private float feetpos;
-    public float waitTime;
+    public float moveDelay;
     private float waitTimer;
     private bool wait;
 
     //combat
     private bool myTurn;
+    public float actionDelay;
+    private bool useWeaponSkill;
 
     //actions
     private Weapon weaponSelected;
     private List<GameObject> combatantsInfluenceByAction;
     private bool actionComplete;
+
+    //animation controller
+    public GameObject animationObject;
+    private PlayerAnimationController animationController;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +60,7 @@ public class PlayerControllerCombat : MonoBehaviour
         feetpos = 0;
         moveIndex = 0;
 
-        waitTimer = Time.time + waitTime;
+        waitTimer = Time.time + moveDelay;
         wait = false;
 
         //highlighting
@@ -61,11 +68,15 @@ public class PlayerControllerCombat : MonoBehaviour
 
         //actions
         combatantsInfluenceByAction = new List<GameObject>();
+
+        //animation controller
+        animationController = animationObject.GetComponent<PlayerAnimationController>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (stats.GetCurrentHealth() <= 0) combatControllerState = CombatControllerState.Dead;
         //speed up in combat
         if (Input.GetButton("Jump"))
             Time.timeScale = 4;
@@ -81,6 +92,8 @@ public class PlayerControllerCombat : MonoBehaviour
                 //disable any kind of interaction until conditions are met
                 case CombatControllerState.Freeze:
                     {
+                        if (GlobalGameState.combatState==GlobalGameState.CombatState.Combat && myTurn)
+                            combatControllerState = CombatControllerState.Wait;
                         break;
                     }
 
@@ -157,36 +170,35 @@ public class PlayerControllerCombat : MonoBehaviour
 
                 case CombatControllerState.SelectAction:
                     {
+                        combatantsInfluenceByAction.Clear();
                         //if (waitTimer <= Time.time)
                         //{
                             if (UIBlock()) break;
-                            if (Input.GetMouseButtonDown(0))
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            //set up ray
+                            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                            //create a plane at floor level
+                            Plane hitPlane = new Plane(Vector3.up, new Vector3(0, -0.5f, 0));
+                            //Plane.Raycast stores the distance from ray.origin to the hit point in this variable
+                            float distance = 0;
+                            //if the ray hits the plane
+                            if (hitPlane.Raycast(ray, out distance))
                             {
-                                //set up ray
-                                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                                //create a plane at floor level
-                                Plane hitPlane = new Plane(Vector3.up, new Vector3(0, -0.5f, 0));
-                                //Plane.Raycast stores the distance from ray.origin to the hit point in this variable
-                                float distance = 0;
-                                //if the ray hits the plane
-                                if (hitPlane.Raycast(ray, out distance))
-                                {
-                                    //get the hit point
-                                    mouseClickPos = ray.GetPoint(distance);
+                                //get the hit point
+                                mouseClickPos = ray.GetPoint(distance);
 
-                                    //setup for maphandler functions
-                                    Vector2Int clickpos = new Vector2Int(Mathf.FloorToInt(mouseClickPos.x), Mathf.FloorToInt(mouseClickPos.z));
-                                    Vector2Int[] selectionTiles = weaponSelected.GetRangeTiles(getMatrixPos());
-                                    Debug.Log(clickpos.ToString());
-                                    //check for outside range click
-                                    bool outsideRange = true;
+                                //setup for maphandler functions
+                                Vector2Int clickpos = new Vector2Int(Mathf.FloorToInt(mouseClickPos.x), Mathf.FloorToInt(mouseClickPos.z));
+                                Vector2Int[] selectionTiles = weaponSelected.GetRangeTiles(getMatrixPos());
+                                //check for outside range click
+                                bool outsideRange = true;
                                 //go through range tiles
                                 for (int i = 0; i < selectionTiles.Length; i++)
                                 {
                                     //if the tile is at click pos
                                     if (selectionTiles[i] == clickpos)
                                     {
-                                        Debug.Log("Click in range");
                                         outsideRange = false;
                                         //clear highlights
                                         highlight.ClearHighlights();
@@ -195,7 +207,7 @@ public class PlayerControllerCombat : MonoBehaviour
                                         for (int z = 0; z < aoeTiles.Length; z++)
                                         {
                                             //place aoe highlights
-                                            highlight.PlaceHighlight(aoeTiles[z]);
+                                            highlight.PlaceHighlight(aoeTiles[z], Color.red);
                                             //check against combatants in area
                                             for (int c = 0; c < CombatHandler._combatants.Length; c++)
                                             {
@@ -217,33 +229,44 @@ public class PlayerControllerCombat : MonoBehaviour
                                                             break;
                                                         }
                                                     }
-                                                    if(add) combatantsInfluenceByAction.Add(CombatHandler._combatants[c]);
+                                                    if (add) combatantsInfluenceByAction.Add(CombatHandler._combatants[c]);
                                                 }
                                             }
                                         }
                                         if (combatantsInfluenceByAction != null && combatantsInfluenceByAction.Count > 0)
                                         {
+                                            //rotate
+                                            if (animationController!=null)
+                                            {
+                                                Vector3 point = new Vector3(combatantsInfluenceByAction[0].transform.position.x, 0, combatantsInfluenceByAction[0].transform.position.z);
+                                                animationController.RotateToFace(point);
+                                            }
                                             //take ap
                                             stats.ModifyActionPointsBy(-weaponSelected.getCost());
                                             //set up wait
-                                            waitTimer = Time.time + waitTime;
+                                            waitTimer = Time.time + actionDelay;
                                             //setup action used once
                                             actionComplete = false;
                                             //use action
                                             combatControllerState = CombatControllerState.UseAction;
                                         }
+                                        else
+                                        {
+                                            highlight.ClearHighlights();
+                                            combatControllerState = CombatControllerState.Wait;
+                                        }
                                         break;
                                     }
                                 }
 
-                                    //go back to wait state if clicked outside range
-                                    if (outsideRange)
-                                    {
-                                        highlight.ClearHighlights();
-                                        combatControllerState = CombatControllerState.Wait;
-                                    }
+                                //go back to wait state if clicked outside range
+                                if (outsideRange)
+                                {
+                                    highlight.ClearHighlights();
+                                    combatControllerState = CombatControllerState.Wait;
                                 }
                             }
+                        }
                         //}
                         break;
                     }
@@ -257,7 +280,9 @@ public class PlayerControllerCombat : MonoBehaviour
                                 if (combatantsInfluenceByAction[i].GetComponent<EnemyController>())
                                 {
                                     int amount = combatantsInfluenceByAction[i].GetComponent<EnemyController>().ModifyHealthBy(-weaponSelected.RollForDamage());
-                                    Debug.Log("Dealt " + amount);
+                                    //use skill
+                                    //if(useWeaponSkill)
+                                        
                                 }
                             }
                             actionComplete = true;
@@ -273,6 +298,11 @@ public class PlayerControllerCombat : MonoBehaviour
                 case CombatControllerState.EndTurn:
                     {
                         EndTurn();
+                        break;
+                    }
+                case CombatControllerState.Dead: 
+                    {
+                        EndCombat();
                         break;
                     }
             }
@@ -333,7 +363,7 @@ public class PlayerControllerCombat : MonoBehaviour
                     {
                         moveIndex++;
                         wait = true;
-                        waitTimer = Time.time + waitTime;
+                        waitTimer = Time.time + moveDelay;
                         //check if the distance travelled is bigger or equal to movement points available
                         if (Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)) >= stats.GetCurrentMovementPoints())
                         {
@@ -381,6 +411,9 @@ public class PlayerControllerCombat : MonoBehaviour
 
     public void MyTurn()
     {
+        //check if stats is initialized
+        if(stats==null)
+            stats = gameObject.GetComponent<PlayerController>().stats;
         //ap
         stats.RefillActionPoints();
         //mp
@@ -391,10 +424,38 @@ public class PlayerControllerCombat : MonoBehaviour
         combatControllerState = CombatControllerState.Wait;
         //turn
         myTurn = true;
+        //enable ui
+        GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().ReEnableButtonsForTurnStart();
+        //check if all enemies are dead
+        bool combatDone = true;
+        for (int i = 0; i < CombatHandler._combatants.Length; i++)
+        {
+            if (CombatHandler._combatants[i] != gameObject &&
+                CombatHandler._combatants[i].GetComponent<EnemyController>().stats.GetCurrentHealth() > 0)
+            {
+                combatDone = false;
+                break;
+            }
+        }
+        if (combatDone)
+        {
+            EndCombat();
+        }
+    }
+
+    private void EndCombat() 
+    {
+        //disable all actions
+        combatControllerState = CombatControllerState.Freeze;
+        //swap controllers
+        GetComponent<PlayerController>().enabled = true;
+        GetComponent<PlayerController>().CombatEndPhase();
+        enabled = false;
     }
 
     public void EndTurn()
     {
+        highlight.ClearHighlights();
         controllerCamera.enabled = false;
         combatControllerState = CombatControllerState.Freeze;
         myTurn = false;
@@ -406,9 +467,10 @@ public class PlayerControllerCombat : MonoBehaviour
         return new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
     }
 
-    public void SelectAction(Weapon w)
+    public void SelectAction(Weapon w,bool skill)
     {
         weaponSelected = w;
+        useWeaponSkill = skill;
         //clear highlights
         highlight.ClearHighlights();
         //prep and place highlights
