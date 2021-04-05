@@ -28,7 +28,7 @@ public static class CombatHandler
         GlobalGameState.SetCombatState(true);
 
         //if its the fist call of combat handling
-        if (_combatants == null) ResetCombat(combatants);
+        ResetCombat(combatants);
         for (int i = 0; i < _combatants.Length; i++)
         {
             //set them to their respective combat start phase state

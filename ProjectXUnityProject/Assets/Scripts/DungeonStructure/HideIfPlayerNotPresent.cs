@@ -7,6 +7,7 @@ using UnityEngine;
 public class HideIfPlayerNotPresent : MonoBehaviour
 {
     public GameObject hideThis;
+    private List<GameObject> hideChildren;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,15 @@ public class HideIfPlayerNotPresent : MonoBehaviour
             //spawn if there is an enemy spawner
             if (GetComponent<EnemySpawner>()) GetComponent<EnemySpawner>().CheckAndPlaceEnemies();
 
+            foreach (GameObject obj in hideChildren) obj.SetActive(true);
             hideThis.SetActive(true);
         }
+    }
+
+    public void SetChild(GameObject gamobj)
+    {
+        if (hideChildren == null) hideChildren = new List<GameObject>();
+        hideChildren.Add(gamobj);
+        hideChildren[hideChildren.Count - 1].SetActive(false);
     }
 }
