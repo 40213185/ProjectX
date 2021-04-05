@@ -4,35 +4,38 @@ using UnityEngine;
 
 public class Weapon : Item
 {
-    public enum EquipmentType { 
-        ArmingSword, 
-        Halberd, 
-        Greatsword, 
-        SpellBook, 
+    public enum EquipmentType {
+        ArmingSword,
+        Halberd,
+        Greatsword,
+        SpellBook,
         Flintlock,
         Dagger
     }
-    public enum Skills { 
-        AttackOfOpportunity,
-        Execute,
-        FireBall,
-        Bleed,
-        EagleEye,
-        KnockBack
-    }
+
     private int rarity;
     private EquipmentType type;
-    private Skills skill;
+    public Skills skill { get; private set; }
     private StatusEffect.EffectType effect;
     private int cost;
     private bool linearRange;
     private bool linearAOE;
+    private float critChance;
+    private float critModifier;
+    private float missChance;
+
+    public Weapon()
+    {
+        skill = new Skills();
+        critModifier = 2.5f;
+        critChance = 0.1f;
+    }
 
     public static Weapon GetRandomWeapon(int modifier1, int modifier2)
     {
         Weapon weaponRoll = new Weapon();
         int rndType = Random.Range(0, 6);
-        EquipmentType equipType=EquipmentType.ArmingSword;
+        EquipmentType equipType = EquipmentType.ArmingSword;
         switch (rndType)
         {
             case 0: { equipType = EquipmentType.ArmingSword; break; }
@@ -40,13 +43,13 @@ public class Weapon : Item
             case 2: { equipType = EquipmentType.Greatsword; break; }
             case 3: { equipType = EquipmentType.SpellBook; break; }
             case 4: { equipType = EquipmentType.Flintlock; break; }
-            case 5: { equipType = EquipmentType.Dagger;break; }
+            case 5: { equipType = EquipmentType.Dagger; break; }
         }
         switch (equipType)
         {
             case EquipmentType.ArmingSword:
                 weaponRoll.type = EquipmentType.ArmingSword;
-                weaponRoll.skill = Skills.AttackOfOpportunity;
+                weaponRoll.skill.SetSkill(Skills.SkillList.AttackOfOpportunity);
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Dagger", "A Small bladed dagger, used for stabbing things, Good at making holes that bleed");
                 weaponRoll.SetPotency(1, 3, modifier2, modifier1);
@@ -56,7 +59,7 @@ public class Weapon : Item
 
             case EquipmentType.Halberd:
                 weaponRoll.type = EquipmentType.Halberd;
-                weaponRoll.skill = Skills.Execute;
+                weaponRoll.skill.SetSkill(Skills.SkillList.Execute);
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Sword", "A long bladed weapon, Makes a nice whoosh sound when used in a slashing motion");
                 weaponRoll.SetPotency(2, 5, modifier2, modifier1);
@@ -66,7 +69,7 @@ public class Weapon : Item
 
             case EquipmentType.Greatsword:
                 weaponRoll.type = EquipmentType.Greatsword;
-                weaponRoll.skill = Skills.KnockBack;
+                weaponRoll.skill.SetSkill(Skills.SkillList.KnockBack);
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("TwoHandedSword", "A Massive sword, Surprised you can even hold it up, Good at cracking eggs");
                 weaponRoll.SetPotency(4, 8, modifier2, modifier1);
@@ -76,7 +79,7 @@ public class Weapon : Item
 
             case EquipmentType.SpellBook:
                 weaponRoll.type = EquipmentType.SpellBook;
-                weaponRoll.skill = Skills.FireBall;
+                weaponRoll.skill.SetSkill(Skills.SkillList.FireBall);
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Fireball", "Summon a fireball from god knows where and use it for things such as cooking or other activities");
                 weaponRoll.SetPotency(3, 6, modifier2, modifier1);
@@ -86,47 +89,49 @@ public class Weapon : Item
 
             case EquipmentType.Flintlock:
                 weaponRoll.type = EquipmentType.Flintlock;
-                weaponRoll.skill = Skills.EagleEye;
+                weaponRoll.skill.SetSkill(Skills.SkillList.EagleEye);
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Icespike", "Summon a giant ice spike that can be launched like a rocket, remember to wear gloves when using this, can get chilly");
                 weaponRoll.SetPotency(3, 6, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 3;
+                weaponRoll.ModifyCritChanceBy(0.1f);
                 break;
 
             case EquipmentType.Dagger:
                 weaponRoll.type = EquipmentType.Dagger;
-                weaponRoll.skill = Skills.Bleed;
+                weaponRoll.skill.SetSkill(Skills.SkillList.Bleed);
                 weaponRoll.effect = StatusEffect.EffectType.Bleed;
                 weaponRoll.SetNameAndDesc("Dagger", "A Small bladed dagger, used for stabbing things, Good at making holes that bleed");
                 weaponRoll.SetPotency(3, 6, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 2;
+                weaponRoll.ModifyCritChanceBy(0.4f);
                 break;
         }
 
         return weaponRoll;
     }
-    public void CreateWeapon(EquipmentType equipType, Skills equipSkill,int usecost,int minPotency,int maxPotency,int modifier1,int modifier2)
+    public void CreateWeapon(EquipmentType equipType, Skills.SkillList equipSkill, int usecost, int minPotency, int maxPotency, int modifier1, int modifier2)
     {
         type = equipType;
-        skill = equipSkill;
+        skill.SetSkill(equipSkill);
         effect = StatusEffect.EffectType.None;
-        SetRangeAndAOEforSkill(type); 
+        SetRangeAndAOEforSkill(type);
         SetPotency(minPotency, maxPotency, modifier2, modifier1);
         cost = usecost;
     }
-    public void CreateWeapon(EquipmentType equipType, Skills equipSkill, StatusEffect.EffectType effectType,int usecost, int minPotency, int maxPotency, int modifier1, int modifier2)
+    public void CreateWeapon(EquipmentType equipType, Skills.SkillList equipSkill, StatusEffect.EffectType effectType, int usecost, int minPotency, int maxPotency, int modifier1, int modifier2)
     {
         type = equipType;
-        skill = equipSkill;
+        skill.SetSkill(equipSkill);
         effect = effectType;
         SetRangeAndAOEforSkill(type);
         SetPotency(minPotency, maxPotency, modifier2, modifier1);
         cost = usecost;
     }
 
-    private void SetRangeAndAOEforSkill(EquipmentType equipType) 
+    private void SetRangeAndAOEforSkill(EquipmentType equipType)
     {
         switch (equipType)
         {
@@ -175,7 +180,7 @@ public class Weapon : Item
         }
     }
 
-    public int getCost() 
+    public int getCost()
     {
         return cost;
     }
@@ -184,13 +189,39 @@ public class Weapon : Item
         return rarity;
     }
 
+    public StatusEffect.EffectType GetEffectType() 
+    {
+        return effect;
+    }
+
+    public void ModifyCritChanceBy(float amount)
+    {
+        critChance += amount;
+    }
+
     public int RollForDamage()
     {
         Vector2Int damageVector = GetPotency();
 
         int damage = Random.Range(damageVector.x, damageVector.y);
 
-        if (Random.Range(0, 100) < 15) damage = 0;
+        //miss chance
+        if (Random.Range(0.0f, 1.0f) < missChance) damage = 0;
+        //apply crit rate
+        else if (Random.Range(0.0f, 1.0f) < critChance) damage = Mathf.CeilToInt(damage * critModifier);
+
+        return damage;
+    }
+    public int RollForDamage(float critIncrment)
+    {
+        Vector2Int damageVector = GetPotency();
+
+        int damage = Random.Range(damageVector.x, damageVector.y);
+
+        //miss chance
+        if (Random.Range(0.0f, 1.0f) < missChance) damage = 0;
+        //apply crit rate
+        else if (Random.Range(0.0f, 1.0f) < critChance+critIncrment) damage = Mathf.CeilToInt(damage * critModifier);
 
         return damage;
     }
