@@ -156,16 +156,19 @@ public class UIHandling : MonoBehaviour
 
     public void SkipTurnPressed()
     {
-        if (playerCombatController.combatControllerState == PlayerControllerCombat.CombatControllerState.Wait||
+            if (playerCombatController.combatControllerState == PlayerControllerCombat.CombatControllerState.Wait||
             playerCombatController.combatControllerState==PlayerControllerCombat.CombatControllerState.SelectAction)
         {
-            playerCombatController.EndTurn();
+            if(playerCombatController.isMyTurn()) playerCombatController.EndTurn();
             //disable button
-            skipTurnButton.GetComponent<Button>().interactable = false;
-            //disable other buttons
-            weaponSkill.GetComponent<Button>().interactable = false;
-            basicAttack.GetComponent<Button>().interactable = false;
-            itemsPanel.SetActive(false);
+            if (!playerCombatController.isMyTurn())
+            {
+                skipTurnButton.GetComponent<Button>().interactable = false;
+                //disable other buttons
+                weaponSkill.GetComponent<Button>().interactable = false;
+                basicAttack.GetComponent<Button>().interactable = false;
+                itemsPanel.SetActive(false);
+            }
         }
     }
 

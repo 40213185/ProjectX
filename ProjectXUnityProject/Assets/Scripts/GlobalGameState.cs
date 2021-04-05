@@ -10,12 +10,12 @@ public static class GlobalGameState
 
     public static void Pause(bool pause) 
     {
-        _pause = pause;
-        if (_pause) Time.timeScale = 0;
+        if (pause) Time.timeScale = 0;
         else Time.timeScale = 1.0f;
     }
     public static void SetCombatState(bool inCombat) 
     {
+        Time.timeScale = 1.0f;
         if (inCombat)
         {
             GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().setCombat(true);

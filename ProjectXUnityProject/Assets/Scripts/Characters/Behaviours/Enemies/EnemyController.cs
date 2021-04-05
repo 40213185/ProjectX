@@ -435,12 +435,10 @@ public class EnemyController : MonoBehaviour
                         EndTurn();
                         break;
                     }
-                case State.Dead: 
-                    {
-                        break;
-                    }
             }
         }
+        if(actionState==State.Dead)
+            Destroy(gameObject, 3);
     }
 
     private float CalculateDistanceTo(Vector3 me,Vector3 target) 

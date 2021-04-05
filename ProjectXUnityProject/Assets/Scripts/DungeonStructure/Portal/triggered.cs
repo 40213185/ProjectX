@@ -6,14 +6,12 @@ using UnityEngine;
 
 public class triggered : MonoBehaviour
 {
-    private float delay;
     public bool trig { get; private set; }
 
     private void Start()
     {
-        GetComponent<BoxCollider>().isTrigger = true;
         trig = false;
-        delay = 3.0f+Time.time;
+        GetComponent<BoxCollider>().isTrigger = true;
     }
 
 
@@ -21,12 +19,7 @@ public class triggered : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (Time.time > delay)
-            {
-                trig = true;
-
-                delay = Time.time + 1.0f;
-            }
+            trig = true;
         }
     }
 
@@ -34,10 +27,19 @@ public class triggered : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            trig = false;
+            ResetTrigger();
         }
     }
-    public void ResetTrigger() {
+    public void ResetTrigger()
+    {
         trig = false;
+    }
+    public void DisableCollider() 
+    {
+        GetComponent<BoxCollider>().enabled = false;
+    }
+    public void EnableCollider() 
+    {
+        GetComponent<BoxCollider>().enabled = true;
     }
 }

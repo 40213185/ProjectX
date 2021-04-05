@@ -119,10 +119,66 @@ public class MapGenerator : MonoBehaviour
         Instantiate(UI, new Vector3(0, 0, 0), UI.transform.rotation);
     }
 
-    private void PlaceClutter() 
+    private void ClutterPlacementStep(int x, int y,GameObject[] clutterChoice)
     {
-        GameObject clutter;
-        int pick;
+        if (clutterChoice.Length > 0)
+        {
+            //pick random clutter
+            int pick = Random.Range(0, clutterChoice.Length);
+
+            //place clutter
+            GameObject clutter = Instantiate(clutterChoice[pick], new Vector3(x * MapHandler.roomSizex, 0, y * MapHandler.roomSizey), clutterChoice[pick].transform.rotation);
+
+            //find room
+            for (int i = 0; i < rooms.Count; i++)
+            {
+                //found room
+                if (rooms[i].transform.position.x == x * MapHandler.roomSizex && rooms[i].transform.position.z == y * MapHandler.roomSizey)
+                {
+                    //set to hide/show
+                    rooms[i].GetComponent<HideIfPlayerNotPresent>().SetChild(clutter);
+                }
+            }
+
+            //go through children and change map matrix
+            for (int yy = y * MapHandler.roomSizex; yy < (y * MapHandler.roomSizey) + MapHandler.roomSizey; yy++)
+            {
+                for (int xx = x * MapHandler.roomSizex; xx < (x * MapHandler.roomSizex) + MapHandler.roomSizex; xx++)
+                {
+                    for (int i = 0; i < clutter.transform.childCount; i++)
+                    {
+                        //mesh size
+                        float xsize = clutter.transform.GetChild(i).GetComponent<MeshFilter>().mesh.bounds.size.x;
+                        if (xsize > 0.4f)
+                        {
+                            //vectors for mad handling
+                            Vector3 childV3 = clutter.transform.GetChild(i).transform.position;
+                            Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
+                            //set origin tile to obstacle
+                            if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable)
+                                MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
+                            //set additional tile to obstacle
+                            if (xsize > 1.0f)
+                            {
+                                //check which tile
+                                if (clutter.transform.GetChild(i).transform.rotation.y != 0 ||
+                                    clutter.transform.GetChild(i).transform.rotation.y != 180)
+                                    childV2Int.y++;
+                                else childV2Int.x++;
+
+                                //set to obstacle
+                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable)
+                                    MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void PlaceClutter()
+    {
         for (int y = 0; y < roomsBuiltValidation.GetLength(0); y++)
         {
             for (int x = 0; x < roomsBuiltValidation.GetLength(0); x++)
@@ -131,222 +187,15 @@ public class MapGenerator : MonoBehaviour
                 {
                     switch (roomType[x, y])
                     {
-                        case 0:
-                            {
-                                if (clutter00.Length>0)
-                                {
-                                    //pick random clutter
-                                    pick = Random.Range(0, clutter00.Length);
-                                    //place clutter
-                                    clutter = Instantiate(clutter00[pick], new Vector3(x * MapHandler.roomSizex, 0, y * MapHandler.roomSizey), clutter00[pick].transform.rotation);
-                                    //go through children and change map matrix
-                                    for (int yy = y * MapHandler.roomSizex; yy < (y * MapHandler.roomSizey) + MapHandler.roomSizey; yy++)
-                                    {
-                                        for (int xx = x * MapHandler.roomSizex; xx < (x * MapHandler.roomSizex) + MapHandler.roomSizex; xx++)
-                                        {
-                                            for(int i=0;i<clutter.transform.childCount;i++)
-                                            {
-                                                Vector3 childV3=clutter.transform.GetChild(i).transform.position;
-                                                Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
-                                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable) MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
-                                            }
-                                        }
-                                    }
-                                }
-                                break;
-                            }
-                        case 1:
-                            {
-                                if (clutter01.Length > 0)
-                                {
-                                    //pick random clutter
-                                    pick = Random.Range(0, clutter01.Length);
-                                    //place clutter
-                                    clutter = Instantiate(clutter01[pick], new Vector3(x * MapHandler.roomSizex, 0, y * MapHandler.roomSizey), clutter01[pick].transform.rotation);
-                                    //go through children and change map matrix
-                                    for (int yy = y * MapHandler.roomSizex; yy < (y * MapHandler.roomSizey) + MapHandler.roomSizey; yy++)
-                                    {
-                                        for (int xx = x * MapHandler.roomSizex; xx < (x * MapHandler.roomSizex) + MapHandler.roomSizex; xx++)
-                                        {
-                                            for (int i = 0; i < clutter.transform.childCount; i++)
-                                            {
-                                                Vector3 childV3 = clutter.transform.GetChild(i).transform.position;
-                                                Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
-                                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable) MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
-                                            }
-                                        }
-                                    }
-                                }
-                                break;
-                            }
-                        case 2:
-                            {
-                                if (clutter02.Length > 0)
-                                {
-                                    //pick random clutter
-                                    pick = Random.Range(0, clutter02.Length);
-                                    //place clutter
-                                    clutter = Instantiate(clutter02[pick], new Vector3(x * MapHandler.roomSizex, 0, y * MapHandler.roomSizey), clutter02[pick].transform.rotation);
-                                    //go through children and change map matrix
-                                    for (int yy = y * MapHandler.roomSizex; yy < (y * MapHandler.roomSizey) + MapHandler.roomSizey; yy++)
-                                    {
-                                        for (int xx = x * MapHandler.roomSizex; xx < (x * MapHandler.roomSizex) + MapHandler.roomSizex; xx++)
-                                        {
-                                            for (int i = 0; i < clutter.transform.childCount; i++)
-                                            {
-                                                Vector3 childV3 = clutter.transform.GetChild(i).transform.position;
-                                                Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
-                                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable) MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
-                                            }
-                                        }
-                                    }
-                                }
-                                break;
-                            }
-                        case 3:
-                            {
-                                if (clutter03.Length > 0)
-                                {
-                                    //pick random clutter
-                                    pick = Random.Range(0, clutter03.Length);
-                                    //place clutter
-                                    clutter = Instantiate(clutter03[pick], new Vector3(x * MapHandler.roomSizex, 0, y * MapHandler.roomSizey), clutter03[pick].transform.rotation);
-                                    //go through children and change map matrix
-                                    for (int yy = y * MapHandler.roomSizex; yy < (y * MapHandler.roomSizey) + MapHandler.roomSizey; yy++)
-                                    {
-                                        for (int xx = x * MapHandler.roomSizex; xx < (x * MapHandler.roomSizex) + MapHandler.roomSizex; xx++)
-                                        {
-                                            for (int i = 0; i < clutter.transform.childCount; i++)
-                                            {
-                                                Vector3 childV3 = clutter.transform.GetChild(i).transform.position;
-                                                Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
-                                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable) MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
-                                            }
-                                        }
-                                    }
-                                }
-                                break;
-                            }
-                        case 4:
-                            {
-                                if (clutter04.Length > 0)
-                                {
-                                    //pick random clutter
-                                    pick = Random.Range(0, clutter04.Length);
-                                    //place clutter
-                                    clutter = Instantiate(clutter04[pick], new Vector3(x * MapHandler.roomSizex, 0, y * MapHandler.roomSizey), clutter04[pick].transform.rotation);
-                                    //go through children and change map matrix
-                                    for (int yy = y * MapHandler.roomSizex; yy < (y * MapHandler.roomSizey) + MapHandler.roomSizey; yy++)
-                                    {
-                                        for (int xx = x * MapHandler.roomSizex; xx < (x * MapHandler.roomSizex) + MapHandler.roomSizex; xx++)
-                                        {
-                                            for (int i = 0; i < clutter.transform.childCount; i++)
-                                            {
-                                                Vector3 childV3 = clutter.transform.GetChild(i).transform.position;
-                                                Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
-                                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable) MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
-                                            }
-                                        }
-                                    }
-                                }
-                                break;
-                            }
-                        case 5:
-                            {
-                                if (clutterSCR.Length > 0)
-                                {
-                                    //pick random clutter
-                                    pick = Random.Range(0, clutterSCR.Length);
-                                    //place clutter
-                                    clutter = Instantiate(clutterSCR[pick], new Vector3(x * MapHandler.roomSizex, 0, y * MapHandler.roomSizey), clutterSCR[pick].transform.rotation);
-                                    //go through children and change map matrix
-                                    for (int yy = y * MapHandler.roomSizex; yy < (y * MapHandler.roomSizey) + MapHandler.roomSizey; yy++)
-                                    {
-                                        for (int xx = x * MapHandler.roomSizex; xx < (x * MapHandler.roomSizex) + MapHandler.roomSizex; xx++)
-                                        {
-                                            for (int i = 0; i < clutter.transform.childCount; i++)
-                                            {
-                                                Vector3 childV3 = clutter.transform.GetChild(i).transform.position;
-                                                Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
-                                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable) MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
-                                            }
-                                        }
-                                    }
-                                }
-                                break;
-                            }
-                        case 6:
-                            {
-                                if (clutterSR.Length > 0)
-                                {
-                                    //pick random clutter
-                                    pick = Random.Range(0, clutterSR.Length);
-                                    //place clutter
-                                    clutter = Instantiate(clutterSR[pick], new Vector3(x * MapHandler.roomSizex, 0, y * MapHandler.roomSizey), clutterSR[pick].transform.rotation);
-                                    //go through children and change map matrix
-                                    for (int yy = y * MapHandler.roomSizex; yy < (y * MapHandler.roomSizey) + MapHandler.roomSizey; yy++)
-                                    {
-                                        for (int xx = x * MapHandler.roomSizex; xx < (x * MapHandler.roomSizex) + MapHandler.roomSizex; xx++)
-                                        {
-                                            for (int i = 0; i < clutter.transform.childCount; i++)
-                                            {
-                                                Vector3 childV3 = clutter.transform.GetChild(i).transform.position;
-                                                Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
-                                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable) MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
-                                            }
-                                        }
-                                    }
-                                }
-                                break;
-                            }
-                        case 7:
-                            {
-                                if (clutterSR02.Length > 0)
-                                {
-                                    //pick random clutter
-                                    pick = Random.Range(0, clutterSR02.Length);
-                                    //place clutter
-                                    clutter = Instantiate(clutterSR02[pick], new Vector3(x * MapHandler.roomSizex, 0, y * MapHandler.roomSizey), clutterSR02[pick].transform.rotation);
-                                    //go through children and change map matrix
-                                    for (int yy = y * MapHandler.roomSizex; yy < (y * MapHandler.roomSizey) + MapHandler.roomSizey; yy++)
-                                    {
-                                        for (int xx = x * MapHandler.roomSizex; xx < (x * MapHandler.roomSizex) + MapHandler.roomSizex; xx++)
-                                        {
-                                            for (int i = 0; i < clutter.transform.childCount; i++)
-                                            {
-                                                Vector3 childV3 = clutter.transform.GetChild(i).transform.position;
-                                                Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
-                                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable) MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
-                                            }
-                                        }
-                                    }
-                                }
-                                break;
-                            }
-                        case 8:
-                            {
-                                if (clutterStart.Length > 0)
-                                {
-                                    //pick random clutter
-                                    pick = Random.Range(0, clutterStart.Length);
-                                    //place clutter
-                                    clutter = Instantiate(clutterStart[pick], new Vector3(x * MapHandler.roomSizex, 0, y * MapHandler.roomSizey), clutterStart[pick].transform.rotation);
-                                    //go through children and change map matrix
-                                    for (int yy = y * MapHandler.roomSizex; yy < (y * MapHandler.roomSizey) + MapHandler.roomSizey; yy++)
-                                    {
-                                        for (int xx = x * MapHandler.roomSizex; xx < (x * MapHandler.roomSizex) + MapHandler.roomSizex; xx++)
-                                        {
-                                            for (int i = 0; i < clutter.transform.childCount; i++)
-                                            {
-                                                Vector3 childV3 = clutter.transform.GetChild(i).transform.position;
-                                                Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
-                                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable) MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
-                                            }
-                                        }
-                                    }
-                                }
-                                break;
-                            }
+                        case 0: { ClutterPlacementStep(x, y, clutter00); break; }
+                        case 1: { ClutterPlacementStep(x, y, clutter01); break; }
+                        case 2: { ClutterPlacementStep(x, y, clutter02); break; }
+                        case 3: { ClutterPlacementStep(x, y, clutter03); break; }
+                        case 4: { ClutterPlacementStep(x, y, clutter04); break; }
+                        case 5: { ClutterPlacementStep(x, y, clutterSCR); break; }
+                        case 6: { ClutterPlacementStep(x, y, clutterSR); break; }
+                        case 7: { ClutterPlacementStep(x, y, clutterSR02); break; }
+                        case 8: { ClutterPlacementStep(x, y, clutterStart); break; }
                     }
                 }
             }
@@ -365,9 +214,9 @@ public class MapGenerator : MonoBehaviour
         int roomsOnFloor = RoomsPerFloor[GameData.CurrentFloor];
         GenerateMap(roomsOnFloor);
         GenerateMapMatrix(roomsOnFloor);
+        PlaceClutter();
         PositionPlayer();
         PositionUI();
-        PlaceClutter();
         GlobalGameState.SetCombatState(false);
     }
 

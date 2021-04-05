@@ -282,15 +282,20 @@ public class PlayerControllerCombat : MonoBehaviour
                                     int amount = combatantsInfluenceByAction[i].GetComponent<EnemyController>().ModifyHealthBy(-weaponSelected.RollForDamage());
                                     //use skill
                                     //if(useWeaponSkill)
-                                        
+
                                 }
                             }
                             actionComplete = true;
-                        }else if (waitTimer <= Time.time)
+                        } else if (waitTimer <= Time.time)
                         {
                             //clear highlights
                             highlight.ClearHighlights();
-                            combatControllerState = CombatControllerState.Wait;
+                            //check if combat is done
+                            if (CheckCombatDone())
+                            {
+                                EndCombat();
+                            }
+                            else combatControllerState = CombatControllerState.Wait;
                         }
                         break;
                     }
@@ -426,6 +431,15 @@ public class PlayerControllerCombat : MonoBehaviour
         myTurn = true;
         //enable ui
         GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().ReEnableButtonsForTurnStart();
+    }
+
+    public bool isMyTurn() 
+    {
+        return myTurn;
+    }
+
+    private bool CheckCombatDone()
+    {
         //check if all enemies are dead
         bool combatDone = true;
         for (int i = 0; i < CombatHandler._combatants.Length; i++)
@@ -437,10 +451,7 @@ public class PlayerControllerCombat : MonoBehaviour
                 break;
             }
         }
-        if (combatDone)
-        {
-            EndCombat();
-        }
+        return combatDone;
     }
 
     private void EndCombat() 

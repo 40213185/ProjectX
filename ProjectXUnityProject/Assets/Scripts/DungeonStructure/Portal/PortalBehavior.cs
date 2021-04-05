@@ -7,16 +7,11 @@ public class PortalBehavior : MonoBehaviour
     public GameObject trigger;
     private GameObject teleportPosObject;
     private bool activated;
-    private float timer, delay;
+    private GameObject player;
 
     private void Start()
     {
-        delay = 3.0f;
-    }
-
-    public void setDelay()
-    {
-        timer = Time.time + delay;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void FixedUpdate()
@@ -34,18 +29,23 @@ public class PortalBehavior : MonoBehaviour
             if (activated)
             {
                 //and its triggered
-                if (trigger.GetComponent<triggered>().trig && Time.time > timer)
+                if (trigger.GetComponent<triggered>().trig)
                 {
-                    //add delay to next portal so no insta back to portal
-                    teleportPosObject.GetComponent<PortalBehavior>().setDelay();
+                    //disable next collider
+                    teleportPosObject.GetComponent<PortalBehavior>().trigger.GetComponent<triggered>().DisableCollider();
                     //stop player movement
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().StopMovement();
+                    player.GetComponent<PlayerController>().StopMovement();
                     //teleport
-                    GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(
+                    player.transform.position = new Vector3(
                         teleportPosObject.transform.position.x,
-                        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().feetpos
+                        player.GetComponent<PlayerController>().feetpos
                         , teleportPosObject.transform.position.z); ;
                 }
+
+                //player out of portal?
+                if ((transform.position - player.transform.position).magnitude >= 1)
+                    //reenable collider
+                    trigger.GetComponent<triggered>().EnableCollider();
             }
         }
     }
