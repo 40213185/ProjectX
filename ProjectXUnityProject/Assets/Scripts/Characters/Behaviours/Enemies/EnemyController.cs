@@ -508,7 +508,11 @@ public class EnemyController : MonoBehaviour
         else
             stats = EnemyLibrary.GetEnemyStats(enemyType);
         //set camera
-        controllerCamera.enabled = true;
+
+        //controllerCamera.enabled = true;
+
+        GameObject.FindGameObjectWithTag("FreeCam").GetComponent<CamMovement>().newTarget(gameObject);
+
         //move reset
         moved = false;
         //action reset

@@ -23,6 +23,7 @@ public class UIHandling : MonoBehaviour
     private int mp;
     public GameObject[] combatObjectCollection;
     public GameObject[] usablesButtons;
+    public GameObject followButton;
 
     //combat controller
     private PlayerControllerCombat playerCombatController;
@@ -206,4 +207,14 @@ public class UIHandling : MonoBehaviour
         InventorySystem.usablesHeld[index] = null;
     }
 
+    public void FollowPlayer() 
+    {
+        GameObject.FindGameObjectWithTag("FreeCam").GetComponent<CamMovement>().newTarget(GameObject.FindGameObjectWithTag("Player"));
+        FollowButtonToggle(false);
+    }
+
+    public void FollowButtonToggle(bool active) 
+    {
+        followButton.SetActive(active);
+    }
 }

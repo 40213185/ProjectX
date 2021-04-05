@@ -18,7 +18,9 @@ public class CamMovement : MonoBehaviour
     {
         camMoveSpeed = 3;
         camZoomSpeed = 3;
-        //following = true;
+        target = GameObject.FindGameObjectWithTag("Player");
+        GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().FollowButtonToggle(false);
+        following = true;
     }
 
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class CamMovement : MonoBehaviour
         Vector3 camRight = new Vector3(cam.transform.right.x, 0, cam.transform.right.z);
 
         //Toggle if folloing the Player (WILL NEED TO CHANGE THIS FOR DURING COMBAT, VITOR HELP ME WORK OUT HOW COMBAT WORKS PLEASE")
-        if (Input.GetKeyDown("space")) 
+        /*if (Input.GetKeyDown("space")) 
         {
             following = !following;
             if (following) 
@@ -39,7 +41,7 @@ public class CamMovement : MonoBehaviour
                 target = GameObject.FindGameObjectWithTag("Player");
                 Debug.Log("Target =" + target.name);
             }
-        }
+        }*/
 
         //Interpolate to the targets location for smooth follow, With no Interpolate looks jagged, Only do if following a target
         if (following) 
@@ -52,6 +54,7 @@ public class CamMovement : MonoBehaviour
         if (following && x != 0 || following && z != 0)
         {
             following = false;
+            GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().FollowButtonToggle(true);
         }
 
 
@@ -77,5 +80,11 @@ public class CamMovement : MonoBehaviour
     void camPosUpdate(Vector3 pos) 
     {
         gameObject.transform.position = pos;
+    }
+
+    public void newTarget(GameObject newTarg) 
+    {
+        target = newTarg;
+        following = true;
     }
 }

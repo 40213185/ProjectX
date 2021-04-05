@@ -424,7 +424,10 @@ public class PlayerControllerCombat : MonoBehaviour
         //mp
         stats.RefillMovementPoints();
         //camera
-        controllerCamera.enabled = true;
+
+        //controllerCamera.enabled = true;
+        GameObject.FindGameObjectWithTag("FreeCam").GetComponent<CamMovement>().newTarget(gameObject);
+
         //controller
         combatControllerState = CombatControllerState.Wait;
         //turn
