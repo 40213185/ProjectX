@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GlobalGameState.cs" />
+    <Compile Include="Assets\Scripts\Freecam\CamMovement.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\PortalContainer.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\Portal\triggered.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\InventorySystem.cs" />
@@ -85,7 +86,6 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\HideIfPlayerNotPresent.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyController.cs" />
-    <Compile Include="Assets\CamMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
