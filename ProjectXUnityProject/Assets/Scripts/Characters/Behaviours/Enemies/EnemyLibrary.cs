@@ -364,7 +364,7 @@ public static class EnemyLibrary
                 {
                     weapons = new Weapon[1];
                     weapons[0] = new Weapon();
-                    weapons[0].CreateWeapon(Weapon.EquipmentType.ArmingSword, Weapon.Skills.Execute,1, 1, 2, GameData.CurrentFloor, 1);
+                    weapons[0].CreateWeapon(Weapon.EquipmentType.ArmingSword, Skills.SkillList.None,1, 1, 2, GameData.CurrentFloor, 1);
 
                     break;
                 }
@@ -372,7 +372,7 @@ public static class EnemyLibrary
                 {
                     weapons = new Weapon[1];
                     weapons[0] = new Weapon();
-                    weapons[0].CreateWeapon(Weapon.EquipmentType.Greatsword, Weapon.Skills.FireBall,2, 2, 4, GameData.CurrentFloor, 1);
+                    weapons[0].CreateWeapon(Weapon.EquipmentType.Greatsword, Skills.SkillList.None, 2, 2, 4, GameData.CurrentFloor, 1);
 
                     break;
                 }
@@ -380,7 +380,7 @@ public static class EnemyLibrary
                 {
                     weapons = new Weapon[1];
                     weapons[0] = new Weapon();
-                    weapons[0].CreateWeapon(Weapon.EquipmentType.SpellBook, Weapon.Skills.Bleed,2, 1, 5, GameData.CurrentFloor, 1);
+                    weapons[0].CreateWeapon(Weapon.EquipmentType.SpellBook, Skills.SkillList.None, 2, 1, 5, GameData.CurrentFloor, 1);
 
                     break;
                 }
@@ -388,7 +388,7 @@ public static class EnemyLibrary
                 {
                     weapons = new Weapon[1];
                     weapons[0] = new Weapon();
-                    weapons[0].CreateWeapon(Weapon.EquipmentType.Halberd, Weapon.Skills.Execute,2, 3, 4, GameData.CurrentFloor, 1);
+                    weapons[0].CreateWeapon(Weapon.EquipmentType.Halberd, Skills.SkillList.None, 2, 3, 4, GameData.CurrentFloor, 1);
 
                     break;
                 }
@@ -396,7 +396,7 @@ public static class EnemyLibrary
                 {
                     weapons = new Weapon[1];
                     weapons[0] = new Weapon();
-                    weapons[0].CreateWeapon(Weapon.EquipmentType.Flintlock, Weapon.Skills.Bleed,2, 1, 1, GameData.CurrentFloor, 1);
+                    weapons[0].CreateWeapon(Weapon.EquipmentType.Flintlock, Skills.SkillList.None, 2, 1, 1, GameData.CurrentFloor, 1);
 
                     break;
                 }
@@ -404,7 +404,7 @@ public static class EnemyLibrary
                 {
                     weapons = new Weapon[1];
                     weapons[0] = new Weapon();
-                    weapons[0].CreateWeapon(Weapon.EquipmentType.Halberd, Weapon.Skills.AttackOfOpportunity,2, 4, 6, GameData.CurrentFloor, 1);
+                    weapons[0].CreateWeapon(Weapon.EquipmentType.Halberd, Skills.SkillList.None, 2, 4, 6, GameData.CurrentFloor, 1);
 
                     break;
                 }
@@ -412,7 +412,7 @@ public static class EnemyLibrary
                 {
                     weapons = new Weapon[1];
                     weapons[0] = new Weapon();
-                    weapons[0].CreateWeapon(Weapon.EquipmentType.ArmingSword, Weapon.Skills.Execute,1,1, 3, GameData.CurrentFloor, 1);
+                    weapons[0].CreateWeapon(Weapon.EquipmentType.ArmingSword, Skills.SkillList.None, 1,1, 3, GameData.CurrentFloor, 1);
 
                     break;
                 }

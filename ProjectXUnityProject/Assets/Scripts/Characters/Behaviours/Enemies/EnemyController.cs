@@ -401,8 +401,18 @@ public class EnemyController : MonoBehaviour
 
                             //roll
                             int roll;
-                            if (!usingAoe) roll = weapons[weaponChoice[0]].RollForDamage();
-                            else roll= weapons[aoePointsWeapon[0]].RollForDamage();
+                            int pointIndexChoice;
+
+                            if (!usingAoe) pointIndexChoice = weaponChoice[0];
+                            else pointIndexChoice = aoePointsWeapon[0];
+
+                            float critMod=0.0f;
+                            if (player.GetComponent<StatusEffect>())
+                                if (player.GetComponent<StatusEffect>().GetEffectType() == StatusEffect.EffectType.ExposedToCrit)
+                                    critMod = player.GetComponent<StatusEffect>().effectPotency/100;
+
+                            roll = weapons[pointIndexChoice].RollForDamage(critMod);
+
                             //rotate
                             if (animationController!=null)
                             {
@@ -411,6 +421,15 @@ public class EnemyController : MonoBehaviour
                             }
                             //attack
                             player.GetComponent<PlayerController>().stats.ModifyHealthBy(-roll);
+                            //skill
+                            if (weapons[pointIndexChoice].skill.skillType != Skills.SkillList.None)
+                            {
+                                player.AddComponent<StatusEffect>().setStatusEffect(
+                                    weapons[pointIndexChoice].GetEffectType(),
+                                    StatusEffect.LibraryDuration(weapons[pointIndexChoice].GetEffectType()),
+                                    StatusEffect.LibraryPotency(weapons[pointIndexChoice].GetEffectType(), 
+                                    roll));
+                            }
                             //take ap
                             if(!usingAoe) stats.ModifyActionPointsBy(-weapons[weaponChoice[0]].getCost());
                             else stats.ModifyActionPointsBy(-weapons[aoePointsWeapon[0]].getCost());
@@ -554,5 +573,10 @@ public class EnemyController : MonoBehaviour
     {
         int value= stats.ModifyHealthBy(amount);
         return value;
+    }
+
+    public void Die() 
+    {
+        stats.ModifyHealthBy(-stats.GetCurrentHealth());
     }
 }

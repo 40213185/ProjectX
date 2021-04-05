@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerControllerCombat : MonoBehaviour
 {
-    private Stats stats;
+    public Stats stats { get; private set; }
     //camera
     public Camera controllerCamera;
     //highlighting cells
@@ -279,10 +279,25 @@ public class PlayerControllerCombat : MonoBehaviour
                             {
                                 if (combatantsInfluenceByAction[i].GetComponent<EnemyController>())
                                 {
-                                    int amount = combatantsInfluenceByAction[i].GetComponent<EnemyController>().ModifyHealthBy(-weaponSelected.RollForDamage());
+                                    //crit modifier if any
+                                    float critMod = 0.0f;
+                                    if (combatantsInfluenceByAction[i].GetComponent<StatusEffect>())
+                                        if (combatantsInfluenceByAction[i].GetComponent<StatusEffect>().GetEffectType() == StatusEffect.EffectType.ExposedToCrit)
+                                            critMod = combatantsInfluenceByAction[i].GetComponent<StatusEffect>().effectPotency / 100;
+                                    int roll = weaponSelected.RollForDamage(critMod);
+                                    combatantsInfluenceByAction[i].GetComponent<EnemyController>().ModifyHealthBy(-roll);
                                     //use skill
-                                    //if(useWeaponSkill)
-
+                                    if (useWeaponSkill)
+                                    {
+                                        if (weaponSelected.skill.skillType != Skills.SkillList.None)
+                                        {
+                                            combatantsInfluenceByAction[i].AddComponent<StatusEffect>().setStatusEffect(
+                                                weaponSelected.GetEffectType(),
+                                                StatusEffect.LibraryDuration(weaponSelected.GetEffectType()),
+                                                StatusEffect.LibraryPotency(weaponSelected.GetEffectType(),
+                                                roll));
+                                        }
+                                    }
                                 }
                             }
                             actionComplete = true;
