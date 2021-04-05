@@ -16,7 +16,7 @@ public class CamMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camMoveSpeed = 5;
+        camMoveSpeed = 3;
         camZoomSpeed = 3;
         //following = true;
     }
@@ -65,12 +65,12 @@ public class CamMovement : MonoBehaviour
         //Free Movement, Get the direction the camera is facing and move in the direction according to the camera and the keys pressed
         if (z != 0)
         {
-            gameObject.transform.position += camForward * (z * camMoveSpeed) * Time.deltaTime;
+            gameObject.transform.position += camForward * (z * camMoveSpeed * cam.orthographicSize) * Time.deltaTime;
         }
 
         if (x != 0) 
         {
-            gameObject.transform.position += camRight * (x * camMoveSpeed) * Time.deltaTime;
+            gameObject.transform.position += camRight * (x * camMoveSpeed * cam.orthographicSize) * Time.deltaTime;
         }
     }
 
