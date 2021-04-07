@@ -147,6 +147,8 @@ public class MapGenerator : MonoBehaviour
                 {
                     for (int i = 0; i < clutter.transform.childCount; i++)
                     {
+                        //ignore if its partciles
+                        if (clutter.transform.GetChild(i).GetComponent<ParticleSystem>()) continue;
                         //mesh size
                         float xsize = clutter.transform.GetChild(i).GetComponent<MeshFilter>().mesh.bounds.size.x;
                         if (xsize > 0.4f)

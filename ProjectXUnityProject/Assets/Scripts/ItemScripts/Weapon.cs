@@ -29,6 +29,7 @@ public class Weapon : Item
         skill = new Skills();
         critModifier = 2.5f;
         critChance = 0.1f;
+        missChance = 0.05f;
     }
 
     public static Weapon GetRandomWeapon(int modifier1, int modifier2)
@@ -206,9 +207,17 @@ public class Weapon : Item
         int damage = Random.Range(damageVector.x, damageVector.y);
 
         //miss chance
-        if (Random.Range(0.0f, 1.0f) < missChance) damage = 0;
+        if (Random.Range(0.0f, 1.0f) < missChance)
+        {
+            damage = 0;
+            GlobalGameState.UpdateLog("Attack missed.");
+        }
         //apply crit rate
-        else if (Random.Range(0.0f, 1.0f) < critChance) damage = Mathf.CeilToInt(damage * critModifier);
+        else if (Random.Range(0.0f, 1.0f) < critChance)
+        {
+            damage = Mathf.CeilToInt(damage * critModifier);
+            GlobalGameState.UpdateLog("Critical hit.");
+        }
 
         return damage;
     }
@@ -219,9 +228,17 @@ public class Weapon : Item
         int damage = Random.Range(damageVector.x, damageVector.y);
 
         //miss chance
-        if (Random.Range(0.0f, 1.0f) < missChance) damage = 0;
+        if (Random.Range(0.0f, 1.0f) < missChance)
+        {
+            damage = 0;
+            GlobalGameState.UpdateLog("Attack <color=gray>missed</color>.");
+        }
         //apply crit rate
-        else if (Random.Range(0.0f, 1.0f) < critChance+critIncrment) damage = Mathf.CeilToInt(damage * critModifier);
+        else if (Random.Range(0.0f, 1.0f) < critChance + critIncrment)
+        {
+            damage = Mathf.CeilToInt(damage * critModifier);
+            GlobalGameState.UpdateLog("<color=red>Critical</color> hit.");
+        }
 
         return damage;
     }

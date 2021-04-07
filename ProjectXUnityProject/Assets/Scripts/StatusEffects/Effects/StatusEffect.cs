@@ -22,7 +22,14 @@ public class StatusEffect : MonoBehaviour
     public int effectDuration { get; private set; }
     private int currentDuration;
     public int effectPotency { get; private set; }
+    private bool setKnockbackPoint;
     private Vector2Int knockBackPoint;
+    private GameObject usedBy;
+
+    public void SetUser(GameObject user) 
+    {
+        usedBy = user;
+    }
 
     public static int LibraryDuration(EffectType type)
     {
@@ -151,12 +158,16 @@ public class StatusEffect : MonoBehaviour
         return amount;
     }
 
-    public void setStatusEffect(EffectType type,int duration,int potency) 
+    public void setStatusEffect(EffectType type,int duration,int potency,GameObject user) 
     {
         effectType = type;
         effectDuration = duration;
         currentDuration = effectDuration;
         effectPotency = potency;
+
+        setKnockbackPoint = false;
+
+        SetUser(user);
     }
 
     private void DOT(int value) 
@@ -175,6 +186,7 @@ public class StatusEffect : MonoBehaviour
             case EffectType.Burn:
                 {
                     DOT(-effectPotency);
+                    GlobalGameState.UpdateLog(string.Format("Took <color=red>{0}</color> <color=red>{1}</color> damage.",effectPotency,"Burn"));
                     break;
                 }
             case EffectType.Freeze:
@@ -184,16 +196,19 @@ public class StatusEffect : MonoBehaviour
             case EffectType.Bleed:
                 {
                     DOT(-effectPotency);
+                    GlobalGameState.UpdateLog(string.Format("Took <color=red>{0}</color> <color=red>{1}</color> damage.", effectPotency, "Bleed"));
                     break;
                 }
             case EffectType.Poisoned:
                 {
                     DOT(-effectPotency);
+                    GlobalGameState.UpdateLog(string.Format("Took <color=red>{0}</color> <color=purpl>{1}</color> damage.", effectPotency, "Poison"));
                     break;
                 }
             case EffectType.Healing:
                 {
                     DOT(effectPotency);
+                    GlobalGameState.UpdateLog(string.Format("Healed <color=green>{0}</color> health.", effectPotency));
                     break;
                 }
             case EffectType.StrengthBuff:
@@ -210,6 +225,7 @@ public class StatusEffect : MonoBehaviour
                         gameObject.GetComponent<PlayerControllerCombat>().EndTurn();
                     else if (gameObject.GetComponent<EnemyController>())
                         gameObject.GetComponent<EnemyController>().EndTurn();
+                    GlobalGameState.UpdateLog(string.Format("{0} is <color=yellow>{1}</color>. Skipping turn.", name, "Stunned"));
                     break;
                 }
             case EffectType.KnockBack:
@@ -225,7 +241,11 @@ public class StatusEffect : MonoBehaviour
         }
         currentDuration--;
         //remove after duration is done
-        if (currentDuration <= 0) Destroy(this);
+        if (currentDuration <= 0)
+        {
+            GlobalGameState.UpdateLog(string.Format("<color=yellow>{0}</color> on {1} expired.", effectType, name));
+            Destroy(this);
+        }
     }
 
     public EffectType GetEffectType() 
@@ -247,17 +267,59 @@ public class StatusEffect : MonoBehaviour
         if (effectType == EffectType.None) Destroy(this);
         if (effectType == EffectType.KnockBack)
         {
-            //set vector3 of target position
-            Vector3 targetPoint = new Vector3(knockBackPoint.x, 0, knockBackPoint.y) + transform.position;
-            //move towards it
-            transform.position = Vector3.MoveTowards(transform.position, targetPoint, 0.5f * Time.deltaTime);
-            //after reached
-            if (transform.position == targetPoint)
+            if (!setKnockbackPoint&&usedBy!=null)
             {
-                //set position point in case of weird float/double points
-                transform.position = targetPoint;
-                //destroy
-                Destroy(this);
+                Vector3 current = transform.position;
+                Vector3 target = usedBy.transform.position;
+                Vector3 direction = new Vector3(current.x - target.x,0, current.z - target.z);
+
+                //knockback 2 cells
+                direction =direction.normalized * 2;
+
+                Vector2Int point = new Vector2Int(Mathf.FloorToInt(direction.x+transform.position.x),
+                    Mathf.FloorToInt(direction.z+transform.position.z));
+
+                SetKnockBackPoint(point);
+
+                setKnockbackPoint = true;
+            }
+
+            if (setKnockbackPoint) {
+                //set vector3 of target position
+                Vector3 targetPoint = new Vector3(knockBackPoint.x, 0, knockBackPoint.y);
+                //move towards it
+                transform.position = Vector3.MoveTowards(transform.position, targetPoint, 5f * Time.deltaTime);
+
+                //check if not walkable
+                if (MapHandler.GetTileTypeFromPosition(transform.position) != MapHandler.TileType.Walkable)
+                {
+                    //not walkable, set target position to current position
+                    targetPoint = transform.position;
+                }
+                //get rounded position for comparison with combatants
+                Vector2Int roundedPos = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z));
+                //check if enemies in that position
+                foreach (GameObject co in CombatHandler._combatants)
+                {
+                    if (co != null&&co!=gameObject)
+                    {
+                        //get rounded position for comparison
+                        Vector2Int roundedPosCo = new Vector2Int(Mathf.RoundToInt(co.transform.position.x), Mathf.RoundToInt(co.transform.position.z));
+                        if (roundedPos == roundedPosCo)
+                        {
+                            targetPoint = transform.position;
+                        }
+                    }
+                }
+                //after reached
+                if (transform.position == targetPoint)
+                {
+                    //set position point in case of weird float/double points
+                    transform.position = new Vector3(Mathf.RoundToInt(transform.position.x), transform.position.y,
+                        Mathf.RoundToInt(transform.position.z));
+                    //destroy
+                    Destroy(this);
+                }
             }
         }
     }

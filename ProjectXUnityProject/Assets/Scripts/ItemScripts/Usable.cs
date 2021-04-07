@@ -7,11 +7,13 @@ public class Usable : Item
     public enum UsableType { Potion, Bomb }
     private UsableType type;
     private StatusEffect.EffectType effectType = StatusEffect.EffectType.None;
+    private GameObject player;
 
     public Usable(UsableType usabletype) 
     {
         type = usabletype;
         RollUsableEffect(type);
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public UsableType GetUsableType()
@@ -40,13 +42,13 @@ public class Usable : Item
                             case StatusEffect.EffectType.StrengthBuff:
                                 {
                                     var component = ent.AddComponent<StatusEffect>();
-                                    component.setStatusEffect(effectType, 3, RollForPotency());
+                                    component.setStatusEffect(effectType, 3, RollForPotency(),player);
                                     break;
                                 }
                             case StatusEffect.EffectType.IntBuff:
                                 {
                                     var component = ent.AddComponent<StatusEffect>();
-                                    component.setStatusEffect(effectType, 3, RollForPotency());
+                                    component.setStatusEffect(effectType, 3, RollForPotency(), player);
                                     break;
                                 }
                         }
@@ -59,25 +61,25 @@ public class Usable : Item
                             case StatusEffect.EffectType.Burn:
                                 {
                                     var component = ent.AddComponent<StatusEffect>();
-                                    component.setStatusEffect(effectType, Random.Range(2,6), RollForPotency());
+                                    component.setStatusEffect(effectType, Random.Range(2,6), RollForPotency(), player);
                                     break;
                                 }
                             case StatusEffect.EffectType.Freeze:
                                 {
                                     var component = ent.AddComponent<StatusEffect>();
-                                    component.setStatusEffect(effectType, 1, RollForPotency());
+                                    component.setStatusEffect(effectType, 1, RollForPotency(), player);
                                     break;
                                 }
                             case StatusEffect.EffectType.Poisoned:
                                 {
                                     var component = ent.AddComponent<StatusEffect>();
-                                    component.setStatusEffect(effectType, 4, RollForPotency());
+                                    component.setStatusEffect(effectType, 4, RollForPotency(), player);
                                     break;
                                 }
                             case StatusEffect.EffectType.Bleed:
                                 {
                                     var component = ent.AddComponent<StatusEffect>();
-                                    component.setStatusEffect(effectType, 3,RollForPotency());
+                                    component.setStatusEffect(effectType, 3,RollForPotency(), player);
                                     break;
                                 }
                         }

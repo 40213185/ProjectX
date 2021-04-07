@@ -18,6 +18,7 @@ public class MenuScripts : MonoBehaviour
     //Main
     public void BeginGame() 
     {
+        GameData.Load();
         SceneManager.LoadScene("Dungeon");
     }
 

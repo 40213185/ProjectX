@@ -6,7 +6,17 @@ using UnityEngine;
 
 public class DataContainer
 {
+    //container data
+    public int currency;
+
+
+    //container methods
     string path = Application.persistentDataPath + "/GameData.dat";
+
+    public DataContainer() 
+    {
+        currency = 0;
+    }
 
     public void SaveData()
     {
@@ -22,12 +32,16 @@ public class DataContainer
     public void LoadData()
     {
         var serializer = new XmlSerializer(typeof(DataContainer));
-        using (var stream = new FileStream(path, FileMode.Open))
+        if (CheckFileExists())
         {
-            DataContainer container = serializer.Deserialize(stream) as DataContainer;
-            stream.Close();
-            SetData(container);
+            using (var stream = new FileStream(path, FileMode.Open))
+            {
+                DataContainer container = serializer.Deserialize(stream) as DataContainer;
+                stream.Close();
+                SetData(container);
+            }
         }
+        else SaveData();
     }
 
     public bool CheckFileExists()
@@ -38,6 +52,6 @@ public class DataContainer
 
     public void SetData(DataContainer dataContainer) 
     {
-
+        currency = GameData.currency;
     }
 }

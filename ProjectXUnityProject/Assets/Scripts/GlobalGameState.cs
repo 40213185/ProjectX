@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class GlobalGameState
 {
@@ -26,5 +27,21 @@ public static class GlobalGameState
             GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().setCombat(false);
             combatState = CombatState.OutOfCombat;
         }
+    }
+
+    public static void UpdateLog(string message)
+    {
+        if (GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>())
+            GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateLog(message);
+    }
+
+    public static void Restart() 
+    {
+        //save
+        GameData.Save();
+        //normal game speed
+        Time.timeScale = 1.0f;
+        //restart
+        SceneManager.LoadScene(0);
     }
 }
