@@ -31,6 +31,7 @@ public class MapGenerator : MonoBehaviour
 
 
     public GameObject player;
+    public GameObject camera;
     public List<GameObject> rooms { get; private set; }
 
     public GameObject UI;
@@ -204,6 +205,11 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
+    private void PlaceCamera()
+    {
+        Instantiate(camera);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -218,6 +224,7 @@ public class MapGenerator : MonoBehaviour
         GenerateMapMatrix(roomsOnFloor);
         PlaceClutter();
         PositionPlayer();
+        PlaceCamera();
         PositionUI();
         GlobalGameState.SetCombatState(false);
     }

@@ -14,6 +14,13 @@ public class SettingsScript : MonoBehaviour
     public Slider musicSlider;
     public Text resSizeButton;
 
+    public bool fullScreen;
+
+    public void Start()
+    {
+        fullScreen = true;
+    }
+
     public void closeSettings()
     {
         settingsTab.SetActive(false);
@@ -21,11 +28,12 @@ public class SettingsScript : MonoBehaviour
 
     public void ChangeResolution()
     {
+        Debug.Log("res changed");
         currentResLoc++;
         if (currentResLoc > 3) currentResLoc = 0;
         Debug.Log("Res at pos" + resolutions[currentResLoc]);
         resSizeButton.text = resolutions[currentResLoc].ToString();
-        Screen.SetResolution(resolutions[currentResLoc].x, resolutions[currentResLoc].y, true);
+        Screen.SetResolution(resolutions[currentResLoc].x, resolutions[currentResLoc].y, fullScreen);
         Debug.Log("New Resolution is " + Screen.currentResolution);
     }
 
@@ -37,5 +45,11 @@ public class SettingsScript : MonoBehaviour
     public void MusicVolChange()
     {
         Debug.Log("Music Vol now" + musicSlider.value);
+    }
+
+    public void ToggleWindowMode() 
+    {
+        fullScreen = !fullScreen;
+        Screen.SetResolution(resolutions[currentResLoc].x, resolutions[currentResLoc].y, fullScreen);
     }
 }

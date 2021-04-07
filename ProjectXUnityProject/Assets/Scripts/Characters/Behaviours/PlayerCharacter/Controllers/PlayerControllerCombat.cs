@@ -6,8 +6,6 @@ using UnityEngine.EventSystems;
 public class PlayerControllerCombat : MonoBehaviour
 {
     public Stats stats { get; private set; }
-    //camera
-    public Camera controllerCamera;
     //highlighting cells
     private HighlightCells highlight;
 
@@ -457,7 +455,7 @@ public class PlayerControllerCombat : MonoBehaviour
         //mp
         stats.RefillMovementPoints();
         //camera
-        controllerCamera.enabled = true;
+        GameObject.FindGameObjectWithTag("FreeCam").GetComponent<CamMovement>().newTarget(gameObject);
         //controller
         combatControllerState = CombatControllerState.Wait;
         //turn
@@ -508,7 +506,6 @@ public class PlayerControllerCombat : MonoBehaviour
     public void EndTurn()
     {
         highlight.ClearHighlights();
-        controllerCamera.enabled = false;
         combatControllerState = CombatControllerState.Freeze;
         myTurn = false;
         CombatHandler.NextCombatantTurn();

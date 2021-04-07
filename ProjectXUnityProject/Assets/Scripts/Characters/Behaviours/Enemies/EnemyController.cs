@@ -6,8 +6,6 @@ public class EnemyController : MonoBehaviour
 {
     //stats
     public Stats stats { get; private set; }
-    //camera
-    public Camera controllerCamera;
     //highlighting cells
     private HighlightCells highlight;
 
@@ -502,7 +500,6 @@ public class EnemyController : MonoBehaviour
     public void CombatStart() 
     {
         actionState = State.Wait;
-        controllerCamera.enabled = false;
         myTurn = false;
     }
 
@@ -521,7 +518,7 @@ public class EnemyController : MonoBehaviour
         else
             stats = EnemyLibrary.GetEnemyStats(enemyType);
         //set camera
-        controllerCamera.enabled = true;
+        GameObject.FindGameObjectWithTag("FreeCam").GetComponent<CamMovement>().newTarget(gameObject);
         //move reset
         moved = false;
         //action reset
@@ -547,7 +544,6 @@ public class EnemyController : MonoBehaviour
 
     public void EndTurn()
     {
-        controllerCamera.enabled = false;
         actionState = State.Idle;
         myTurn = false;
         CombatHandler.NextCombatantTurn();
