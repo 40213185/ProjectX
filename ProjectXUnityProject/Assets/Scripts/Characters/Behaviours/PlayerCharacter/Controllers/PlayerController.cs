@@ -10,9 +10,6 @@ public class PlayerController : MonoBehaviour
     //stats
     public Stats stats { get; private set; }
 
-    //camera
-    public Camera controllerCamera;
-
     //combatController
     private PlayerControllerCombat combatController;
 
@@ -56,7 +53,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Camera.main == null) controllerCamera.enabled = true;
         switch (controllerState)
         {
             //disable any kind of interaction until conditions are met
@@ -183,26 +179,18 @@ public class PlayerController : MonoBehaviour
 
         //swap controllers
         combatController.enabled = true;
-        //camera
-        controllerCamera.enabled = false;
         enabled = false;
     }
 
     public void CombatEndPhase() 
     {
         GlobalGameState.SetCombatState(false);
-        //camera
-        controllerCamera.enabled = true;
         //movement
         controllerState = ControllerState.Freeze;
         //if lost combat
         if (stats.GetCurrentHealth() <= 0) Debug.Log("Dead");
     }
 
-    public void OnEnable()
-    {
-        controllerCamera.enabled = true;
-    }
 
     public void StopMovement()
     {

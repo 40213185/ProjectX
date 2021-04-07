@@ -6,8 +6,6 @@ using UnityEngine.EventSystems;
 public class PlayerControllerCombat : MonoBehaviour
 {
     public Stats stats { get; private set; }
-    //camera
-    public Camera controllerCamera;
     //highlighting cells
     private HighlightCells highlight;
 
@@ -408,15 +406,22 @@ public class PlayerControllerCombat : MonoBehaviour
                 }
                 else
                 {
-                    //get the previous move point
-                    movePoint = new Vector3(moveToPoints[moveIndex - 1].x, feetpos, moveToPoints[moveIndex - 1].y);
-                    //take mp
-                    stats.ModifyMovementPointsBy(-(int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
-                    GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
-                    //reset index for next movement
-                    moveIndex = 0;
-                    //return finished
-                    return true;
+                    try
+                    {
+                        //get the previous move point
+                        movePoint = new Vector3(moveToPoints[moveIndex - 1].x, feetpos, moveToPoints[moveIndex - 1].y);
+                        //take mp
+                        stats.ModifyMovementPointsBy(-(int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
+                        GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
+                        //reset index for next movement
+                        moveIndex = 0;
+                        //return finished
+                        return true;
+                    }
+                    catch 
+                    {
+                        return true;
+                    }
                 }
             }
             else if (waitTimer < Time.time)
@@ -450,7 +455,7 @@ public class PlayerControllerCombat : MonoBehaviour
         //mp
         stats.RefillMovementPoints();
         //camera
-        controllerCamera.enabled = true;
+        GameObject.FindGameObjectWithTag("FreeCam").GetComponent<CamMovement>().newTarget(gameObject);
         //controller
         combatControllerState = CombatControllerState.Wait;
         //turn
@@ -501,7 +506,6 @@ public class PlayerControllerCombat : MonoBehaviour
     public void EndTurn()
     {
         highlight.ClearHighlights();
-        controllerCamera.enabled = false;
         combatControllerState = CombatControllerState.Freeze;
         myTurn = false;
         CombatHandler.NextCombatantTurn();

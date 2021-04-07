@@ -39,6 +39,8 @@ public class UIHandling : MonoBehaviour
     public GameObject logTextPrefab;
     public GameObject logScrollBar;
 
+    public GameObject followButton;
+
     private void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().stats;
@@ -231,4 +233,14 @@ public class UIHandling : MonoBehaviour
         InventorySystem.usablesHeld[index] = null;
     }
 
+    public void FollowPlayer()
+    {
+        GameObject.FindGameObjectWithTag("FreeCam").GetComponent<CamMovement>().newTarget(GameObject.FindGameObjectWithTag("Player"));
+        FollowButtonToggle(false);
+    }
+
+    public void FollowButtonToggle(bool active)
+    {
+        followButton.SetActive(active);
+    }
 }
