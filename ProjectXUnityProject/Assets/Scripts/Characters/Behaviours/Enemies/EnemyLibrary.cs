@@ -419,4 +419,18 @@ public static class EnemyLibrary
         }
         return weapons;
     }
+
+    public static int getEnemyValue(EnemyType type)
+    {
+        switch (type)
+        {
+            case EnemyType.Pawn:return 1;
+            case EnemyType.Horse:return 3;
+            case EnemyType.Bishop:return 3;
+            case EnemyType.Rook:return 5;
+            case EnemyType.Queen:return 9;
+            case EnemyType.King:return 20;
+            default:return 1;
+        }    
+    }
 }

@@ -24,6 +24,7 @@ public static class CombatHandler
 
     public static void StartCombat(GameObject[] combatants)
     {
+        if (combatants.Length <= 1) return;
         //set global state
         GlobalGameState.SetCombatState(true);
 
@@ -112,15 +113,19 @@ public static class CombatHandler
 
     public static void NextCombatantTurn()
     {
-        //increment counter
-        if (combatantPointer >= _combatants.Length - 1)
-        {
-            AddTurnTime();
-            combatantPointer = 0;
-        }
-        else combatantPointer++;
 
         //set turn for next combatant
+        do
+        {
+            //increment counter
+            if (combatantPointer >= _combatants.Length - 1)
+            {
+                AddTurnTime();
+                combatantPointer = 0;
+            }
+            else combatantPointer++;
+        }while (_combatants[combatantPointer] == null);
+
         if (_combatants[combatantPointer].tag == "Player") _combatants[combatantPointer].GetComponent<PlayerControllerCombat>().MyTurn();
         else if (_combatants[combatantPointer].tag == "Enemy") _combatants[combatantPointer].GetComponent<EnemyController>().MyTurn();
 
@@ -137,7 +142,7 @@ public static class CombatHandler
 
     public static Vector2Int GetCombatantMatrixPos(int index)
     {
-        if (index < _combatants.Length)
+        if (index < _combatants.Length&&_combatants[index]!=null)
         {
             Vector2Int matrixPos = new Vector2Int(Mathf.FloorToInt(_combatants[index].transform.position.x),
                 Mathf.FloorToInt(_combatants[index].transform.position.z));
@@ -153,7 +158,7 @@ public static class CombatHandler
             return _combatants[combatantPointer];
         else return null;
     }
-    public static GameObject getNextTurnCombatant()
+    public static GameObject GetNextTurnCombatant()
     {
         if (_combatants != null)
         {

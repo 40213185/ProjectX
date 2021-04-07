@@ -53,6 +53,10 @@ public class EnemyController : MonoBehaviour
     public GameObject animationObject;
     private EnemyAnimationController animationController;
 
+    //particles
+    public GameObject deathParticles;
+    private bool usedDeathParticles;
+
     public void SetStats() 
     {
         stats = EnemyLibrary.GetEnemyStats(enemyType);
@@ -81,6 +85,8 @@ public class EnemyController : MonoBehaviour
 
         //animation
         animationController = animationObject.GetComponent<EnemyAnimationController>();
+
+        usedDeathParticles = false;
     }
 
     // Update is called once per frame
@@ -331,36 +337,12 @@ public class EnemyController : MonoBehaviour
                             {
                                 for (int i = 0; i < weaponChoice.Count; i++)
                                 {
-                                    /*
-                                    //check if within weapon range + aoe
-                                    foreach (Vector2Int v in weapons[weaponChoice[i]].GetRangeTiles(GetMatrixPos()))
-                                    {
-                                        foreach (Vector2Int t in weapons[weaponChoice[i]].GetAoeTiles(v, GetMatrixPos()))
-                                            if (playerPos == t)
-                                            {*/
                                     if (weapons[weaponChoice[i]].GetPotency().y > weapons[weaponChoice[0]].GetPotency().y)
                                     {
                                         //store in 0 index of weapon choice
                                         weaponChoice[0] = weaponChoice[i];
-                                        //usingAoe = true;
-                                        //aoePoint = v;
-                                        //i = weaponChoice.Count;
                                         break;
                                     }
-                                    //}
-                                    /*
-                                if (playerPos == v&&!usingAoe)
-                                {
-                                    if (weapons[weaponChoice[i]].GetPotency().y > weapons[weaponChoice[0]].GetPotency().y)
-                                    {
-                                        //store in 0 index of weapon choice
-                                        weaponChoice[0] = weaponChoice[i];
-                                        i = weaponChoice.Count;
-                                        break;
-                                    }
-                                }
-                                    */
-                                    // }
                                 }
                             }
                             //using aoe
@@ -421,14 +403,17 @@ public class EnemyController : MonoBehaviour
                             }
                             //attack
                             player.GetComponent<PlayerController>().stats.ModifyHealthBy(-roll);
+                            //log
+                            GlobalGameState.UpdateLog(string.Format("<color=yellow>{0}</color> attacked and dealt <color=red>{1}</color> damage.",
+                                name,roll));
                             //skill
                             if (weapons[pointIndexChoice].skill.skillType != Skills.SkillList.None)
                             {
-                                player.AddComponent<StatusEffect>().setStatusEffect(
-                                    weapons[pointIndexChoice].GetEffectType(),
-                                    StatusEffect.LibraryDuration(weapons[pointIndexChoice].GetEffectType()),
-                                    StatusEffect.LibraryPotency(weapons[pointIndexChoice].GetEffectType(), 
-                                    roll));
+                                //use skill
+                                weapons[pointIndexChoice].skill.UseSkill(weapons[pointIndexChoice],null, player.GetComponent<PlayerControllerCombat>(),roll, gameObject);
+                                //log
+                                GlobalGameState.UpdateLog(string.Format("<color=yellow>{0}</color> used <color=purple>{1}</color>.",
+                                    name, weapons[pointIndexChoice].skill.skillType));
                             }
                             //take ap
                             if(!usingAoe) stats.ModifyActionPointsBy(-weapons[weaponChoice[0]].getCost());
@@ -443,8 +428,6 @@ public class EnemyController : MonoBehaviour
                             highlight.ClearHighlights();
                             //back to wait
                             actionState = State.Wait;
-                            //end for now
-                            //actionState = State.TurnEnd;
                         }
                         break;
                     }
@@ -456,8 +439,18 @@ public class EnemyController : MonoBehaviour
                     }
             }
         }
-        if(actionState==State.Dead)
-            Destroy(gameObject, 3);
+        if (actionState == State.Dead)
+        {
+            Destroy(gameObject, 1);
+            if (!usedDeathParticles)
+            {
+                usedDeathParticles = true;
+                Instantiate(deathParticles, transform.position, deathParticles.transform.rotation);
+
+                //add currency
+                GameData.ModifyCurrencyBy(EnemyLibrary.getEnemyValue(enemyType));
+            }
+        }
     }
 
     private float CalculateDistanceTo(Vector3 me,Vector3 target) 
@@ -515,6 +508,7 @@ public class EnemyController : MonoBehaviour
 
     public void MyTurn()
     {
+        GlobalGameState.UpdateLog(string.Format("{0}'s turn.", name));
         if (actionState == State.Dead)
         {
             EndTurn();

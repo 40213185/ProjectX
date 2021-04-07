@@ -211,25 +211,28 @@ public class PlayerControllerCombat : MonoBehaviour
                                             //check against combatants in area
                                             for (int c = 0; c < CombatHandler._combatants.Length; c++)
                                             {
-                                                Vector2Int curcombatantMatrixPos =
-                                                    new Vector2Int(Mathf.FloorToInt(CombatHandler._combatants[c].transform.position.x),
-                                                    Mathf.FloorToInt(CombatHandler._combatants[c].transform.position.z));
-                                                //add to list if combatant within the area but not self
-                                                if (curcombatantMatrixPos != getMatrixPos() &&
-                                                    curcombatantMatrixPos == aoeTiles[z])
+                                                if (CombatHandler._combatants[c] != null)
                                                 {
-                                                    bool add = true;
-                                                    //go through combatants influenced list
-                                                    for (int ciba = 0; ciba < combatantsInfluenceByAction.Count; ciba++)
+                                                    Vector2Int curcombatantMatrixPos =
+                                                        new Vector2Int(Mathf.FloorToInt(CombatHandler._combatants[c].transform.position.x),
+                                                        Mathf.FloorToInt(CombatHandler._combatants[c].transform.position.z));
+                                                    //add to list if combatant within the area but not self
+                                                    if (curcombatantMatrixPos != getMatrixPos() &&
+                                                        curcombatantMatrixPos == aoeTiles[z])
                                                     {
-                                                        //and only add if not added already
-                                                        if (combatantsInfluenceByAction[ciba] != CombatHandler._combatants[c])
+                                                        bool add = true;
+                                                        //go through combatants influenced list
+                                                        for (int ciba = 0; ciba < combatantsInfluenceByAction.Count; ciba++)
                                                         {
-                                                            add = false;
-                                                            break;
+                                                            //and only add if not added already
+                                                            if (combatantsInfluenceByAction[ciba] != CombatHandler._combatants[c])
+                                                            {
+                                                                add = false;
+                                                                break;
+                                                            }
                                                         }
+                                                        if (add) combatantsInfluenceByAction.Add(CombatHandler._combatants[c]);
                                                     }
-                                                    if (add) combatantsInfluenceByAction.Add(CombatHandler._combatants[c]);
                                                 }
                                             }
                                         }
@@ -284,18 +287,22 @@ public class PlayerControllerCombat : MonoBehaviour
                                     if (combatantsInfluenceByAction[i].GetComponent<StatusEffect>())
                                         if (combatantsInfluenceByAction[i].GetComponent<StatusEffect>().GetEffectType() == StatusEffect.EffectType.ExposedToCrit)
                                             critMod = combatantsInfluenceByAction[i].GetComponent<StatusEffect>().effectPotency / 100;
+                                    //damage
                                     int roll = weaponSelected.RollForDamage(critMod);
                                     combatantsInfluenceByAction[i].GetComponent<EnemyController>().ModifyHealthBy(-roll);
+                                    //log
+                                    GlobalGameState.UpdateLog(string.Format("<color=purple>{0}</color> attacked and dealt <color=red>{1}</color> damage.",
+                                        "You", roll));
+                                    if(combatantsInfluenceByAction[i].GetComponent<EnemyController>().stats.GetCurrentHealth()/
+                                        combatantsInfluenceByAction[i].GetComponent<EnemyController>().stats.GetMaxHealth()<0.15f)
+                                        GlobalGameState.UpdateLog(string.Format("{0} is starting to fall apart.", combatantsInfluenceByAction[i].name));
                                     //use skill
-                                    if (useWeaponSkill)
+                                    if (useWeaponSkill&&weaponSelected.skill.skillType!=Skills.SkillList.None)
                                     {
                                         if (weaponSelected.skill.skillType != Skills.SkillList.None)
                                         {
-                                            combatantsInfluenceByAction[i].AddComponent<StatusEffect>().setStatusEffect(
-                                                weaponSelected.GetEffectType(),
-                                                StatusEffect.LibraryDuration(weaponSelected.GetEffectType()),
-                                                StatusEffect.LibraryPotency(weaponSelected.GetEffectType(),
-                                                roll));
+                                            //use skill
+                                            weaponSelected.skill.UseSkill(weaponSelected, combatantsInfluenceByAction[i].GetComponent<EnemyController>(),null,roll,gameObject);
                                         }
                                     }
                                 }
@@ -322,23 +329,23 @@ public class PlayerControllerCombat : MonoBehaviour
                     }
                 case CombatControllerState.Dead: 
                     {
+                        GlobalGameState.Restart();
+                        //endcombat
                         EndCombat();
                         break;
                     }
             }
         }
+        if (stats.GetCurrentHealth() <= 0) GlobalGameState.Restart();
     }
 
     private bool UIBlock() 
     {
         bool blocked = false;
         //block on ui hit
-#if !UNITY_EDITOR
-
-                        if (EventSystem.current.IsPointerOverGameObject(0)) blocked=true;
-#else
-        if (EventSystem.current.IsPointerOverGameObject(-1)) blocked = true; ;
-#endif
+        if (EventSystem.current.IsPointerOverGameObject(0)) blocked = true;
+        if (EventSystem.current.IsPointerOverGameObject(-1)) blocked = true;
+        if (EventSystem.current.IsPointerOverGameObject(1)) blocked = true;
         return blocked;
     }
 
@@ -348,16 +355,19 @@ public class PlayerControllerCombat : MonoBehaviour
         bool canmove = true;
         for (int i = 0; i < CombatHandler._combatants.Length; i++)
         {
-            if (CombatHandler._combatants[i].tag != "Player")
+            if (CombatHandler._combatants[i] != null)
             {
-                //setup vector2int for comparison
-                Vector2Int enemyPlacement = new Vector2Int(Mathf.FloorToInt(CombatHandler._combatants[i].transform.position.x),
-                    Mathf.FloorToInt(CombatHandler._combatants[i].transform.position.z));
-                //compare and break if necessary
-                if (enemyPlacement == clickpos)
+                if (CombatHandler._combatants[i].tag != "Player")
                 {
-                    canmove = false;
-                    break;
+                    //setup vector2int for comparison
+                    Vector2Int enemyPlacement = new Vector2Int(Mathf.FloorToInt(CombatHandler._combatants[i].transform.position.x),
+                        Mathf.FloorToInt(CombatHandler._combatants[i].transform.position.z));
+                    //compare and break if necessary
+                    if (enemyPlacement == clickpos)
+                    {
+                        canmove = false;
+                        break;
+                    }
                 }
             }
         }
@@ -431,8 +441,9 @@ public class PlayerControllerCombat : MonoBehaviour
 
     public void MyTurn()
     {
+        GlobalGameState.UpdateLog(string.Format("Your turn."));
         //check if stats is initialized
-        if(stats==null)
+        if (stats==null)
             stats = gameObject.GetComponent<PlayerController>().stats;
         //ap
         stats.RefillActionPoints();
@@ -444,6 +455,11 @@ public class PlayerControllerCombat : MonoBehaviour
         combatControllerState = CombatControllerState.Wait;
         //turn
         myTurn = true;
+        //apply status effects
+        if (GetComponent<StatusEffect>())
+        {
+            foreach (StatusEffect se in GetComponents<StatusEffect>()) se.TurnTick();
+        }
         //enable ui
         GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().ReEnableButtonsForTurnStart();
     }
@@ -459,11 +475,14 @@ public class PlayerControllerCombat : MonoBehaviour
         bool combatDone = true;
         for (int i = 0; i < CombatHandler._combatants.Length; i++)
         {
-            if (CombatHandler._combatants[i] != gameObject &&
-                CombatHandler._combatants[i].GetComponent<EnemyController>().stats.GetCurrentHealth() > 0)
+            if (CombatHandler._combatants[i] != null)
             {
-                combatDone = false;
-                break;
+                if (CombatHandler._combatants[i] != gameObject &&
+                    CombatHandler._combatants[i].GetComponent<EnemyController>().stats.GetCurrentHealth() > 0)
+                {
+                    combatDone = false;
+                    break;
+                }
             }
         }
         return combatDone;

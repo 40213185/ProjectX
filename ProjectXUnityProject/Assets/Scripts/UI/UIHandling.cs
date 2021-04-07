@@ -11,6 +11,7 @@ public class UIHandling : MonoBehaviour
     
 
     public Slider hpSlider;
+    public Text hpText;
 
     public GameObject pauseMenu; 
 
@@ -33,12 +34,18 @@ public class UIHandling : MonoBehaviour
     public GameObject weaponSkill;
     public GameObject itemsPanel;
 
+    //log
+    public GameObject logContent;
+    public GameObject logTextPrefab;
+    public GameObject logScrollBar;
+
     private void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().stats;
         ap = playerStats.GetCurrentActionPoints();
         mp = playerStats.GetCurrentMovementPoints();
         hpSlider.maxValue = playerStats.GetMaxHealth();
+        hpText.text = string.Format("{0}/{1}",playerStats.GetCurrentHealth(),playerStats.GetMaxHealth());
 
         hpSlider.value = playerStats.GetCurrentHealth();
 
@@ -67,7 +74,12 @@ public class UIHandling : MonoBehaviour
     public void UpdateUI() 
     {
         if (hpSlider.value != playerStats.GetCurrentHealth())
-            hpSlider.value = playerStats.GetCurrentHealth(); 
+        {
+            //update slider
+            hpSlider.value = playerStats.GetCurrentHealth();
+            //update text
+            hpText.text = string.Format("{0}/{1}", playerStats.GetCurrentHealth(), playerStats.GetMaxHealth());
+        }
         
         //ap handling
         if( ap!= playerStats.GetCurrentActionPoints()) 
@@ -96,6 +108,19 @@ public class UIHandling : MonoBehaviour
             }
         }
 
+    }
+
+    public void UpdateLog(string message)
+    {
+        GameObject text=Instantiate(logTextPrefab, logContent.transform);
+        text.GetComponent<Text>().text = message;
+        StartCoroutine("ChatScrollQuickFix");
+    }
+
+    private IEnumerator ChatScrollQuickFix() 
+    {
+        yield return new WaitForSeconds(0.25f);
+        logScrollBar.GetComponent<Scrollbar>().value = 0;
     }
 
     public void setCombat(bool inCombat) 

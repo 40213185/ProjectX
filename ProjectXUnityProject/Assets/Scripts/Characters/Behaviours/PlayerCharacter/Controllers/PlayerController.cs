@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Camera.main == null) controllerCamera.enabled = true;
         switch (controllerState)
         {
             //disable any kind of interaction until conditions are met

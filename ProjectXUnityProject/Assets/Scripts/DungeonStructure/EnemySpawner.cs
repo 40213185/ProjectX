@@ -36,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
 
             //roll between min and max
             int rnd = Random.Range(enemySpawnMin, enemySpawnMax + 1);
-            //create array accoridingly+player
+            //create array accordingly+player
             GameObject[] combatants = new GameObject[rnd+1];
 
             for (int i = 0; i < rnd; i++)
