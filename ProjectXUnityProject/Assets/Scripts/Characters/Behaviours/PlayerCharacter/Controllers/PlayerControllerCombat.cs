@@ -408,15 +408,22 @@ public class PlayerControllerCombat : MonoBehaviour
                 }
                 else
                 {
-                    //get the previous move point
-                    movePoint = new Vector3(moveToPoints[moveIndex - 1].x, feetpos, moveToPoints[moveIndex - 1].y);
-                    //take mp
-                    stats.ModifyMovementPointsBy(-(int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
-                    GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
-                    //reset index for next movement
-                    moveIndex = 0;
-                    //return finished
-                    return true;
+                    try
+                    {
+                        //get the previous move point
+                        movePoint = new Vector3(moveToPoints[moveIndex - 1].x, feetpos, moveToPoints[moveIndex - 1].y);
+                        //take mp
+                        stats.ModifyMovementPointsBy(-(int)Node.CalculateDistance(initialPos, new Vector2Int((int)movePoint.x, (int)movePoint.z)));
+                        GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
+                        //reset index for next movement
+                        moveIndex = 0;
+                        //return finished
+                        return true;
+                    }
+                    catch 
+                    {
+                        return true;
+                    }
                 }
             }
             else if (waitTimer < Time.time)
