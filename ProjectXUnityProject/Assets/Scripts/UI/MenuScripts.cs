@@ -15,10 +15,14 @@ public class MenuScripts : MonoBehaviour
     public GameObject main;
     public Text resSizeButton;
 
+    private void Start()
+    {
+        if (!GameData.Load()) GameData.Save();
+    }
+
     //Main
     public void BeginGame() 
     {
-        GameData.Load();
         SceneManager.LoadScene("Dungeon");
     }
 

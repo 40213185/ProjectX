@@ -13,6 +13,23 @@ public class Stats
     private int currentActionPoints;
     private int baseInitiative;
 
+    private int maxActionPointsAllowed;
+    private int maxMovementPointsAllowed;
+
+    public Stats()
+    {
+        maxHealth = 10;
+        currentHealth = maxHealth;
+        maxMovementPoints = 3;
+        currentMovementPoints = maxMovementPoints;
+        maxActionPoints = 6;
+        currentActionPoints = maxActionPoints;
+        baseInitiative = 3;
+
+        maxActionPointsAllowed = 15;
+        maxMovementPointsAllowed = 15;
+    }
+
     public Stats(int maxhealth,int maxmovementPoints,int maxactionPoints,int initiative) 
     {
         maxHealth = maxhealth;
@@ -22,6 +39,9 @@ public class Stats
         maxActionPoints = maxactionPoints;
         currentActionPoints = maxActionPoints;
         baseInitiative = initiative;
+
+        maxActionPointsAllowed = 15;
+        maxMovementPointsAllowed = 15;
     }
 
     public int GetMaxHealth() 
@@ -70,7 +90,7 @@ public class Stats
     {
         int amount = currentActionPoints;
         currentActionPoints = maxActionPoints;
-        amount = maxActionPoints - amount;
+        amount = currentActionPoints - amount;
         //ui
         GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
         return amount;
@@ -112,5 +132,36 @@ public class Stats
         int temp = UnityEngine.Random.Range(1, 7);
         temp += baseInitiative;
         return temp;
+    }
+    public int MaximumActionPointsAllowed()
+    {
+        return maxActionPointsAllowed;
+    }
+
+    public int MaximumMovementPointsAllowed() 
+    {
+        return maxMovementPointsAllowed;
+    }
+
+    public int ModifyMaxHpBy(int amount)
+    {
+        int dif = maxHealth;
+        maxHealth = Mathf.Clamp(maxHealth + amount, 0, int.MaxValue);
+        dif = maxHealth - dif;
+        return dif;
+    }
+    public int ModifyMaxApBy(int amount)
+    {
+        int dif = maxActionPoints;
+        maxActionPoints = Mathf.Clamp(maxActionPoints + amount, 0, maxActionPointsAllowed);
+        dif = maxActionPoints - dif;
+        return dif;
+    }
+    public int ModifyMaxMpBy(int amount)
+    {
+        int dif = maxMovementPoints;
+        maxMovementPoints = Mathf.Clamp(maxMovementPoints + amount, 0, maxMovementPointsAllowed);
+        dif = maxMovementPoints - dif;
+        return dif;
     }
 }

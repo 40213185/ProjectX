@@ -149,29 +149,24 @@ public class MapGenerator : MonoBehaviour
                     for (int i = 0; i < clutter.transform.childCount; i++)
                     {
                         //ignore if its partciles
-                        if (clutter.transform.GetChild(i).GetComponent<ParticleSystem>()) continue;
-                        //mesh size
-                        float xsize = clutter.transform.GetChild(i).GetComponent<MeshFilter>().mesh.bounds.size.x;
-                        if (xsize > 0.4f)
+                        //if (clutter.transform.GetChild(i).GetComponent<ParticleSystem>()) continue;
+
+                        if (clutter.transform.GetChild(i).GetComponent<ClutterSize>())
                         {
-                            //vectors for mad handling
+                            //clutter size
+                            Vector2Int clutterSize = clutter.transform.GetChild(i).GetComponent<ClutterSize>().size;
+
+                            //vectors for map handling
                             Vector3 childV3 = clutter.transform.GetChild(i).transform.position;
                             Vector2Int childV2Int = new Vector2Int(Mathf.FloorToInt(childV3.x), Mathf.FloorToInt(childV3.z));
-                            //set origin tile to obstacle
-                            if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable)
-                                MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
-                            //set additional tile to obstacle
-                            if (xsize > 1.0f)
-                            {
-                                //check which tile
-                                if (clutter.transform.GetChild(i).transform.rotation.y != 0 ||
-                                    clutter.transform.GetChild(i).transform.rotation.y != 180)
-                                    childV2Int.y++;
-                                else childV2Int.x++;
 
-                                //set to obstacle
-                                if (MapHandler.GetTileTypeFromMatrix(childV2Int) == MapHandler.TileType.Walkable)
-                                    MapHandler.ConvertTileToType(childV2Int, MapHandler.TileType.Obstacle);
+                            //set corresponding size tiles to obstacle
+                            for (int cx = 0; cx <= clutterSize.x; cx++)
+                            {
+                                for (int cy = 0; cy <= clutterSize.y; cy++)
+                                {
+                                    MapHandler.ConvertTileToType(childV2Int + new Vector2Int(cx, cy), MapHandler.TileType.Obstacle);
+                                }
                             }
                         }
                     }
@@ -214,7 +209,7 @@ public class MapGenerator : MonoBehaviour
     void Start()
     {
         //initialize game data
-        GameData.SetFloor(4);
+        GameData.SetFloor(1);
         InventorySystem.init(4);
 
         //initialize map

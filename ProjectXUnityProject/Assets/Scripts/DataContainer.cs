@@ -8,6 +8,7 @@ public class DataContainer
 {
     //container data
     public int currency;
+    public Stats stats;
 
 
     //container methods
@@ -16,6 +17,7 @@ public class DataContainer
     public DataContainer() 
     {
         currency = 0;
+        stats = new Stats();
     }
 
     public void SaveData()
@@ -29,7 +31,7 @@ public class DataContainer
 
         Debug.Log("Saved to " + path);
     }
-    public void LoadData()
+    public bool LoadData()
     {
         var serializer = new XmlSerializer(typeof(DataContainer));
         if (CheckFileExists())
@@ -38,10 +40,14 @@ public class DataContainer
             {
                 DataContainer container = serializer.Deserialize(stream) as DataContainer;
                 stream.Close();
-                SetData(container);
+
+                //loaded into in scope container
+                //set back to appropriate objects
+                SendData(container);
             }
+            return true;
         }
-        else SaveData();
+        return false;
     }
 
     public bool CheckFileExists()
@@ -50,8 +56,15 @@ public class DataContainer
         else return false;
     }
 
-    public void SetData(DataContainer dataContainer) 
+    public void SetData() 
     {
         currency = GameData.currency;
+        stats = GameData.stats;
+    }
+
+    private void SendData(DataContainer container)
+    {
+        currency = container.currency;
+        stats = container.stats;
     }
 }

@@ -169,9 +169,9 @@ public class PlayerControllerCombat : MonoBehaviour
                 case CombatControllerState.SelectAction:
                     {
                         combatantsInfluenceByAction.Clear();
-                        //if (waitTimer <= Time.time)
-                        //{
-                            if (UIBlock()) break;
+
+                        if (UIBlock()) break;
+
                         if (Input.GetMouseButtonDown(0))
                         {
                             //set up ray
@@ -242,8 +242,6 @@ public class PlayerControllerCombat : MonoBehaviour
                                                 Vector3 point = new Vector3(combatantsInfluenceByAction[0].transform.position.x, 0, combatantsInfluenceByAction[0].transform.position.z);
                                                 animationController.RotateToFace(point);
                                             }
-                                            //take ap
-                                            stats.ModifyActionPointsBy(-weaponSelected.getCost());
                                             //set up wait
                                             waitTimer = Time.time + actionDelay;
                                             //setup action used once
@@ -268,7 +266,6 @@ public class PlayerControllerCombat : MonoBehaviour
                                 }
                             }
                         }
-                        //}
                         break;
                     }
                 case CombatControllerState.UseAction:
@@ -295,13 +292,21 @@ public class PlayerControllerCombat : MonoBehaviour
                                         combatantsInfluenceByAction[i].GetComponent<EnemyController>().stats.GetMaxHealth()<0.15f)
                                         GlobalGameState.UpdateLog(string.Format("{0} is starting to fall apart.", combatantsInfluenceByAction[i].name));
                                     //use skill
-                                    if (useWeaponSkill&&weaponSelected.skill.skillType!=Skills.SkillList.None)
+                                    if (useWeaponSkill)
                                     {
                                         if (weaponSelected.skill.skillType != Skills.SkillList.None)
                                         {
                                             //use skill
-                                            weaponSelected.skill.UseSkill(weaponSelected, combatantsInfluenceByAction[i].GetComponent<EnemyController>(),null,roll,gameObject);
+                                            weaponSelected.skill.UseSkill(weaponSelected, combatantsInfluenceByAction[i].GetComponent<EnemyController>(), null, roll, gameObject);
                                         }
+
+                                        //take ap
+                                        stats.ModifyActionPointsBy(-weaponSelected.getCost());
+                                    }
+                                    else 
+                                    {
+                                        //take ap
+                                        stats.ModifyActionPointsBy(-1);
                                     }
                                 }
                             }
@@ -451,7 +456,7 @@ public class PlayerControllerCombat : MonoBehaviour
         if (stats==null)
             stats = gameObject.GetComponent<PlayerController>().stats;
         //ap
-        stats.RefillActionPoints();
+        stats.ModifyActionPointsBy(1);
         //mp
         stats.RefillMovementPoints();
         //camera
