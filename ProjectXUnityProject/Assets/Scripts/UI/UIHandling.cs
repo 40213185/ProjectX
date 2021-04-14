@@ -43,28 +43,37 @@ public class UIHandling : MonoBehaviour
 
     private void Start()
     {
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().stats;
-        ap = playerStats.GetCurrentActionPoints();
-        mp = playerStats.GetCurrentMovementPoints();
+        playerStats = GameData.stats;
+        ap = playerStats.MaximumActionPointsAllowed();
+        mp = playerStats.MaximumMovementPointsAllowed();
         hpSlider.maxValue = playerStats.GetMaxHealth();
         hpText.text = string.Format("{0}/{1}",playerStats.GetCurrentHealth(),playerStats.GetMaxHealth());
 
         hpSlider.value = playerStats.GetCurrentHealth();
 
-        apCollection = new GameObject[playerStats.GetMaxActionPoints()];
-        mpCollection = new GameObject[playerStats.GetMaxMovementPoints()];
-
-        for (int i = 0; i < playerStats.GetMaxActionPoints(); i++)
-        {
-            apCollection[i] = Instantiate(apPoint, apGroup.transform);
-        }
-        for (int i = 0; i < playerStats.GetMaxMovementPoints(); i++)
-        {
-            mpCollection[i] = Instantiate(mpPoint, mpGroup.transform);
-        }
+        PopulateAp(ap);
+        PopulateMp(mp);
 
         //combat controller
         playerCombatController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControllerCombat>();
+
+        UpdateUI();
+    }
+    private void PopulateAp(int size)
+    {
+        apCollection = new GameObject[size];
+        for (int i = 0; i < size; i++)
+        {
+            apCollection[i] = Instantiate(apPoint, apGroup.transform);
+        }
+    }
+    private void PopulateMp(int size)
+    {
+        mpCollection = new GameObject[size];
+        for (int i = 0; i < size; i++)
+        {
+            mpCollection[i] = Instantiate(mpPoint, mpGroup.transform);
+        }
     }
 
     public void PausePressed() 
@@ -121,7 +130,7 @@ public class UIHandling : MonoBehaviour
 
     private IEnumerator ChatScrollQuickFix() 
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.1f);
         logScrollBar.GetComponent<Scrollbar>().value = 0;
     }
 
@@ -149,12 +158,12 @@ public class UIHandling : MonoBehaviour
         if (playerCombatController.combatControllerState == PlayerControllerCombat.CombatControllerState.Wait)
         {
             //check if can attack
-            if (playerStats.GetCurrentActionPoints() >= InventorySystem.equipmentHeld.getCost())
+            if (playerStats.GetCurrentActionPoints() >= 1)
             {
                 playerCombatController.SelectAction(InventorySystem.equipmentHeld,false);
             }
             //check if cant use anymore
-            if (playerStats.GetCurrentActionPoints() < InventorySystem.equipmentHeld.getCost())
+            if (playerStats.GetCurrentActionPoints() < 1)
             {
                 basicAttack.GetComponent<Button>().interactable = false;
                 weaponSkill.GetComponent<Button>().interactable = false;
@@ -207,6 +216,9 @@ public class UIHandling : MonoBehaviour
         if (playerStats.GetCurrentActionPoints() >= InventorySystem.equipmentHeld.getCost())
         {
             weaponSkill.GetComponent<Button>().interactable = true;
+        }
+        if(playerStats.GetCurrentActionPoints()>0)
+        { 
             basicAttack.GetComponent<Button>().interactable = true;
         }
         itemsPanel.SetActive(true);
@@ -228,6 +240,8 @@ public class UIHandling : MonoBehaviour
 
     public void UsablePressed(int index) 
     {
+        GameObject[] objs = new GameObject[1] { playerCombatController.gameObject };
+        InventorySystem.usablesHeld[index].Use(objs);
         usablesButtons[index].SetActive(false);
         Debug.Log("USABLE " + index + " PRESSED");
         InventorySystem.usablesHeld[index] = null;

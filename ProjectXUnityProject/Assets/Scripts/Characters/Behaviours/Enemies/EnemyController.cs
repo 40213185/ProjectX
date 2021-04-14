@@ -446,7 +446,8 @@ public class EnemyController : MonoBehaviour
                 Instantiate(deathParticles, transform.position, deathParticles.transform.rotation);
 
                 //add currency
-                GameData.ModifyCurrencyBy(EnemyLibrary.getEnemyValue(enemyType));
+                int currencyAdded=GameData.ModifyCurrencyBy(EnemyLibrary.getEnemyValue(enemyType));
+                GlobalGameState.UpdateLog(string.Format("You've received {0} souls.", currencyAdded));
             }
         }
     }

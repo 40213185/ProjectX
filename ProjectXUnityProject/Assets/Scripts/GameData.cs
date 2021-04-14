@@ -8,23 +8,33 @@ public static class GameData
     public static int CurrentFloor { get; private set; }
 
     public static int currency { get; private set; }
+    public static Stats stats { get; private set; }
 
-    public static void Save() 
+    private static void Init()
     {
-        if (dataContainer == null)
-        {
-            dataContainer = new DataContainer();
-        }
-        dataContainer.SetData(dataContainer);
+        dataContainer = new DataContainer();
+        currency = 0;
+        stats = new Stats();
+    }
+
+    public static void Save()
+    {
+        if (dataContainer == null) Init();
+        dataContainer.SetData();
         dataContainer.SaveData();
     }
 
-    public static void Load() 
+    public static bool Load() 
     {
-        if (dataContainer == null) dataContainer = new DataContainer();
-        dataContainer.LoadData();
-        //set the data container data back to game data
-        currency = dataContainer.currency;
+        if (dataContainer == null) Init();
+        if (dataContainer.LoadData())
+        {
+            //set the data container data back to game data
+            currency = dataContainer.currency;
+            stats = dataContainer.stats;
+            return true;
+        }
+        return false;
     }
 
     public static void SetFloor(int floor) 
@@ -32,8 +42,9 @@ public static class GameData
         CurrentFloor = floor;
     }
 
-    public static void ModifyCurrencyBy(int amount)
+    public static int ModifyCurrencyBy(int amount)
     {
         currency = Mathf.Clamp(currency + amount, 0, 999999);
+        return amount;
     }
 }
