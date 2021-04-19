@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\DungeonStructure\PortalContainer.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\Portal\triggered.cs" />
     <Compile Include="Assets\Scripts\ItemScripts\InventorySystem.cs" />
+    <Compile Include="Assets\Scripts\UI\UpgradesUIHandler.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\StatusEffects\Stats\Stats.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Controllers\PlayerAnimationController.cs" />
@@ -84,11 +85,10 @@
     <Compile Include="Assets\Scripts\ItemScripts\Skills.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Controllers\PlayerControllerCombat.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyLibrary.cs" />
+    <Compile Include="Assets\Scripts\DungeonStructure\FloorGeneration\ClutterSize.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\HideIfPlayerNotPresent.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\DungeonStructure\FloorGeneration\ClutterSize.cs" />
-    <Compile Include="Assets\Scripts\UI\UpgradesUIHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
