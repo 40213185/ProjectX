@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C9B863CB-DF19-4334-B446-86B6E7EBA84D}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Music" ID="{C9B863CB-DF19-4334-B446-86B6E7EBA84D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Main_Menu_Music" ID="{31572F17-D9C5-4C00-834E-7457971662D0}">
+					<ChildrenList>
+						<Action Name="" ID="{B96519EC-074D-4E50-A77E-770FD4299CF8}" ShortID="385503377">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main Menu" ID="{7ED9C4DB-130E-4902-BC5F-8FF310D8CF56}" WorkUnitID="{123EDAF1-0255-479C-9292-3849639C15C7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_In_Game_Music" ID="{2EBBB086-A44D-4986-9D5C-18C15EE2A28B}">
+					<ChildrenList>
+						<Action Name="" ID="{A697AA32-A38E-43C4-9DDA-05C69B7A439D}" ShortID="624218440">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="In_Game" ID="{24A99C76-2D68-414F-AB66-39904B14BA33}" WorkUnitID="{123EDAF1-0255-479C-9292-3849639C15C7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_In_Game_Music" ID="{8345BCFE-B6F6-489D-B11D-6F40D917A2BE}">
+					<ChildrenList>
+						<Action Name="" ID="{9CB84334-D562-4744-9914-3291503F3883}" ShortID="83030472">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="In_Game" ID="{24A99C76-2D68-414F-AB66-39904B14BA33}" WorkUnitID="{123EDAF1-0255-479C-9292-3849639C15C7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Main_Menu_Music" ID="{686BEF14-0666-43F8-A8D7-7795B9844F3E}">
+					<ChildrenList>
+						<Action Name="" ID="{1ACA2C2B-8713-4F66-AB64-D9E8B5FFDCB2}" ShortID="432604753">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main Menu" ID="{7ED9C4DB-130E-4902-BC5F-8FF310D8CF56}" WorkUnitID="{123EDAF1-0255-479C-9292-3849639C15C7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

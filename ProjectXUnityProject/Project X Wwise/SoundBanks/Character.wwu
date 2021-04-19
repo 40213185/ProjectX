@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4AF07B3F-66C0-42DE-A76F-34A806CA6BB9}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Character" ID="{4AF07B3F-66C0-42DE-A76F-34A806CA6BB9}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="NPC" ID="{C77FF8A4-7E00-497A-96BA-BEA0BFDCD1B4}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Movement_NPC" ID="{76C56826-D869-443F-A479-027BCA55A4E5}" WorkUnitID="{5E98A28F-4B23-47DC-A174-2A5F22428A6D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_NPC_Damage" ID="{8A4E11D9-C566-45EE-99A6-AA141F1B694D}" WorkUnitID="{5E98A28F-4B23-47DC-A174-2A5F22428A6D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_NPC_Death" ID="{7095A246-B0C9-4D72-8C03-E7E357EC989F}" WorkUnitID="{5E98A28F-4B23-47DC-A174-2A5F22428A6D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="PC" ID="{C0DD6992-1BD2-4ACB-B6A6-32CC65FC0E43}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Consumables" ID="{20371DE5-757D-4597-A4E7-B68CCA0C6946}" WorkUnitID="{5E98A28F-4B23-47DC-A174-2A5F22428A6D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Movement_PC" ID="{854E363A-FD76-45F1-B217-9ACB0AFD7027}" WorkUnitID="{5E98A28F-4B23-47DC-A174-2A5F22428A6D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

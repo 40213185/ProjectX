@@ -10,6 +10,7 @@ public class Skills
         AttackOfOpportunity,
         Execute,
         FireBall,
+        IceBall,
         Bleed,
         EagleEye,
         KnockBack

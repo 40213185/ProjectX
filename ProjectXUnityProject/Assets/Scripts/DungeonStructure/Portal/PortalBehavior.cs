@@ -40,6 +40,8 @@ public class PortalBehavior : MonoBehaviour
                         teleportPosObject.transform.position.x,
                         player.GetComponent<PlayerController>().feetpos
                         , teleportPosObject.transform.position.z); ;
+                    //play sound
+                    SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Portal_1, gameObject);
                 }
 
                 //player out of portal?

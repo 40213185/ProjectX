@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{197B3BED-98C3-472C-A39D-BDF4F30CF932}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{197B3BED-98C3-472C-A39D-BDF4F30CF932}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Stop_All" ID="{CA33015D-32E3-4D50-A9B9-B9AAA70282FF}">
+					<ChildrenList>
+						<Action Name="" ID="{777DA091-F480-4D12-8A11-4D0F16703909}" ShortID="462895958">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{A4F48BC5-A938-4C3B-B553-33482BFB4EF4}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambience_dungeon" ID="{77076115-91A3-4795-972B-ADC5C6D22BEA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+								<EventActionException Name="" ID="{DDD13ACA-4A74-4BA1-B30A-1F12F20D8B33}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Candles" ID="{4C4D6717-293C-4E57-B02D-0BEC2CE940DA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+								<EventActionException Name="" ID="{CC91CCFA-029D-4DEB-BF38-E5283E968607}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="In_Game" ID="{24A99C76-2D68-414F-AB66-39904B14BA33}" WorkUnitID="{123EDAF1-0255-479C-9292-3849639C15C7}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+								<EventActionException Name="" ID="{673E3DFA-1128-4993-9EEA-612B3F9BA641}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="In_Game" ID="{24A99C76-2D68-414F-AB66-39904B14BA33}" WorkUnitID="{123EDAF1-0255-479C-9292-3849639C15C7}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+							</ChildrenList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

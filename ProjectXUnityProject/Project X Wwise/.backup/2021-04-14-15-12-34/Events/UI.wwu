@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{913E9BAE-A24C-4ECA-88F3-31A0016636B3}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="UI" ID="{913E9BAE-A24C-4ECA-88F3-31A0016636B3}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Coins" ID="{6C118B0E-398E-4EBA-859A-488C18C47BCB}">
+					<ChildrenList>
+						<Action Name="" ID="{50CBB624-BB33-4B70-B8E2-626092B7C294}" ShortID="154184361">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Coins" ID="{7DF4766A-19FA-4A8E-87B1-AB4D19B1EAA2}" WorkUnitID="{D1D6D2F1-9C59-4D94-AEB6-93314E3455CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Main_Menu" ID="{5FEA77C3-E3A5-4AE9-985C-ABD2E5CC44B7}">
+					<ChildrenList>
+						<Action Name="" ID="{75E9AD8D-66FB-46AD-A381-46A0CAB3332A}" ShortID="254954133">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main_Menu" ID="{ED34C9B2-3D2A-4B9D-A835-758A1EE005BB}" WorkUnitID="{D1D6D2F1-9C59-4D94-AEB6-93314E3455CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Main_Menu" ID="{75ECE5BE-9F99-4D70-A6EF-C52C8F4A7180}">
+					<ChildrenList>
+						<Action Name="" ID="{0ECEDEA9-EE6A-4848-BC68-8A1C9006D109}" ShortID="628436745">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main_Menu" ID="{ED34C9B2-3D2A-4B9D-A835-758A1EE005BB}" WorkUnitID="{D1D6D2F1-9C59-4D94-AEB6-93314E3455CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Hover" ID="{35DE9673-79B2-40BB-AFB0-924098A06948}">
+					<ChildrenList>
+						<Action Name="" ID="{168D3226-C7E1-42DC-BAD0-37C3829EF5E5}" ShortID="739808210">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Hover" ID="{B6E2A63D-A4CF-4560-A3D7-87EA3B66FC5C}" WorkUnitID="{D1D6D2F1-9C59-4D94-AEB6-93314E3455CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Menu_1" ID="{063106C3-9E71-4F26-88E7-64D55F1EB461}">
+					<ChildrenList>
+						<Action Name="" ID="{BB3DE07D-2C5F-438E-9E78-33B937E34B6E}" ShortID="671981754">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Menu_1" ID="{2F81F47C-BF60-40A2-905F-E08793020E39}" WorkUnitID="{D1D6D2F1-9C59-4D94-AEB6-93314E3455CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

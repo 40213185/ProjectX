@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C2F640E5-709D-4A7B-AC0B-8F82EF9B6F81}" SchemaVersion="103">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{C2F640E5-709D-4A7B-AC0B-8F82EF9B6F81}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="States" ID="{5333563A-9AFF-473B-8A5E-58D331D38879}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{8A2660F3-742E-43E8-A051-4165FF9375B7}"/>
+						<State Name="In_Combat" ID="{B3E515AC-25FF-431A-B968-4F2C170CACF3}"/>
+						<State Name="Out_Combat" ID="{1D28BC1F-3AA4-45A5-925D-0531B6F988C0}"/>
+						<State Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="In_Combat" ID="{B3E515AC-25FF-431A-B968-4F2C170CACF3}"/>
+							<EndState Name="Out_Combat" ID="{1D28BC1F-3AA4-45A5-925D-0531B6F988C0}"/>
+							<Time>0.5</Time>
+							<IsShared>true</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="In_Combat" ID="{B3E515AC-25FF-431A-B968-4F2C170CACF3}"/>
+							<EndState Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+							<Time>0.5</Time>
+							<IsShared>true</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Out_Combat" ID="{1D28BC1F-3AA4-45A5-925D-0531B6F988C0}"/>
+							<EndState Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+							<Time>0.5</Time>
+							<IsShared>true</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

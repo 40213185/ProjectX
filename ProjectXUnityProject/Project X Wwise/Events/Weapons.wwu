@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B7CB40EE-A2BF-4DC1-AD4C-4D84B9210B87}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Weapons" ID="{B7CB40EE-A2BF-4DC1-AD4C-4D84B9210B87}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Bleed" ID="{A7D2F95A-9235-4C41-A184-672D2344F767}">
+					<ChildrenList>
+						<Action Name="" ID="{B97ABC2F-C4B0-4B7F-A7DA-D9896FE025DF}" ShortID="712202799">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bleed" ID="{32A4277E-D6AC-46EF-A614-06B85D598EFA}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Weapons" ID="{8E55EE01-15C8-465A-B113-0CFB5C8B6FFA}">
+					<ChildrenList>
+						<Action Name="" ID="{0EBAB62D-451C-41F7-B9D2-9EF8EC1166E6}" ShortID="777947039">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Weapons" ID="{2D14DDBE-B57F-4E31-8EFD-C11436E10191}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

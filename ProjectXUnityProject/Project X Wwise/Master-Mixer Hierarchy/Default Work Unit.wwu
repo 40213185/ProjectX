@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}" SchemaVersion="103">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{DC81CB44-CB36-4E8F-A70B-E965024A8782}" WorkUnitID="{3793426A-B094-4369-B885-1520AE571EDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Music" ID="{36A4F321-4AB7-4EAD-97D4-E196B924A526}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="UI" ID="{C19A0D9C-A625-454A-B21F-FA0BAACC368A}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Ambience" ID="{BB5774F6-D78D-4C23-935C-2F471C824799}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Weapons" ID="{B2C8DFE3-77B8-4D3F-9547-068FCF659E2B}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Character" ID="{EC08603C-33B2-4AC6-8B2F-F1975417621F}">
+							<ObjectLists/>
+						</Bus>
+					</ChildrenList>
+					<ObjectLists/>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

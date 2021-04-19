@@ -1,0 +1,28 @@
+Event	ID	Name			Wwise Object Path	Notes
+	913961828	Play_In_Game_Music			\Music\Play_In_Game_Music	
+	2829915331	Stop_Main_Menu_Music			\Music\Stop_Main_Menu_Music	
+	2895168921	Play_Main_Menu_Music			\Music\Play_Main_Menu_Music	
+	3963843894	Stop_In_Game_Music			\Music\Stop_In_Game_Music	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1208172739	States			\Default Work Unit\States	
+
+State	ID	Name	State Group			Notes
+	748895195	None	States			
+	2116791127	In_Combat	States			
+	2390470926	Speed_Up	States			
+	3133095762	Out_Combat	States			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	3672849	In_Combat	States	\Interactive Music Hierarchy\Default Work Unit\In_Game\Piano Harmonies Loop		
+	598622752	Out_Combat	States	\Interactive Music Hierarchy\Default Work Unit\In_Game\Piano Harmonies Loop		
+	985199448	Out_Combat	States	\Interactive Music Hierarchy\Default Work Unit\In_Game\Piano Chords Loop		
+	1006416438	In_Combat	States	\Interactive Music Hierarchy\Default Work Unit\In_Game\Piano Chords Loop		
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	238385434	Piano Menu Loop	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Piano Menu Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Main Menu\Piano Menu Loop\Piano Menu Loop		5679852
+	314038336	Piano Chords Loop	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Piano Chords Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\In_Game\Piano Chords Loop\Piano Chords Loop		3504876
+	352981321	Piano Harmonies Loop	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Piano Harmonies Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\In_Game\Piano Harmonies Loop\Piano Harmonies Loop		3495320
+	620007431	Chords Loop	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Chords Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\In_Game\Chords Loop\Chords Loop		3495320
+	1052246929	Drone Loop	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Drone Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\In_Game\Drone Loop\Drone Loop		3495320
+

@@ -302,12 +302,29 @@ public class PlayerControllerCombat : MonoBehaviour
 
                                         //take ap
                                         stats.ModifyActionPointsBy(-weaponSelected.getCost());
+                                        //sound for skill
+                                        SoundbankHandler.WeaponSelector(gameObject, InventorySystem.equipmentHeld.GetEquipmentType());
+                                        if (InventorySystem.equipmentHeld.GetEquipmentType() != Weapon.EquipmentType.SpellBook)
+                                            SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Ability_Attack);
+                                        else
+                                        {
+                                            if (InventorySystem.equipmentHeld.skill.skillType == Skills.SkillList.FireBall)
+                                                SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Spellbook_Fire);
+                                            else if (InventorySystem.equipmentHeld.skill.skillType == Skills.SkillList.IceBall)
+                                                SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Spellbook_Ice);
+                                        }
                                     }
-                                    else 
+                                    else
                                     {
                                         //take ap
                                         stats.ModifyActionPointsBy(-1);
+                                        //sound for basic attack
+                                        SoundbankHandler.WeaponSelector(gameObject, InventorySystem.equipmentHeld.GetEquipmentType());
+                                        if (InventorySystem.equipmentHeld.GetEquipmentType() != Weapon.EquipmentType.SpellBook)
+                                            SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Basic_Attack);
+                                        else SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Spellbook_Basic);
                                     }
+                                    SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Weapons, gameObject);
                                 }
                             }
                             actionComplete = true;

@@ -205,6 +205,14 @@ public class MapGenerator : MonoBehaviour
         Instantiate(camera);
     }
 
+    private void StartMusic()
+    {
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Stop_Main_Menu_Music, gameObject);
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_In_Game_Music, gameObject);
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Ambience_Dungeon, gameObject);
+        //SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Candles, gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -222,6 +230,7 @@ public class MapGenerator : MonoBehaviour
         PlaceCamera();
         PositionUI();
         GlobalGameState.SetCombatState(false);
+        StartMusic();
     }
 
     // Update is called once per frame
