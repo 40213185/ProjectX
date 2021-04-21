@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3415531506408025441}
   - component: {fileID: 1944912088257122652}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: King
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cca86f7ec3d6424198691de13ce1d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllerCamera: {fileID: 0}
   actionState: 0
   enemyType: 4
   movementSpeed: 0.8
@@ -67,7 +66,7 @@ GameObject:
   - component: {fileID: 4086161758834464781}
   - component: {fileID: 6438858139572834727}
   - component: {fileID: 8367389463968772188}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5053037153856104680}
   - component: {fileID: 2642277621221291133}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Area Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
