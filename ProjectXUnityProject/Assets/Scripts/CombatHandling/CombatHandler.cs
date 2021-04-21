@@ -25,8 +25,6 @@ public static class CombatHandler
     public static void StartCombat(GameObject[] combatants)
     {
         if (combatants.Length <= 1) return;
-        //set global state
-        GlobalGameState.SetCombatState(true);
 
         //if its the fist call of combat handling
         ResetCombat(combatants);
@@ -100,6 +98,10 @@ public static class CombatHandler
         //set the first combatant to its turn start
         if (_combatants[0].transform.tag == "Player") _combatants[0].GetComponent<PlayerControllerCombat>().MyTurn();
         else if (_combatants[0].transform.tag == "Enemy") _combatants[0].GetComponent<EnemyController>().MyTurn();
+
+        //set global state
+        GlobalGameState.SetCombatState(true);
+
     }
 
     public static void AddTurnTime()

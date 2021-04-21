@@ -197,6 +197,8 @@ public class PlayerControllerCombat : MonoBehaviour
                                     //if the tile is at click pos
                                     if (selectionTiles[i] == clickpos)
                                     {
+                                        if (MapHandler.isSightBlocked(transform.position,
+                                            new Vector3(clickpos.x, 0, clickpos.y))) break;
                                         outsideRange = false;
                                         //clear highlights
                                         highlight.ClearHighlights();
@@ -284,13 +286,6 @@ public class PlayerControllerCombat : MonoBehaviour
                                             critMod = combatantsInfluenceByAction[i].GetComponent<StatusEffect>().effectPotency / 100;
                                     //damage
                                     int roll = weaponSelected.RollForDamage(critMod);
-                                    combatantsInfluenceByAction[i].GetComponent<EnemyController>().ModifyHealthBy(-roll);
-                                    //log
-                                    GlobalGameState.UpdateLog(string.Format("<color=purple>{0}</color> attacked and dealt <color=red>{1}</color> damage.",
-                                        "You", roll));
-                                    if(combatantsInfluenceByAction[i].GetComponent<EnemyController>().stats.GetCurrentHealth()/
-                                        combatantsInfluenceByAction[i].GetComponent<EnemyController>().stats.GetMaxHealth()<0.15f)
-                                        GlobalGameState.UpdateLog(string.Format("{0} is starting to fall apart.", combatantsInfluenceByAction[i].name));
                                     //use skill
                                     if (useWeaponSkill)
                                     {
@@ -303,8 +298,17 @@ public class PlayerControllerCombat : MonoBehaviour
                                         //take ap
                                         stats.ModifyActionPointsBy(-weaponSelected.getCost());
                                     }
-                                    else 
+                                    else
                                     {
+                                        combatantsInfluenceByAction[i].GetComponent<EnemyController>().ModifyHealthBy(-roll);
+                                        //log
+                                        GlobalGameState.UpdateLog(string.Format("<color=purple>{0}</color> attacked and dealt <color=red>{1}</color> damage.",
+                                            "You", roll));
+                                        if ((float)combatantsInfluenceByAction[i].GetComponent<EnemyController>().stats.GetCurrentHealth() /
+                                            (float)combatantsInfluenceByAction[i].GetComponent<EnemyController>().stats.GetMaxHealth() < 0.2f&&
+                                            (float)combatantsInfluenceByAction[i].GetComponent<EnemyController>().stats.GetCurrentHealth() /
+                                            (float)combatantsInfluenceByAction[i].GetComponent<EnemyController>().stats.GetMaxHealth()>0)
+                                            GlobalGameState.UpdateLog(string.Format("{0} is starting to fall apart.", combatantsInfluenceByAction[i].name));
                                         //take ap
                                         stats.ModifyActionPointsBy(-1);
                                     }
@@ -451,6 +455,8 @@ public class PlayerControllerCombat : MonoBehaviour
 
     public void MyTurn()
     {
+        highlight = HighlightCells.instance;
+        highlight.ClearHighlights();
         GlobalGameState.UpdateLog(string.Format("Your turn."));
         //check if stats is initialized
         if (stats==null)

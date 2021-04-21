@@ -52,6 +52,15 @@ public class Stats
     {
         return currentHealth;
     }
+    public int RefillHealth()
+    {
+        int amount = currentHealth;
+        currentHealth = maxHealth;
+        amount = currentHealth - amount;
+        //ui
+        GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
+        return amount;
+    }
     public int ModifyHealthBy(int amount) 
     {
         //store current health

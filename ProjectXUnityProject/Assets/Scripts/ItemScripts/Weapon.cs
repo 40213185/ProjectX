@@ -237,7 +237,8 @@ public class Weapon : Item
         else if (Random.Range(0.0f, 1.0f) < critChance + critIncrment)
         {
             damage = Mathf.CeilToInt(damage * critModifier);
-            GlobalGameState.UpdateLog("<color=red>Critical</color> hit.");
+            if(damage>0)
+                GlobalGameState.UpdateLog("<color=red>Critical</color> hit.");
         }
 
         return damage;

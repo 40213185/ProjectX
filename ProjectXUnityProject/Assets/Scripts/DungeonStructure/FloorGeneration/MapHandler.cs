@@ -315,10 +315,10 @@ public static class MapHandler
         }
         return mapMatrix;
     }
-    public static Vector3 GetTilePosition(Vector3 position)
+    public static Vector2Int GetTilePosition(Vector3 position)
     {
         //convert position to int
-        Vector3Int tilepos = new Vector3Int(Mathf.FloorToInt(position.x), 0, Mathf.FloorToInt(position.z));
+        Vector2Int tilepos = new Vector2Int(Mathf.FloorToInt(position.x), Mathf.FloorToInt(position.z));
 
         return tilepos;
     }
@@ -335,7 +335,7 @@ public static class MapHandler
                 default: return TileType.None;
             }
         }
-        catch 
+        catch
         {
             return TileType.Obstacle;
         }
@@ -348,7 +348,7 @@ public static class MapHandler
 
     public static void ConvertTileToType(Vector2Int matrixPos, TileType ttype)
     {
-        switch(ttype){
+        switch (ttype) {
             case TileType.Empty:
                 {
                     mapMatrix[matrixPos.x, matrixPos.y] = 0;
@@ -369,7 +369,7 @@ public static class MapHandler
                     mapMatrix[matrixPos.x, matrixPos.y] = -1;
                     break;
                 }
-            }
+        }
     }
 
     public static Vector2Int[] GetMoveToPoints(Vector2Int initialPosition, Vector2Int finalPosition, int range)
@@ -401,14 +401,14 @@ public static class MapHandler
 
             //current node
             Node currentNode = Node.GetLowestFCostNode(openList);
-           
+
             //remove from open
             openList.Remove(currentNode);
             //add to closed
             closedList.Add(currentNode);
 
             //go through neighbours
-            foreach (Node n in Node.GetNeighbours(currentNode,initialPosition,finalPosition))
+            foreach (Node n in Node.GetNeighbours(currentNode, initialPosition, finalPosition))
             {
                 //if above range ignore (added padding)
                 if (n.gcost > range * 1.5f) continue;
@@ -423,15 +423,15 @@ public static class MapHandler
                 //check if its already in closed list
                 for (int i = 0; i < closedList.Count; i++)
                 {
-                    if (closedList[i].getPosition()==n.getPosition()) continue;
+                    if (closedList[i].getPosition() == n.getPosition()) continue;
                 }
 
                 //check cost of lowest cost neighbor plus cost to move (1 tile)
-                float tentativeGcost = currentNode.gcost+Node.CalculateDistance(n.getPosition(),currentNode.getPosition());
+                float tentativeGcost = currentNode.gcost + Node.CalculateDistance(n.getPosition(), currentNode.getPosition());
                 float tentativeHCost = Node.CalculateDistance(currentNode.getPosition(), finalPosition);
                 //float tentativeFCost = currentNode.fcost + Node.CalculateDistance(currentNode.getPosition(), n.getPosition());
                 //if cost is lower or the same
-                if (tentativeGcost<=n.gcost||tentativeHCost>=n.hcost)
+                if (tentativeGcost <= n.gcost || tentativeHCost >= n.hcost)
                 {
                     //check if not in open list
                     bool found = false;
@@ -482,7 +482,7 @@ public static class MapHandler
         return null;
     }
 
-    private static bool isValidMovementPosition(Node currentNode) 
+    private static bool isValidMovementPosition(Node currentNode)
     {
         bool valid = true;
         if (GetTileTypeFromMatrix(currentNode.getPosition()) != TileType.Walkable) valid = false;
@@ -490,17 +490,17 @@ public static class MapHandler
         if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat)
         {
             foreach (GameObject obj in CombatHandler._combatants)
-                if(obj!=null)
-                if (obj.transform.position.x == currentNode.getPosition().x &&
-                    obj.transform.position.z == currentNode.getPosition().y) valid = false;
+                if (obj != null)
+                    if (obj.transform.position.x == currentNode.getPosition().x &&
+                        obj.transform.position.z == currentNode.getPosition().y) valid = false;
         }
         return valid;
     }
 
-    private static Vector2Int[] CalculatedPath(List<Node> nodeOpenList,Vector2Int initialPos)
+    private static Vector2Int[] CalculatedPath(List<Node> nodeOpenList, Vector2Int initialPos)
     {
         List<Node> path = new List<Node>();
-        path.Add(nodeOpenList[nodeOpenList.Count-1]);
+        path.Add(nodeOpenList[nodeOpenList.Count - 1]);
         Node current = path[0];
         while (current.parentNode != null)
         {
@@ -567,6 +567,33 @@ public static class MapHandler
         */
 
         return points.ToArray();
+    }
+
+    public static bool isSightBlocked(Vector3 position, Vector3 targetPosition)
+    {
+        bool sightBlocked = false;
+
+        //create line of sight tiles
+        List<Vector2Int> lineOfSight = new List<Vector2Int>();
+        lineOfSight.Add(MapHandler.GetTilePosition(position));
+        Vector3 directionVector3 = targetPosition-position;
+        directionVector3.y = 0;
+        directionVector3=directionVector3.normalized/2;
+        Vector3 lineOfSightVec3 = new Vector3(lineOfSight[0].x, 0, lineOfSight[0].y) + new Vector3(0.5f, 0, 0.5f);
+        for (int dir = 1; dir < 20; dir++)
+        {
+            lineOfSightVec3 +=directionVector3;
+            lineOfSight.Add(MapHandler.GetTilePosition(lineOfSightVec3));
+
+            if (MapHandler.GetTilePosition(targetPosition) ==
+                lineOfSight[dir]) break;
+            if (MapHandler.GetTileTypeFromMatrix(lineOfSight[dir]) != MapHandler.TileType.Walkable)
+            {
+                sightBlocked = true;
+                break;
+            }
+        }
+        return sightBlocked;
     }
 }
 

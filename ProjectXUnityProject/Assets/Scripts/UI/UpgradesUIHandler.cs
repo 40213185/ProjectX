@@ -37,9 +37,9 @@ public class UpgradesUIHandler : MonoBehaviour
 
         if (GameData.currency < hpCost) upgradeHp.enabled = false;
         else upgradeHp.enabled = true;
-        if (GameData.currency < apCost || GameData.stats.GetCurrentActionPoints() >= GameData.stats.GetMaxActionPoints()) upgradeAp.enabled = false;
+        if (GameData.currency < apCost || GameData.stats.GetCurrentActionPoints() >= GameData.stats.MaximumActionPointsAllowed()) upgradeAp.enabled = false;
         else upgradeAp.enabled = true;
-        if (GameData.currency < mpCost || GameData.stats.GetCurrentMovementPoints() >= GameData.stats.GetMaxMovementPoints()) upgradeMp.enabled = false;
+        if (GameData.currency < mpCost || GameData.stats.GetCurrentMovementPoints() >= GameData.stats.MaximumMovementPointsAllowed()) upgradeMp.enabled = false;
         else upgradeMp.enabled = true;
     }
 

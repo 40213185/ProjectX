@@ -120,14 +120,26 @@ public class EnemyController : MonoBehaviour
                             //check if within weapon range + aoe
                             foreach (Vector2Int v in weapons[i].GetRangeTiles(GetMatrixPos()))
                             {
-                                foreach (Vector2Int t in weapons[i].GetAoeTiles(v, GetMatrixPos()))
-                                    if (playerPos == t) { 
-                                        inrange = true;
-                                        usingAoe = true;
-                                        aoePoint = v;
-                                        break; 
+                                if (!MapHandler.isSightBlocked(
+                                    transform.position, player.transform.position))
+                                {
+                                    //check area of effect
+                                    foreach (Vector2Int t in weapons[i].GetAoeTiles(v, GetMatrixPos()))
+                                    {
+                                        if (playerPos == t)
+                                        {
+                                            inrange = true;
+                                            usingAoe = true;
+                                            aoePoint = v;
+                                            break;
+                                        }
                                     }
-                                if (playerPos == v) { inrange = true; break; }
+                                    if (playerPos == v)
+                                    {
+                                        inrange = true;
+                                        break;
+                                    }
+                                }
                             }
                             if (inrange)
                             {
@@ -167,6 +179,7 @@ public class EnemyController : MonoBehaviour
                         {
                             //movement decision
                             movePoints = EnemyLibrary.GetPossibleMovementPoints(enemyType, GetMatrixPos());
+                            
                             //if there are valid movement points
                             if (movePoints.Length > 0)
                             {
@@ -180,11 +193,11 @@ public class EnemyController : MonoBehaviour
                                     //add all weapons to weapon choice list
                                     for (int x = 0; x < weapons.Length; x++) weaponChoice.Add(x);
                                 }
-
-                                //pick movement point
+                                
+                                //go through movement points
                                 for (int i = 0; i < movePoints.Length; i++)
                                 {
-                                    //go though weapon choices
+                                    //go through weapon choices
                                     for (int w = 0; w < weaponChoice.Count; w++)
                                     {
                                         //check if within weapon range + aoe
@@ -207,7 +220,7 @@ public class EnemyController : MonoBehaviour
                                         }
                                     }
                                 }
-
+                                
                                 //points with weapons
                                 if (possiblePointsWithWeapon.Count > 0)
                                 {
@@ -262,8 +275,8 @@ public class EnemyController : MonoBehaviour
                                     //if no point was picked
                                     else
                                     {
-                                        //pick random
-                                        pointPick = Random.Range(0, movePoints.Length);
+                                        //end turn
+                                        actionState = State.TurnEnd;
                                     }
                                 }
 

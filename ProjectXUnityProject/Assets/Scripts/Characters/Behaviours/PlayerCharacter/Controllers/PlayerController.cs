@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         stats = GameData.stats;                 //initial player stats
+        stats.RefillHealth();
         combatController = GetComponent<PlayerControllerCombat>();
         combatController.enabled = false;
 
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour
             //disable any kind of interaction until conditions are met
             case ControllerState.Freeze:
                 {
+                    move = false;
                     if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)
                         controllerState = ControllerState.FreeMovement;
                     break;

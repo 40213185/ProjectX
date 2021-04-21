@@ -29,6 +29,15 @@ public class Skills
         {
             case SkillList.AttackOfOpportunity:
                 {
+                    //initial damage
+                    if (applyEnemy)
+                        enemycontroller.stats.ModifyHealthBy(-damageroll);
+                    if (applyPlayer)
+                        playercontroller.stats.ModifyHealthBy(-damageroll);
+
+                    //log
+                    GlobalGameState.UpdateLog(string.Format("<color=red>{0}</color> damage dealt.", damageroll));
+
                     //roll between 1 and 10
                     int rnd = Random.Range(1, 11);
                     //if any of the first five numbers
@@ -61,6 +70,7 @@ public class Skills
                         //apply to enemy
                         if (applyEnemy)
                             enemycontroller.stats.ModifyHealthBy(-roll);
+                        //apply to player
                         if (applyPlayer)
                             playercontroller.stats.ModifyHealthBy(-roll);
 
@@ -75,13 +85,18 @@ public class Skills
             case SkillList.Execute:
                 {
                     //get enemies health in percentage
-                    float hpPercentage = enemycontroller.stats.GetCurrentHealth() / enemycontroller.stats.GetMaxHealth();
+                    float hpPercentage = (float)enemycontroller.stats.GetCurrentHealth() / (float)enemycontroller.stats.GetMaxHealth();
                     //check and kill
                     if (hpPercentage <= 0.2f)
                     {
                         enemycontroller.Die();
                         //log
                         GlobalGameState.UpdateLog(string.Format("<color=red>{0}</color> succeeded.", "Execute"));
+                    }
+                    else
+                    {
+                        //log
+                        GlobalGameState.UpdateLog(string.Format("<color=red>{0}</color> failed.", "Execute"));
                     }
                     break;
                 }

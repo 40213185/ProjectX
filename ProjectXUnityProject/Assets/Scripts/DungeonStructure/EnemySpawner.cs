@@ -43,7 +43,8 @@ public class EnemySpawner : MonoBehaviour
             {
                 //get random index
                 int index = Random.Range(0, possibleSpawningPoints.Count);
-
+                if (MapHandler.GetTilePosition(GameObject.FindGameObjectWithTag("Player").transform.position) ==
+                    possibleSpawningPoints[index]) continue;
                 //choose spawn point with index
                 Vector2 spawnPoint = possibleSpawningPoints[index];
                 //choose enemy
