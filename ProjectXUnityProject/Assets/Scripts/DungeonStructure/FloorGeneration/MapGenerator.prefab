@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5228069063699565711}
   - component: {fileID: 505412095456775140}
+  - component: {fileID: 4038277333027683435}
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: MapGenerator
@@ -88,3 +89,16 @@ MonoBehaviour:
   player: {fileID: 6315204001475452088, guid: 15785bf9296c07b47b5b056c637004fc, type: 3}
   camera: {fileID: 4215082132668820899, guid: a85d9577aaf967b47b47f08901b98aee, type: 3}
   UI: {fileID: 1253594410327910640, guid: ed780079e28d96e4f92eb3b40d3160f6, type: 3}
+--- !u!114 &4038277333027683435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232205056197129996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5bf955f8ed24c49974e15d35ad313b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropObject: {fileID: 0}

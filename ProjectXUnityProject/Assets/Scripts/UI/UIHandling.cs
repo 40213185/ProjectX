@@ -25,6 +25,13 @@ public class UIHandling : MonoBehaviour
     public GameObject[] combatObjectCollection;
     public GameObject[] usablesButtons;
 
+    //ItemTooltips
+    public GameObject itemToolTip;
+    public Image itemToolTipImage;
+    public Text itemToolTipText;
+    public Sprite[] weaponIcons;
+    private bool showingTooltip = false;
+
     //combat controller
     private PlayerControllerCombat playerCombatController;
 
@@ -152,6 +159,45 @@ public class UIHandling : MonoBehaviour
                 e.SetActive(true);
             }
         }
+    }
+
+    public void ShowToolTipWeapon(Weapon.EquipmentType type, string name, int rarity, Vector2Int potency, string description)
+    {
+        string rarityText = null;
+        switch (rarity)
+        {
+            case 1:
+                rarityText = "Common";
+                break;
+            case 2:
+                rarityText = "Uncommon";
+                break;
+            case 3:
+                rarityText = "Rare";
+                break;
+            case 4:
+                rarityText = "Unique";
+                break;
+        }
+        itemToolTip.SetActive(true);
+        showingTooltip = true;
+        itemToolTipText.text = name + "\n\n" + rarityText + "\n\nDamage: " + potency + "\n\n" + description;
+        itemToolTip.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
+
+    }
+
+    public void ShowToolTipUsable(Usable.UsableType type, string name, Vector2Int potency, string description)
+    {
+        itemToolTip.SetActive(true);
+        showingTooltip = true;
+        itemToolTipText.text = name + "\n\nPotency: " + potency + "\n\n" + description;
+        itemToolTip.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
+    }
+
+    public void HideToolTip()
+    {
+        itemToolTip.SetActive(false);
+        showingTooltip = false;
     }
 
     public void BasicAttackPressed() 
