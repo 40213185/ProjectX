@@ -12,21 +12,20 @@ public static class GameData
 
     private static void Init()
     {
-        dataContainer = new DataContainer();
-        currency = 0;
-        stats = new Stats();
+        if (dataContainer == null) dataContainer = new DataContainer();
+        if (stats == null) stats = new Stats();
     }
 
     public static void Save()
     {
-        if (dataContainer == null) Init();
+        Init();
         dataContainer.SetData();
         dataContainer.SaveData();
     }
 
     public static bool Load() 
     {
-        if (dataContainer == null) Init();
+        Init();
         if (dataContainer.LoadData())
         {
             //set the data container data back to game data

@@ -8,16 +8,20 @@ public class HideIfPlayerNotPresent : MonoBehaviour
 {
     public GameObject hideThis;
     private List<GameObject> hideChildren;
+    private bool triggered;
+    private bool finished;
 
     // Start is called before the first frame update
     void Start()
     {
         hideThis.SetActive(false);
         GetComponent<BoxCollider>().isTrigger = true;
+        triggered = false;
+        finished = false;
     }
     private void FixedUpdate()
     {
-        if (hideThis.activeSelf)
+        if (finished)
         {
             GetComponent<BoxCollider>().enabled = false;
             enabled = false;
@@ -33,6 +37,14 @@ public class HideIfPlayerNotPresent : MonoBehaviour
         //OnTriggeredByPlayer(other);
     }
 
+    private IEnumerator DelayForCombatStart() 
+    {
+        triggered = true;
+        yield return new WaitForSecondsRealtime(2f);
+
+        if (GetComponent<EnemySpawner>()) GetComponent<EnemySpawner>().CheckAndPlaceEnemies();
+        finished = true;
+    }
     private void OnTriggeredByPlayer(Collider other) 
     {
         if (other.gameObject.transform.tag == "Player")
@@ -40,7 +52,7 @@ public class HideIfPlayerNotPresent : MonoBehaviour
             //spawn portals
             gameObject.GetComponent<PortalContainer>().ActivatePortalPipeline();
             //spawn if there is an enemy spawner
-            if (GetComponent<EnemySpawner>()) GetComponent<EnemySpawner>().CheckAndPlaceEnemies();
+            if(!triggered) StartCoroutine("DelayForCombatStart");
 
             foreach (GameObject obj in hideChildren) obj.SetActive(true);
             hideThis.SetActive(true);

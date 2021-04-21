@@ -47,7 +47,7 @@ public class HighlightCells : MonoBehaviour
 
     public void ClearHighlights()
     {
-        if (highlights.Count > 0)
+        if (highlights!=null&&highlights.Count > 0)
         {
             foreach (GameObject go in highlights) Destroy(go.gameObject);
             highlights.Clear();

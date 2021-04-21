@@ -84,41 +84,43 @@ public class UIHandling : MonoBehaviour
 
     public void UpdateUI() 
     {
-        if (hpSlider.value != playerStats.GetCurrentHealth())
+        if (playerStats != null)
         {
-            //update slider
-            hpSlider.value = playerStats.GetCurrentHealth();
-            //update text
-            hpText.text = string.Format("{0}/{1}", playerStats.GetCurrentHealth(), playerStats.GetMaxHealth());
-        }
-        
-        //ap handling
-        if( ap!= playerStats.GetCurrentActionPoints()) 
-        {
-            ap = playerStats.GetCurrentActionPoints();
-            foreach (GameObject e in apCollection) 
+            if (hpSlider.value != playerStats.GetCurrentHealth())
             {
-                e.SetActive(false);
+                //update slider
+                hpSlider.value = playerStats.GetCurrentHealth();
+                //update text
+                hpText.text = string.Format("{0}/{1}", playerStats.GetCurrentHealth(), playerStats.GetMaxHealth());
             }
-            for(int i = 0; i < playerStats.GetCurrentActionPoints(); i++) 
-            {
-                apCollection[i].SetActive(true);
-            }
-        }
-        //mp handling
-        if ( mp!= playerStats.GetCurrentMovementPoints())
-        {
-            mp = playerStats.GetCurrentMovementPoints();
-            foreach (GameObject e in mpCollection)
-            {
-                e.SetActive(false);
-            }
-            for (int i = 0; i < playerStats.GetCurrentMovementPoints(); i++)
-            {
-                mpCollection[i].SetActive(true);
-            }
-        }
 
+            //ap handling
+            if (ap != playerStats.GetCurrentActionPoints())
+            {
+                ap = playerStats.GetCurrentActionPoints();
+                foreach (GameObject e in apCollection)
+                {
+                    e.SetActive(false);
+                }
+                for (int i = 0; i < playerStats.GetCurrentActionPoints(); i++)
+                {
+                    apCollection[i].SetActive(true);
+                }
+            }
+            //mp handling
+            if (mp != playerStats.GetCurrentMovementPoints())
+            {
+                mp = playerStats.GetCurrentMovementPoints();
+                foreach (GameObject e in mpCollection)
+                {
+                    e.SetActive(false);
+                }
+                for (int i = 0; i < playerStats.GetCurrentMovementPoints(); i++)
+                {
+                    mpCollection[i].SetActive(true);
+                }
+            }
+        }
     }
 
     public void UpdateLog(string message)
@@ -130,7 +132,7 @@ public class UIHandling : MonoBehaviour
 
     private IEnumerator ChatScrollQuickFix() 
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSecondsRealtime(0.1f);
         logScrollBar.GetComponent<Scrollbar>().value = 0;
     }
 

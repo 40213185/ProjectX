@@ -120,15 +120,8 @@ public class EnemyController : MonoBehaviour
                             //check if within weapon range + aoe
                             foreach (Vector2Int v in weapons[i].GetRangeTiles(GetMatrixPos()))
                             {
-                                Debug.DrawRay(transform.position + new Vector3(0, 0.2f, 0),
-                                    (player.transform.position - transform.position), Color.red,
-                                     10.0f);
-                                //check line of sight
-                                RaycastHit ray;
-                                Physics.Raycast(transform.position + new Vector3(0, 0.2f, 0),
-                                     (player.transform.position - transform.position),
-                                     out ray, 1000.0f, LayerMask.GetMask("Default"));
-                                if (ray.collider.gameObject.tag == "Player")
+                                if (!MapHandler.isSightBlocked(
+                                    transform.position, player.transform.position))
                                 {
                                     //check area of effect
                                     foreach (Vector2Int t in weapons[i].GetAoeTiles(v, GetMatrixPos()))
@@ -146,7 +139,6 @@ public class EnemyController : MonoBehaviour
                                         inrange = true;
                                         break;
                                     }
-
                                 }
                             }
                             if (inrange)
