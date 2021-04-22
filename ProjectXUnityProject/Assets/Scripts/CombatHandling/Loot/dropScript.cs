@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,21 +23,28 @@ public class dropScript : MonoBehaviour
 
     public void getWeapon(Weapon item) 
     {
-        droppedWep = item;
-        int index = 0;
-        for(int i = 0; i <  wepModels.Length; i ++) 
+        try
         {
-            if (droppedWep.GetEquipmentType() == weaponTypes[i])
+            droppedWep = item;
+            int index = 0;
+            for (int i = 0; i < wepModels.Length; i++)
             {
-                index = i;
-                break;
+                if (droppedWep.GetEquipmentType() == weaponTypes[i])
+                {
+                    index = i;
+                    break;
+                }
             }
-        }
 
-        body.GetComponent<MeshFilter>().mesh = wepModels[index];
-        rarity = droppedWep.getRarity();
-        setRarityColour();
-        isWep = true;
+            body.GetComponent<MeshFilter>().mesh = wepModels[index];
+            rarity = droppedWep.getRarity();
+            setRarityColour();
+            isWep = true;
+        }catch(Exception e) 
+        {
+            Debug.LogError(e);
+            GameObject.Destroy(this.gameObject);
+        }
     }
 
     public void OnMouseEnter()
@@ -130,6 +138,7 @@ public class dropScript : MonoBehaviour
         body.GetComponent<MeshFilter>().mesh = usableModels[index];
         body.GetComponent<ParticleSystem>().startColor = Color.cyan;
         isWep = false;
+        if (droppedUsable == null) GameObject.Destroy(this.gameObject);
     }
 
     public void setRarityColour()

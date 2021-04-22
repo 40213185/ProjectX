@@ -6,6 +6,6 @@ public class toolTipFollow : MonoBehaviour
 { 
     void Update()
     {
-        
+            gameObject.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
     }
 }

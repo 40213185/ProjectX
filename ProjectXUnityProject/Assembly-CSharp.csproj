@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\DungeonStructure\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\StatusEffects\Stats\Stats.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Controllers\PlayerAnimationController.cs" />
+    <Compile Include="Assets\Scripts\UI\toolTipFollow.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\Portal\PortalBehavior.cs" />
     <Compile Include="Assets\Scripts\CombatHandling\CombatHandler.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Controllers\PlayerController.cs" />
@@ -91,7 +92,6 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\HideIfPlayerNotPresent.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyController.cs" />
-    <Compile Include="Assets\toolTipFollow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

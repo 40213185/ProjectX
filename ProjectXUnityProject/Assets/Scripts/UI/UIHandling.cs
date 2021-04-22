@@ -27,6 +27,7 @@ public class UIHandling : MonoBehaviour
 
     //ItemTooltips
     public GameObject itemToolTip;
+    public GameObject toolTipBackground;
     public Image itemToolTipImage;
     public Text itemToolTipText;
     public Sprite[] weaponIcons;
@@ -164,6 +165,8 @@ public class UIHandling : MonoBehaviour
     public void ShowToolTipWeapon(Weapon.EquipmentType type, string name, int rarity, Vector2Int potency, string description)
     {
         string rarityText = null;
+        
+
         switch (rarity)
         {
             case 1:
@@ -179,18 +182,51 @@ public class UIHandling : MonoBehaviour
                 rarityText = "Unique";
                 break;
         }
+
+
         itemToolTip.SetActive(true);
         showingTooltip = true;
+
+
         itemToolTipText.text = name + "\n\n" + rarityText + "\n\nDamage: " + potency + "\n\n" + description;
+
+        //Resize tooltip according to the size of the text
+        Vector2 backgroundSize = new Vector2(0, 0);
+        if (itemToolTipText.preferredHeight > 150) backgroundSize = new Vector2(itemToolTipText.preferredWidth + 4f * 4f, 70 + 4f);
+        else backgroundSize = new Vector2(itemToolTipText.preferredWidth + 4f * 4f, itemToolTipText.preferredHeight + 4f);
+
+        toolTipBackground.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+        itemToolTipText.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+
         itemToolTip.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
 
+
+
+    }
+
+    public float getTooltipSize() 
+    {
+        return itemToolTipText.preferredHeight + 4;
     }
 
     public void ShowToolTipUsable(Usable.UsableType type, string name, Vector2Int potency, string description)
     {
+        
+       
         itemToolTip.SetActive(true);
+
         showingTooltip = true;
         itemToolTipText.text = name + "\n\nPotency: " + potency + "\n\n" + description;
+
+
+        //Resize tooltip according to the size of the text
+        Vector2 backgroundSize = new Vector2 (0, 0);
+        if (itemToolTipText.preferredHeight > 150) backgroundSize = new Vector2(itemToolTipText.preferredWidth + 4f * 4f, 70 + 4f);
+        else backgroundSize = new Vector2(itemToolTipText.preferredWidth + 4f * 4f, itemToolTipText.preferredHeight + 4f);
+
+        toolTipBackground.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+        itemToolTipText.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+
         itemToolTip.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
     }
 
@@ -293,6 +329,16 @@ public class UIHandling : MonoBehaviour
         usablesButtons[index].SetActive(false);
         Debug.Log("USABLE " + index + " PRESSED");
         InventorySystem.usablesHeld[index] = null;
+    }
+
+    public void bagToolTip(int index) 
+    {
+        Usable.UsableType type = InventorySystem.usablesHeld[index].GetUsableType();
+        string name = InventorySystem.usablesHeld[index].GetName();
+        Vector2Int potency = InventorySystem.usablesHeld[index].GetPotency();
+        string description = InventorySystem.usablesHeld[index].GetDescription();
+
+        ShowToolTipUsable(type, name, potency, description);
     }
 
     public void FollowPlayer()

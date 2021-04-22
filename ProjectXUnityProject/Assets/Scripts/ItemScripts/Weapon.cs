@@ -52,7 +52,7 @@ public class Weapon : Item
                 weaponRoll.type = EquipmentType.ArmingSword;
                 weaponRoll.skill.SetSkill(Skills.SkillList.AttackOfOpportunity);
                 weaponRoll.effect = StatusEffect.EffectType.None;
-                weaponRoll.SetNameAndDesc("Dagger", "A Small bladed dagger, used for stabbing things, Good at making holes that bleed");
+                weaponRoll.SetNameAndDesc("Arming Sword", "A long bladed weapon, Makes a nice whoosh sound when used in a slashing motion");
                 weaponRoll.SetPotency(1, 3, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 3;
@@ -62,7 +62,7 @@ public class Weapon : Item
                 weaponRoll.type = EquipmentType.Halberd;
                 weaponRoll.skill.SetSkill(Skills.SkillList.Execute);
                 weaponRoll.effect = StatusEffect.EffectType.None;
-                weaponRoll.SetNameAndDesc("Sword", "A long bladed weapon, Makes a nice whoosh sound when used in a slashing motion");
+                weaponRoll.SetNameAndDesc("Halberd", "Its like an axe and a spear had a child, Good for poking but also chopping heads");
                 weaponRoll.SetPotency(2, 5, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 4;
@@ -72,7 +72,7 @@ public class Weapon : Item
                 weaponRoll.type = EquipmentType.Greatsword;
                 weaponRoll.skill.SetSkill(Skills.SkillList.KnockBack);
                 weaponRoll.effect = StatusEffect.EffectType.None;
-                weaponRoll.SetNameAndDesc("TwoHandedSword", "A Massive sword, Surprised you can even hold it up, Good at cracking eggs");
+                weaponRoll.SetNameAndDesc("Greatsword", "A Massive sword, Surprised you can even hold it up, Good at cracking eggs");
                 weaponRoll.SetPotency(4, 8, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 5;
@@ -92,7 +92,8 @@ public class Weapon : Item
                 weaponRoll.type = EquipmentType.Flintlock;
                 weaponRoll.skill.SetSkill(Skills.SkillList.EagleEye);
                 weaponRoll.effect = StatusEffect.EffectType.None;
-                weaponRoll.SetNameAndDesc("Icespike", "Summon a giant ice spike that can be launched like a rocket, remember to wear gloves when using this, can get chilly");
+                //weaponRoll.SetNameAndDesc("Icespike", "Summon a giant ice spike that can be launched like a rocket, remember to wear gloves when using this, can get chilly");
+                weaponRoll.SetNameAndDesc("Flintlock", "A handheld musket?!? Now you can take on your enemies from afar with little effort");
                 weaponRoll.SetPotency(3, 6, modifier2, modifier1);
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 3;

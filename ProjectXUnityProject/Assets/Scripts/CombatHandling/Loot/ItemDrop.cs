@@ -53,7 +53,7 @@ public class ItemDrop : MonoBehaviour
     {
         Random.seed = System.DateTime.Now.Millisecond;
         int chance = Random.Range(0, 100);
-        if(chance > 50) 
+        if(chance > 0) 
         {
             GenerateLoot();
             GameObject droppedObject = Instantiate(dropObject, pos, dropObject.transform.rotation);
