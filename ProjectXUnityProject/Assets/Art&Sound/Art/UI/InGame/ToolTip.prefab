@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8696847948805282474}
+  - component: {fileID: 7071964817593606954}
   m_Layer: 5
   m_Name: ToolTip
   m_TagString: Untagged
@@ -36,6 +37,18 @@ RectTransform:
   m_AnchoredPosition: {x: 910, y: 490}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &7071964817593606954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908748637131219151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97a3e68f6d964c4b9421fbe8f4ed679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4733792487222029524
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class ItemDrop : MonoBehaviour
         isWep = false;
         int randomNum = Random.Range(0,100);
         Debug.Log("RandomNum = "+randomNum);
-        if(randomNum > 70) 
+        if(randomNum > 0) 
         {
             Random.seed = System.DateTime.Now.Millisecond;
             randomNum = Random.Range(0, 100);

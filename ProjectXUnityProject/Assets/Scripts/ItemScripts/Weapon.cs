@@ -54,6 +54,7 @@ public class Weapon : Item
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Arming Sword", "A long bladed weapon, Makes a nice whoosh sound when used in a slashing motion");
                 weaponRoll.SetPotency(1, 3, modifier2, modifier1);
+                weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 3;
                 break;
@@ -64,6 +65,7 @@ public class Weapon : Item
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Halberd", "Its like an axe and a spear had a child, Good for poking but also chopping heads");
                 weaponRoll.SetPotency(2, 5, modifier2, modifier1);
+                weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 4;
                 break;
@@ -74,6 +76,7 @@ public class Weapon : Item
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Greatsword", "A Massive sword, Surprised you can even hold it up, Good at cracking eggs");
                 weaponRoll.SetPotency(4, 8, modifier2, modifier1);
+                weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 5;
                 break;
@@ -84,6 +87,7 @@ public class Weapon : Item
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Fireball", "Summon a fireball from god knows where and use it for things such as cooking or other activities");
                 weaponRoll.SetPotency(3, 6, modifier2, modifier1);
+                weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 4;
                 break;
@@ -95,6 +99,7 @@ public class Weapon : Item
                 //weaponRoll.SetNameAndDesc("Icespike", "Summon a giant ice spike that can be launched like a rocket, remember to wear gloves when using this, can get chilly");
                 weaponRoll.SetNameAndDesc("Flintlock", "A handheld musket?!? Now you can take on your enemies from afar with little effort");
                 weaponRoll.SetPotency(3, 6, modifier2, modifier1);
+                weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 3;
                 weaponRoll.ModifyCritChanceBy(0.1f);
@@ -106,6 +111,7 @@ public class Weapon : Item
                 weaponRoll.effect = StatusEffect.EffectType.Bleed;
                 weaponRoll.SetNameAndDesc("Dagger", "A Small bladed dagger, used for stabbing things, Good at making holes that bleed");
                 weaponRoll.SetPotency(3, 6, modifier2, modifier1);
+                weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 2;
                 weaponRoll.ModifyCritChanceBy(0.4f);

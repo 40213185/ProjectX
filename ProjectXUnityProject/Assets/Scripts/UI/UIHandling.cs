@@ -186,22 +186,18 @@ public class UIHandling : MonoBehaviour
 
         itemToolTip.SetActive(true);
         showingTooltip = true;
-
+        itemToolTipImage.enabled = true;
 
         itemToolTipText.text = name + "\n\n" + rarityText + "\n\nDamage: " + potency + "\n\n" + description;
 
+        Debug.Log(name + rarityText + "Damage: " + potency + description);
+
         //Resize tooltip according to the size of the text
         Vector2 backgroundSize = new Vector2(0, 0);
-        if (itemToolTipText.preferredHeight > 150) backgroundSize = new Vector2(itemToolTipText.preferredWidth + 4f * 4f, 70 + 4f);
-        else backgroundSize = new Vector2(itemToolTipText.preferredWidth + 4f * 4f, itemToolTipText.preferredHeight + 4f);
+        sizeTooltip();
 
-        toolTipBackground.GetComponent<RectTransform>().sizeDelta = backgroundSize;
-        itemToolTipText.GetComponent<RectTransform>().sizeDelta = backgroundSize;
 
         itemToolTip.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
-
-
-
     }
 
     public float getTooltipSize() 
@@ -214,20 +210,47 @@ public class UIHandling : MonoBehaviour
         
        
         itemToolTip.SetActive(true);
-
+        itemToolTipImage.enabled = true;
         showingTooltip = true;
         itemToolTipText.text = name + "\n\nPotency: " + potency + "\n\n" + description;
 
 
         //Resize tooltip according to the size of the text
-        Vector2 backgroundSize = new Vector2 (0, 0);
-        if (itemToolTipText.preferredHeight > 150) backgroundSize = new Vector2(itemToolTipText.preferredWidth + 4f * 4f, 70 + 4f);
-        else backgroundSize = new Vector2(itemToolTipText.preferredWidth + 4f * 4f, itemToolTipText.preferredHeight + 4f);
-
-        toolTipBackground.GetComponent<RectTransform>().sizeDelta = backgroundSize;
-        itemToolTipText.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+        sizeTooltip();
 
         itemToolTip.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
+    }
+
+    public void toolTipMessage(string message)
+    {
+        itemToolTip.SetActive(true);
+        itemToolTipImage.enabled = false;
+        showingTooltip = true;
+
+        itemToolTipText.text = message;
+
+        sizeTooltip();
+
+        itemToolTip.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
+    }
+
+    private void sizeTooltip() 
+    {
+        Vector2 backgroundSize = new Vector2(0, 0);
+        if (itemToolTipText.preferredHeight > 150)
+        {
+            //Have to do this as first value for some reason is always in the thousands, works after that point, temp fix but mainly for presentation so it doesnt look like shit
+            backgroundSize = new Vector2(itemToolTipText.preferredWidth, 150 + 4f * 4f);
+            toolTipBackground.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+            itemToolTipText.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+            Debug.Log(itemToolTipText.preferredHeight);
+        }
+        else
+        {
+            backgroundSize = new Vector2(itemToolTipText.preferredWidth, itemToolTipText.preferredHeight + 4f * 4f);
+            toolTipBackground.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+            itemToolTipText.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+        }
     }
 
     public void HideToolTip()
@@ -340,6 +363,18 @@ public class UIHandling : MonoBehaviour
 
         ShowToolTipUsable(type, name, potency, description);
     }
+
+    public void currentWepTooltip() 
+    {
+        Weapon.EquipmentType type = InventorySystem.equipmentHeld.GetEquipmentType();
+        string name = InventorySystem.equipmentHeld.GetName();
+        int rarity = InventorySystem.equipmentHeld.getRarity();
+        Vector2Int potency = InventorySystem.equipmentHeld.GetPotency();
+        string description = InventorySystem.equipmentHeld.GetDescription();
+
+        ShowToolTipWeapon(type, name, rarity, potency, description);
+    }
+
 
     public void FollowPlayer()
     {
