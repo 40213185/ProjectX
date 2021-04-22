@@ -464,7 +464,7 @@ public class EnemyController : MonoBehaviour
 
                 //Drop Object
                 
-                GameObject.FindGameObjectWithTag("MapGenerator").GetComponent<ItemDrop>().chanceToDrop();
+                GameObject.FindGameObjectWithTag("MapGenerator").GetComponent<ItemDrop>().chanceToDrop(transform.position);
             }
         }
     }
