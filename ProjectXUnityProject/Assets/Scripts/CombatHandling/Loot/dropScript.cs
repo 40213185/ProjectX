@@ -114,7 +114,7 @@ public class dropScript : MonoBehaviour
                 }
                 else 
                 {
-                    Debug.Log("Inventory Full");
+                    GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().toolTipMessage("Inventory Full");
                 }
 
             }

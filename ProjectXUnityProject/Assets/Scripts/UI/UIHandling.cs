@@ -165,7 +165,8 @@ public class UIHandling : MonoBehaviour
     public void ShowToolTipWeapon(Weapon.EquipmentType type, string name, int rarity, Vector2Int potency, string description)
     {
         string rarityText = null;
-        
+
+        Cursor.visible = false;
 
         switch (rarity)
         {
@@ -255,6 +256,7 @@ public class UIHandling : MonoBehaviour
 
     public void HideToolTip()
     {
+        Cursor.visible = true;
         itemToolTip.SetActive(false);
         showingTooltip = false;
     }
