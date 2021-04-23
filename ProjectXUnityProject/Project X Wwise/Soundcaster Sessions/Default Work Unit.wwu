@@ -1,6 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B0EFF389-E5CB-42B7-96C8-2673BE09AE3A}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{B0EFF389-E5CB-42B7-96C8-2673BE09AE3A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B0EFF389-E5CB-42B7-96C8-2673BE09AE3A}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Project X Soundcaster" ID="{9181CAF0-A01D-4F24-8E0D-1362F8B94919}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Ambience_dungeon" ID="{77076115-91A3-4795-972B-ADC5C6D22BEA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Movement_NPC" ID="{DD5EDE01-24FD-4031-B2FA-1E56917F766F}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Coins" ID="{7DF4766A-19FA-4A8E-87B1-AB4D19B1EAA2}" WorkUnitID="{D1D6D2F1-9C59-4D94-AEB6-93314E3455CC}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bleed" ID="{32A4277E-D6AC-46EF-A614-06B85D598EFA}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Basic_Attack" ID="{A9B0BE27-5EAF-4F1A-82E0-05D582EEABE4}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Basic_Attack" ID="{7899CFF4-1D83-49AC-8B03-2EC39429AAE2}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Spell_Fire_1" ID="{1C5DC066-30A8-44F9-9C29-7627F8D7B0D4}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="0" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Candles" ID="{4C4D6717-293C-4E57-B02D-0BEC2CE940DA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Movement_PC" ID="{5DEE3263-AB12-4FB3-B8AA-FCADF6C7DBEF}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Main_Menu" ID="{ED34C9B2-3D2A-4B9D-A835-758A1EE005BB}" WorkUnitID="{D1D6D2F1-9C59-4D94-AEB6-93314E3455CC}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="In_Game" ID="{24A99C76-2D68-414F-AB66-39904B14BA33}" WorkUnitID="{123EDAF1-0255-479C-9292-3849639C15C7}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ability_Dagger" ID="{038957B0-2928-47D6-9EC5-942DE10D5D45}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ability_GS_Whoosh" ID="{B9E04337-0695-40BC-8E28-7502024D4A66}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Spell_Ice_1" ID="{B320C8D0-394F-4663-A72F-C801CE905B2D}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="1" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Portal_1" ID="{06177163-DF9C-4456-BEC9-1165226BB8DA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Death" ID="{D03D8DD8-9AED-4816-980D-CB6C3A289AEF}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_Hover" ID="{B6E2A63D-A4CF-4560-A3D7-87EA3B66FC5C}" WorkUnitID="{D1D6D2F1-9C59-4D94-AEB6-93314E3455CC}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Main Menu" ID="{7ED9C4DB-130E-4902-BC5F-8FF310D8CF56}" WorkUnitID="{123EDAF1-0255-479C-9292-3849639C15C7}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Weapon_Spellbook_Final" ID="{B218EBBE-B0C2-4ED7-95F4-7681C3B9AA82}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="2" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Potion_Hth_1" ID="{16EE0651-D287-430D-9951-23C06E996758}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Damage" ID="{79F9A9C5-E0DE-491F-AFEA-F8B52C2CB567}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_Menu_1" ID="{2F81F47C-BF60-40A2-905F-E08793020E39}" WorkUnitID="{D1D6D2F1-9C59-4D94-AEB6-93314E3455CC}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Basic_Attack" ID="{B9D4D2F9-99C4-4E32-A95B-38D0906114CC}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Basic_Attack" ID="{521D44CB-79F6-4B07-A602-599E40C736DC}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="3" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Potion_Str_1" ID="{B58960D0-FFF6-4344-86CF-5F49F7D0E1BE}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ability_FL" ID="{6BA1E38E-C492-4502-B269-E4BA9BFB85FE}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ability_Halberd" ID="{AA9F3125-A410-4254-9F84-9B17141BFF95}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="4" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Basic_Attack" ID="{D7326632-B09E-4200-8530-996D58224E52}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+							<Position X="4" Y="6"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Ability_Attack" ID="{AA34DA08-2798-4B0C-8636-1C50C719618A}"/>
+						<CurrentSwitchRef Name="ArmingSword" ID="{FDB22852-DE01-49D1-87EF-C620F7E7C87B}"/>
+						<CurrentSwitchRef Name="Potion_Health" ID="{B06E03AE-3945-4EAA-BB57-9B8D16530B94}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

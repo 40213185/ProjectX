@@ -43,5 +43,6 @@ public static class GlobalGameState
         Time.timeScale = 1.0f;
         //restart
         SceneManager.LoadScene(0);
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Main_Menu_Blend, GameObject.FindGameObjectWithTag("Player"));
     }
 }

@@ -7,7 +7,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-13</Value>
+								<Value>-2</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -37,7 +37,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-2</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -65,7 +65,17 @@
 				</Sound>
 				<RandomSequenceContainer Name="Coins" ID="{7DF4766A-19FA-4A8E-87B1-AB4D19B1EAA2}" ShortID="295959315">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>61</Value>
+							</ValueList>
+						</Property>
 						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -87,6 +97,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Coins_1" ID="{AD764B06-4ECF-49C8-B289-83C353A247C2}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0840404040404041"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.03649831649832"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Coins_1.wav</AudioFile>
 									<MediaIDList>
@@ -129,7 +144,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-11</Value>
+								<Value>-3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -446,7 +461,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="Weight" Type="Real64">
 											<ValueList>
-												<Value>95</Value>
+												<Value>85</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

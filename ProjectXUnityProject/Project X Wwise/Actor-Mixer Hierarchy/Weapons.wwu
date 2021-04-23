@@ -201,6 +201,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Ability_Halberd" ID="{AA9F3125-A410-4254-9F84-9B17141BFF95}" ShortID="1049790761">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
@@ -226,6 +233,11 @@
 								<RandomSequenceContainer Name="Basic_Attack" ID="{521D44CB-79F6-4B07-A602-599E40C736DC}" ShortID="317577749">
 									<PropertyList>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -887,15 +899,258 @@
 									</ChildrenList>
 									<ObjectLists/>
 								</RandomSequenceContainer>
+								<BlendContainer Name="Ability_AS" ID="{D00E5D0A-DC2F-47E6-8AF9-88B8608BDB57}" ShortID="861080026">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Basic_Attack_Ability" ID="{948540E9-3A03-4B48-91DD-1B52D855592B}" ShortID="428970299">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.35</Value>
+													</ValueList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Weapons" ID="{B2C8DFE3-77B8-4D3F-9547-068FCF659E2B}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Weapon_AS_1" ID="{FBE54A04-CCBC-424D-9A91-78D5D9C56544}" ShortID="105529585">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Weapon_AS_1" ID="{7B0D8D00-FE30-4710-B7CC-A5D57CD95374}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon_AS_1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="258710519"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Weapon_AS_1" ID="{7B0D8D00-FE30-4710-B7CC-A5D57CD95374}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Weapon_AS_2" ID="{5B66D375-B54B-40C6-97E9-CAD8ED177678}" ShortID="425971610">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Weapon_AS_2" ID="{52E264B5-FA47-4D2B-AAA0-6A765008746B}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon_AS_2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="312726206"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Weapon_AS_2" ID="{52E264B5-FA47-4D2B-AAA0-6A765008746B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Weapon_AS_3" ID="{7C0EAE05-0023-4405-8831-CD00ACF1EC6E}" ShortID="384178684">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Weapon_AS_3" ID="{43CC16BE-8B02-44CA-B4E5-7903CB740BA2}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon_AS_3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="29866118"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Weapon_AS_3" ID="{43CC16BE-8B02-44CA-B4E5-7903CB740BA2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Weapon_AS_4" ID="{45BEC446-3FDD-4604-9749-7E00C1ED15F4}" ShortID="514546894">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Weapon_AS_4" ID="{9F8605DE-9829-4C5E-8D11-313446CBFDF9}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon_AS_4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="776760629"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Weapon_AS_4" ID="{9F8605DE-9829-4C5E-8D11-313446CBFDF9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Basic_Attack" ID="{EE0225B8-1AE3-4E21-9A74-6097B5B407C8}" ShortID="308766511">
+											<PropertyList>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Weapons" ID="{B2C8DFE3-77B8-4D3F-9547-068FCF659E2B}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Weapon_AS_1" ID="{C3152BB8-76E1-4976-801B-E58951A2E143}" ShortID="515417721">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Weapon_AS_1" ID="{CF2A9893-9DC4-4308-A7BC-A2BE908D93A1}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon_AS_1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="258710519"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Weapon_AS_1" ID="{CF2A9893-9DC4-4308-A7BC-A2BE908D93A1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Weapon_AS_2" ID="{D0BAF197-D4A6-4A8E-A2D5-E9595948E80C}" ShortID="962572699">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Weapon_AS_2" ID="{58EDDAFD-EA12-42A2-9925-4005B86458F8}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon_AS_2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="312726206"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Weapon_AS_2" ID="{58EDDAFD-EA12-42A2-9925-4005B86458F8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Weapon_AS_3" ID="{14C03E02-A12A-4EC2-8805-8A98B467E1E8}" ShortID="53691029">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Weapon_AS_3" ID="{226C701A-F27F-4B78-B4B7-B2422CA1E966}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon_AS_3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="29866118"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Weapon_AS_3" ID="{226C701A-F27F-4B78-B4B7-B2422CA1E966}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Weapon_AS_4" ID="{D49E7C2D-C96B-4073-B54F-BAB848EFD53F}" ShortID="71778941">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Weapon_AS_4" ID="{4540C071-9536-4B7A-9906-9650002C118E}">
+															<Language>SFX</Language>
+															<AudioFile>Weapon_AS_4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="776760629"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Weapon_AS_4" ID="{4540C071-9536-4B7A-9906-9650002C118E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<ObjectLists/>
+								</BlendContainer>
 							</ChildrenList>
 							<ObjectLists/>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
+										<ItemRef Name="Ability_AS" ID="{D00E5D0A-DC2F-47E6-8AF9-88B8608BDB57}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
 										<ItemRef Name="Basic_Attack" ID="{D7326632-B09E-4200-8530-996D58224E52}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Ability_Attack" ID="{AA34DA08-2798-4B0C-8636-1C50C719618A}"/>
+										<ItemList>
+											<ItemRef Name="Ability_AS" ID="{D00E5D0A-DC2F-47E6-8AF9-88B8608BDB57}"/>
+										</ItemList>
+									</Grouping>
 									<Grouping>
 										<SwitchRef Name="Basic_Attack" ID="{7F294143-5B77-4D6D-A977-3E9ABB7852B8}"/>
 										<ItemList>
@@ -973,6 +1228,11 @@
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">

@@ -11,18 +11,113 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Music" ID="{36A4F321-4AB7-4EAD-97D4-E196B924A526}">
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="States" ID="{5333563A-9AFF-473B-8A5E-58D331D38879}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+										<CustomState Name="" ID="{F1DAB4AA-A1F7-4BE9-BB4D-B95377F56E89}" ShortID="340204736"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Speed_Norm" ID="{C147163B-6BF0-4F9E-9890-FFC3B4E4C0D8}"/>
+										<CustomState Name="" ID="{113BEA57-1B90-497F-91F2-D763282EA351}" ShortID="995530972"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="UI" ID="{C19A0D9C-A625-454A-B21F-FA0BAACC368A}">
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="States" ID="{5333563A-9AFF-473B-8A5E-58D331D38879}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+										<CustomState Name="" ID="{957C2053-6107-439D-A6DA-8C78A94F423C}" ShortID="154102142">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-108"/>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Speed_Norm" ID="{C147163B-6BF0-4F9E-9890-FFC3B4E4C0D8}"/>
+										<CustomState Name="" ID="{41C08FB0-600A-4267-8FCD-FEA64A34F0B9}" ShortID="690423030"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="Ambience" ID="{BB5774F6-D78D-4C23-935C-2F471C824799}">
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="States" ID="{5333563A-9AFF-473B-8A5E-58D331D38879}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+										<CustomState Name="" ID="{0AA6DE47-EA5C-4F88-88C0-BCACE8FC8632}" ShortID="389732532">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-108"/>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Speed_Norm" ID="{C147163B-6BF0-4F9E-9890-FFC3B4E4C0D8}"/>
+										<CustomState Name="" ID="{3A6BC5E6-CC98-44ED-B292-9F8704E276EE}" ShortID="14974449"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="Weapons" ID="{B2C8DFE3-77B8-4D3F-9547-068FCF659E2B}">
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="States" ID="{5333563A-9AFF-473B-8A5E-58D331D38879}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+										<CustomState Name="" ID="{40E4FCA5-8ABE-46F2-B9BC-263FBCF8BAE2}" ShortID="190188932"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Speed_Norm" ID="{C147163B-6BF0-4F9E-9890-FFC3B4E4C0D8}"/>
+										<CustomState Name="" ID="{E13EE2F0-277B-44D9-B732-6502583E053E}" ShortID="254494035"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="Character" ID="{EC08603C-33B2-4AC6-8B2F-F1975417621F}">
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="States" ID="{5333563A-9AFF-473B-8A5E-58D331D38879}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+										<CustomState Name="" ID="{3E22E7FD-1011-4276-8850-7BB865A0933A}" ShortID="811126306"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Speed_Norm" ID="{C147163B-6BF0-4F9E-9890-FFC3B4E4C0D8}"/>
+										<CustomState Name="" ID="{48A0FBF1-F40A-4D2F-9580-29570D94F0CD}" ShortID="561517221"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists/>
 						</Bus>
 					</ChildrenList>

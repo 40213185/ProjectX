@@ -20,6 +20,10 @@ public class Usable : Item
     {
         return type;
     }
+    public StatusEffect.EffectType GetEffectType()
+    {
+        return effectType;
+    }
 
     //used for adding the effect components or
     //dealing dmg/healing

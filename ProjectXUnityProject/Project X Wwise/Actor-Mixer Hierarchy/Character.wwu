@@ -109,12 +109,37 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{7C49986F-1365-4F41-8B11-8B12509537DA}"/>
+					</PositioningInfo>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="States" ID="{5333563A-9AFF-473B-8A5E-58D331D38879}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+								<CustomState Name="" ID="{F93B6651-B51E-47D2-A588-444750D3ED24}" ShortID="415629354">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Speed_Norm" ID="{C147163B-6BF0-4F9E-9890-FFC3B4E4C0D8}"/>
+								<CustomState Name="" ID="{B3A62D0A-AB41-4EFC-A5F1-EEB102B51195}" ShortID="510077586"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Movement_NPC" ID="{DD5EDE01-24FD-4031-B2FA-1E56917F766F}" ShortID="444795503">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -250,6 +275,30 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{D3CB15A1-F497-4416-BCD8-69A401C61B88}"/>
+					</PositioningInfo>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="States" ID="{5333563A-9AFF-473B-8A5E-58D331D38879}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+								<CustomState Name="" ID="{9072D73D-2968-410F-98FF-A3CC2C48498E}" ShortID="847068322">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Speed_Norm" ID="{C147163B-6BF0-4F9E-9890-FFC3B4E4C0D8}"/>
+								<CustomState Name="" ID="{7291E7D7-9575-4174-A05F-8A3B936F1B0C}" ShortID="753504459"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="NPC_Damage" ID="{79F9A9C5-E0DE-491F-AFEA-F8B52C2CB567}" ShortID="587233961">
@@ -491,6 +540,11 @@
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -766,7 +820,14 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
-				<SwitchContainer Name="Consumables" ID="{90BD3F35-B08F-4DDA-A20F-07B1FA0584AD}" ShortID="886240492">
+				<Sound Name="Potion_Hth_1" ID="{16EE0651-D287-430D-9951-23C06E996758}" ShortID="15420690">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
@@ -774,84 +835,51 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Character" ID="{EC08603C-33B2-4AC6-8B2F-F1975417621F}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
 						</Reference>
-						<Reference Name="SwitchGroupOrStateGroup">
-							<ObjectRef Name="Consumables" ID="{AD6399EB-43A6-4AE1-BEDE-5E6319ED7866}" WorkUnitID="{FDB72978-B7B1-47CF-8BB5-C8BD5CA6B96E}"/>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Potion_Hth_1" ID="{E710F7DD-862D-4950-AA56-39090960DDEB}">
+							<Language>SFX</Language>
+							<AudioFile>Potion_Hth_1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="417912712"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Potion_Hth_1" ID="{E710F7DD-862D-4950-AA56-39090960DDEB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Potion_Str_1" ID="{B58960D0-FFF6-4344-86CF-5F49F7D0E1BE}" ShortID="450463697">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Character" ID="{EC08603C-33B2-4AC6-8B2F-F1975417621F}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Potion_Hth_1" ID="{16EE0651-D287-430D-9951-23C06E996758}" ShortID="15420690">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Potion_Hth_1" ID="{E710F7DD-862D-4950-AA56-39090960DDEB}">
-									<Language>SFX</Language>
-									<AudioFile>Potion_Hth_1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="417912712"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Potion_Hth_1" ID="{E710F7DD-862D-4950-AA56-39090960DDEB}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Potion_Str_1" ID="{B58960D0-FFF6-4344-86CF-5F49F7D0E1BE}" ShortID="450463697">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Potion_Str_1" ID="{E7A6DE7A-F11B-4208-832C-CA172CC7E175}">
-									<Language>SFX</Language>
-									<AudioFile>Potion_Str_1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="817217900"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Potion_Str_1" ID="{E7A6DE7A-F11B-4208-832C-CA172CC7E175}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						<AudioFileSource Name="Potion_Str_1" ID="{E7A6DE7A-F11B-4208-832C-CA172CC7E175}">
+							<Language>SFX</Language>
+							<AudioFile>Potion_Str_1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="817217900"/>
+							</MediaIDList>
+						</AudioFileSource>
 					</ChildrenList>
 					<ObjectLists/>
-					<GroupingInfo>
-						<GroupingBehaviorList>
-							<GroupingBehavior>
-								<ItemRef Name="Potion_Hth_1" ID="{16EE0651-D287-430D-9951-23C06E996758}"/>
-							</GroupingBehavior>
-							<GroupingBehavior>
-								<ItemRef Name="Potion_Str_1" ID="{B58960D0-FFF6-4344-86CF-5F49F7D0E1BE}"/>
-							</GroupingBehavior>
-						</GroupingBehaviorList>
-						<GroupingList>
-							<Grouping>
-								<SwitchRef Name="Potion_Health" ID="{B06E03AE-3945-4EAA-BB57-9B8D16530B94}"/>
-								<ItemList>
-									<ItemRef Name="Potion_Hth_1" ID="{16EE0651-D287-430D-9951-23C06E996758}"/>
-								</ItemList>
-							</Grouping>
-							<Grouping>
-								<SwitchRef Name="Potion_Strength" ID="{CD7EFFB2-377A-462F-A2D5-3C59F7A13A90}"/>
-								<ItemList>
-									<ItemRef Name="Potion_Str_1" ID="{B58960D0-FFF6-4344-86CF-5F49F7D0E1BE}"/>
-								</ItemList>
-							</Grouping>
-						</GroupingList>
-					</GroupingInfo>
-				</SwitchContainer>
+					<ActiveSourceList>
+						<ActiveSource Name="Potion_Str_1" ID="{E7A6DE7A-F11B-4208-832C-CA172CC7E175}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

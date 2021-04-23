@@ -4,6 +4,13 @@
 		<WorkUnit Name="Ambience" ID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}" PersistMode="Standalone">
 			<ChildrenList>
 				<BlendContainer Name="Ambience_dungeon" ID="{77076115-91A3-4795-972B-ADC5C6D22BEA}" ShortID="2502511">
+					<PropertyList>
+						<Property Name="InitialDelay" Type="Real64">
+							<ValueList>
+								<Value>0.51</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{61519050-C1E9-42C9-93B4-8C50E27E605D}"/>

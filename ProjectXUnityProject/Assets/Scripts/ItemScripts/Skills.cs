@@ -45,6 +45,9 @@ public class Skills
                         //apply to enemy
                         if (applyEnemy)
                         {
+                            SoundbankHandler.WeaponAttackType(enemycontroller.gameObject, SoundbankHandler.AttackType.Ability_Attack);
+                            SoundbankHandler.WeaponSelector(enemycontroller.gameObject, Weapon.EquipmentType.ArmingSword);
+                            SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Weapons, enemycontroller.gameObject);
                             if (enemycontroller.GetComponent<StatusEffect>())
                                 if (enemycontroller.GetComponent<StatusEffect>().GetEffectType() == StatusEffect.EffectType.ExposedToCrit)
                                     critMod = enemycontroller.GetComponent<StatusEffect>().effectPotency / 100;
@@ -52,6 +55,9 @@ public class Skills
                         //apply to player
                         if (applyPlayer)
                         {
+                            SoundbankHandler.WeaponAttackType(playercontroller.gameObject, SoundbankHandler.AttackType.Ability_Attack);
+                            SoundbankHandler.WeaponSelector(playercontroller.gameObject, Weapon.EquipmentType.ArmingSword);
+                            SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Weapons, playercontroller.gameObject);
                             if (playercontroller.GetComponent<StatusEffect>())
                                 if (playercontroller.GetComponent<StatusEffect>().GetEffectType() == StatusEffect.EffectType.ExposedToCrit)
                                     critMod = playercontroller.GetComponent<StatusEffect>().effectPotency / 100;
@@ -69,8 +75,23 @@ public class Skills
                         GlobalGameState.UpdateLog(string.Format("<color=red>{0}</color> Attack of Opportunity damage dealt.", roll));
                     }
                     else
+                    {
                         //log
                         GlobalGameState.UpdateLog(string.Format("Attack of Opportunity attempt unsuccessful."));
+                        if (applyEnemy)
+                        {
+                            SoundbankHandler.WeaponAttackType(enemycontroller.gameObject, SoundbankHandler.AttackType.Basic_Attack);
+                            SoundbankHandler.WeaponSelector(enemycontroller.gameObject, Weapon.EquipmentType.ArmingSword);
+                            SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Weapons, enemycontroller.gameObject);
+                        }
+                        //apply to player
+                        if (applyPlayer)
+                        {
+                            SoundbankHandler.WeaponAttackType(playercontroller.gameObject, SoundbankHandler.AttackType.Basic_Attack);
+                            SoundbankHandler.WeaponSelector(playercontroller.gameObject, Weapon.EquipmentType.ArmingSword);
+                            SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Weapons, playercontroller.gameObject);
+                        }
+                    }
                     break;
                 }
             case SkillList.Execute:

@@ -17,21 +17,24 @@ namespace AK
         static const AkUniqueID PLAY_BLEED = 2720341754U;
         static const AkUniqueID PLAY_CANDLES = 1806167784U;
         static const AkUniqueID PLAY_COINS = 3115138860U;
-        static const AkUniqueID PLAY_CONSUMABLES = 2704168646U;
         static const AkUniqueID PLAY_IN_GAME_MUSIC = 913961828U;
-        static const AkUniqueID PLAY_MAIN_MENU = 3306210749U;
+        static const AkUniqueID PLAY_MAIN_MENU_BLEND = 945407265U;
         static const AkUniqueID PLAY_MAIN_MENU_MUSIC = 2895168921U;
         static const AkUniqueID PLAY_MOVEMENT_NPC = 1646373573U;
         static const AkUniqueID PLAY_MOVEMENT_PC = 3370026795U;
         static const AkUniqueID PLAY_NPC_DAMAGE = 3651581149U;
         static const AkUniqueID PLAY_NPC_DEATH = 3888855080U;
         static const AkUniqueID PLAY_PORTAL_1 = 1673435120U;
+        static const AkUniqueID PLAY_POTION_HTH = 4038368374U;
+        static const AkUniqueID PLAY_POTION_STR = 3804614471U;
         static const AkUniqueID PLAY_UI_HOVER = 1339559671U;
         static const AkUniqueID PLAY_UI_MENU_1 = 2314505318U;
         static const AkUniqueID PLAY_WEAPONS = 155002645U;
+        static const AkUniqueID STOP_AFTER_DEATH = 446363481U;
+        static const AkUniqueID STOP_ALL = 452547817U;
         static const AkUniqueID STOP_AMBIENCE_DUNGEON = 3796838367U;
         static const AkUniqueID STOP_IN_GAME_MUSIC = 3963843894U;
-        static const AkUniqueID STOP_MAIN_MENU = 774860123U;
+        static const AkUniqueID STOP_MAIN_MENU_BLEND = 1344209019U;
         static const AkUniqueID STOP_MAIN_MENU_MUSIC = 2829915331U;
     } // namespace EVENTS
 
@@ -43,9 +46,8 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID IN_COMBAT = 2116791127U;
                 static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID OUT_COMBAT = 3133095762U;
+                static const AkUniqueID SPEED_NORM = 1000450095U;
                 static const AkUniqueID SPEED_UP = 2390470926U;
             } // namespace STATE
         } // namespace STATES
@@ -64,15 +66,6 @@ namespace AK
                 static const AkUniqueID POTION_STRENGTH = 3920335616U;
             } // namespace SWITCH
         } // namespace CONSUMABLES
-
-        namespace MUSIC
-        {
-            static const AkUniqueID GROUP = 3991942870U;
-
-            namespace SWITCH
-            {
-            } // namespace SWITCH
-        } // namespace MUSIC
 
         namespace WEAPON_ATTACK_SELECTOR
         {
@@ -109,6 +102,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID DEFAULT = 782826392U;
         static const AkUniqueID MENU = 2607556080U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID NPC = 662417162U;

@@ -66,7 +66,7 @@ public class UpgradesUIHandler : MonoBehaviour
                     break;
                 }
         }
-
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Coins, gameObject);
         GameData.Save();
         UpdateUI();
     }

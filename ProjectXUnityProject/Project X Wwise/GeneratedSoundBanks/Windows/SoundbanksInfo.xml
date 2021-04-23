@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="1625629654">
+		<SoundBank Id="85412153" Language="SFX" Hash="3581511215">
 			<ObjectPath>\SoundBanks\Ambience\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
@@ -147,7 +147,7 @@
 				<Event Id="3796838367" Name="Stop_Ambience_dungeon" ObjectPath="\Events\Ambience\Stop_Ambience_dungeon" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="662417162" Language="SFX" Hash="3135326425">
+		<SoundBank Id="662417162" Language="SFX" Hash="3691688120">
 			<ObjectPath>\SoundBanks\Character\NPC</ObjectPath>
 			<ShortName>NPC</ShortName>
 			<Path>NPC.bnk</Path>
@@ -242,12 +242,30 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1368792909">
+		<SoundBank Id="782826392" Language="SFX" Hash="625234203">
+			<ObjectPath>\SoundBanks\Default Work Unit\Default</ObjectPath>
+			<ShortName>Default</ShortName>
+			<Path>Default.bnk</Path>
+			<IncludedEvents>
+				<Event Id="446363481" Name="Stop_After_Death" ObjectPath="\Events\Default Work Unit\Stop_After_Death" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\Default Work Unit\Stop_All" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2236473052">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<StateGroups>
+				<StateGroup Id="1208172739" Name="States" ObjectPath="\States\Default Work Unit\States">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\States\None"/>
+						<State Id="2390470926" Name="Speed_Up" ObjectPath="\States\Default Work Unit\States\Speed_Up"/>
+						<State Id="1000450095" Name="Speed_Norm" ObjectPath="\States\Default Work Unit\States\Speed_Norm"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1467963052" Language="SFX" Hash="3735870598">
+		<SoundBank Id="1467963052" Language="SFX" Hash="1717970239">
 			<ObjectPath>\SoundBanks\Weapons\Weapons</ObjectPath>
 			<ShortName>Weapons</ShortName>
 			<Path>Weapons.bnk</Path>
@@ -471,6 +489,14 @@
 										<File Id="776760629"/>
 									</Media>
 								</SwitchContainer>
+								<SwitchContainer SwitchValue="{AA34DA08-2798-4B0C-8636-1C50C719618A}">
+									<Media>
+										<File Id="29866118"/>
+										<File Id="258710519"/>
+										<File Id="312726206"/>
+										<File Id="776760629"/>
+									</Media>
+								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -498,35 +524,11 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1635194334" Language="SFX" Hash="3863064904">
+		<SoundBank Id="1635194334" Language="SFX" Hash="640457989">
 			<ObjectPath>\SoundBanks\Character\PC</ObjectPath>
 			<ShortName>PC</ShortName>
 			<Path>PC.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2704168646" Name="Play_Consumables" ObjectPath="\Events\Character\Play_Consumables" DurationType="OneShot" DurationMin="3.349333" DurationMax="3.429333">
-					<IncludedMemoryFiles>
-						<File Id="417912712" Language="SFX">
-							<ShortName>Potion_Hth_1.wav</ShortName>
-							<Path>SFX\Potion_Hth_1_10C4C929.wem</Path>
-						</File>
-						<File Id="817217900" Language="SFX">
-							<ShortName>Potion_Str_1.wav</ShortName>
-							<Path>SFX\Potion_Str_1_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<SwitchContainers>
-						<SwitchContainer SwitchValue="{B06E03AE-3945-4EAA-BB57-9B8D16530B94}">
-							<Media>
-								<File Id="417912712"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{CD7EFFB2-377A-462F-A2D5-3C59F7A13A90}">
-							<Media>
-								<File Id="817217900"/>
-							</Media>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
 				<Event Id="3370026795" Name="Play_Movement_PC" ObjectPath="\Events\Character\Play_Movement_PC" DurationType="OneShot" DurationMin="1.002667" DurationMax="1.004000">
 					<IncludedMemoryFiles>
 						<File Id="28931275" Language="SFX">
@@ -547,26 +549,34 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4038368374" Name="Play_Potion_Hth" ObjectPath="\Events\Character\Play_Potion_Hth" DurationType="OneShot" DurationMin="3.429333" DurationMax="3.429333">
+					<IncludedMemoryFiles>
+						<File Id="417912712" Language="SFX">
+							<ShortName>Potion_Hth_1.wav</ShortName>
+							<Path>SFX\Potion_Hth_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3804614471" Name="Play_Potion_Str" ObjectPath="\Events\Character\Play_Potion_Str" DurationType="OneShot" DurationMin="3.349333" DurationMax="3.349333">
+					<IncludedMemoryFiles>
+						<File Id="817217900" Language="SFX">
+							<ShortName>Potion_Str_1.wav</ShortName>
+							<Path>SFX\Potion_Str_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
-			<SwitchGroups>
-				<SwitchGroup Id="3213291899" Name="Consumables" ObjectPath="\Switches\Default Work Unit\Consumables">
-					<Switches>
-						<Switch Id="2940579045" Name="Potion_Health" ObjectPath="\Switches\Default Work Unit\Consumables\Potion_Health"/>
-						<Switch Id="3920335616" Name="Potion_Strength" ObjectPath="\Switches\Default Work Unit\Consumables\Potion_Strength"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2607556080" Language="SFX" Hash="789791758">
+		<SoundBank Id="2607556080" Language="SFX" Hash="13251337">
 			<ObjectPath>\SoundBanks\UI\Menu</ObjectPath>
 			<ShortName>Menu</ShortName>
 			<Path>Menu.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3115138860" Name="Play_Coins" ObjectPath="\Events\UI\Play_Coins" DurationType="OneShot" DurationMin="0.768000" DurationMax="1.493333">
+				<Event Id="3115138860" Name="Play_Coins" ObjectPath="\Events\UI\Play_Coins" DurationType="OneShot" DurationMin="0.768000" DurationMax="1.036498">
 					<IncludedMemoryFiles>
 						<File Id="973997414" Language="SFX">
 							<ShortName>Coins_1.wav</ShortName>
-							<Path>SFX\Coins_1_10C4C929.wem</Path>
+							<Path>SFX\Coins_1_7B78785A.wem</Path>
 						</File>
 						<File Id="1064926841" Language="SFX">
 							<ShortName>Coins_2.wav</ShortName>
@@ -574,7 +584,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3306210749" Name="Play_Main_Menu" ObjectPath="\Events\UI\Play_Main_Menu" DurationType="Infinite">
+				<Event Id="945407265" Name="Play_Main_Menu_Blend" ObjectPath="\Events\UI\Play_Main_Menu_Blend" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="1317681" Language="SFX">
 							<ShortName>Raven_5.wav</ShortName>
@@ -638,10 +648,10 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="774860123" Name="Stop_Main_Menu" ObjectPath="\Events\UI\Stop_Main_Menu" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1344209019" Name="Stop_Main_Menu_Blend" ObjectPath="\Events\UI\Stop_Main_Menu_Blend" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="1059191834">
+		<SoundBank Id="3991942870" Language="SFX" Hash="1992637146">
 			<ObjectPath>\SoundBanks\Music\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

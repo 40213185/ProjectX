@@ -3,6 +3,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	3651581149	Play_NPC_Damage			\Character\Play_NPC_Damage	
 	3888855080	Play_NPC_Death			\Character\Play_NPC_Death	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	1208172739	States			\Default Work Unit\States	
+
+State	ID	Name	State Group			Notes
+	748895195	None	States			
+	1000450095	Speed_Norm	States			
+	2390470926	Speed_Up	States			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	847068322	Speed_Up	States	\Actor-Mixer Hierarchy\Character\Movement_NPC		
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	8078757	NPC_Dmg_4	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dmg_4_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Damage\NPC_Dmg_4		200256
 	67307189	Movement_NPC_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Movement_NPC_1_10C4C929.wem		\Actor-Mixer Hierarchy\Character\Movement_NPC\Movement_NPC_1		96320

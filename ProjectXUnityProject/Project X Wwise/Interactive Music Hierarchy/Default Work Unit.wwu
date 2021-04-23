@@ -64,7 +64,7 @@
 																		<MusicClip Name="Piano Chords Loop" ID="{63FCE925-2689-42EE-A630-E430BCB3CAA3}">
 																			<PropertyList>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="18254.2291666667"/>
-																				<Property Name="FadeInDuration" Type="Real64" Value="67.4832871226126"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="118.095752464572"/>
 																				<Property Name="FadeOutDuration" Type="Real64" Value="118.095752464571"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="Piano Chords Loop" ID="{40D14587-3D83-40E7-88FE-7F883488C496}"/>
@@ -88,26 +88,12 @@
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
-										<StateRef Name="In_Combat" ID="{B3E515AC-25FF-431A-B968-4F2C170CACF3}"/>
-										<CustomState Name="" ID="{39E6A50F-B09D-431E-940C-BEFCB2BC0DDA}" ShortID="1006416438">
-											<PropertyList>
-												<Property Name="MakeUpGain" Type="Real64" Value="-192"/>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="Out_Combat" ID="{1D28BC1F-3AA4-45A5-925D-0531B6F988C0}"/>
-										<CustomState Name="" ID="{83D11EDE-AF8B-4653-8BB8-B31824C98725}" ShortID="985199448">
-											<PropertyList>
-												<Property Name="MakeUpGain" Type="Real64" Value="-192"/>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-									<CustomState>
 										<StateRef Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
 										<CustomState Name="" ID="{B57C9E14-942B-4007-A5E5-32E996D9FD56}" ShortID="279662211"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Speed_Norm" ID="{C147163B-6BF0-4F9E-9890-FFC3B4E4C0D8}"/>
+										<CustomState Name="" ID="{637DF4B2-CDE4-4A5F-B0E2-0B2AA496CE23}" ShortID="667341954"/>
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>
@@ -180,7 +166,7 @@
 																		<MusicClip Name="Chords Loop" ID="{3AE4E502-7EA2-473B-9A7D-4DDC47D4215E}">
 																			<PropertyList>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="18204.4583333333"/>
-																				<Property Name="FadeInDuration" Type="Real64" Value="84.1241142945159"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="134.598582871226"/>
 																				<Property Name="FadeOutDuration" Type="Real64" Value="67.2992914356128"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="Chords Loop" ID="{7C9AF560-3779-491B-9680-DE0FD8E6FAF1}"/>
@@ -265,7 +251,7 @@
 																		<MusicClip Name="Drone Loop" ID="{78BAC281-AFDB-4965-BD43-30F24B265489}">
 																			<PropertyList>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="18204.4583333333"/>
-																				<Property Name="FadeInDuration" Type="Real64" Value="67.2992914356132"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="151.42340573013"/>
 																				<Property Name="FadeOutDuration" Type="Real64" Value="67.2992914356128"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="Drone Loop" ID="{9A1FDDEE-439B-44F3-9640-C458227FE1B8}"/>
@@ -350,7 +336,7 @@
 																		<MusicClip Name="Piano Harmonies Loop" ID="{9940689A-6959-477B-B4F2-5BFA06963858}">
 																			<PropertyList>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="18204.4583333333"/>
-																				<Property Name="FadeInDuration" Type="Real64" Value="100.94893715342"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="151.42340573013"/>
 																				<Property Name="FadeOutDuration" Type="Real64" Value="151.423405730131"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="Piano Harmonies Loop" ID="{FD35D550-846F-4D5C-95BF-81C00220CB6A}"/>
@@ -374,26 +360,12 @@
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
-										<StateRef Name="In_Combat" ID="{B3E515AC-25FF-431A-B968-4F2C170CACF3}"/>
-										<CustomState Name="" ID="{88E7199B-39C1-4EA0-88D3-401BCC1948F1}" ShortID="3672849">
-											<PropertyList>
-												<Property Name="MakeUpGain" Type="Real64" Value="-192"/>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="Out_Combat" ID="{1D28BC1F-3AA4-45A5-925D-0531B6F988C0}"/>
-										<CustomState Name="" ID="{63C82623-9343-4208-82BB-7030A78BC318}" ShortID="598622752">
-											<PropertyList>
-												<Property Name="MakeUpGain" Type="Real64" Value="-192"/>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-									<CustomState>
 										<StateRef Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
 										<CustomState Name="" ID="{A0AF90EE-3F98-4C39-B8EB-DA17F2369ABE}" ShortID="262168226"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Speed_Norm" ID="{C147163B-6BF0-4F9E-9890-FFC3B4E4C0D8}"/>
+										<CustomState Name="" ID="{6F7951DA-D60C-494B-B822-ECEBC4B8F869}" ShortID="121059934"/>
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>
@@ -436,6 +408,8 @@
 						<MusicPlaylistItem Name="" ID="{C28B833E-EF44-41F0-9999-67695FC88B37}" ShortID="939458495">
 							<PropertyList>
 								<Property Name="LoopCount" Type="int16" Value="0"/>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="PlayMode" Type="int16" Value="2"/>
 							</PropertyList>
 							<ChildrenList>
 								<MusicPlaylistItem Name="" ID="{A047C62A-4B5E-41DC-B2B9-9AD8CF13C4CA}" ShortID="532065031">

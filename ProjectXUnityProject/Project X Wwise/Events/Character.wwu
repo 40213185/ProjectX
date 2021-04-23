@@ -14,17 +14,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Consumables" ID="{20371DE5-757D-4597-A4E7-B68CCA0C6946}">
-					<ChildrenList>
-						<Action Name="" ID="{3B1D9CEC-E988-4ADA-BFED-3A5D705B1A90}" ShortID="893438823">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Consumables" ID="{90BD3F35-B08F-4DDA-A20F-07B1FA0584AD}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Movement_PC" ID="{854E363A-FD76-45F1-B217-9ACB0AFD7027}">
 					<ChildrenList>
 						<Action Name="" ID="{0E451033-118C-4541-866C-CA6681D28735}" ShortID="583940233">
@@ -53,6 +42,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="NPC_Damage" ID="{79F9A9C5-E0DE-491F-AFEA-F8B52C2CB567}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Potion_Str" ID="{654F882D-129D-4BA3-BAA7-7D1B9E145D25}">
+					<ChildrenList>
+						<Action Name="" ID="{BEE957B3-3CB4-4772-8EBD-4A0E353EF0F9}" ShortID="681622166">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Potion_Str_1" ID="{B58960D0-FFF6-4344-86CF-5F49F7D0E1BE}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Potion_Hth" ID="{7822B2A1-8C00-48CF-ABC8-3E9AD4BE7A07}">
+					<ChildrenList>
+						<Action Name="" ID="{9428C555-0ABC-44F6-BC62-71F43CC8643F}" ShortID="324068650">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Potion_Hth_1" ID="{16EE0651-D287-430D-9951-23C06E996758}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

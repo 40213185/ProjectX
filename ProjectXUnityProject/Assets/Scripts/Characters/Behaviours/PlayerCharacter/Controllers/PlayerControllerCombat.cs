@@ -48,6 +48,8 @@ public class PlayerControllerCombat : MonoBehaviour
     public GameObject animationObject;
     private PlayerAnimationController animationController;
 
+    private bool StopSoundPosted;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +71,7 @@ public class PlayerControllerCombat : MonoBehaviour
 
         //animation controller
         animationController = animationObject.GetComponent<PlayerAnimationController>();
+        StopSoundPosted = false;
     }
 
     // Update is called once per frame
@@ -77,10 +80,28 @@ public class PlayerControllerCombat : MonoBehaviour
         if (stats.GetCurrentHealth() <= 0) combatControllerState = CombatControllerState.Dead;
         //speed up in combat
         if (Input.GetButton("Jump"))
+        {
             Time.timeScale = 4;
+            SoundbankHandler.StateSelector(SoundbankHandler.WwiseStates.Speed_Up);
+        }
         else if (Time.timeScale > 1)
+        {
             Time.timeScale = 1;
-
+            SoundbankHandler.StateSelector(SoundbankHandler.WwiseStates.Speed_Norm);
+        }
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (!StopSoundPosted)
+            {
+                SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Stop_All, gameObject);
+                Debug.Log("event is posting");
+                StopSoundPosted = true;
+            }
+        }
+        else if (Input.GetButtonUp("Jump"))
+        {
+            StopSoundPosted = false;
+        }
         //only perform actions if players turn
         //this is always set to true outside of combat
         if (myTurn)
@@ -123,6 +144,7 @@ public class PlayerControllerCombat : MonoBehaviour
                                     {
                                         //get the movetopoints
                                         moveToPoints = MapHandler.GetMoveToPoints(initpos, clickpos, movementRange);
+
                                         //change state
                                         if (GlobalGameState.combatState == GlobalGameState.CombatState.Combat && myTurn && moveToPoints != null)
                                         {
@@ -324,7 +346,9 @@ public class PlayerControllerCombat : MonoBehaviour
                                             SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Basic_Attack);
                                         else SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Spellbook_Basic);
                                     }
+                                    if (InventorySystem.equipmentHeld.skill.skillType != Skills.SkillList.AttackOfOpportunity)
                                     SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Weapons, gameObject);
+                                    if (roll > 0) SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_NPC_Damage, gameObject);
                                 }
                             }
                             actionComplete = true;
@@ -411,7 +435,10 @@ public class PlayerControllerCombat : MonoBehaviour
                     //once reached go to next index
                     if (transform.position == movePoint)
                     {
+                           
                         moveIndex++;
+                        if (moveIndex <= stats.GetCurrentMovementPoints() && moveIndex < moveToPoints.Length)
+                            SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Movement_PC, gameObject);
                         wait = true;
                         waitTimer = Time.time + moveDelay;
                         //check if the distance travelled is bigger or equal to movement points available
@@ -522,6 +549,7 @@ public class PlayerControllerCombat : MonoBehaviour
         //swap controllers
         GetComponent<PlayerController>().enabled = true;
         GetComponent<PlayerController>().CombatEndPhase();
+        SoundbankHandler.StateSelector(SoundbankHandler.WwiseStates.Speed_Norm);
         enabled = false;
     }
 

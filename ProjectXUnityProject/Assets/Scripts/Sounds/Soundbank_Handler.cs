@@ -10,22 +10,24 @@ public static class SoundbankHandler
         Play_Bleed,
         Play_Candles,
         Play_Coins,
-        Play_Consumables,
         Play_In_Game_Music,
-        Play_Main_Menu,
+        Play_Main_Menu_Blend,
         Play_Main_Menu_Music,
         Play_Movement_NPC,
         Play_Movement_PC,
         Play_NPC_Damage,
         Play_NPC_Death,
         Play_Portal_1,
+        Play_Potion_Hth,
+        Play_Potion_Str,
         Play_UI_Hover,
         Play_UI_Menu_1,
         Play_Weapons,
+        Stop_After_Death,
         Stop_All,
         Stop_Ambience_Dungeon,
         Stop_In_Game_Music,
-        Stop_Main_Menu,
+        Stop_Main_Menu_Blend,
         Stop_Main_Menu_Music
     }
     public enum AttackType
@@ -40,6 +42,11 @@ public static class SoundbankHandler
     {
         Potion_Health,
         Potion_Strength
+    }
+    public enum WwiseStates
+    {
+        Speed_Norm,
+        Speed_Up
     }
     public static void WeaponAttackType(GameObject gameObject, AttackType attackType)
     {
@@ -56,5 +63,9 @@ public static class SoundbankHandler
     public static void SoundEvent(Sounds sound, GameObject gameObject)
     {
         AkSoundEngine.PostEvent(sound.ToString(), gameObject);
+    }
+    public static void StateSelector(WwiseStates wwiseStates)
+    {
+        AkSoundEngine.SetState("States", wwiseStates.ToString());
     }
 }

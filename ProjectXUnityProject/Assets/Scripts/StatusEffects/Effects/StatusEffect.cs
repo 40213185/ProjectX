@@ -197,6 +197,7 @@ public class StatusEffect : MonoBehaviour
                 {
                     DOT(-effectPotency);
                     GlobalGameState.UpdateLog(string.Format("Took <color=red>{0}</color> <color=red>{1}</color> damage.", effectPotency, "Bleed"));
+                    SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Bleed, gameObject);
                     break;
                 }
             case EffectType.Poisoned:

@@ -3,9 +3,12 @@ State Group	ID	Name			Wwise Object Path	Notes
 
 State	ID	Name	State Group			Notes
 	748895195	None	States			
-	2116791127	In_Combat	States			
+	1000450095	Speed_Norm	States			
 	2390470926	Speed_Up	States			
-	3133095762	Out_Combat	States			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	154102142	Speed_Up	States	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI		
+	389732532	Speed_Up	States	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambience		
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	

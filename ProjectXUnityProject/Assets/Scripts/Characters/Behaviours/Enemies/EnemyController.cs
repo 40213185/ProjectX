@@ -90,7 +90,11 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (stats.GetCurrentHealth() <= 0) actionState = State.Dead;
+        if (stats.GetCurrentHealth() <= 0)
+        {
+            actionState = State.Dead;
+            SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_NPC_Death, gameObject);
+        }
         if (myTurn)
         {
             switch (actionState)
@@ -316,6 +320,7 @@ public class EnemyController : MonoBehaviour
                         //if delay has passed
                         else if (waitTimer < Time.time)
                         {
+                            SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Movement_NPC, gameObject);
                             //gets the next move point
                             nextPoint = GetNextMovePoint();
                             //end delay
@@ -356,7 +361,7 @@ public class EnemyController : MonoBehaviour
                                 }
                             }
                             //create highlights
-                            Vector2Int[] attackTiles ;
+                            Vector2Int[] attackTiles;
                             if (usingAoe)
                             {
                                 Vector2Int[] aoeTiles = weapons[aoePointsWeapon[0]].GetAoeTiles(aoePoint, GetMatrixPos());
@@ -364,12 +369,13 @@ public class EnemyController : MonoBehaviour
                                 {
                                     for (int i = 0; i < aoeTiles.Length; i++)
                                     {
-                                        highlight.PlaceHighlight(aoeTiles[i],Color.red);
+                                        highlight.PlaceHighlight(aoeTiles[i], Color.red);
                                     }
                                 }
                                 //range tiles
                                 attackTiles = weapons[aoePointsWeapon[0]].GetRangeTiles(GetMatrixPos());
-                            }else attackTiles = weapons[weaponChoice[0]].GetRangeTiles(GetMatrixPos());
+                            }
+                            else attackTiles = weapons[weaponChoice[0]].GetRangeTiles(GetMatrixPos());
 
                             if (attackTiles != null)
                             {
@@ -386,32 +392,54 @@ public class EnemyController : MonoBehaviour
                             if (!usingAoe) pointIndexChoice = weaponChoice[0];
                             else pointIndexChoice = aoePointsWeapon[0];
 
-                            float critMod=0.0f;
+                            float critMod = 0.0f;
                             if (player.GetComponent<StatusEffect>())
                                 if (player.GetComponent<StatusEffect>().GetEffectType() == StatusEffect.EffectType.ExposedToCrit)
-                                    critMod = player.GetComponent<StatusEffect>().effectPotency/100;
+                                    critMod = player.GetComponent<StatusEffect>().effectPotency / 100;
 
                             roll = weapons[pointIndexChoice].RollForDamage(critMod);
 
                             //rotate
-                            if (animationController!=null)
+                            if (animationController != null)
                             {
-                                Vector3 point = new Vector3(player.transform.position.x,0,player.transform.position.z);
+                                Vector3 point = new Vector3(player.transform.position.x, 0, player.transform.position.z);
                                 animationController.RotateToFace(point);
                             }
                             //attack
                             player.GetComponent<PlayerController>().stats.ModifyHealthBy(-roll);
                             //log
                             GlobalGameState.UpdateLog(string.Format("<color=yellow>{0}</color> attacked and dealt <color=red>{1}</color> damage.",
-                                name,roll));
+                                name, roll));
                             //skill
                             if (weapons[pointIndexChoice].skill.skillType != Skills.SkillList.None)
                             {
                                 //use skill
-                                weapons[pointIndexChoice].skill.UseSkill(weapons[pointIndexChoice],null, player.GetComponent<PlayerControllerCombat>(),roll, gameObject);
+                                weapons[pointIndexChoice].skill.UseSkill(weapons[pointIndexChoice], null, player.GetComponent<PlayerControllerCombat>(), roll, gameObject);
+                                //sound
+                                SoundbankHandler.WeaponSelector(gameObject, weapons[pointIndexChoice].GetEquipmentType());
+                                if (weapons[pointIndexChoice].GetEquipmentType() != Weapon.EquipmentType.SpellBook)
+                                    SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Ability_Attack);
+                                else
+                                {
+                                    if (weapons[pointIndexChoice].skill.skillType == Skills.SkillList.FireBall)
+                                        SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Spellbook_Fire);
+                                    else if (weapons[pointIndexChoice].skill.skillType == Skills.SkillList.IceBall)
+                                        SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Spellbook_Ice);
+                                }
                                 //log
                                 GlobalGameState.UpdateLog(string.Format("<color=yellow>{0}</color> used <color=purple>{1}</color>.",
-                                    name, weapons[pointIndexChoice].skill.skillType));
+                                name, weapons[pointIndexChoice].skill.skillType));
+                            }
+                            else
+                            {
+                                SoundbankHandler.WeaponSelector(gameObject, weapons[pointIndexChoice].GetEquipmentType());
+                                if (weapons[pointIndexChoice].GetEquipmentType() != Weapon.EquipmentType.SpellBook)
+                                    SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Basic_Attack);
+                                else SoundbankHandler.WeaponAttackType(gameObject, SoundbankHandler.AttackType.Spellbook_Basic);
+
+                                SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Weapons, gameObject);
+
+                                if (roll > 0) SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_NPC_Damage, gameObject);
                             }
                             //take ap
                             if(!usingAoe) stats.ModifyActionPointsBy(-weapons[weaponChoice[0]].getCost());
