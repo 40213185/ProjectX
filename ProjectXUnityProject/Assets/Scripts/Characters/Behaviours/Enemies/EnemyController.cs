@@ -461,6 +461,10 @@ public class EnemyController : MonoBehaviour
                 //add currency
                 int currencyAdded=GameData.ModifyCurrencyBy(EnemyLibrary.getEnemyValue(enemyType));
                 GlobalGameState.UpdateLog(string.Format("You've received {0} souls.", currencyAdded));
+
+                //Drop Object
+                
+                GameObject.FindGameObjectWithTag("MapGenerator").GetComponent<ItemDrop>().chanceToDrop(transform.position);
             }
         }
     }

@@ -25,6 +25,14 @@ public class UIHandling : MonoBehaviour
     public GameObject[] combatObjectCollection;
     public GameObject[] usablesButtons;
 
+    //ItemTooltips
+    public GameObject itemToolTip;
+    public GameObject toolTipBackground;
+    public Image itemToolTipImage;
+    public Text itemToolTipText;
+    public Sprite[] weaponIcons;
+    private bool showingTooltip = false;
+
     //combat controller
     private PlayerControllerCombat playerCombatController;
 
@@ -154,6 +162,105 @@ public class UIHandling : MonoBehaviour
         }
     }
 
+    public void ShowToolTipWeapon(Weapon.EquipmentType type, string name, int rarity, Vector2Int potency, string description)
+    {
+        string rarityText = null;
+
+        Cursor.visible = false;
+
+        switch (rarity)
+        {
+            case 1:
+                rarityText = "Common";
+                break;
+            case 2:
+                rarityText = "Uncommon";
+                break;
+            case 3:
+                rarityText = "Rare";
+                break;
+            case 4:
+                rarityText = "Unique";
+                break;
+        }
+
+
+        itemToolTip.SetActive(true);
+        showingTooltip = true;
+        itemToolTipImage.enabled = true;
+
+        itemToolTipText.text = name + "\n\n" + rarityText + "\n\nDamage: " + potency + "\n\n" + description;
+
+        Debug.Log(name + rarityText + "Damage: " + potency + description);
+
+        //Resize tooltip according to the size of the text
+        Vector2 backgroundSize = new Vector2(0, 0);
+        sizeTooltip();
+
+
+        itemToolTip.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
+    }
+
+    public float getTooltipSize() 
+    {
+        return itemToolTipText.preferredHeight + 4;
+    }
+
+    public void ShowToolTipUsable(Usable.UsableType type, string name, Vector2Int potency, string description)
+    {
+        
+       
+        itemToolTip.SetActive(true);
+        itemToolTipImage.enabled = true;
+        showingTooltip = true;
+        itemToolTipText.text = name + "\n\nPotency: " + potency + "\n\n" + description;
+
+
+        //Resize tooltip according to the size of the text
+        sizeTooltip();
+
+        itemToolTip.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
+    }
+
+    public void toolTipMessage(string message)
+    {
+        itemToolTip.SetActive(true);
+        itemToolTipImage.enabled = false;
+        showingTooltip = true;
+
+        itemToolTipText.text = message;
+
+        sizeTooltip();
+
+        itemToolTip.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
+    }
+
+    private void sizeTooltip() 
+    {
+        Vector2 backgroundSize = new Vector2(0, 0);
+        if (itemToolTipText.preferredHeight > 150)
+        {
+            //Have to do this as first value for some reason is always in the thousands, works after that point, temp fix but mainly for presentation so it doesnt look like shit
+            backgroundSize = new Vector2(itemToolTipText.preferredWidth, 150 + 4f * 4f);
+            toolTipBackground.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+            itemToolTipText.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+            Debug.Log(itemToolTipText.preferredHeight);
+        }
+        else
+        {
+            backgroundSize = new Vector2(itemToolTipText.preferredWidth, itemToolTipText.preferredHeight + 4f * 4f);
+            toolTipBackground.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+            itemToolTipText.GetComponent<RectTransform>().sizeDelta = backgroundSize;
+        }
+    }
+
+    public void HideToolTip()
+    {
+        Cursor.visible = true;
+        itemToolTip.SetActive(false);
+        showingTooltip = false;
+    }
+
     public void BasicAttackPressed() 
     {
         //check if not moving
@@ -248,6 +355,28 @@ public class UIHandling : MonoBehaviour
         Debug.Log("USABLE " + index + " PRESSED");
         InventorySystem.usablesHeld[index] = null;
     }
+
+    public void bagToolTip(int index) 
+    {
+        Usable.UsableType type = InventorySystem.usablesHeld[index].GetUsableType();
+        string name = InventorySystem.usablesHeld[index].GetName();
+        Vector2Int potency = InventorySystem.usablesHeld[index].GetPotency();
+        string description = InventorySystem.usablesHeld[index].GetDescription();
+
+        ShowToolTipUsable(type, name, potency, description);
+    }
+
+    public void currentWepTooltip() 
+    {
+        Weapon.EquipmentType type = InventorySystem.equipmentHeld.GetEquipmentType();
+        string name = InventorySystem.equipmentHeld.GetName();
+        int rarity = InventorySystem.equipmentHeld.getRarity();
+        Vector2Int potency = InventorySystem.equipmentHeld.GetPotency();
+        string description = InventorySystem.equipmentHeld.GetDescription();
+
+        ShowToolTipWeapon(type, name, rarity, potency, description);
+    }
+
 
     public void FollowPlayer()
     {

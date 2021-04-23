@@ -139,37 +139,37 @@ public class Usable : Item
         switch (effectType)
         {
             case StatusEffect.EffectType.Healing:
-                SetNameAndDesc("Healing Potion", "Heals you for a portion of your health, No idea how, isnt modern medicine amazing");
+                SetNameAndDesc("Healing Potion", "Heals you for a portion of your health,\n No idea how, isnt modern medicine amazing");
                 SetRangeAndAoE(new Vector2(0,0),new Vector2(0,0));
                 SetPotency(3,6,GameData.CurrentFloor,1);
                 break;
             case StatusEffect.EffectType.StrengthBuff:
-                SetNameAndDesc("Strength Potion", "Looks like milk, doesnt taste like milk, but still makes you big and strong so who cares");
+                SetNameAndDesc("Strength Potion", "Looks like milk, doesnt taste like milk,\n but still makes you big and strong so who cares");
                 SetRangeAndAoE(new Vector2(0, 0), new Vector2(0, 0));
                 SetPotency(2, 4, GameData.CurrentFloor, 1);
                 break;
             case StatusEffect.EffectType.IntBuff:
-                SetNameAndDesc("Intelligence Potion", "Its big brain juice, has the opposite affect of alcohol and less fun");
+                SetNameAndDesc("Intelligence Potion", "Its big brain juice, has the\n opposite affect of alcohol and less fun");
                 SetRangeAndAoE(new Vector2(0, 0), new Vector2(0, 0));
                 SetPotency(3, 6, GameData.CurrentFloor, 1);
                 break;
             case StatusEffect.EffectType.Bleed:
-                SetNameAndDesc("Spikey Bomb", "A bomb full of spikey objects, Cover your eyes kiddies");
+                SetNameAndDesc("Spikey Bomb", "A bomb full of spikey objects,\n Cover your eyes kiddies");
                 SetRangeAndAoE(new Vector2(1, 5), new Vector2(0, 0));
                 SetPotency(1, 4, GameData.CurrentFloor, 1);
                 break;
             case StatusEffect.EffectType.Burn:
-                SetNameAndDesc("Fire Bomb", "A bomb full of fire, Common tool amoung chefs");
+                SetNameAndDesc("Fire Bomb", "A bomb full of fire,\n Common tool amoung chefs");
                 SetRangeAndAoE(new Vector2(1, 5), new Vector2(0, 2));
                 SetPotency(2, 3, GameData.CurrentFloor, 1);
                 break;
             case StatusEffect.EffectType.Freeze:
-                SetNameAndDesc("Ice Bomb", "A very cold bomb, Can make a snowball fight deadly");
+                SetNameAndDesc("Ice Bomb", "A very cold bomb, Can make\n a snowball fight deadly");
                 SetRangeAndAoE(new Vector2(0, 0), new Vector2(0, 3));
                 SetPotency(1, 2, GameData.CurrentFloor, 1);
                 break;
             case StatusEffect.EffectType.Poisoned:
-                SetNameAndDesc("Poison Bomb", "A Poison bomb, Smells so bad it makes you ill");
+                SetNameAndDesc("Poison Bomb", "A Poison bomb, Smells so bad\n it makes you ill");
                 SetRangeAndAoE(new Vector2(0, 0), new Vector2(0, 4));
                 SetPotency(3, 3, GameData.CurrentFloor, 1);
                 break;
