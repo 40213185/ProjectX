@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class toolTipFollow : MonoBehaviour
 { 
-    void Update()
+    void FixedUpdate()
     {
         Vector2 localPoint;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Input.mousePosition, null, out localPoint);

@@ -40,8 +40,19 @@ public class Stats
         currentActionPoints = maxActionPoints;
         baseInitiative = initiative;
 
-        maxActionPointsAllowed = 15;
-        maxMovementPointsAllowed = 15;
+        maxActionPointsAllowed = 13;
+        maxMovementPointsAllowed = 13;
+    }
+
+    public void SetStats(Stats stats)
+    {
+        maxHealth = stats.GetMaxHealth();
+        currentHealth = stats.GetCurrentHealth();
+        maxMovementPoints = stats.GetMaxMovementPoints();
+        currentMovementPoints = stats.GetCurrentMovementPoints();
+        maxActionPoints = stats.GetMaxActionPoints();
+        currentActionPoints = stats.GetCurrentActionPoints();
+        baseInitiative = stats.GetBaseInitiative();
     }
 
     public int GetMaxHealth() 
@@ -126,16 +137,19 @@ public class Stats
         return beforeMP - currentMovementPoints;
     }
 
-    public int RefillMovementPoints() 
+    public int RefillMovementPoints()
     {
-        int amount=currentMovementPoints;
+        int amount = currentMovementPoints;
         currentMovementPoints = maxMovementPoints;
         amount = maxMovementPoints - amount;
         //ui
         GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
         return amount;
     }
-
+    public int GetBaseInitiative() 
+    {
+        return baseInitiative;
+    }
     public int RollInitiative()
     {
         int temp = UnityEngine.Random.Range(1, 7);

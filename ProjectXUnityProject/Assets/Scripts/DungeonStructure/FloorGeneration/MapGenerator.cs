@@ -13,7 +13,9 @@ public class MapGenerator : MonoBehaviour
 
     public GameObject[] RoomPrefabs;
 
-    public enum RoomType { Room00, Room01, Room02, Room03, Room04, SmallCrossRoom, SmallRoom, SmallRoom02, StartRoom }
+    public enum RoomType { 
+        Room00, Room01, Room02, Room03, Room04,
+        SmallCrossRoom, SmallRoom, SmallRoom02, StartRoom, NextFLoorRoom }
     
     public GameObject[] clutter00; 
     public GameObject[] clutter01;
@@ -52,7 +54,7 @@ public class MapGenerator : MonoBehaviour
             }
         }
         //room type storage for use with MapHandler class
-        roomType = new int[roomsOnFloor,roomsOnFloor];
+        roomType = new int[roomsOnFloor, roomsOnFloor];
         //random pointer for placing rooms properly
         Vector2Int pointer = new Vector2Int(0, 0);
         //cycle the amount of rooms fabricated at the current floor
@@ -62,16 +64,16 @@ public class MapGenerator : MonoBehaviour
             if (!roomsBuiltValidation[pointer.x, pointer.y])
             {
                 int pick;
-                if(i == 0) 
+                if (i == 0)
                 {
                     pick = 8;
                 }
-                else 
-                { 
-                    pick = Random.Range(0, RoomPrefabs.Length-1); 
+                else
+                {
+                    pick = Random.Range(0, RoomPrefabs.Length - 1);
                 }
                 //pick a room
-                
+
                 //create room and store it
                 rooms.Add(Instantiate(RoomPrefabs[pick], new Vector3(pointer.x * MapHandler.roomSizex, 0, pointer.y * MapHandler.roomSizey), RoomPrefabs[pick].transform.rotation));
                 //set room built here
@@ -85,7 +87,7 @@ public class MapGenerator : MonoBehaviour
             for (int y = 0; y < roomsOnFloor; y++)
             {
                 for (int x = 0; x < roomsOnFloor; x++)
-                { 
+                {
                     //if theres no room placed
                     if (!roomsBuiltValidation[x, y])
                     {
@@ -100,6 +102,45 @@ public class MapGenerator : MonoBehaviour
             }
             //pick a random from the list and set it for new room placement
             pointer = possiblePlacements[Random.Range(0, possiblePlacements.Count - 1)];
+        }
+
+        //place next floor room
+        if (GameData.CurrentFloor != 5)
+        {
+            List<Vector2Int> possiblePlaces = new List<Vector2Int>();
+            for (int y = 0; y < roomsBuiltValidation.GetLength(1); y++)
+            {
+                for (int x = 0; x < roomsBuiltValidation.GetLength(0); x++)
+                {
+                    if (x - 1 >= 0 && y - 1 >= 0 &&
+                        x + 1 < roomsBuiltValidation.GetLength(0) && y + 1 < roomsBuiltValidation.GetLength(1))
+                    {
+                        if (roomsBuiltValidation[x - 1, y] && !roomsBuiltValidation[x, y])
+                        {
+                            possiblePlaces.Add(new Vector2Int(x, y));
+                        }
+                        if (roomsBuiltValidation[x + 1, y] && !roomsBuiltValidation[x, y])
+                        {
+                            possiblePlaces.Add(new Vector2Int(x, y));
+                        }
+                        if (roomsBuiltValidation[x, y - 1] && !roomsBuiltValidation[x, y])
+                        {
+                            possiblePlaces.Add(new Vector2Int(x, y));
+                        }
+                        if (roomsBuiltValidation[x, y + 1] && !roomsBuiltValidation[x, y])
+                        {
+                            possiblePlaces.Add(new Vector2Int(x, y));
+                        }
+                    }
+                }
+            }
+
+            int rnd = Random.Range(0, possiblePlaces.Count);
+            roomsBuiltValidation[possiblePlaces[rnd].x, possiblePlaces[rnd].y] = true;
+            roomType[possiblePlaces[rnd].x, possiblePlaces[rnd].y] = 9;
+
+            //create room and store it
+            rooms.Add(Instantiate(RoomPrefabs[9], new Vector3(possiblePlaces[rnd].x * MapHandler.roomSizex, 0, possiblePlaces[rnd].y * MapHandler.roomSizey), RoomPrefabs[9].transform.rotation));
         }
     }
 
@@ -148,9 +189,6 @@ public class MapGenerator : MonoBehaviour
                 {
                     for (int i = 0; i < clutter.transform.childCount; i++)
                     {
-                        //ignore if its partciles
-                        //if (clutter.transform.GetChild(i).GetComponent<ParticleSystem>()) continue;
-
                         if (clutter.transform.GetChild(i).GetComponent<ClutterSize>())
                         {
                             //clutter size
@@ -209,7 +247,7 @@ public class MapGenerator : MonoBehaviour
     void Start()
     {
         //initialize game data
-        GameData.SetFloor(1);
+        GameData.SetFloor(0);
         InventorySystem.init(4);
 
         //initialize map

@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     {
         stats = GameData.stats;                 //initial player stats
         stats.RefillHealth();
+        stats.RefillMovementPoints();
+        stats.RefillActionPoints();
         combatController = GetComponent<PlayerControllerCombat>();
         combatController.enabled = false;
 

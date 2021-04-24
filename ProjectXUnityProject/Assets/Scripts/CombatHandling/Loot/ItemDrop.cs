@@ -15,7 +15,6 @@ public class ItemDrop : MonoBehaviour
         Random.seed = System.DateTime.Now.Millisecond;
         isWep = false;
         int randomNum = Random.Range(0,100);
-        Debug.Log("RandomNum = "+randomNum);
         if(randomNum > 100) 
         {
             Random.seed = System.DateTime.Now.Millisecond;

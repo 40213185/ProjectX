@@ -13,6 +13,7 @@ public static class GameData
     private static void Init()
     {
         if (dataContainer == null) dataContainer = new DataContainer();
+        Debug.Log("Stats init");
         if (stats == null) stats = new Stats();
     }
 

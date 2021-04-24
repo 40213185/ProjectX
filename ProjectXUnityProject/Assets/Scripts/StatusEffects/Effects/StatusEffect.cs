@@ -287,38 +287,50 @@ public class StatusEffect : MonoBehaviour
             if (setKnockbackPoint) {
                 //set vector3 of target position
                 Vector3 targetPoint = new Vector3(knockBackPoint.x, 0, knockBackPoint.y);
+                //and next position
                 //move towards it
-                transform.position = Vector3.MoveTowards(transform.position, targetPoint, 5f * Time.deltaTime);
+                Vector3 nextPosition = Vector3.MoveTowards(transform.position, targetPoint, 5f * Time.deltaTime);
 
                 //check if not walkable
-                if (MapHandler.GetTileTypeFromPosition(transform.position) != MapHandler.TileType.Walkable)
+                if (MapHandler.GetTileTypeFromPosition(nextPosition) != MapHandler.TileType.Walkable)
                 {
                     //not walkable, set target position to current position
                     targetPoint = transform.position;
                 }
-                //get rounded position for comparison with combatants
-                Vector2Int roundedPos = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z));
-                //check if enemies in that position
-                foreach (GameObject co in CombatHandler._combatants)
+                else
                 {
-                    if (co != null&&co!=gameObject)
+                    //get rounded position for comparison with combatants
+                    Vector2Int roundedPos = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z));
+                    //check if enemies in that position
+                    foreach (GameObject co in CombatHandler._combatants)
                     {
-                        //get rounded position for comparison
-                        Vector2Int roundedPosCo = new Vector2Int(Mathf.RoundToInt(co.transform.position.x), Mathf.RoundToInt(co.transform.position.z));
-                        if (roundedPos == roundedPosCo)
+                        if (co != null && co != gameObject)
                         {
-                            targetPoint = transform.position;
+                            //get rounded position for comparison
+                            Vector2Int roundedPosCo = new Vector2Int(Mathf.RoundToInt(co.transform.position.x), Mathf.RoundToInt(co.transform.position.z));
+                            if (roundedPos == roundedPosCo)
+                            {
+                                targetPoint = transform.position;
+                            }
                         }
                     }
-                }
-                //after reached
-                if (transform.position == targetPoint)
-                {
-                    //set position point in case of weird float/double points
-                    transform.position = new Vector3(Mathf.RoundToInt(transform.position.x), transform.position.y,
-                        Mathf.RoundToInt(transform.position.z));
-                    //destroy
-                    Destroy(this);
+
+                    if (targetPoint != transform.position)
+                    {
+                        transform.position = nextPosition;
+                    }
+                    else 
+                    {
+                        //after reached
+                        if (transform.position == targetPoint)
+                        {
+                            //set position point in case of weird float/double points
+                            transform.position = new Vector3(Mathf.FloorToInt(transform.position.x), transform.position.y,
+                                Mathf.FloorToInt(transform.position.z));
+                            //destroy
+                            Destroy(this);
+                        }
+                    }
                 }
             }
         }

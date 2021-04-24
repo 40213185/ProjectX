@@ -191,8 +191,6 @@ public class UIHandling : MonoBehaviour
 
         itemToolTipText.text = name + "\n\n" + rarityText + "\n\nDamage: " + potency + "\n\n" + description;
 
-        Debug.Log(name + rarityText + "Damage: " + potency + description);
-
         //Resize tooltip according to the size of the text
         Vector2 backgroundSize = new Vector2(0, 0);
         sizeTooltip();
@@ -244,7 +242,6 @@ public class UIHandling : MonoBehaviour
             backgroundSize = new Vector2(itemToolTipText.preferredWidth, 150 + 4f * 4f);
             toolTipBackground.GetComponent<RectTransform>().sizeDelta = backgroundSize;
             itemToolTipText.GetComponent<RectTransform>().sizeDelta = backgroundSize;
-            Debug.Log(itemToolTipText.preferredHeight);
         }
         else
         {
@@ -352,7 +349,7 @@ public class UIHandling : MonoBehaviour
         GameObject[] objs = new GameObject[1] { playerCombatController.gameObject };
         InventorySystem.usablesHeld[index].Use(objs);
         usablesButtons[index].SetActive(false);
-        Debug.Log("USABLE " + index + " PRESSED");
+
         InventorySystem.usablesHeld[index] = null;
     }
 
