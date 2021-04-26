@@ -15,11 +15,11 @@ C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63037
+54311
 Successfully changed project path to: C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 23.01 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 21.71 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.4f1 (becced5a802b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,22 +35,22 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56784
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56392
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002312 seconds.
+Registered in 0.002104 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 23.43 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 21.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.998 seconds
+- Completed reload, in  0.871 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000724 seconds.
+Registered in 0.000657 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
@@ -59,136 +59,64 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.692 seconds
+- Completed reload, in  0.644 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1113 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 58.3 MB.
 System memory in use after: 58.4 MB.
 
 Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1560.
-Total: 1.648800 ms (FindLiveObjects: 0.168600 ms CreateObjectMapping: 0.028900 ms MarkObjects: 1.385100 ms  DeleteObjects: 0.064600 ms)
+Total: 1.574600 ms (FindLiveObjects: 0.171900 ms CreateObjectMapping: 0.027100 ms MarkObjects: 1.313700 ms  DeleteObjects: 0.060800 ms)
 
 ========================================================================
 Received Import Request.
   path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
   artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44718114cb7c8d0c667ab321a9f3420e') in 0.087945 seconds
-  Import took 0.090291 seconds .
+Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b51182f341e3e19c09ea8883951afd92') in 0.072074 seconds
+  Import took 0.074311 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.795459 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d2db9318decc087a63d745345eb4d80') in 0.011071 seconds
-  Import took 0.013575 seconds .
+  Time since last request: 2.119949 seconds.
+  path: Assets/Scripts/CombatHandling/Loot/ItemDrop.cs
+  artifactKey: Guid(ad5bf955f8ed24c49974e15d35ad313b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CombatHandling/Loot/ItemDrop.cs using Guid(ad5bf955f8ed24c49974e15d35ad313b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ce12c40e8def296abb015983647829e') in 0.003822 seconds
+  Import took 0.005556 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.398642 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56994d11894bf26584283f7f2f5a8536') in 0.010108 seconds
-  Import took 0.012619 seconds .
+  Time since last request: 0.024893 seconds.
+  path: Assets/Scripts/CombatHandling/Loot/ItemDrop.cs
+  artifactKey: Guid(ad5bf955f8ed24c49974e15d35ad313b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CombatHandling/Loot/ItemDrop.cs using Guid(ad5bf955f8ed24c49974e15d35ad313b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ce12c40e8def296abb015983647829e') in 0.001830 seconds
+  Import took 0.003105 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.451138 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1b9493c537383bc4e89e0901f8270cc') in 0.011692 seconds
-  Import took 0.014287 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.886195 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a74f1d014c28ddac3defc56593d6cdea') in 0.009885 seconds
-  Import took 0.013121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.069170 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4af36003129276cac396114a8575567') in 0.012377 seconds
-  Import took 0.015291 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.798587 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e362f1141e5e70b6c48166f77419888c') in 0.009813 seconds
-  Import took 0.012318 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.263347 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87d9ca486a0a696b13c7ed7018564d58') in 0.010478 seconds
-  Import took 0.012909 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.678682 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2936e7d3a022389d1d068df0817d9ee3') in 0.011667 seconds
-  Import took 0.014409 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.688471 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcca06ae2064c925477b391baa071a5b') in 0.010600 seconds
-  Import took 0.013225 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.518845 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3caad83df3a7f50ab348a786a92937d') in 0.010934 seconds
-  Import took 0.013777 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.935567 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'effb7f611d3ef21dab45be76efd64ea1') in 0.012518 seconds
-  Import took 0.015299 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.999338 seconds.
-  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
-  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ac40bc88bce0a9a7ef6c4a8c53af986') in 0.010950 seconds
-  Import took 0.013465 seconds .
+  Time since last request: 44.069278 seconds.
+  path: Assets/Scripts/CombatHandling/Loot/ItemDrop.cs
+  artifactKey: Guid(ad5bf955f8ed24c49974e15d35ad313b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CombatHandling/Loot/ItemDrop.cs using Guid(ad5bf955f8ed24c49974e15d35ad313b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66313a32da98108d52729c8f0e2e259c') in 0.002255 seconds
+  Import took 0.004059 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000778 seconds.
+Registered in 0.000667 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.655 seconds
+- Completed reload, in  0.634 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -197,6 +125,14 @@ System memory in use before: 58.4 MB.
 System memory in use after: 58.5 MB.
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1564.
-Total: 1.425700 ms (FindLiveObjects: 0.151700 ms CreateObjectMapping: 0.025600 ms MarkObjects: 1.223900 ms  DeleteObjects: 0.023500 ms)
+Total: 1.430600 ms (FindLiveObjects: 0.168900 ms CreateObjectMapping: 0.029700 ms MarkObjects: 1.209100 ms  DeleteObjects: 0.022000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.099735 seconds.
+  path: Assets/Scripts/UI/UIHandling.cs
+  artifactKey: Guid(65bd9a3e68614674ab8b76196dfd911a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/UIHandling.cs using Guid(65bd9a3e68614674ab8b76196dfd911a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a398c8177480f2ea2228d649a6cf404') in 0.006214 seconds
+  Import took 0.008409 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
