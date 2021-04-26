@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\UI\UpgradesUIHandler.cs" />
     <Compile Include="Assets\Scripts\CombatHandling\Loot\dropScript.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\EnemySpawner.cs" />
+    <Compile Include="Assets\hideWalls.cs" />
     <Compile Include="Assets\Scripts\StatusEffects\Stats\Stats.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\PlayerCharacter\Controllers\PlayerAnimationController.cs" />
     <Compile Include="Assets\Scripts\UI\toolTipFollow.cs" />
@@ -92,7 +93,6 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DungeonStructure\HideIfPlayerNotPresent.cs" />
     <Compile Include="Assets\Scripts\Characters\Behaviours\Enemies\EnemyController.cs" />
-    <Compile Include="Assets\hideWalls.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
