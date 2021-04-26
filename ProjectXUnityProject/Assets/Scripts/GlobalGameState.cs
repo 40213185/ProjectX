@@ -9,11 +9,25 @@ public static class GlobalGameState
     public static CombatState combatState { get; private set; }
     public static bool _pause { get; private set; }
 
+    public static bool wallsHidden { get; private set; }
+
     public static void Pause(bool pause) 
     {
         if (pause) Time.timeScale = 0;
         else Time.timeScale = 1.0f;
     }
+
+    public static void toggleWalls() 
+    {
+        wallsHidden = !wallsHidden;
+        GameObject[] walls = GameObject.FindGameObjectsWithTag("HideableWalls"); ;
+        Debug.Log("Walls Are " + wallsHidden);
+        foreach(GameObject wall in walls) 
+        {
+            wall.GetComponent<hideWalls>().toggleWalls(wallsHidden);
+        }
+    }
+
     public static void SetCombatState(bool inCombat) 
     {
         Time.timeScale = 1.0f;

@@ -388,4 +388,9 @@ public class UIHandling : MonoBehaviour
     {
         followButton.SetActive(active);
     }
+
+    public void toggleWallsPressed() 
+    {
+        GlobalGameState.toggleWalls();
+    }
 }
