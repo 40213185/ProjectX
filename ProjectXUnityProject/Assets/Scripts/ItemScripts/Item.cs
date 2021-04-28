@@ -17,10 +17,10 @@ public class Item
         description = newDescription;
     }
 
-    public void SetPotency(int min, int max, int multiplier1, int multiplier2)
+    public void SetPotency(int min, int max, int multiplier1, int incrementedMultiplier)
     {
-        potency.x = min * multiplier1 * multiplier2;
-        potency.y = max * multiplier1 * multiplier2;
+        potency.x = min * multiplier1 * (incrementedMultiplier+1);
+        potency.y = max * multiplier1 * (incrementedMultiplier+1);
     }
 
     public void SetRangeAndAoE(Vector2 newRange, Vector2 newAreaOfEffect)

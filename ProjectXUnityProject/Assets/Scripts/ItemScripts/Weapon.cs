@@ -32,7 +32,7 @@ public class Weapon : Item
         missChance = 0.05f;
     }
 
-    public static Weapon GetRandomWeapon(int modifier1, int modifier2)
+    public static Weapon GetRandomWeapon(int floormodifier, int modifier2)
     {
         Weapon weaponRoll = new Weapon();
         int rndType = Random.Range(0, 6);
@@ -53,7 +53,7 @@ public class Weapon : Item
                 weaponRoll.skill.SetSkill(Skills.SkillList.AttackOfOpportunity);
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Arming Sword", "A long bladed weapon, Makes a nice whoosh sound when used in a slashing motion");
-                weaponRoll.SetPotency(1, 3, modifier2, modifier1);
+                weaponRoll.SetPotency(1, 3, modifier2, floormodifier);
                 weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 3;
@@ -64,7 +64,7 @@ public class Weapon : Item
                 weaponRoll.skill.SetSkill(Skills.SkillList.Execute);
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Halberd", "Its like an axe and a spear had a child, Good for poking but also chopping heads");
-                weaponRoll.SetPotency(2, 5, modifier2, modifier1);
+                weaponRoll.SetPotency(2, 5, modifier2, floormodifier);
                 weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 4;
@@ -75,7 +75,7 @@ public class Weapon : Item
                 weaponRoll.skill.SetSkill(Skills.SkillList.KnockBack);
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Greatsword", "A Massive sword, Surprised you can even hold it up, Good at cracking eggs");
-                weaponRoll.SetPotency(4, 8, modifier2, modifier1);
+                weaponRoll.SetPotency(4, 8, modifier2, floormodifier);
                 weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 5;
@@ -86,7 +86,7 @@ public class Weapon : Item
                 weaponRoll.skill.SetSkill(Skills.SkillList.FireBall);
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 weaponRoll.SetNameAndDesc("Fireball", "Summon a fireball from god knows where and use it for things such as cooking or other activities");
-                weaponRoll.SetPotency(3, 6, modifier2, modifier1);
+                weaponRoll.SetPotency(3, 6, modifier2, floormodifier);
                 weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 4;
@@ -98,7 +98,7 @@ public class Weapon : Item
                 weaponRoll.effect = StatusEffect.EffectType.None;
                 //weaponRoll.SetNameAndDesc("Icespike", "Summon a giant ice spike that can be launched like a rocket, remember to wear gloves when using this, can get chilly");
                 weaponRoll.SetNameAndDesc("Flintlock", "A handheld musket?!? Now you can take on your enemies from afar with little effort");
-                weaponRoll.SetPotency(3, 6, modifier2, modifier1);
+                weaponRoll.SetPotency(3, 6, modifier2, floormodifier);
                 weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 3;
@@ -110,7 +110,7 @@ public class Weapon : Item
                 weaponRoll.skill.SetSkill(Skills.SkillList.Bleed);
                 weaponRoll.effect = StatusEffect.EffectType.Bleed;
                 weaponRoll.SetNameAndDesc("Dagger", "A Small bladed dagger, used for stabbing things, Good at making holes that bleed");
-                weaponRoll.SetPotency(3, 6, modifier2, modifier1);
+                weaponRoll.SetPotency(3, 6, modifier2, floormodifier);
                 weaponRoll.rarity = modifier2;
                 weaponRoll.SetRangeAndAOEforSkill(weaponRoll.type);
                 weaponRoll.cost = 2;
