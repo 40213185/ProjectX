@@ -40,7 +40,7 @@ public class HideIfPlayerNotPresent : MonoBehaviour
     private IEnumerator DelayForCombatStart() 
     {
         triggered = true;
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(1f);
 
         if (GetComponent<EnemySpawner>()) GetComponent<EnemySpawner>().CheckAndPlaceEnemies();
         finished = true;
@@ -54,7 +54,7 @@ public class HideIfPlayerNotPresent : MonoBehaviour
             //spawn if there is an enemy spawner
             if(!triggered) StartCoroutine("DelayForCombatStart");
 
-            foreach (GameObject obj in hideChildren) obj.SetActive(true);
+            if(hideChildren!=null) foreach (GameObject obj in hideChildren) obj.SetActive(true);
             hideThis.SetActive(true);
         }
     }

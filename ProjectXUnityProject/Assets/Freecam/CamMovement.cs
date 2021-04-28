@@ -25,7 +25,7 @@ public class CamMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -47,6 +47,7 @@ public class CamMovement : MonoBehaviour
         //Interpolate to the targets location for smooth follow, With no Interpolate looks jagged, Only do if following a target
         if (following) 
         {
+            if (target == null) target = GameObject.FindGameObjectWithTag("Player");
             camPosUpdate(Vector3.Lerp(gameObject.transform.position, target.transform.position, 3 * Time.deltaTime));
         }
 

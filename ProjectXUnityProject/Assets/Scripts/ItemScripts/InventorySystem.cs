@@ -16,8 +16,6 @@ public static class InventorySystem
         equipmentHeld = new Weapon();
         usablesHeld = new Usable[usableSlots];
         equipmentHeld = Weapon.GetRandomWeapon(100,100);
-        Debug.Log(string.Format("{0}\n{1}\n{2}",
-            equipmentHeld.GetEquipmentType().ToString(),equipmentHeld.skill.skillType.ToString(),equipmentHeld.GetEffectType().ToString()));
     }
 
     public static void ReplaceWeapon(Weapon equip)

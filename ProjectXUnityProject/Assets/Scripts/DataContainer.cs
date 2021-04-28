@@ -8,8 +8,13 @@ public class DataContainer
 {
     //container data
     public int currency;
-    public Stats stats;
 
+    public int maxHealth;
+    public int maxMovementPoints;
+    public int maxActionPoints;
+    public int baseInitiative;
+
+    public Stats stats;
 
     //container methods
     string path = Application.persistentDataPath + "/GameData.dat";
@@ -17,8 +22,11 @@ public class DataContainer
     public DataContainer() 
     {
         currency = 0;
-        stats = new Stats();
-    }
+        maxHealth = 0;
+        maxMovementPoints = 0;
+        maxActionPoints = 0;
+        baseInitiative = 0;
+}
 
     public void SaveData()
     {
@@ -59,12 +67,22 @@ public class DataContainer
     public void SetData() 
     {
         currency = GameData.currency;
-        stats = GameData.stats;
+
+        maxHealth = GameData.stats.GetMaxHealth();
+        maxMovementPoints = GameData.stats.GetMaxMovementPoints();
+        maxActionPoints = GameData.stats.GetMaxActionPoints();
+        baseInitiative = GameData.stats.GetBaseInitiative();
     }
 
     private void SendData(DataContainer container)
     {
         currency = container.currency;
-        stats = container.stats;
+
+        maxHealth = container.maxHealth;
+        maxMovementPoints = container.maxMovementPoints;
+        maxActionPoints = container.maxActionPoints;
+        baseInitiative = container.baseInitiative;
+
+        stats = new Stats(maxHealth,maxMovementPoints,maxActionPoints,baseInitiative);
     }
 }

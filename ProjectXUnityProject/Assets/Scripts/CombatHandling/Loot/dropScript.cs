@@ -101,7 +101,7 @@ public class dropScript : MonoBehaviour
             {
                 if(InventorySystem.usablesHeld.Length < 5) 
                 {
-                     for(int i = 0; i < 5; i++) 
+                     for(int i = 0; i < 4; i++) 
                     {
                         if (InventorySystem.usablesHeld[i] == null) 
                         {
