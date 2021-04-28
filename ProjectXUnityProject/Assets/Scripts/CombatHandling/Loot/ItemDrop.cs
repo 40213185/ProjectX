@@ -16,7 +16,7 @@ public class ItemDrop : MonoBehaviour
         isWep = false;
         int randomNum = Random.Range(0,100);
         Debug.Log("RandomNum = "+randomNum);
-        if(randomNum > 65) 
+        if(randomNum > 60) 
         {
             Random.seed = System.DateTime.Now.Millisecond;
             randomNum = Random.Range(0, 100);
@@ -53,7 +53,7 @@ public class ItemDrop : MonoBehaviour
     {
         Random.seed = System.DateTime.Now.Millisecond;
         int chance = Random.Range(0, 100);
-        if(chance > 60) 
+        if(chance > 65) 
         {
             GenerateLoot();
             GameObject droppedObject = Instantiate(dropObject, pos, dropObject.transform.rotation);
