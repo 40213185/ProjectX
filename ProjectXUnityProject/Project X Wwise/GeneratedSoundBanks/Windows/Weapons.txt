@@ -1,0 +1,52 @@
+Event	ID	Name			Wwise Object Path	Notes
+	155002645	Play_Weapons			\Weapons\Play_Weapons	
+	2720341754	Play_Bleed			\Weapons\Play_Bleed	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1149957304	Weapon_Attack_Selector			\Default Work Unit\Weapon_Attack_Selector	
+	3924803767	Weapon_Selector			\Default Work Unit\Weapon_Selector	
+
+Switch	ID	Name	Switch Group			Notes
+	241032265	Spellbook_Basic	Weapon_Attack_Selector			
+	674541133	Spellbook_Fire	Weapon_Attack_Selector			
+	1579373004	Basic_Attack	Weapon_Attack_Selector			
+	3563871754	Spellbook_Ice	Weapon_Attack_Selector			
+	3835939360	Ability_Attack	Weapon_Attack_Selector			
+	646465998	ArmingSword	Weapon_Selector			
+	870806629	Halberd	Weapon_Selector			
+	2170136578	SpellBook	Weapon_Selector			
+	3732162827	Dagger	Weapon_Selector			
+	3772309111	Greatsword	Weapon_Selector			
+	3971841939	Flintlock	Weapon_Selector			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	29866118	Weapon_AS_3	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_AS_3_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Sword\Basic_Attack\Weapon_AS_3		83392
+	69357589	Ability_GS_Whoosh	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Ability_GS_Whoosh_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Greatsword\Ability_GS_Whoosh		110144
+	110836890	Weapon_FL_3	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_FL_3_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Flintlock\Basic_Attack\Weapon_FL_3		184320
+	144220820	Ability_Bleed_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Ability_Bleed_1_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Bleed\Ability_Bleed_1		41024
+	258710519	Weapon_AS_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_AS_1_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Sword\Basic_Attack\Weapon_AS_1		63296
+	259873576	Weapon_GS_2	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_GS_2_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Greatsword\Basic_Attack\Weapon_GS_2		115264
+	283119837	Weapon_Dagger_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_Dagger_1_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Dagger\Basic_Attack\Weapon_Dagger_1		49984
+	312726206	Weapon_AS_2	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_AS_2_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Sword\Basic_Attack\Weapon_AS_2		57024
+	331192244	Weapon_FL_2	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_FL_2_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Flintlock\Basic_Attack\Weapon_FL_2		186944
+	349669135	Ability_FL	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Ability_FL_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Flintlock\Ability_FL		192576
+	405523992	Ability_Dagger	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Ability_Dagger_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Dagger\Ability_Dagger		176192
+	415803651	Weapon_Dagger_4	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_Dagger_4_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Dagger\Basic_Attack\Weapon_Dagger_4		48192
+	420807016	Weapon_FL_4	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_FL_4_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Flintlock\Basic_Attack\Weapon_FL_4		174656
+	438411972	Weapon_GS_4	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_GS_4_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Greatsword\Basic_Attack\Weapon_GS_4		115008
+	478106939	Spell_Ice_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Spell_Ice_1_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Spellbook\Spell_Ice_1		275520
+	590467020	Spell_Fire_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Spell_Fire_1_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Spellbook\Spell_Fire_1		156736
+	708546328	Weapon_Halberd_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_Halberd_5_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Halberd\Basic_Attack\Weapon_Halberd_1		41024
+	718932885	Weapon_Spellbook_Final	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_Spellbook_Final_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Spellbook\Weapon_Spellbook_Final		206656
+	741359387	Weapon_GS_3	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_GS_3_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Greatsword\Basic_Attack\Weapon_GS_3		108608
+	776760629	Weapon_AS_4	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_AS_4_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Sword\Basic_Attack\Weapon_AS_4		67264
+	855222352	Weapon_Dagger_2	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_Dagger_2_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Dagger\Basic_Attack\Weapon_Dagger_2		59456
+	898117120	Weapon_FL_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_FL_1_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Flintlock\Basic_Attack\Weapon_FL_1		174848
+	942931104	Ability_Bleed_2	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Ability_Bleed_2_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Bleed\Ability_Bleed_2		46144
+	965766111	Weapon_Dagger_3	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_Dagger_3_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Dagger\Basic_Attack\Weapon_Dagger_3		45120
+	972814202	Ability_Bleed_3	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Ability_Bleed_3_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Bleed\Ability_Bleed_3		47168
+	992827639	Ability_Halberd	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Ability_Halberd_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Halberd\Ability_Halberd		184384
+	996373383	Weapon_Halberd_2	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_Halberd_6_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Halberd\Basic_Attack\Weapon_Halberd_2		41024
+	1010087073	Ability_Bleed_4	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Ability_Bleed_4_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Bleed\Ability_Bleed_4		56384
+	1018732029	Weapon_GS_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Weapon_GS_1_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Weapons\Greatsword\Basic_Attack\Weapon_GS_1		129088
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{197B3BED-98C3-472C-A39D-BDF4F30CF932}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{197B3BED-98C3-472C-A39D-BDF4F30CF932}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Stop_All" ID="{1B1F962E-D64A-4873-AA44-CB29290DA697}">
+					<ChildrenList>
+						<Action Name="" ID="{77C38C7E-8AF6-4C4F-A4B0-04E3B4FFA214}" ShortID="303257961">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Delay" Type="Real64" Value="0.51"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{F646284B-9094-48CB-9BBB-191FF0D4705B}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambience_dungeon" ID="{77076115-91A3-4795-972B-ADC5C6D22BEA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+								<EventActionException Name="" ID="{44AC85C1-9231-4FAC-AFBF-E8CDA6CD1412}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Candles" ID="{4C4D6717-293C-4E57-B02D-0BEC2CE940DA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+								<EventActionException Name="" ID="{46D788CF-51D6-4F01-9420-3F877039EC40}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="NPC_Damage" ID="{79F9A9C5-E0DE-491F-AFEA-F8B52C2CB567}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+								<EventActionException Name="" ID="{27250CDE-D83E-448A-906F-8A98F4100FFE}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="NPC_Death" ID="{D03D8DD8-9AED-4816-980D-CB6C3A289AEF}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+								<EventActionException Name="" ID="{DCDB06FE-B0AF-4F47-9FE4-56CA37F35E99}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Weapons" ID="{2D14DDBE-B57F-4E31-8EFD-C11436E10191}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+								<EventActionException Name="" ID="{E95B36FA-5E74-4418-88E6-3A40393F073F}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="In_Game" ID="{24A99C76-2D68-414F-AB66-39904B14BA33}" WorkUnitID="{123EDAF1-0255-479C-9292-3849639C15C7}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+							</ChildrenList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_After_Death" ID="{546C4D8A-382D-44C7-ACA0-141890DCFC7F}">
+					<ChildrenList>
+						<Action Name="" ID="{68B1EB43-C1D5-4C64-A993-996ABF1649CB}" ShortID="411937422">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

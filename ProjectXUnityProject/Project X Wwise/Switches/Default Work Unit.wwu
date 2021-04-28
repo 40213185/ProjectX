@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FDB72978-B7B1-47CF-8BB5-C8BD5CA6B96E}" SchemaVersion="103">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{FDB72978-B7B1-47CF-8BB5-C8BD5CA6B96E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Weapon_Selector" ID="{E7E200C7-957E-496F-B9A3-0475DD09FCFC}">
+					<ChildrenList>
+						<Switch Name="Dagger" ID="{1BDF5915-059C-4FBA-9B68-0C23130DAEC2}"/>
+						<Switch Name="Flintlock" ID="{3E1B6F5C-508F-4613-BE1B-1D4D8E71F641}"/>
+						<Switch Name="Greatsword" ID="{0B4FBC3B-4829-4CD8-9C7D-13AF71801446}"/>
+						<Switch Name="SpellBook" ID="{2EC0A293-2785-4E19-B60A-43F118780A1E}"/>
+						<Switch Name="ArmingSword" ID="{FDB22852-DE01-49D1-87EF-C620F7E7C87B}"/>
+						<Switch Name="Halberd" ID="{DC510BAD-9050-4887-BADA-213B56248D2F}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Weapon_Attack_Selector" ID="{4D904DEF-A983-4572-BD79-0199969909B8}">
+					<ChildrenList>
+						<Switch Name="Basic_Attack" ID="{7F294143-5B77-4D6D-A977-3E9ABB7852B8}"/>
+						<Switch Name="Ability_Attack" ID="{AA34DA08-2798-4B0C-8636-1C50C719618A}"/>
+						<Switch Name="Spellbook_Fire" ID="{45E778EF-5510-4B5F-A894-36690A2655C6}"/>
+						<Switch Name="Spellbook_Ice" ID="{2D7FA47F-8745-4368-B573-0A6B70D1041E}"/>
+						<Switch Name="Spellbook_Basic" ID="{CEA2BF22-AE63-4658-859E-5FE72C67589E}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Consumables" ID="{AD6399EB-43A6-4AE1-BEDE-5E6319ED7866}">
+					<ChildrenList>
+						<Switch Name="Potion_Health" ID="{B06E03AE-3945-4EAA-BB57-9B8D16530B94}"/>
+						<Switch Name="Potion_Strength" ID="{CD7EFFB2-377A-462F-A2D5-3C59F7A13A90}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

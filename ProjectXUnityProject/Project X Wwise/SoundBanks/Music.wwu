@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CE363E43-9AA8-411A-9BD1-7101462C6E95}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Music" ID="{CE363E43-9AA8-411A-9BD1-7101462C6E95}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Music" ID="{D90F0E1D-BDB5-47CB-817D-78C7405DC111}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Stop_Main_Menu_Music" ID="{686BEF14-0666-43F8-A8D7-7795B9844F3E}" WorkUnitID="{C9B863CB-DF19-4334-B446-86B6E7EBA84D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_In_Game_Music" ID="{8345BCFE-B6F6-489D-B11D-6F40D917A2BE}" WorkUnitID="{C9B863CB-DF19-4334-B446-86B6E7EBA84D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_In_Game_Music" ID="{2EBBB086-A44D-4986-9D5C-18C15EE2A28B}" WorkUnitID="{C9B863CB-DF19-4334-B446-86B6E7EBA84D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Main_Menu_Music" ID="{31572F17-D9C5-4C00-834E-7457971662D0}" WorkUnitID="{C9B863CB-DF19-4334-B446-86B6E7EBA84D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

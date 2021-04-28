@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{ED7D7C23-ACC4-42D7-9CAD-264CD9DC4FB0}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Weapons" ID="{ED7D7C23-ACC4-42D7-9CAD-264CD9DC4FB0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Weapons" ID="{81CC6AA6-608B-4249-A234-9D1954E05913}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Weapons" ID="{8E55EE01-15C8-465A-B113-0CFB5C8B6FFA}" WorkUnitID="{B7CB40EE-A2BF-4DC1-AD4C-4D84B9210B87}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Bleed" ID="{A7D2F95A-9235-4C41-A184-672D2344F767}" WorkUnitID="{B7CB40EE-A2BF-4DC1-AD4C-4D84B9210B87}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

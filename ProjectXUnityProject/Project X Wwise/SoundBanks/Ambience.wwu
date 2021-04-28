@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7FB32AC3-AEC3-4D47-8949-7247BDB20C87}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Ambience" ID="{7FB32AC3-AEC3-4D47-8949-7247BDB20C87}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Ambience" ID="{893FB932-25B5-4496-AE00-5814DDB48B38}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Portal_1" ID="{924356D3-1DA0-469C-B60E-164BF62A71BE}" WorkUnitID="{94B8CCD5-2FCA-4B3A-97FD-44B9DEDEC92C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Candles" ID="{FB2B2240-4D6B-4D00-8CF8-1E8DCE98E335}" WorkUnitID="{94B8CCD5-2FCA-4B3A-97FD-44B9DEDEC92C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Ambience_dungeon" ID="{03F40EF8-376D-4F24-89C9-D5BAC405A8E0}" WorkUnitID="{94B8CCD5-2FCA-4B3A-97FD-44B9DEDEC92C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience_dungeon" ID="{64649B9B-A7AE-4F88-B168-EAFDD25B7B3D}" WorkUnitID="{94B8CCD5-2FCA-4B3A-97FD-44B9DEDEC92C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

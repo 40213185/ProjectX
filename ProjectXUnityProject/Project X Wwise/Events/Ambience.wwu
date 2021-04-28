@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{94B8CCD5-2FCA-4B3A-97FD-44B9DEDEC92C}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Ambience" ID="{94B8CCD5-2FCA-4B3A-97FD-44B9DEDEC92C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Ambience_dungeon" ID="{64649B9B-A7AE-4F88-B168-EAFDD25B7B3D}">
+					<ChildrenList>
+						<Action Name="" ID="{A4932F74-8B0E-4156-A5CC-1231575E313A}" ShortID="1012200516">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_dungeon" ID="{77076115-91A3-4795-972B-ADC5C6D22BEA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Ambience_dungeon" ID="{03F40EF8-376D-4F24-89C9-D5BAC405A8E0}">
+					<ChildrenList>
+						<Action Name="" ID="{8E0005C3-2B6E-4809-A5EE-4A127F143FEF}" ShortID="398807014">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_dungeon" ID="{77076115-91A3-4795-972B-ADC5C6D22BEA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Portal_1" ID="{924356D3-1DA0-469C-B60E-164BF62A71BE}">
+					<ChildrenList>
+						<Action Name="" ID="{D3A63820-0513-49BF-A3B3-0306CEF4A977}" ShortID="277659988">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Portal_1" ID="{06177163-DF9C-4456-BEC9-1165226BB8DA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Candles" ID="{FB2B2240-4D6B-4D00-8CF8-1E8DCE98E335}">
+					<ChildrenList>
+						<Action Name="" ID="{18D81065-3C16-4E30-8CF8-66224AC507CF}" ShortID="577976946">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Candles" ID="{4C4D6717-293C-4E57-B02D-0BEC2CE940DA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,24 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3370026795	Play_Movement_PC			\Character\Play_Movement_PC	
+	3804614471	Play_Potion_Str			\Character\Play_Potion_Str	
+	4038368374	Play_Potion_Hth			\Character\Play_Potion_Hth	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1208172739	States			\Default Work Unit\States	
+
+State	ID	Name	State Group			Notes
+	748895195	None	States			
+	1000450095	Speed_Norm	States			
+	2390470926	Speed_Up	States			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	415629354	Speed_Up	States	\Actor-Mixer Hierarchy\Character\Movement_PC		
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	28931275	Movement_PC_3	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Movement_PC_3_10C4C929.wem		\Actor-Mixer Hierarchy\Character\Movement_PC\Movement_PC_3		96320
+	409282851	Movement_PC_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Movement_PC_1_10C4C929.wem		\Actor-Mixer Hierarchy\Character\Movement_PC\Movement_PC_1		96320
+	417912712	Potion_Hth_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Potion_Hth_1_10C4C929.wem		\Actor-Mixer Hierarchy\Character\Potion_Hth_1		329280
+	641816117	Movement_PC_4	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Movement_PC_4_10C4C929.wem		\Actor-Mixer Hierarchy\Character\Movement_PC\Movement_PC_4		96448
+	685611504	Movement_PC_2	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Movement_PC_2_10C4C929.wem		\Actor-Mixer Hierarchy\Character\Movement_PC\Movement_PC_2		96320
+	817217900	Potion_Str_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Potion_Str_1_10C4C929.wem		\Actor-Mixer Hierarchy\Character\Potion_Str_1		321600
+

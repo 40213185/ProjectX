@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{197B3BED-98C3-472C-A39D-BDF4F30CF932}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{197B3BED-98C3-472C-A39D-BDF4F30CF932}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Weapons" ID="{8E55EE01-15C8-465A-B113-0CFB5C8B6FFA}">
+					<ChildrenList>
+						<Action Name="" ID="{0EBAB62D-451C-41F7-B9D2-9EF8EC1166E6}" ShortID="777947039">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Weapons" ID="{2D14DDBE-B57F-4E31-8EFD-C11436E10191}" WorkUnitID="{A9EFF2DE-E121-4091-B100-8C2459FAD445}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Candles" ID="{9D8BEB93-C6DF-480E-991D-F1C609998B22}">
+					<ChildrenList>
+						<Action Name="" ID="{B5350BD8-A084-4AB8-8053-00FC5E81D969}" ShortID="99274888">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Candles" ID="{4C4D6717-293C-4E57-B02D-0BEC2CE940DA}" WorkUnitID="{B401EDB3-04E2-4806-9C4B-89D509DF928A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

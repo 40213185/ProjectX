@@ -15,14 +15,20 @@ public class MenuScripts : MonoBehaviour
     public GameObject main;
     public Text resSizeButton;
 
-    private void Start()
+    public void Start()
     {
         if (!GameData.Load()) GameData.Save();
+        SoundbankHandler.StateSelector(SoundbankHandler.WwiseStates.Speed_Norm);
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Stop_After_Death, gameObject);
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Main_Menu_Music, gameObject);
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Main_Menu_Blend, gameObject);
     }
 
     //Main
     public void BeginGame() 
     {
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_UI_Menu_1, gameObject);
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Stop_Main_Menu_Blend, gameObject);
         SceneManager.LoadScene("Dungeon");
     }
 

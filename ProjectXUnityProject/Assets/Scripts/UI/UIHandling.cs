@@ -354,6 +354,10 @@ public class UIHandling : MonoBehaviour
         usablesButtons[index].SetActive(false);
         Debug.Log("USABLE " + index + " PRESSED");
         InventorySystem.usablesHeld[index] = null;
+        if (InventorySystem.usablesHeld[index].GetEffectType()==StatusEffect.EffectType.Healing)
+            SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Potion_Hth, gameObject);
+        else if (InventorySystem.usablesHeld[index].GetEffectType() == StatusEffect.EffectType.StrengthBuff)
+            SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Potion_Str, gameObject);
     }
 
     public void bagToolTip(int index) 

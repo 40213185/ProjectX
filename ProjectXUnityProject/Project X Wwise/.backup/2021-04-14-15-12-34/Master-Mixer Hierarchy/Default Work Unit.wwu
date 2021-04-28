@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}" SchemaVersion="97">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{BEBC04AE-02FC-4B88-8008-94FD811141D8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{DC81CB44-CB36-4E8F-A70B-E965024A8782}" WorkUnitID="{3793426A-B094-4369-B885-1520AE571EDB}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+				<Bus Name="Weapons" ID="{D2EAD232-2A47-465A-9640-FAF17FE6865D}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{DC81CB44-CB36-4E8F-A70B-E965024A8782}" WorkUnitID="{3793426A-B094-4369-B885-1520AE571EDB}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+				<Bus Name="Ambience" ID="{0E1FC524-813C-4D3D-8B5B-D19C33CCD05F}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{DC81CB44-CB36-4E8F-A70B-E965024A8782}" WorkUnitID="{3793426A-B094-4369-B885-1520AE571EDB}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+				<Bus Name="UI" ID="{F6362AA4-07BD-45DA-92A0-70F8CFA71554}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{DC81CB44-CB36-4E8F-A70B-E965024A8782}" WorkUnitID="{3793426A-B094-4369-B885-1520AE571EDB}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+				<Bus Name="Character" ID="{14A3A68F-8A2D-4F87-A765-BCE5ED5E8ABC}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{DC81CB44-CB36-4E8F-A70B-E965024A8782}" WorkUnitID="{3793426A-B094-4369-B885-1520AE571EDB}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

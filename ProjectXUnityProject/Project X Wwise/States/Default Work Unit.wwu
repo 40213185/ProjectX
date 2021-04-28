@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C2F640E5-709D-4A7B-AC0B-8F82EF9B6F81}" SchemaVersion="103">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{C2F640E5-709D-4A7B-AC0B-8F82EF9B6F81}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="States" ID="{5333563A-9AFF-473B-8A5E-58D331D38879}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{8A2660F3-742E-43E8-A051-4165FF9375B7}"/>
+						<State Name="Speed_Up" ID="{483BC761-9720-4B54-8207-A27ED1C1D948}"/>
+						<State Name="Speed_Norm" ID="{C147163B-6BF0-4F9E-9890-FFC3B4E4C0D8}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

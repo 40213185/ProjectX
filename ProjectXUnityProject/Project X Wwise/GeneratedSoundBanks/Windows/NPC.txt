@@ -1,0 +1,37 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1646373573	Play_Movement_NPC			\Character\Play_Movement_NPC	
+	3651581149	Play_NPC_Damage			\Character\Play_NPC_Damage	
+	3888855080	Play_NPC_Death			\Character\Play_NPC_Death	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1208172739	States			\Default Work Unit\States	
+
+State	ID	Name	State Group			Notes
+	748895195	None	States			
+	1000450095	Speed_Norm	States			
+	2390470926	Speed_Up	States			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	847068322	Speed_Up	States	\Actor-Mixer Hierarchy\Character\Movement_NPC		
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	8078757	NPC_Dmg_4	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dmg_4_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Damage\NPC_Dmg_4		200256
+	67307189	Movement_NPC_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Movement_NPC_1_10C4C929.wem		\Actor-Mixer Hierarchy\Character\Movement_NPC\Movement_NPC_1		96320
+	162787060	NPC_Dmg_7	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dmg_7_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Damage\NPC_Dmg_7		250432
+	204354831	NPC_Dmg_3	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dmg_3_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Damage\NPC_Dmg_3		202816
+	260519276	NPC_Dmg_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dmg_1_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Damage\NPC_Dmg_1		221248
+	262903295	NPC_Dmg_2	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dmg_2_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Damage\NPC_Dmg_2		203840
+	313518597	NPC_Dth_5	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dth_5_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Death\NPC_Dth_5		236608
+	391919816	Movement_NPC_3	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Movement_NPC_3_10C4C929.wem		\Actor-Mixer Hierarchy\Character\Movement_NPC\Movement_NPC_3		96320
+	400718510	NPC_Dth_8	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dth_8_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Death\NPC_Dth_8		245824
+	437502771	Movement_NPC_2	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\Movement_NPC_2_10C4C929.wem		\Actor-Mixer Hierarchy\Character\Movement_NPC\Movement_NPC_2		96256
+	448617348	NPC_Dth_9	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dth_9_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Death\NPC_Dth_9		314432
+	484277029	NPC_Dmg_6	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dmg_6_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Damage\NPC_Dmg_6		229440
+	490431883	NPC_Dth_4	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dth_4_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Death\NPC_Dth_4		216128
+	653347862	NPC_Dth_2	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dth_2_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Death\NPC_Dth_2		278592
+	688525747	NPC_Dth_1	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dth_1_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Death\NPC_Dth_1		276544
+	713725371	NPC_Dmg_5	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dmg_5_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Damage\NPC_Dmg_5		218688
+	818209198	NPC_Dth_6	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dth_6_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Death\NPC_Dth_6		242752
+	828907439	NPC_Dth_7	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dth_7_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Death\NPC_Dth_7		237632
+	862641414	NPC_Dth_3	D:\GitHub\ProjectX\ProjectXUnityProject\Project X Wwise\.cache\Windows\SFX\NPC_Dth_3_10C4C929.wem		\Actor-Mixer Hierarchy\Character\NPC_Death\NPC_Dth_3		262208
+

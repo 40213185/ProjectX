@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FE3DC9E3-E7B0-4A35-A7B6-D45A2C81CFF7}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="UI" ID="{FE3DC9E3-E7B0-4A35-A7B6-D45A2C81CFF7}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Menu" ID="{0372C11C-EFBB-41D4-83EA-BE2694183258}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_UI_Hover" ID="{35DE9673-79B2-40BB-AFB0-924098A06948}" WorkUnitID="{913E9BAE-A24C-4ECA-88F3-31A0016636B3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Main_Menu_Blend" ID="{9E9879CD-D2B5-4884-A6A5-6C4E87C24910}" WorkUnitID="{913E9BAE-A24C-4ECA-88F3-31A0016636B3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Main_Menu_Blend" ID="{30E33CB7-EE6A-48FA-99AF-487911DB2A8D}" WorkUnitID="{913E9BAE-A24C-4ECA-88F3-31A0016636B3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Coins" ID="{6C118B0E-398E-4EBA-859A-488C18C47BCB}" WorkUnitID="{913E9BAE-A24C-4ECA-88F3-31A0016636B3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI_Menu_1" ID="{063106C3-9E71-4F26-88E7-64D55F1EB461}" WorkUnitID="{913E9BAE-A24C-4ECA-88F3-31A0016636B3}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5E98A28F-4B23-47DC-A174-2A5F22428A6D}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Character" ID="{5E98A28F-4B23-47DC-A174-2A5F22428A6D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_NPC_Death" ID="{7095A246-B0C9-4D72-8C03-E7E357EC989F}">
+					<ChildrenList>
+						<Action Name="" ID="{D891A935-CB4D-417D-BDF9-C1EE991E9DAB}" ShortID="642278381">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NPC_Death" ID="{D03D8DD8-9AED-4816-980D-CB6C3A289AEF}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Movement_PC" ID="{854E363A-FD76-45F1-B217-9ACB0AFD7027}">
+					<ChildrenList>
+						<Action Name="" ID="{0E451033-118C-4541-866C-CA6681D28735}" ShortID="583940233">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Movement_PC" ID="{5DEE3263-AB12-4FB3-B8AA-FCADF6C7DBEF}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Movement_NPC" ID="{76C56826-D869-443F-A479-027BCA55A4E5}">
+					<ChildrenList>
+						<Action Name="" ID="{E4C62B1B-C6BC-4DDF-B3A5-EF06D368387E}" ShortID="731009265">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Movement_NPC" ID="{DD5EDE01-24FD-4031-B2FA-1E56917F766F}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_NPC_Damage" ID="{8A4E11D9-C566-45EE-99A6-AA141F1B694D}">
+					<ChildrenList>
+						<Action Name="" ID="{094D3055-F192-48E8-8224-D2475E1C324B}" ShortID="393365121">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NPC_Damage" ID="{79F9A9C5-E0DE-491F-AFEA-F8B52C2CB567}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Potion_Str" ID="{654F882D-129D-4BA3-BAA7-7D1B9E145D25}">
+					<ChildrenList>
+						<Action Name="" ID="{BEE957B3-3CB4-4772-8EBD-4A0E353EF0F9}" ShortID="681622166">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Potion_Str_1" ID="{B58960D0-FFF6-4344-86CF-5F49F7D0E1BE}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Potion_Hth" ID="{7822B2A1-8C00-48CF-ABC8-3E9AD4BE7A07}">
+					<ChildrenList>
+						<Action Name="" ID="{9428C555-0ABC-44F6-BC62-71F43CC8643F}" ShortID="324068650">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Potion_Hth_1" ID="{16EE0651-D287-430D-9951-23C06E996758}" WorkUnitID="{CAAFCE1F-393E-465A-9ECE-13022DF86935}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
