@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PortalBehavior : MonoBehaviour
 {
@@ -9,9 +10,14 @@ public class PortalBehavior : MonoBehaviour
     private bool activated;
     private GameObject player;
 
+    public bool nextFloorPortal;
+    private bool sceneloaded;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        if (nextFloorPortal) activated = true;
+        sceneloaded = false;
     }
 
     public void FixedUpdate()
@@ -31,15 +37,27 @@ public class PortalBehavior : MonoBehaviour
                 //and its triggered
                 if (trigger.GetComponent<triggered>().trig)
                 {
-                    //disable next collider
-                    teleportPosObject.GetComponent<PortalBehavior>().trigger.GetComponent<triggered>().DisableCollider();
-                    //stop player movement
-                    player.GetComponent<PlayerController>().StopMovement();
-                    //teleport
-                    player.transform.position = new Vector3(
-                        teleportPosObject.transform.position.x,
-                        player.GetComponent<PlayerController>().feetpos
-                        , teleportPosObject.transform.position.z); ;
+                    if (!nextFloorPortal)
+                    {
+                        //disable next collider
+                        teleportPosObject.GetComponent<PortalBehavior>().trigger.GetComponent<triggered>().DisableCollider();
+                        //stop player movement
+                        player.GetComponent<PlayerController>().StopMovement();
+                        //teleport
+                        player.transform.position = new Vector3(
+                            teleportPosObject.transform.position.x,
+                            player.GetComponent<PlayerController>().feetpos
+                            , teleportPosObject.transform.position.z);
+                    }
+                    else 
+                    {
+                        if (!sceneloaded)
+                        {
+                            GameData.SetFloor(GameData.CurrentFloor + 1);
+                            sceneloaded = true;
+                            SceneManager.LoadScene("Menu");
+                        }
+                    }
                 }
 
                 //player out of portal?

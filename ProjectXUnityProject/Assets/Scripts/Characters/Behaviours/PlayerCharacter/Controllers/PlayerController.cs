@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     private Vector2Int[] moveToPoints;
     private int movePointsIndex;
 
+    //fix mouseclick fixed update
+    private bool mouseClicked;
+
     //highlighting cells
     private HighlightCells highlight;
 
@@ -50,6 +53,23 @@ public class PlayerController : MonoBehaviour
         move = false;
 
         highlight = HighlightCells.instance;
+
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Update()
+    {
+        if (Time.timeScale > 0)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                mouseClicked = true;
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                mouseClicked = false;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -72,15 +92,13 @@ public class PlayerController : MonoBehaviour
                 }
             case ControllerState.FreeMovement:
                 {
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButtonDown(0)||mouseClicked)
                     {
+                        Debug.Log("mouse pressed");
                         //block on ui hit
-#if !UNITY_EDITOR
-
+                        if (EventSystem.current.IsPointerOverGameObject(1)) break;
                         if (EventSystem.current.IsPointerOverGameObject(0)) break;
-#else
                         if (EventSystem.current.IsPointerOverGameObject(-1)) break;
-#endif
                         //clear highlights if they exist;
                         highlight.ClearHighlights();
                         //set up ray

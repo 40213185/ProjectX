@@ -70,7 +70,7 @@ public class MapGenerator : MonoBehaviour
                 }
                 else
                 {
-                    pick = Random.Range(0, RoomPrefabs.Length - 1);
+                    pick = Random.Range(1, RoomPrefabs.Length - 1);
                 }
                 //pick a room
 
@@ -247,7 +247,7 @@ public class MapGenerator : MonoBehaviour
     void Start()
     {
         //initialize game data
-        GameData.SetFloor(0);
+        //GameData.SetFloor(0);
         InventorySystem.init(4);
 
         //initialize map
