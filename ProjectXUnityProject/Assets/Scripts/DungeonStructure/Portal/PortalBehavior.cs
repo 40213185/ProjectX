@@ -57,9 +57,9 @@ public class PortalBehavior : MonoBehaviour
                         {
                             GameData.SetFloor(GameData.CurrentFloor + 1);
                             sceneloaded = true;
-                    //play sound
-                    SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Portal_1, gameObject);
-                            SceneManager.LoadScene("Menu");
+                            //play sound
+                            SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Portal_1, gameObject);
+                            SceneManager.LoadScene("Shop");
                         }
                     }
                 }

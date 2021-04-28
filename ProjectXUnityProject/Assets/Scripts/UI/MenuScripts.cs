@@ -29,7 +29,7 @@ public class MenuScripts : MonoBehaviour
     {
         SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_UI_Menu_1, gameObject);
         SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Stop_Main_Menu_Blend, gameObject);
-        SceneManager.LoadScene("Dungeon");
+        SceneManager.LoadScene("Shop");
     }
 
     public void ToggleSettings() 
