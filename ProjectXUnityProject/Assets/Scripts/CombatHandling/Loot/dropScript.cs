@@ -10,11 +10,12 @@ public class dropScript : MonoBehaviour
 
     private int rarity;
 
-    public GameObject body;
+    public GameObject parent;
+    public GameObject[] drops;
 
-    public Mesh[] wepModels;
+    public GameObject particleSys;
+
     public Weapon.EquipmentType[] weaponTypes;
-    public Mesh[] usableModels;
     public Usable.UsableType[] usableTypes;
 
     private Weapon sortSpaceWep;
@@ -27,16 +28,35 @@ public class dropScript : MonoBehaviour
         {
             droppedWep = item;
             int index = 0;
-            for (int i = 0; i < wepModels.Length; i++)
+            for (int i = 0; i < 6; i++)
             {
                 if (droppedWep.GetEquipmentType() == weaponTypes[i])
                 {
                     index = i;
-                    break;
                 }
             }
-
-            body.GetComponent<MeshFilter>().mesh = wepModels[index];
+            switch (droppedWep.GetEquipmentType()) 
+            {
+                case (Weapon.EquipmentType.ArmingSword):
+                    Instantiate(drops[0], parent.transform);
+                    break;
+                case (Weapon.EquipmentType.Halberd):
+                    Instantiate(drops[1], parent.transform);
+                    break;
+                case (Weapon.EquipmentType.Greatsword):
+                    Instantiate(drops[2], parent.transform);
+                    break;
+                case (Weapon.EquipmentType.SpellBook):
+                    Instantiate(drops[3], parent.transform);
+                    break;
+                case (Weapon.EquipmentType.Flintlock):
+                    Instantiate(drops[4], parent.transform);
+                    break;
+                case (Weapon.EquipmentType.Dagger):
+                    Instantiate(drops[5], parent.transform);
+                    break;
+            }
+            
             rarity = droppedWep.getRarity();
             setRarityColour();
             isWep = true;
@@ -126,7 +146,7 @@ public class dropScript : MonoBehaviour
         droppedUsable = item;
 
         int index = 0;
-        for (int i = 0; i < wepModels.Length; i++)
+        for (int i = 0; i < 2; i++)
         {
             if (droppedUsable.GetUsableType() == usableTypes[i])
             {
@@ -134,9 +154,8 @@ public class dropScript : MonoBehaviour
                 break;
             }
         }
-
-        body.GetComponent<MeshFilter>().mesh = usableModels[index];
-        body.GetComponent<ParticleSystem>().startColor = Color.cyan;
+        Instantiate(drops[6], parent.transform);
+        particleSys.GetComponent<ParticleSystem>().startColor = Color.cyan;
         isWep = false;
         if (droppedUsable == null) GameObject.Destroy(this.gameObject);
     }
@@ -146,16 +165,16 @@ public class dropScript : MonoBehaviour
         switch (rarity) 
         {
             case 1:
-                body.GetComponent<ParticleSystem>().startColor = Color.white;
+                particleSys.GetComponent<ParticleSystem>().startColor = Color.white;
                 break;
             case 2:
-                body.GetComponent<ParticleSystem>().startColor = Color.green;
+                particleSys.GetComponent<ParticleSystem>().startColor = Color.green;
                 break;
             case 3:
-                body.GetComponent<ParticleSystem>().startColor = Color.blue;
+                particleSys.GetComponent<ParticleSystem>().startColor = Color.blue;
                 break;
             case 4:
-                body.GetComponent<ParticleSystem>().startColor = Color.yellow;
+                particleSys.GetComponent<ParticleSystem>().startColor = Color.yellow;
                 break;
         }
     }
