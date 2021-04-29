@@ -15,11 +15,11 @@ D:/Documents/uni/Year 3/GroupProject/ProjectX/ProjectXUnityProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-24056
+25157
 Successfully changed project path to: D:/Documents/uni/Year 3/GroupProject/ProjectX/ProjectXUnityProject
 D:/Documents/uni/Year 3/GroupProject/ProjectX/ProjectXUnityProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 83.33 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 80.76 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.4f1 (becced5a802b)
 [Subsystems] Discovering subsystems at path D:/Program files/Unity/Editor/Data/Resources/UnitySubsystems
@@ -35,558 +35,129 @@ Initialize mono
 Mono path[0] = 'D:/Program files/Unity/Editor/Data/Managed'
 Mono path[1] = 'D:/Program files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Program files/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56368
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56964
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004230 seconds.
+Registered in 0.004527 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 35.58 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 36.41 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.268 seconds
+- Completed reload, in  1.296 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.017150 seconds.
+Registered in 0.017195 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.62 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.347 seconds
+- Completed reload, in  1.277 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.62 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1451 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69.8 MB.
+System memory in use before: 69.9 MB.
 System memory in use after: 69.9 MB.
 
 Unloading 74 unused Assets to reduce memory usage. Loaded Objects now: 1833.
-Total: 2.612100 ms (FindLiveObjects: 0.146400 ms CreateObjectMapping: 0.051800 ms MarkObjects: 2.296100 ms  DeleteObjects: 0.116800 ms)
+Total: 2.673000 ms (FindLiveObjects: 0.150900 ms CreateObjectMapping: 0.037900 ms MarkObjects: 2.365700 ms  DeleteObjects: 0.118000 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Dungeon/Rooms/floor_unity_export.fbx
-  artifactKey: Guid(50d8cb8e8427d834488a82d2ee6f9568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon/Rooms/floor_unity_export.fbx using Guid(50d8cb8e8427d834488a82d2ee6f9568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bc79b1bbe54486d41316f25f6adf3f6') in 0.167686 seconds
-  Import took 0.170113 seconds .
+  path: Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_Emissive.png
+  artifactKey: Guid(9d956be19fb37dd47aeba0f2ab85f83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_Emissive.png using Guid(9d956be19fb37dd47aeba0f2ab85f83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e853e10b19ac3c3e7ba4af1c78d7ddc7') in 0.079312 seconds
+  Import took 0.081991 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/Scenes/Dungeon/Rooms/SpecialRooms/NextFloorRoom.prefab
-  artifactKey: Guid(3e47b3a4da468964e97a675624b9a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon/Rooms/SpecialRooms/NextFloorRoom.prefab using Guid(3e47b3a4da468964e97a675624b9a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6c950767053652f65eeabe4184cc3a') in 0.046918 seconds
-  Import took 0.051418 seconds .
+  Time since last request: 0.000314 seconds.
+  path: Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_AO.png
+  artifactKey: Guid(a51f970bd88a3284fb99df1d3ac24cc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_AO.png using Guid(a51f970bd88a3284fb99df1d3ac24cc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9369325febdf4058b31f64e145e3d67b') in 0.014292 seconds
+  Import took 0.017382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_Metallic.png
+  artifactKey: Guid(a8bb433d048a4c14d9bb607b41c0d990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_Metallic.png using Guid(a8bb433d048a4c14d9bb607b41c0d990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70434ae850703fbc7c834a47516ebc1c') in 0.019027 seconds
+  Import took 0.021589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_Normal.png
+  artifactKey: Guid(9da63ba4991683a43aa7941b4bab0d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_Normal.png using Guid(9da63ba4991683a43aa7941b4bab0d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29c8f5b1b5b3bc1912ce00fa02040080') in 0.037060 seconds
+  Import took 0.040065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_Height.png
+  artifactKey: Guid(9ce24e93939d38e47b5d4b7d50fbae5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_Height.png using Guid(9ce24e93939d38e47b5d4b7d50fbae5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42a31067b2886074e7e05d660b074455') in 0.015685 seconds
+  Import took 0.018385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_Albedo.png
+  artifactKey: Guid(2259f07348d18354888b538112dff17a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Lamp-Floating/Lamp-Floating_Material.014_Albedo.png using Guid(2259f07348d18354888b538112dff17a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9946c317454c25a6652413874dce1da') in 0.014091 seconds
+  Import took 0.017228 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 152.683805 seconds.
+  path: Assets/Scenes/Dungeon/ClutterPrefabs/LampRegular.prefab
+  artifactKey: Guid(903d31119535e4341ac4a727119fde41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Dungeon/ClutterPrefabs/LampRegular.prefab using Guid(903d31119535e4341ac4a727119fde41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ec40a6e00a8a9feb8e919fd58c2d924') in 0.054066 seconds
+  Import took 0.058044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.053456 seconds.
+  path: Assets/Scenes/Dungeon/ClutterPrefabs/LampRegular.prefab
+  artifactKey: Guid(903d31119535e4341ac4a727119fde41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Dungeon/ClutterPrefabs/LampRegular.prefab using Guid(903d31119535e4341ac4a727119fde41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a79badc6f956aaaadf2e7a61a0103e59') in 0.021669 seconds
+  Import took 0.024419 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.017209 seconds.
+Registered in 0.018654 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.203 seconds
+- Completed reload, in  1.193 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.3 MB.
-System memory in use after: 73.4 MB.
+System memory in use before: 73.0 MB.
+System memory in use after: 73.1 MB.
 
-Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 1845.
-Total: 2.449100 ms (FindLiveObjects: 0.132900 ms CreateObjectMapping: 0.043400 ms MarkObjects: 2.180300 ms  DeleteObjects: 0.091400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 89.971189 seconds.
-  path: Assets/Scenes/Dungeon/Rooms/floor_unity_export.fbx
-  artifactKey: Guid(50d8cb8e8427d834488a82d2ee6f9568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon/Rooms/floor_unity_export.fbx using Guid(50d8cb8e8427d834488a82d2ee6f9568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22791b23af093f6f2df379682286b089') in 0.066957 seconds
-  Import took 0.069463 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/Scenes/Dungeon/Rooms/SpecialRooms/NextFloorRoom.prefab
-  artifactKey: Guid(3e47b3a4da468964e97a675624b9a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon/Rooms/SpecialRooms/NextFloorRoom.prefab using Guid(3e47b3a4da468964e97a675624b9a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a34f05ba3452f73dce2582f56c05761d') in 0.039015 seconds
-  Import took 0.042612 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.544166 seconds.
-  path: Assets/Scenes/Dungeon/Rooms/floor_unity_export.fbx
-  artifactKey: Guid(50d8cb8e8427d834488a82d2ee6f9568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon/Rooms/floor_unity_export.fbx using Guid(50d8cb8e8427d834488a82d2ee6f9568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c301dcb29d06d7c1e4509cad2309e3c') in 0.012075 seconds
-  Import took 0.014913 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000268 seconds.
-  path: Assets/Scenes/Dungeon/Rooms/SpecialRooms/NextFloorRoom.prefab
-  artifactKey: Guid(3e47b3a4da468964e97a675624b9a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon/Rooms/SpecialRooms/NextFloorRoom.prefab using Guid(3e47b3a4da468964e97a675624b9a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e42f1eb4adf1355232397fdb0c87bd2a') in 0.026785 seconds
-  Import took 0.030254 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005157 seconds.
-  path: Assets/Scenes/Dungeon/Rooms/SpecialRooms/NextFloorRoom.prefab
-  artifactKey: Guid(3e47b3a4da468964e97a675624b9a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon/Rooms/SpecialRooms/NextFloorRoom.prefab using Guid(3e47b3a4da468964e97a675624b9a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e42f1eb4adf1355232397fdb0c87bd2a') in 0.027436 seconds
-  Import took 0.032080 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 112.896897 seconds.
-  path: Assets/Scenes/Dungeon/Rooms/floor_unity_export.fbx
-  artifactKey: Guid(50d8cb8e8427d834488a82d2ee6f9568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon/Rooms/floor_unity_export.fbx using Guid(50d8cb8e8427d834488a82d2ee6f9568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ac5d29d58cbdecbdef57de3d043d5e6') in 0.020865 seconds
-  Import took 0.023658 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/Scenes/Dungeon/Rooms/SpecialRooms/NextFloorRoom.prefab
-  artifactKey: Guid(3e47b3a4da468964e97a675624b9a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon/Rooms/SpecialRooms/NextFloorRoom.prefab using Guid(3e47b3a4da468964e97a675624b9a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6709f01aa7ab704496c947403123400') in 0.037753 seconds
-  Import took 0.041400 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000293 seconds.
-  path: Assets/Scenes/Dungeon/Rooms/floor_unity_export.fbx
-  artifactKey: Guid(50d8cb8e8427d834488a82d2ee6f9568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon/Rooms/floor_unity_export.fbx using Guid(50d8cb8e8427d834488a82d2ee6f9568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ac5d29d58cbdecbdef57de3d043d5e6') in 0.018449 seconds
-  Import took 0.021313 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.022151 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.522 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.4 MB.
-System memory in use after: 73.5 MB.
-
-Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 1848.
-Total: 3.863500 ms (FindLiveObjects: 0.273900 ms CreateObjectMapping: 0.094600 ms MarkObjects: 3.429400 ms  DeleteObjects: 0.063400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 149.095471 seconds.
-  path: Assets/Art&Sound/Art/Models/Environment/WallsAndFloor/floor_unity_export.fbx
-  artifactKey: Guid(bfecd16d274761b478ae083a508c4d91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Environment/WallsAndFloor/floor_unity_export.fbx using Guid(bfecd16d274761b478ae083a508c4d91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '643416348685d81c5d6788aa06b5078c') in 0.110126 seconds
-  Import took 0.113188 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 65.732447 seconds.
-  path: Assets/Art&Sound/Art/Models/Environment/WallsAndFloor/floor_unity_export.fbx
-  artifactKey: Guid(bfecd16d274761b478ae083a508c4d91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Environment/WallsAndFloor/floor_unity_export.fbx using Guid(bfecd16d274761b478ae083a508c4d91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9246574df76a7a53536003de52b22023') in 0.024352 seconds
-  Import took 0.027464 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.020529 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.230 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.6 MB.
-System memory in use after: 73.7 MB.
-
-Unloading 69 unused Assets to reduce memory usage. Loaded Objects now: 1884.
-Total: 2.742000 ms (FindLiveObjects: 0.257100 ms CreateObjectMapping: 0.104000 ms MarkObjects: 2.309400 ms  DeleteObjects: 0.070500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 97.481178 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/book-medium.fbx
-  artifactKey: Guid(9948fc7896297a5498679544572c61b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/book-medium.fbx using Guid(9948fc7896297a5498679544572c61b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7806c9a97c8e43d95bd3d19e2a79b36') in 0.075016 seconds
-  Import took 0.077778 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.015205 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/book-medium.fbx
-  artifactKey: Guid(9948fc7896297a5498679544572c61b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/book-medium.fbx using Guid(9948fc7896297a5498679544572c61b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e693fe90ca343d0c69b372d6280eda0e') in 0.013323 seconds
-  Import took 0.016250 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.790141 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/book-medium.fbx
-  artifactKey: Guid(9948fc7896297a5498679544572c61b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/book-medium.fbx using Guid(9948fc7896297a5498679544572c61b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba328196064edabd6b4d4b94e2d28de') in 0.029294 seconds
-  Import took 0.032033 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.195268 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/book-medium.fbx
-  artifactKey: Guid(9948fc7896297a5498679544572c61b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/book-medium.fbx using Guid(9948fc7896297a5498679544572c61b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd030661b906d707d8214e83c1e52b853') in 0.021578 seconds
-  Import took 0.024897 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 33.415855 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/arming_sword.fbx
-  artifactKey: Guid(cbb6c321132bd4048815ed11655b51db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/arming_sword.fbx using Guid(cbb6c321132bd4048815ed11655b51db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de81cfa2e211915c867eb82e3b78149c') in 0.020291 seconds
-  Import took 0.023324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.574965 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/dagger.fbx
-  artifactKey: Guid(9578520faf2844a42a01c43cbad0fc02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/dagger.fbx using Guid(9578520faf2844a42a01c43cbad0fc02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96d8070b51f4d3d823d848cef0a40867') in 0.018061 seconds
-  Import took 0.021127 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.874560 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/dagger.fbx
-  artifactKey: Guid(9578520faf2844a42a01c43cbad0fc02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/dagger.fbx using Guid(9578520faf2844a42a01c43cbad0fc02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0d8b20598c230b56f9d4c1bc8cee085') in 0.019912 seconds
-  Import took 0.023442 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002377 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/dagger.fbx
-  artifactKey: Guid(9578520faf2844a42a01c43cbad0fc02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/dagger.fbx using Guid(9578520faf2844a42a01c43cbad0fc02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0d8b20598c230b56f9d4c1bc8cee085') in 0.019797 seconds
-  Import took 0.022411 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.609072 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/dagger.fbx
-  artifactKey: Guid(9578520faf2844a42a01c43cbad0fc02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/dagger.fbx using Guid(9578520faf2844a42a01c43cbad0fc02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f37bb8fbabbeacdb071ccaa9ffbf163a') in 0.018509 seconds
-  Import took 0.021579 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002965 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/dagger.fbx
-  artifactKey: Guid(9578520faf2844a42a01c43cbad0fc02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/dagger.fbx using Guid(9578520faf2844a42a01c43cbad0fc02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f37bb8fbabbeacdb071ccaa9ffbf163a') in 0.016188 seconds
-  Import took 0.018663 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.306374 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/flintlock.fbx
-  artifactKey: Guid(553a506a84ecc1c478913c9a73d694aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/flintlock.fbx using Guid(553a506a84ecc1c478913c9a73d694aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b888bf13d270e6d2536ef3521925a736') in 0.017645 seconds
-  Import took 0.021019 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003517 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/flintlock.fbx
-  artifactKey: Guid(553a506a84ecc1c478913c9a73d694aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/flintlock.fbx using Guid(553a506a84ecc1c478913c9a73d694aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b888bf13d270e6d2536ef3521925a736') in 0.012853 seconds
-  Import took 0.015663 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.646050 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/flintlock.fbx
-  artifactKey: Guid(553a506a84ecc1c478913c9a73d694aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/flintlock.fbx using Guid(553a506a84ecc1c478913c9a73d694aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbc617cb9fcf5d4b3809318171454e3c') in 0.019504 seconds
-  Import took 0.022493 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002873 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/flintlock.fbx
-  artifactKey: Guid(553a506a84ecc1c478913c9a73d694aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/flintlock.fbx using Guid(553a506a84ecc1c478913c9a73d694aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbc617cb9fcf5d4b3809318171454e3c') in 0.019838 seconds
-  Import took 0.022605 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.898609 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/flintlock.fbx
-  artifactKey: Guid(553a506a84ecc1c478913c9a73d694aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/flintlock.fbx using Guid(553a506a84ecc1c478913c9a73d694aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f56224ceddf2205dc6f93f2c918e2ad') in 0.018336 seconds
-  Import took 0.021248 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 102.865059 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/greatsword.fbx
-  artifactKey: Guid(6a779908c7dd7554cbad14c70ecfd082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/greatsword.fbx using Guid(6a779908c7dd7554cbad14c70ecfd082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5ba5d47215f97523151028eddf93d51') in 0.021033 seconds
-  Import took 0.024259 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004989 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/greatsword.fbx
-  artifactKey: Guid(6a779908c7dd7554cbad14c70ecfd082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/greatsword.fbx using Guid(6a779908c7dd7554cbad14c70ecfd082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5ba5d47215f97523151028eddf93d51') in 0.019625 seconds
-  Import took 0.022486 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.282826 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/greatsword.fbx
-  artifactKey: Guid(6a779908c7dd7554cbad14c70ecfd082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/greatsword.fbx using Guid(6a779908c7dd7554cbad14c70ecfd082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '899635e0b93b045ec714a8de8fb598ee') in 0.019571 seconds
-  Import took 0.022698 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 78.069706 seconds.
-  path: Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword
-  artifactKey: Guid(875309938284c5a459cd578778ce8c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword using Guid(875309938284c5a459cd578778ce8c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c6a50804a0e994101fab57883b34f38') in 0.006722 seconds
-  Import took 0.009481 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.066227 seconds.
-  path: Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword/greatsword_DefaultMaterial_Albedo.png
-  artifactKey: Guid(de9317d3f1d61ad438bbaa7a462007ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword/greatsword_DefaultMaterial_Albedo.png using Guid(de9317d3f1d61ad438bbaa7a462007ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f389cef1d0eaca90fcff3f94e3fafb8') in 0.019779 seconds
-  Import took 0.022918 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000288 seconds.
-  path: Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword/greatsword_DefaultMaterial_Metallic.png
-  artifactKey: Guid(ca485d6a2ce511c449e283b34fdb5fd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword/greatsword_DefaultMaterial_Metallic.png using Guid(ca485d6a2ce511c449e283b34fdb5fd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49ac3a9d010903e3a5f6e4573c6e0225') in 0.010220 seconds
-  Import took 0.012754 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000309 seconds.
-  path: Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword/greatsword_DefaultMaterial_Normal.png
-  artifactKey: Guid(2d6d60510cdb4374ebb08b94294b260a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword/greatsword_DefaultMaterial_Normal.png using Guid(2d6d60510cdb4374ebb08b94294b260a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ca44cdfb20901c13a8b2a5f555939e8') in 0.013955 seconds
-  Import took 0.016573 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000332 seconds.
-  path: Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword/greatsword_DefaultMaterial_AO.png
-  artifactKey: Guid(d843ea15e9cd28b4bbb7a7cb8a470ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword/greatsword_DefaultMaterial_AO.png using Guid(d843ea15e9cd28b4bbb7a7cb8a470ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '860df27dc5f1589728f5c210dfd80c8d') in 0.012493 seconds
-  Import took 0.014918 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000279 seconds.
-  path: Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword/greatsword_DefaultMaterial_Height.png
-  artifactKey: Guid(b857c953bb900cb429dd25d29427de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Materials/TextureComponents/Greatsword/greatsword_DefaultMaterial_Height.png using Guid(b857c953bb900cb429dd25d29427de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d30241a274ac4e5811b638372d15888') in 0.011538 seconds
-  Import took 0.014141 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 52.247945 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab
-  artifactKey: Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab using Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a0f79e3488961691b9be67249c53082') in 0.009803 seconds
-  Import took 0.012318 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003125 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab
-  artifactKey: Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab using Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a0f79e3488961691b9be67249c53082') in 0.004827 seconds
-  Import took 0.007617 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.209097 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab
-  artifactKey: Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab using Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c250da7710949eeba477fa4f5c2fc59') in 0.004463 seconds
-  Import took 0.007466 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004945 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab
-  artifactKey: Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab using Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c250da7710949eeba477fa4f5c2fc59') in 0.004366 seconds
-  Import took 0.007157 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.141979 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab
-  artifactKey: Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab using Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb69c32fc2eeace91ba46994c61256cd') in 0.004281 seconds
-  Import took 0.007228 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005635 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab
-  artifactKey: Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/New Prefab.prefab using Guid(4f7a1e3fc1aee5040a690e5368f88daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb69c32fc2eeace91ba46994c61256cd') in 0.004477 seconds
-  Import took 0.007143 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 101.667107 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/halberd.fbx
-  artifactKey: Guid(64a07a35592961344b9275f6eb5ddccb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/halberd.fbx using Guid(64a07a35592961344b9275f6eb5ddccb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '349cb765fa6fab025b74f54d5b396bca') in 0.021540 seconds
-  Import took 0.024859 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.671667 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/Potion1-Full.fbx
-  artifactKey: Guid(ca132e2ff9a866e45ba874c3263f8bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/Potion1-Full.fbx using Guid(ca132e2ff9a866e45ba874c3263f8bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a261be5f65fddaa1231bb9726cf893b2') in 0.020791 seconds
-  Import took 0.023633 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000821 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/Potion1-Full.fbx
-  artifactKey: Guid(ca132e2ff9a866e45ba874c3263f8bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/Potion1-Full.fbx using Guid(ca132e2ff9a866e45ba874c3263f8bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a261be5f65fddaa1231bb9726cf893b2') in 0.018811 seconds
-  Import took 0.021489 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.835303 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/Potion1.fbx
-  artifactKey: Guid(5664eb46a3a74d143934b47c26a8147d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/Potion1.fbx using Guid(5664eb46a3a74d143934b47c26a8147d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4d689cd23e5995e873454c32b191c67') in 0.022200 seconds
-  Import took 0.025614 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.252236 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/Potion2-Full.fbx
-  artifactKey: Guid(fa31637879dd6fa43a3caeb4246e1a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/Potion2-Full.fbx using Guid(fa31637879dd6fa43a3caeb4246e1a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e53ea2915d17cb5d17f0fae6c69bf1c') in 0.015814 seconds
-  Import took 0.018818 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000788 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/Potion2-Full.fbx
-  artifactKey: Guid(fa31637879dd6fa43a3caeb4246e1a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/Potion2-Full.fbx using Guid(fa31637879dd6fa43a3caeb4246e1a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e53ea2915d17cb5d17f0fae6c69bf1c') in 0.012908 seconds
-  Import took 0.015279 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.394781 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/Potion2-Full.fbx
-  artifactKey: Guid(fa31637879dd6fa43a3caeb4246e1a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/Potion2-Full.fbx using Guid(fa31637879dd6fa43a3caeb4246e1a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc39111c102446dedd9fa9f091fad36a') in 0.019403 seconds
-  Import took 0.022127 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000913 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/Potion2-Full.fbx
-  artifactKey: Guid(fa31637879dd6fa43a3caeb4246e1a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/Potion2-Full.fbx using Guid(fa31637879dd6fa43a3caeb4246e1a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc39111c102446dedd9fa9f091fad36a') in 0.019239 seconds
-  Import took 0.022117 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.186594 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/Potion2.fbx
-  artifactKey: Guid(4b792c13feb673047bc25878edfb659e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/Potion2.fbx using Guid(4b792c13feb673047bc25878edfb659e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '722d1d51c84efbcff31ba2c95dfdb20e') in 0.023857 seconds
-  Import took 0.027232 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 81.244112 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/halberd.fbx
-  artifactKey: Guid(64a07a35592961344b9275f6eb5ddccb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/halberd.fbx using Guid(64a07a35592961344b9275f6eb5ddccb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1bfc1417494628b48d6ad983297e168') in 0.019271 seconds
-  Import took 0.022353 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.319071 seconds.
-  path: Assets/Art&Sound/Art/Models/Items-Weapons/Potion1.fbx
-  artifactKey: Guid(5664eb46a3a74d143934b47c26a8147d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art&Sound/Art/Models/Items-Weapons/Potion1.fbx using Guid(5664eb46a3a74d143934b47c26a8147d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '911353dd8c9651cb921b777cc0130265') in 0.022290 seconds
-  Import took 0.025507 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.018284 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.241 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.7 MB.
-System memory in use after: 73.8 MB.
-
-Unloading 70 unused Assets to reduce memory usage. Loaded Objects now: 1890.
-Total: 2.951500 ms (FindLiveObjects: 0.169500 ms CreateObjectMapping: 0.045100 ms MarkObjects: 2.664000 ms  DeleteObjects: 0.071600 ms)
+Unloading 70 unused Assets to reduce memory usage. Loaded Objects now: 1845.
+Total: 3.542500 ms (FindLiveObjects: 0.195300 ms CreateObjectMapping: 0.057200 ms MarkObjects: 3.201900 ms  DeleteObjects: 0.087100 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
