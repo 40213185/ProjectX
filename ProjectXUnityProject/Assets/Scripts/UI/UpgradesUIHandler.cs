@@ -72,6 +72,7 @@ public class UpgradesUIHandler : MonoBehaviour
         Debug.Log("Begin");
         SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_UI_Menu_1, gameObject);
         SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Stop_Main_Menu_Blend, gameObject);
+        GlobalGameState.ResetWallToggle();
         SceneManager.LoadScene("Dungeon");
     }
 

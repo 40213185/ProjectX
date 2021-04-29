@@ -43,6 +43,7 @@ public class PortalBehavior : MonoBehaviour
                         teleportPosObject.GetComponent<PortalBehavior>().trigger.GetComponent<triggered>().DisableCollider();
                         //stop player movement
                         player.GetComponent<PlayerController>().StopMovement();
+                        player.GetComponent<PlayerController>().Freeze();
                         //teleport
                         player.transform.position = new Vector3(
                             teleportPosObject.transform.position.x,
@@ -50,6 +51,7 @@ public class PortalBehavior : MonoBehaviour
                             , teleportPosObject.transform.position.z);
                     //play sound
                     SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Portal_1, gameObject);
+
                     }
                     else 
                     {
@@ -60,6 +62,7 @@ public class PortalBehavior : MonoBehaviour
                             sceneloaded = true;
                             //play sound
                             SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Portal_1, gameObject);
+                            GameData.Save();
                             SceneManager.LoadScene("Shop");
                         }
                     }
