@@ -258,8 +258,9 @@ public class UIHandling : MonoBehaviour
         showingTooltip = false;
     }
 
-    public void BasicAttackPressed() 
+    public void BasicAttackPressed()
     {
+        playerCombatController.ClearSelectedAction();
         //check if not moving
         if (playerCombatController.combatControllerState == PlayerControllerCombat.CombatControllerState.Wait)
         {
@@ -279,6 +280,7 @@ public class UIHandling : MonoBehaviour
 
     public void WeaponSkillPressed()
     {
+        playerCombatController.ClearSelectedAction();
         //check if not moving
         if (playerCombatController.combatControllerState == PlayerControllerCombat.CombatControllerState.Wait)
         {

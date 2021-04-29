@@ -43,6 +43,7 @@ public class HideIfPlayerNotPresent : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
 
         if (GetComponent<EnemySpawner>()) GetComponent<EnemySpawner>().CheckAndPlaceEnemies();
+        else if (GetComponent<BossFightStart>()) GetComponent<BossFightStart>().StartFight();
         finished = true;
     }
     private void OnTriggeredByPlayer(Collider other) 

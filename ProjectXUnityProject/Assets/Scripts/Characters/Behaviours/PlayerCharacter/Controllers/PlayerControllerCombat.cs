@@ -589,4 +589,10 @@ public class PlayerControllerCombat : MonoBehaviour
         //setup small delay for mouse intput delayed action
         waitTimer = Time.time + 1;
     }
+
+    public void ClearSelectedAction() 
+    {
+        highlight.ClearHighlights();
+        combatControllerState = CombatControllerState.Wait;
+    }
 }

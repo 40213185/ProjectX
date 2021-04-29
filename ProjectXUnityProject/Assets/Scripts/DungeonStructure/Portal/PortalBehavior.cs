@@ -56,6 +56,7 @@ public class PortalBehavior : MonoBehaviour
                         if (!sceneloaded)
                         {
                             GameData.SetFloor(GameData.CurrentFloor + 1);
+                            player.GetComponent<PlayerController>().StopMovement();
                             sceneloaded = true;
                     //play sound
                     SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_Portal_1, gameObject);

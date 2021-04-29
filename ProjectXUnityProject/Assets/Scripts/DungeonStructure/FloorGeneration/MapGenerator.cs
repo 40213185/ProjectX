@@ -45,7 +45,7 @@ public class MapGenerator : MonoBehaviour
         //room build validation
         //this is initialized as false and set to true when a room is placed
         //used to check and avoid room overlapping
-        roomsBuiltValidation = new bool[roomsOnFloor, roomsOnFloor];
+        roomsBuiltValidation = new bool[roomsOnFloor+1, roomsOnFloor+1];
         for (int y = 0; y < roomsOnFloor; y++)
         {
             for (int x = 0; x < roomsOnFloor; x++)
@@ -54,7 +54,7 @@ public class MapGenerator : MonoBehaviour
             }
         }
         //room type storage for use with MapHandler class
-        roomType = new int[roomsOnFloor, roomsOnFloor];
+        roomType = new int[roomsOnFloor+1, roomsOnFloor+1];
         //random pointer for placing rooms properly
         Vector2Int pointer = new Vector2Int(0, 0);
         //cycle the amount of rooms fabricated at the current floor
@@ -70,7 +70,7 @@ public class MapGenerator : MonoBehaviour
                 }
                 else
                 {
-                    pick = Random.Range(1, RoomPrefabs.Length - 1);
+                    pick = Random.Range(1, RoomPrefabs.Length - 2);
                 }
                 //pick a room
 
@@ -101,11 +101,11 @@ public class MapGenerator : MonoBehaviour
                 }
             }
             //pick a random from the list and set it for new room placement
-            pointer = possiblePlacements[Random.Range(0, possiblePlacements.Count - 1)];
+            if(possiblePlacements.Count>0) pointer = possiblePlacements[Random.Range(0, possiblePlacements.Count - 1)];
         }
 
         //place next floor room
-        if (GameData.CurrentFloor != 5)
+        if (GameData.CurrentFloor != 4)
         {
             List<Vector2Int> possiblePlaces = new List<Vector2Int>();
             for (int y = 0; y < roomsBuiltValidation.GetLength(1); y++)
@@ -142,6 +142,14 @@ public class MapGenerator : MonoBehaviour
             //create room and store it
             rooms.Add(Instantiate(RoomPrefabs[9], new Vector3(possiblePlaces[rnd].x * MapHandler.roomSizex, 0, possiblePlaces[rnd].y * MapHandler.roomSizey), RoomPrefabs[9].transform.rotation));
         }
+        //floor 5
+        else 
+        {
+            //create boss room
+            roomsBuiltValidation[0,1] = true;
+            roomType[0,1] = 10;
+            rooms.Add(Instantiate(RoomPrefabs[10],new Vector3( 0, 0, MapHandler.roomSizey), RoomPrefabs[10].transform.rotation));
+        }
     }
 
 
@@ -153,7 +161,10 @@ public class MapGenerator : MonoBehaviour
 
     private void PositionPlayer() 
     {
-        Instantiate(player, new Vector3(3, 0, 1), player.transform.rotation);
+        if (GameObject.FindGameObjectWithTag("Player")) 
+        {
+            GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(3, 0, 1);
+        }else Instantiate(player, new Vector3(3, 0, 1), player.transform.rotation);
     }
 
     private void PositionUI() 
