@@ -82,6 +82,7 @@ public class Stats
         GameObject.FindGameObjectWithTag("UI").GetComponent<UIHandling>().UpdateUI();
         //return the difference between previous current health and new one
         return beforeHealth - currentHealth;
+        Debug.Log("Health = " +currentHealth);
     }
 
     public int GetCurrentActionPoints()
