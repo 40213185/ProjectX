@@ -183,7 +183,7 @@ public class EnemyController : MonoBehaviour
                         {
                             //movement decision
                             movePoints = EnemyLibrary.GetPossibleMovementPoints(enemyType, GetMatrixPos());
-                            
+
                             //if there are valid movement points
                             if (movePoints.Length > 0)
                             {
@@ -197,7 +197,7 @@ public class EnemyController : MonoBehaviour
                                     //add all weapons to weapon choice list
                                     for (int x = 0; x < weapons.Length; x++) weaponChoice.Add(x);
                                 }
-                                
+
                                 //go through movement points
                                 for (int i = 0; i < movePoints.Length; i++)
                                 {
@@ -224,7 +224,7 @@ public class EnemyController : MonoBehaviour
                                         }
                                     }
                                 }
-                                
+
                                 //points with weapons
                                 if (possiblePointsWithWeapon.Count > 0)
                                 {
@@ -295,6 +295,10 @@ public class EnemyController : MonoBehaviour
                                 //move
                                 actionState = State.Move;
                                 break;
+                            }
+                            else 
+                            {
+                                actionState = State.TurnEnd;
                             }
                         }
 
