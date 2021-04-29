@@ -17,6 +17,10 @@ public class MenuScripts : MonoBehaviour
 
     public void Start()
     {
+        if (GameObject.FindGameObjectWithTag("Player")) 
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Player"));
+        }
         if (!GameData.Load()) GameData.Save();
         SoundbankHandler.StateSelector(SoundbankHandler.WwiseStates.Speed_Norm);
         SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Stop_After_Death, gameObject);
