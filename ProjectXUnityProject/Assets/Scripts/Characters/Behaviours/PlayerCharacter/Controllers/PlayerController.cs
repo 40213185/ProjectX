@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     //highlighting cells
     private HighlightCells highlight;
 
+    private float freezeTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,8 +83,10 @@ public class PlayerController : MonoBehaviour
             case ControllerState.Freeze:
                 {
                     move = false;
-                    if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat)
+                    if (GlobalGameState.combatState == GlobalGameState.CombatState.OutOfCombat &&
+                        freezeTimer <= 0)
                         controllerState = ControllerState.FreeMovement;
+                    else freezeTimer -= Time.deltaTime;
                     break;
                 }
 
@@ -94,7 +98,6 @@ public class PlayerController : MonoBehaviour
                 {
                     if (Input.GetMouseButtonDown(0)||mouseClicked)
                     {
-                        Debug.Log("mouse pressed");
                         //block on ui hit
                         if (EventSystem.current.IsPointerOverGameObject(1)) break;
                         if (EventSystem.current.IsPointerOverGameObject(0)) break;
@@ -221,5 +224,16 @@ public class PlayerController : MonoBehaviour
     public Stats GetPlayerStatValues() 
     {
         return stats;
+    }
+
+    private void OnDisable()
+    {
+        StopMovement();
+    }
+
+    public void Freeze() 
+    {
+        controllerState = ControllerState.FreeMovement;
+        freezeTimer = 2;
     }
 }

@@ -13,9 +13,14 @@ public static class InventorySystem
     public static void init(int useSlots) 
     {
         usableSlots = useSlots;
-        equipmentHeld = new Weapon();
         usablesHeld = new Usable[usableSlots];
-        equipmentHeld = Weapon.GetRandomWeapon(100,100);
+        if (GameData.CurrentFloor == 0|| equipmentHeld==null)
+        {
+            equipmentHeld = new Weapon();
+            equipmentHeld = Weapon.GetRandomWeapon(100, 100);
+
+            Debug.Log(equipmentHeld.GetName());
+        }
     }
 
     public static void ReplaceWeapon(Weapon equip)

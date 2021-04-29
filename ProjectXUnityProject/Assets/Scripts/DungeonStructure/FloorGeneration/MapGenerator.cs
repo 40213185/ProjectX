@@ -70,7 +70,7 @@ public class MapGenerator : MonoBehaviour
                 }
                 else
                 {
-                    pick = Random.Range(1, RoomPrefabs.Length - 2);
+                    pick = Random.Range(1, RoomPrefabs.Length - 3);
                 }
                 //pick a room
 

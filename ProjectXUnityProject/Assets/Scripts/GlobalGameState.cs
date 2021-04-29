@@ -16,7 +16,10 @@ public static class GlobalGameState
         if (pause) Time.timeScale = 0;
         else Time.timeScale = 1.0f;
     }
-
+    public static void ResetWallToggle() 
+    {
+        wallsHidden = false;
+    }
     public static void toggleWalls() 
     {
         wallsHidden = !wallsHidden;

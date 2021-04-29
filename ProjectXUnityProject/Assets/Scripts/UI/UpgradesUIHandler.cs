@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UpgradesUIHandler : MonoBehaviour
@@ -23,12 +24,7 @@ public class UpgradesUIHandler : MonoBehaviour
     void Start()
     {
         GameData.Load();
-        if (GameData.currency > 0)
-        {
-            upgradesContainer.SetActive(true);
-            UpdateUI();
-        }
-        else upgradesContainer.SetActive(false);
+        UpdateUI();
     }
 
     private void UpdateUI()
@@ -70,4 +66,14 @@ public class UpgradesUIHandler : MonoBehaviour
         GameData.Save();
         UpdateUI();
     }
+
+    public void BeginGame()
+    {
+        Debug.Log("Begin");
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Play_UI_Menu_1, gameObject);
+        SoundbankHandler.SoundEvent(SoundbankHandler.Sounds.Stop_Main_Menu_Blend, gameObject);
+        GlobalGameState.ResetWallToggle();
+        SceneManager.LoadScene("Dungeon");
+    }
+
 }

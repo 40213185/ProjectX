@@ -31,7 +31,14 @@ public class HighlightCells : MonoBehaviour
         bool found = false;
         Vector3 pos = new Vector3(position.x, 0.01f, position.y);
         foreach (GameObject go in highlights) if (go.transform.position == pos) found = true;
-        if (!found) highlights.Add(Instantiate(highlight, pos, highlight.transform.rotation));
+        try
+        {
+            if (!found) highlights.Add(Instantiate(highlight, pos, highlight.transform.rotation));
+        }
+        catch
+        {
+            Debug.Log("HighlightCells:error");
+        }
     }
     public void PlaceHighlight(Vector2Int position,Color color)
     {

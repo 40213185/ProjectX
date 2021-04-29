@@ -18,7 +18,19 @@ public class BossFightStart : MonoBehaviour
 
     public void StartFight()
     {
+        //add combatants to list
+        GameObject[] combatants = new GameObject[GameObject.FindGameObjectsWithTag("Enemy").Length+1];
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Enemy").Length; i++)
+        {
+            combatants[i] = GameObject.FindGameObjectsWithTag("Enemy")[i];
+        }
+        //add player to combatants list
+        combatants[combatants.Length - 1] = GameObject.FindGameObjectWithTag("Player");
 
-        GameObject[] combatants = new GameObject[1];
+        //enemies spawned? start a fight
+        CombatHandler.StartCombat(combatants);
+
+        //disable component after use
+        enabled = false;
     }
 }
