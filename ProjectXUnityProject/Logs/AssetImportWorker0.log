@@ -1,0 +1,382 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.4f1 (becced5a802b) revision 12504301'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.928; Version 2009; 64bit' Language: 'en' Physical Memory: 16333 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+65292
+Successfully changed project path to: C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
+C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 56.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.4f1 (becced5a802b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Brandon/Documents/GitHub/ProjectX/ProjectXUnityProject/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 (ID=0x1f07)
+    Vendor:   
+    VRAM:     8031 MB
+    Driver:   27.21.14.6079
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56008
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002115 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 32.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.935 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.008204 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000015E271BE020 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.MonoBehaviour.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E225B2820 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.MonoBehaviour.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E272F67A0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E225B2820 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E22C5F9A0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.API.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E27631C70 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.API.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E227444E0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.API.WwiseTypes.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E25D0B020 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Ak.Wwise.Api.WAAPI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E22927A40 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.062 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1452 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.6 MB.
+System memory in use after: 88.7 MB.
+
+Unloading 74 unused Assets to reduce memory usage. Loaded Objects now: 1852.
+Total: 3.344400 ms (FindLiveObjects: 0.210500 ms CreateObjectMapping: 0.034400 ms MarkObjects: 2.969700 ms  DeleteObjects: 0.128300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Freecam/Freecam.prefab
+  artifactKey: Guid(a85d9577aaf967b47b47f08901b98aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Freecam/Freecam.prefab using Guid(a85d9577aaf967b47b47f08901b98aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08d338cb3cafb009e072af2e51bd7b11') in 0.100764 seconds
+  Import took 0.104013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/Freecam
+  artifactKey: Guid(9159643d1bda2c14685cbc44d0cf39b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Freecam using Guid(9159643d1bda2c14685cbc44d0cf39b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efd1e7cb5d819f836e704e61aba0645d') in 0.001847 seconds
+  Import took 0.003850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Art&Sound
+  artifactKey: Guid(4bdf77f2ab69ab540b7db6704f09cbeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound using Guid(4bdf77f2ab69ab540b7db6704f09cbeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65cd2195297a37f23072702c77ce58fd') in 0.002437 seconds
+  Import took 0.004799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.780062 seconds.
+  path: Assets/Art&Sound/Art/UI
+  artifactKey: Guid(ef7d37dd0e545994ea59bacd57c66f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/UI using Guid(ef7d37dd0e545994ea59bacd57c66f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90607dd32650039f8ffba513069180ad') in 0.002173 seconds
+  Import took 0.004344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.083246 seconds.
+  path: Assets/Art&Sound/Art/UI/Menu/Menu.prefab
+  artifactKey: Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/UI/Menu/Menu.prefab using Guid(fd8f294c781037f4fbde7a20e486d3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d4ee00aa909b31d91c264ad4cd7b47c') in 0.025376 seconds
+  Import took 0.027893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Art&Sound/Art/UI/Menu/Upgrades.prefab
+  artifactKey: Guid(f421b0bcfd951574497cfecf8ac3f1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/UI/Menu/Upgrades.prefab using Guid(f421b0bcfd951574497cfecf8ac3f1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0ab6bd9a35e79ca0b3b9820611e7837') in 0.008217 seconds
+  Import took 0.010452 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/Art&Sound/Art/UI/Menu/SettingsPanel.prefab
+  artifactKey: Guid(874466fd8a18072488b13e7ddce9d493) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/UI/Menu/SettingsPanel.prefab using Guid(874466fd8a18072488b13e7ddce9d493) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7768f3f9cef446b6c7b22f1d8e28a30') in 0.004388 seconds
+  Import took 0.006761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.100630 seconds.
+  path: Assets/Art&Sound/Art/UI/InGame/ToolTip.prefab
+  artifactKey: Guid(a73a2fec22cf10b45ab42a5ceac96192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/UI/InGame/ToolTip.prefab using Guid(a73a2fec22cf10b45ab42a5ceac96192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3b4277b694d52144fddc107baee6eb3') in 0.003786 seconds
+  Import took 0.006204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36f5a26e689ac72162f13146dc4e999f') in 0.022399 seconds
+  Import took 0.024874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Art&Sound/Art/UI/InGame/ToolTip.prefab
+  artifactKey: Guid(a73a2fec22cf10b45ab42a5ceac96192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/UI/InGame/ToolTip.prefab using Guid(a73a2fec22cf10b45ab42a5ceac96192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3b4277b694d52144fddc107baee6eb3') in 0.003028 seconds
+  Import took 0.004983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.379263 seconds.
+  path: Assets/Wwise/ScriptableObjects/Switch/0B4FBC3B-4829-4CD8-9C7D-13AF71801446.asset
+  artifactKey: Guid(9c05fe5d0fa118e4ebfb77871fd17efd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Switch/0B4FBC3B-4829-4CD8-9C7D-13AF71801446.asset using Guid(9c05fe5d0fa118e4ebfb77871fd17efd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30b840f271fa12eaa8416ec18e2efbfe') in 0.006306 seconds
+  Import took 0.008722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Wwise/ScriptableObjects/Soundbank/790A902F-CD39-415E-BD80-115977CF3302.asset
+  artifactKey: Guid(48b388d704dc4db48b2c8c4ccdcc8e81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Soundbank/790A902F-CD39-415E-BD80-115977CF3302.asset using Guid(48b388d704dc4db48b2c8c4ccdcc8e81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd23858e18b13a8cd543aeb9f62682fdc') in 0.002870 seconds
+  Import took 0.005371 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Wwise/ScriptableObjects/Event/8E55EE01-15C8-465A-B113-0CFB5C8B6FFA.asset
+  artifactKey: Guid(c88eb13eccfae3046b88133850643950) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Event/8E55EE01-15C8-465A-B113-0CFB5C8B6FFA.asset using Guid(c88eb13eccfae3046b88133850643950) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7973cf569b38e58528cb6f36fc65899') in 0.002980 seconds
+  Import took 0.004870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Wwise/ScriptableObjects/Soundbank/81CC6AA6-608B-4249-A234-9D1954E05913.asset
+  artifactKey: Guid(659958dfe4511a740bbad9d38f16d6b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Soundbank/81CC6AA6-608B-4249-A234-9D1954E05913.asset using Guid(659958dfe4511a740bbad9d38f16d6b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69add2bcdd0fac994b6bb2f3e655fa87') in 0.002738 seconds
+  Import took 0.004909 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Wwise/ScriptableObjects/Switch/45E778EF-5510-4B5F-A894-36690A2655C6.asset
+  artifactKey: Guid(fd6eeaf51c1cf524fa4349da05d1ee3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Switch/45E778EF-5510-4B5F-A894-36690A2655C6.asset using Guid(fd6eeaf51c1cf524fa4349da05d1ee3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d0088b0f1ee6add9f573af33fafe8ea') in 0.002795 seconds
+  Import took 0.005097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Wwise/ScriptableObjects/Event/35DE9673-79B2-40BB-AFB0-924098A06948.asset
+  artifactKey: Guid(fc21486e86384624c92f8e94ed06e857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Event/35DE9673-79B2-40BB-AFB0-924098A06948.asset using Guid(fc21486e86384624c92f8e94ed06e857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7283da7f1d725708adf65f19a1ee65e') in 0.002569 seconds
+  Import took 0.004858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Wwise/API/Editor/WwiseWindows/TreeViewIcons/acoustictexture_nor.png
+  artifactKey: Guid(7ec29baf38f701e4e8353acf1b4bac1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/API/Editor/WwiseWindows/TreeViewIcons/acoustictexture_nor.png using Guid(7ec29baf38f701e4e8353acf1b4bac1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61ce9b2877937b6b9a7ab8643de38620') in 0.015855 seconds
+  Import took 0.018016 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Wwise/ScriptableObjects/SwitchGroup/AD6399EB-43A6-4AE1-BEDE-5E6319ED7866.asset
+  artifactKey: Guid(bda4a716b3eef7f45848eb514229bf7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/SwitchGroup/AD6399EB-43A6-4AE1-BEDE-5E6319ED7866.asset using Guid(bda4a716b3eef7f45848eb514229bf7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bfe5ae70fceed745ccc53246f834cd6') in 0.002729 seconds
+  Import took 0.004700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Wwise/ScriptableObjects/Soundbank/0372C11C-EFBB-41D4-83EA-BE2694183258.asset
+  artifactKey: Guid(5f309f8153fd9d943aa27c4ecc039e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Soundbank/0372C11C-EFBB-41D4-83EA-BE2694183258.asset using Guid(5f309f8153fd9d943aa27c4ecc039e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '681d3ecd823578da1bca1564186f9a66') in 0.002490 seconds
+  Import took 0.004193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Wwise/ScriptableObjects/SwitchGroup/4D904DEF-A983-4572-BD79-0199969909B8.asset
+  artifactKey: Guid(71d87b793fb799f46be611f45dd6e366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/SwitchGroup/4D904DEF-A983-4572-BD79-0199969909B8.asset using Guid(71d87b793fb799f46be611f45dd6e366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1efd802bab042062ec0be6e4d3e8b212') in 0.002729 seconds
+  Import took 0.004578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Wwise/ScriptableObjects/Switch/2EC0A293-2785-4E19-B60A-43F118780A1E.asset
+  artifactKey: Guid(82b952aa261c6de49a053418a33c528a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Switch/2EC0A293-2785-4E19-B60A-43F118780A1E.asset using Guid(82b952aa261c6de49a053418a33c528a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b1a0969cc284cdd4cec765da804f7e') in 0.002917 seconds
+  Import took 0.005178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Wwise/Timeline/Runtime/AK.Wwise.Unity.Timeline.asmdef
+  artifactKey: Guid(8d875e08938b88a4d8b7260404140869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/Timeline/Runtime/AK.Wwise.Unity.Timeline.asmdef using Guid(8d875e08938b88a4d8b7260404140869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed8481bcf6d6945b886d913ae99b8f6') in 0.004023 seconds
+  Import took 0.006024 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Wwise/ScriptableObjects/Switch/1BDF5915-059C-4FBA-9B68-0C23130DAEC2.asset
+  artifactKey: Guid(884c72a5fff04ad44beb4750632d2d44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Switch/1BDF5915-059C-4FBA-9B68-0C23130DAEC2.asset using Guid(884c72a5fff04ad44beb4750632d2d44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f314a4b4c575eb0ffe0d4766f2afb57') in 0.002733 seconds
+  Import took 0.004594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Wwise/ScriptableObjects/Switch/3E1B6F5C-508F-4613-BE1B-1D4D8E71F641.asset
+  artifactKey: Guid(a95f5ae92691b3e42a5cb187885b14d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Switch/3E1B6F5C-508F-4613-BE1B-1D4D8E71F641.asset using Guid(a95f5ae92691b3e42a5cb187885b14d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6d7ca16365f9dd6173eb3b249c41bb9') in 0.002807 seconds
+  Import took 0.004590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Wwise/ScriptableObjects/Switch/2D7FA47F-8745-4368-B573-0A6B70D1041E.asset
+  artifactKey: Guid(a8c2826243167ad459a47039845f3ef4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Switch/2D7FA47F-8745-4368-B573-0A6B70D1041E.asset using Guid(a8c2826243167ad459a47039845f3ef4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa07e51ac205da06013448736ccba953') in 0.002599 seconds
+  Import took 0.004360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Wwise/ScriptableObjects/Soundbank/893FB932-25B5-4496-AE00-5814DDB48B38.asset
+  artifactKey: Guid(c7f2248b6330b1941b5f3a13154f61cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Soundbank/893FB932-25B5-4496-AE00-5814DDB48B38.asset using Guid(c7f2248b6330b1941b5f3a13154f61cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51aac8cb91dd61584abecd59b85952d5') in 0.002712 seconds
+  Import took 0.004762 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Wwise/ScriptableObjects/Event/924356D3-1DA0-469C-B60E-164BF62A71BE.asset
+  artifactKey: Guid(2740b5dac3db29647aa803ce52810b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Event/924356D3-1DA0-469C-B60E-164BF62A71BE.asset using Guid(2740b5dac3db29647aa803ce52810b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6a2933a64e214dd6aa09c998685a0e9') in 0.002356 seconds
+  Import took 0.004010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Wwise/Timeline/Editor/AK.Wwise.Unity.Timeline.Editor.asmdef
+  artifactKey: Guid(4e9605bd2a4794845b68c98493ba756d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/Timeline/Editor/AK.Wwise.Unity.Timeline.Editor.asmdef using Guid(4e9605bd2a4794845b68c98493ba756d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8abfa790175d13574d643ce9dc8cd90') in 0.002431 seconds
+  Import took 0.004772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Wwise/ScriptableObjects/Switch/AA34DA08-2798-4B0C-8636-1C50C719618A.asset
+  artifactKey: Guid(f2208e49f9a3a524697c3fb527cda75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Switch/AA34DA08-2798-4B0C-8636-1C50C719618A.asset using Guid(f2208e49f9a3a524697c3fb527cda75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15a36a85d613894cf0b28101f8b23e08') in 0.002991 seconds
+  Import took 0.005342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Wwise/ScriptableObjects/Switch/7F294143-5B77-4D6D-A977-3E9ABB7852B8.asset
+  artifactKey: Guid(c8714918a3362db47bc2cc823d3d0f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wwise/ScriptableObjects/Switch/7F294143-5B77-4D6D-A977-3E9ABB7852B8.asset using Guid(c8714918a3362db47bc2cc823d3d0f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6084cd9aaaaa02bb5f77a7a89e3fd9c2') in 0.002927 seconds
+  Import took 0.004867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.923315 seconds.
+  path: Assets/Art&Sound/Art/UI/InGame/UI.prefab
+  artifactKey: Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art&Sound/Art/UI/InGame/UI.prefab using Guid(ed780079e28d96e4f92eb3b40d3160f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a56307cbe7b564cd58b4733ca4b0286d') in 0.011572 seconds
+  Import took 0.014855 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009701 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000015E22F34830 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.MonoBehaviour.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E22430CC0 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.MonoBehaviour.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E272FD880 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E261D4230 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E272DA050 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.API.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E271D1260 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.API.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E2724E010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.API.WwiseTypes.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E22C75D10 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\Ak.Wwise.Api.WAAPI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000015E227BD010 doesn't match image C:\Users\Brandon\Documents\GitHub\ProjectX\ProjectXUnityProject\Library\ScriptAssemblies\AK.Wwise.Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.927 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1446 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.9 MB.
+System memory in use after: 92.0 MB.
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 1866.
+Total: 2.374900 ms (FindLiveObjects: 0.175900 ms CreateObjectMapping: 0.033400 ms MarkObjects: 2.104100 ms  DeleteObjects: 0.060400 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
